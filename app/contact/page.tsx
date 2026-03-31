@@ -1,187 +1,166 @@
 import type { Metadata } from 'next';
-import ScrollReveal from '../components/ScrollReveal';
+
+import { siteData } from '../siteData';
 
 export const metadata: Metadata = {
-  title: 'Contact | LOKEIL inc - Interior Remodeling Queens NY',
-  description: 'Contact LOKEIL inc for your interior remodeling needs. Call for a free estimate.',
+  title: `Contact | ${siteData.name} - Interior Remodeling Queens NY`,
+  description:
+    'Contact LOKEIL inc in Ridgewood, Queens for bathrooms, kitchens, tile work, flooring, painting, cabinetry, and other interior remodeling estimates.',
 };
+
+const contactCards = [
+  {
+    label: 'Primary phone',
+    value: siteData.phonePrimary,
+    href: `tel:${siteData.phonePrimary}`,
+    note: 'Best for direct estimate calls',
+  },
+  {
+    label: 'Secondary phone',
+    value: siteData.phoneSecondary,
+    href: `tel:${siteData.phoneSecondary}`,
+    note: 'Alternative contact number',
+  },
+  {
+    label: 'Email',
+    value: siteData.email,
+    href: `mailto:${siteData.email}`,
+    note: 'Send room details and project photos',
+  },
+  {
+    label: 'Instagram',
+    value: siteData.instagramHandle,
+    href: siteData.instagram,
+    note: 'See more project updates',
+  },
+];
 
 export default function Contact() {
   return (
-    <main className="bg-olive-500">
-      {/* Hero Section */}
-      <section className="py-16 bg-gradient-to-b from-olive-600 to-olive-500">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-5xl md:text-6xl font-serif font-bold text-olive-50 mb-6" data-reveal="fade-up">
-            Get in Touch
-          </h1>
-          <p className="text-xl text-olive-200 max-w-2xl mx-auto" data-reveal="fade-up" data-delay="1">
-            Ready to transform your space? Contact us today for a free estimate.
-          </p>
+    <main>
+      <section className="section-space border-b border-white/8">
+        <div className="site-shell grid gap-10 lg:grid-cols-[1fr_0.9fr] lg:items-end">
+          <div data-reveal="fade-up">
+            <p className="eyebrow">Contact</p>
+            <h1 className="page-title mt-4">
+              Start the estimate conversation with a direct phone call or email.
+            </h1>
+            <p className="lead mt-6">
+              Reach out with the room, the rough scope, and any project photos you have. Phone is
+              the fastest path, but email works well too for details and references.
+            </p>
+          </div>
+
+          <div className="surface p-6 sm:p-8" data-reveal="scale-in" data-delay="1">
+            <p className="text-sm uppercase tracking-[0.18em] text-accent/82">Based in</p>
+            <h2 className="mt-3 text-4xl text-olive-50">{siteData.location}</h2>
+            <p className="mt-4 text-base leading-7 text-olive-100/72">
+              Serving {siteData.serviceArea}.
+            </p>
+          </div>
         </div>
       </section>
 
-      {/* Contact Information */}
-      <section className="py-20">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-            {/* Phone 1 */}
-            <div
-              className="bg-olive-400 bg-opacity-30 backdrop-blur-xs border border-olive-50 border-opacity-10 rounded-lg p-8 text-center card-hover"
-              data-reveal="scale-in"
-            >
-              <div className="text-4xl mb-4">☎️</div>
-              <h3 className="text-2xl font-serif font-bold text-accent mb-2">Primary Phone</h3>
-              <a
-                href="tel:917-518-8753"
-                className="text-xl text-olive-50 hover:text-accent transition-colors font-semibold"
-              >
-                917-518-8753
-              </a>
-              <p className="text-olive-200 text-sm mt-2">Best for immediate inquiries</p>
-            </div>
-
-            {/* Phone 2 */}
-            <div
-              className="bg-olive-400 bg-opacity-30 backdrop-blur-xs border border-olive-50 border-opacity-10 rounded-lg p-8 text-center card-hover"
-              data-reveal="scale-in"
-              data-delay="1"
-            >
-              <div className="text-4xl mb-4">☎️</div>
-              <h3 className="text-2xl font-serif font-bold text-accent mb-2">Secondary Phone</h3>
-              <a
-                href="tel:917-518-3866"
-                className="text-xl text-olive-50 hover:text-accent transition-colors font-semibold"
-              >
-                917-518-3866
-              </a>
-              <p className="text-olive-200 text-sm mt-2">Alternative contact number</p>
-            </div>
-
-            {/* Email */}
-            <div
-              className="bg-olive-400 bg-opacity-30 backdrop-blur-xs border border-olive-50 border-opacity-10 rounded-lg p-8 text-center card-hover"
-              data-reveal="scale-in"
-              data-delay="2"
-            >
-              <div className="text-4xl mb-4">✉️</div>
-              <h3 className="text-2xl font-serif font-bold text-accent mb-2">Email</h3>
-              <a
-                href="mailto:lokeil2024@gmail.com"
-                className="text-xl text-olive-50 hover:text-accent transition-colors font-semibold break-all"
-              >
-                lokeil2024@gmail.com
-              </a>
-              <p className="text-olive-200 text-sm mt-2">Send us a detailed message</p>
-            </div>
-          </div>
-
-          {/* Address and Hours */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
-            {/* Address */}
-            <div
-              className="bg-olive-400 bg-opacity-30 backdrop-blur-xs border border-olive-50 border-opacity-10 rounded-lg p-8"
-              data-reveal="fade-up"
-            >
-              <h2 className="text-3xl font-serif font-bold text-olive-50 mb-6">Our Location</h2>
-              <div className="space-y-4">
-                <div>
-                  <h3 className="font-semibold text-accent mb-2">LOKEIL inc</h3>
-                  <p className="text-olive-200 text-lg leading-relaxed">
-                    Ridgewood, Queens<br />
-                    New York, NY 11385<br />
-                    <span className="text-olive-300">Serving NYC Metro Area</span>
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            {/* Business Hours */}
-            <div
-              className="bg-olive-400 bg-opacity-30 backdrop-blur-xs border border-olive-50 border-opacity-10 rounded-lg p-8"
-              data-reveal="fade-up"
-              data-delay="1"
-            >
-              <h2 className="text-3xl font-serif font-bold text-olive-50 mb-6">Business Hours</h2>
-              <div className="space-y-3">
-                <div className="flex justify-between items-center">
-                  <span className="text-olive-200">Monday - Friday:</span>
-                  <span className="text-accent font-semibold">10:00 AM - 6:00 PM</span>
-                </div>
-                <div className="flex justify-between items-center">
-                  <span className="text-olive-200">Saturday:</span>
-                  <span className="text-accent font-semibold">12:00 PM - 5:00 PM</span>
-                </div>
-                <div className="flex justify-between items-center">
-                  <span className="text-olive-200">Sunday:</span>
-                  <span className="text-olive-300">Closed</span>
-                </div>
-                <p className="text-olive-300 text-sm pt-4">
-                  Contact us anytime via phone or email, and we'll get back to you during business hours.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          {/* Instagram */}
-          <div
-            className="bg-gradient-to-r from-olive-400 to-olive-400 bg-opacity-30 backdrop-blur-xs border border-olive-50 border-opacity-10 rounded-lg p-8 text-center card-hover"
-            data-reveal="scale-in"
-          >
-            <h2 className="text-3xl font-serif font-bold text-olive-50 mb-4">Follow Our Work</h2>
-            <p className="text-olive-200 mb-6">Stay inspired with our latest projects and design ideas</p>
+      <section className="section-space">
+        <div className="site-shell grid gap-6 lg:grid-cols-2 xl:grid-cols-4">
+          {contactCards.map((card, index) => (
             <a
-              href="https://instagram.com/lokeil.inc"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block px-8 py-4 bg-accent text-olive-900 font-semibold rounded hover:bg-accent-hover transition-all hover:shadow-xl"
+              key={card.label}
+              href={card.href}
+              target={card.href.startsWith('http') ? '_blank' : undefined}
+              rel={card.href.startsWith('http') ? 'noreferrer' : undefined}
+              className="surface tile-hover px-6 py-7"
+              data-reveal="fade-up"
+              data-delay={String(index + 1)}
             >
-              Follow @lokeil.inc on Instagram
+              <p className="text-sm font-semibold uppercase tracking-[0.18em] text-accent/82">
+                {card.label}
+              </p>
+              <p className="mt-4 text-3xl text-olive-50 break-words">{card.value}</p>
+              <p className="mt-3 text-base leading-7 text-olive-100/68">{card.note}</p>
             </a>
+          ))}
+        </div>
+      </section>
+
+      <section className="section-rule section-space bg-black/8">
+        <div className="site-shell grid gap-8 lg:grid-cols-[0.95fr_1.05fr]">
+          <div className="surface p-6 sm:p-8" data-reveal="fade-up">
+            <p className="eyebrow">Hours</p>
+            <h2 className="section-title mt-4">Business hours</h2>
+            <div className="mt-8 space-y-4">
+              {siteData.hours.map((item) => (
+                <div
+                  key={item.label}
+                  className="flex items-center justify-between gap-4 border-b border-white/8 pb-4 last:border-b-0 last:pb-0"
+                >
+                  <span className="text-base text-olive-100/72">{item.label}</span>
+                  <span className="text-base font-semibold text-accent">{item.value}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="surface p-6 sm:p-8" data-reveal="scale-in" data-delay="1">
+            <p className="eyebrow">Service area</p>
+            <h2 className="section-title mt-4">Ridgewood first, broader NYC area after that.</h2>
+            <p className="mt-6 text-base leading-8 text-olive-100/72">
+              Ridgewood, Queens is the home base, and the company also works across Brooklyn,
+              Manhattan, parts of Long Island, and Westchester County.
+            </p>
+            <p className="mt-5 text-base leading-8 text-olive-100/72">
+              If your project is interior-focused and falls within that area, call or send an
+              email with the room, location, and rough scope.
+            </p>
           </div>
         </div>
       </section>
 
-      {/* Map Section */}
-      <section className="py-20 bg-olive-600">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-serif font-bold text-center text-olive-50 mb-12" data-reveal="fade-up">
-            Find Us
-          </h2>
-          <div
-            className="rounded-lg overflow-hidden h-96 border border-olive-50 border-opacity-10"
-            data-reveal="scale-in"
-            data-delay="1"
-          >
+      <section className="section-rule section-space">
+        <div className="site-shell">
+          <div className="mb-8 max-w-3xl" data-reveal="fade-up">
+            <p className="eyebrow">Map</p>
+            <h2 className="section-title mt-4">Find the service base in Ridgewood, Queens.</h2>
+          </div>
+
+          <div className="media-frame h-[24rem] overflow-hidden sm:h-[32rem]" data-reveal="scale-in" data-delay="1">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12096.634!2d-73.9055!3d40.7004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25e3e2a3d7f0b%3A0x2b71f791d3a62e4c!2sRidgewood%2C%20Queens%2C%20NY!5e0!3m2!1sen!2sus!4v1711843200000"
               width="100%"
               height="100%"
               style={{ border: 0 }}
-              allowFullScreen={true}
+              allowFullScreen
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              title="LOKEIL inc Location Map"
+              title="LOKEIL inc service area map"
             />
           </div>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20 bg-olive-500">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center" data-reveal="fade-up">
-          <h2 className="text-4xl font-serif font-bold text-olive-50 mb-6">
-            Call Us Today
-          </h2>
-          <p className="text-xl text-olive-200 mb-8">
-            Get your free estimate for your interior remodeling project
-          </p>
-          <a
-            href="tel:917-518-8753"
-            className="inline-block px-8 py-4 bg-accent text-olive-900 font-semibold rounded hover:bg-accent-hover transition-all hover:shadow-xl text-lg"
-          >
-            917-518-8753
-          </a>
+      <section className="section-rule section-space">
+        <div className="site-shell">
+          <div className="surface overflow-hidden px-6 py-10 sm:px-10 lg:px-12 lg:py-12">
+            <div className="grid gap-8 lg:grid-cols-[1fr_auto] lg:items-end">
+              <div data-reveal="fade-up">
+                <p className="eyebrow">Free estimate</p>
+                <h2 className="section-title mt-4">Call now or send the project by email.</h2>
+                <p className="lead mt-6">
+                  {siteData.phonePrimary} is the fastest path. If email is easier, send photos,
+                  room dimensions, or a short description to {siteData.email}.
+                </p>
+              </div>
+
+              <div className="flex flex-col gap-4 sm:flex-row lg:flex-col" data-reveal="fade-up" data-delay="1">
+                <a href={`tel:${siteData.phonePrimary}`} className="button-primary">
+                  Call {siteData.phonePrimary}
+                </a>
+                <a href={`mailto:${siteData.email}`} className="button-secondary">
+                  Email Us
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
     </main>

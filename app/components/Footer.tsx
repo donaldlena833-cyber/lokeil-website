@@ -1,88 +1,80 @@
 import Link from 'next/link';
 
+import { coreServices, navItems, siteData } from '../siteData';
+
 export default function Footer() {
   return (
-    <footer className="bg-olive-600 border-t border-olive-50 border-opacity-10 py-12">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
-          {/* Brand Column */}
+    <footer className="section-rule bg-olive-700/70 py-14">
+      <div className="site-shell">
+        <div className="grid gap-10 lg:grid-cols-[1.2fr_0.8fr_0.9fr_0.9fr]">
           <div>
-            <h3 className="text-2xl font-serif text-accent mb-4">LOKEIL</h3>
-            <p className="text-olive-200 text-sm">
-              Creating spaces that are comfortable, memorable and inspiring.
+            <p className="eyebrow">Interior remodeling</p>
+            <h3 className="mt-3 font-serif text-4xl text-accent">{siteData.shortName}</h3>
+            <p className="mt-4 max-w-md text-sm leading-7 text-olive-100/72">
+              Bathrooms, kitchens, tile work, flooring, plaster, painting, cabinets,
+              doors, steps, and fireplace design with a cleaner, modern finish language.
             </p>
           </div>
 
-          {/* Quick Links */}
           <div>
-            <h4 className="text-olive-50 font-semibold mb-4">Quick Links</h4>
-            <ul className="space-y-2 text-sm">
-              <li>
-                <Link href="/" className="text-olive-200 hover:text-accent transition-colors">
-                  Home
-                </Link>
-              </li>
-              <li>
-                <Link href="/about" className="text-olive-200 hover:text-accent transition-colors">
-                  About
-                </Link>
-              </li>
-              <li>
-                <Link href="/services" className="text-olive-200 hover:text-accent transition-colors">
-                  Services
-                </Link>
-              </li>
-              <li>
-                <Link href="/gallery" className="text-olive-200 hover:text-accent transition-colors">
-                  Gallery
-                </Link>
-              </li>
+            <h4 className="text-sm font-semibold uppercase tracking-[0.18em] text-olive-100/54">
+              Navigate
+            </h4>
+            <ul className="mt-4 space-y-3 text-sm">
+              {navItems.map((item) => (
+                <li key={item.href}>
+                  <Link href={item.href} className="text-olive-100/76 hover:text-accent">
+                    {item.label}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
-          {/* Contact Info */}
           <div>
-            <h4 className="text-olive-50 font-semibold mb-4">Contact</h4>
-            <ul className="space-y-2 text-sm text-olive-200">
-              <li className="flex items-center gap-2">
-                <span>Phone:</span>
-                <a href="tel:917-518-8753" className="text-accent hover:text-accent-hover">
-                  917-518-8753
-                </a>
-              </li>
-              <li className="flex items-center gap-2">
-                <span>Email:</span>
-                <a href="mailto:lokeil2024@gmail.com" className="text-accent hover:text-accent-hover">
-                  lokeil2024@gmail.com
-                </a>
-              </li>
-              <li>Ridgewood, Queens, NY 11385</li>
+            <h4 className="text-sm font-semibold uppercase tracking-[0.18em] text-olive-100/54">
+              Core Services
+            </h4>
+            <ul className="mt-4 space-y-3 text-sm text-olive-100/76">
+              {coreServices.slice(0, 5).map((service) => (
+                <li key={service.title}>{service.title}</li>
+              ))}
             </ul>
           </div>
 
-          {/* Social & Hours */}
           <div>
-            <h4 className="text-olive-50 font-semibold mb-4">Hours & Social</h4>
-            <ul className="space-y-2 text-sm text-olive-200 mb-4">
-              <li>Mon-Fri: 10am - 6pm</li>
-              <li>Sat: 12pm - 5pm</li>
-              <li>Sun: Closed</li>
+            <h4 className="text-sm font-semibold uppercase tracking-[0.18em] text-olive-100/54">
+              Contact
+            </h4>
+            <ul className="mt-4 space-y-3 text-sm text-olive-100/76">
+              <li>
+                <a href={`tel:${siteData.phonePrimary}`} className="hover:text-accent">
+                  {siteData.phonePrimary}
+                </a>
+              </li>
+              <li>
+                <a href={`mailto:${siteData.email}`} className="break-all hover:text-accent">
+                  {siteData.email}
+                </a>
+              </li>
+              <li>{siteData.location}</li>
+              <li>{siteData.hours[0].label}: {siteData.hours[0].value}</li>
+              <li>{siteData.hours[1].label}: {siteData.hours[1].value}</li>
             </ul>
             <a
-              href="https://instagram.com/lokeil.inc"
+              href={siteData.instagram}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block px-4 py-2 bg-accent text-olive-900 font-semibold rounded hover:bg-accent-hover transition-colors text-sm"
+              className="button-secondary mt-5 px-5 py-3"
             >
-              Follow @lokeil.inc
+              Follow {siteData.instagramHandle}
             </a>
           </div>
         </div>
 
-        {/* Bottom Bar */}
-        <div className="border-t border-olive-50 border-opacity-10 pt-8 text-center text-sm text-olive-300">
+        <div className="mt-12 border-t border-white/10 pt-7 text-sm text-olive-100/48">
           <p>
-            &copy; {new Date().getFullYear()} LOKEIL inc. All rights reserved. | Queens, NY
+            &copy; {new Date().getFullYear()} {siteData.name}. Ridgewood, Queens, NY.
           </p>
         </div>
       </div>

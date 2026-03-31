@@ -1,150 +1,178 @@
 import type { Metadata } from 'next';
-import ScrollReveal from '../components/ScrollReveal';
+import Image from 'next/image';
+import Link from 'next/link';
+
+import {
+  featuredImages,
+  processSteps,
+  siteData,
+  valuePoints,
+} from '../siteData';
 
 export const metadata: Metadata = {
-  title: 'About | LOKEIL inc - Interior Remodeling Queens NY',
-  description: 'Learn about LOKEIL inc, our owner Lorel Beqari, and our commitment to quality interior remodeling.',
+  title: `About | ${siteData.name} - Interior Remodeling Queens NY`,
+  description:
+    'Learn about LOKEIL inc, owner Lorel Beqari, and the interior remodeling approach behind the company\'s bathrooms, kitchens, tile, and finish work.',
 };
+
+const principles = [
+  {
+    title: 'Clean finish work',
+    body: 'Alignment, material transitions, and final detailing are treated with care from the start.',
+  },
+  {
+    title: 'Straightforward communication',
+    body: 'Clients get direct contact, clear next steps, and a simpler estimate conversation.',
+  },
+  {
+    title: 'Interior remodeling focus',
+    body: 'Bathrooms, kitchens, tile, cabinetry, flooring, and finish work stay at the center of the business.',
+  },
+];
 
 export default function About() {
   return (
-    <main className="bg-olive-500">
-      {/* Hero Section */}
-      <section className="py-16 bg-gradient-to-b from-olive-600 to-olive-500">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-5xl md:text-6xl font-serif font-bold text-olive-50 mb-6" data-reveal="fade-up">
-            About LOKEIL inc
-          </h1>
-          <p className="text-xl text-olive-200 max-w-2xl mx-auto" data-reveal="fade-up" data-delay="1">
-            Creating spaces that are comfortable, memorable and inspiring
-          </p>
-        </div>
-      </section>
-
-      {/* Company Story */}
-      <section className="py-20">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-16">
-            <div data-reveal="fade-up">
-              <h2 className="text-4xl font-serif font-bold text-olive-50 mb-6">Our Story</h2>
-              <p className="text-olive-200 text-lg mb-4">
-                LOKEIL inc was founded with a simple vision: to transform spaces into environments that enhance the quality of everyday life. Since our inception, we've been dedicated to delivering exceptional interior remodeling services throughout Ridgewood, Queens and the broader NYC metro area.
-              </p>
-              <p className="text-olive-200 text-lg mb-4">
-                What started as a passion for craftsmanship and design has grown into a trusted name for homeowners seeking professional, reliable remodeling services. We understand that your home is more than just a space, it's where memories are made and lives are lived.
-              </p>
-              <p className="text-olive-200 text-lg">
-                Every project we undertake reflects our commitment to excellence, attention to detail, and deep respect for our clients' vision and investment.
-              </p>
-            </div>
-            <div className="relative h-96 rounded-lg overflow-hidden" data-reveal="fade-in" data-delay="1">
-              <img
-                src="/gallery/bathroom-tiles/1.jpg"
-                alt="LOKEIL workspace"
-                className="w-full h-full object-cover"
-              />
-            </div>
-          </div>
-
-          {/* Owner Section */}
-          <div className="bg-olive-400 bg-opacity-30 backdrop-blur-xs border border-olive-50 border-opacity-10 rounded-lg p-12 mb-16" data-reveal="scale-in" data-delay="1">
-            <h3 className="text-3xl font-serif font-bold text-olive-50 mb-6">Meet Lorel Beqari</h3>
-            <p className="text-olive-200 text-lg mb-4">
-              Lorel Beqari is the founder and driving force behind LOKEIL inc. With extensive experience in interior remodeling and a genuine passion for transforming spaces, Lorel brings leadership, integrity, and a meticulous eye for detail to every project.
-            </p>
-            <p className="text-olive-200 text-lg mb-4">
-              Lorel's approach to remodeling goes beyond aesthetics. He believes that great design should be functional, durable, and reflect the personality and needs of those who inhabit the space. This philosophy guides all of LOKEIL inc's work, ensuring that every kitchen, bathroom, or remodeled space is not just beautiful, but truly enhances how you live.
-            </p>
-            <p className="text-olive-200 text-lg">
-              When he's not overseeing projects, Lorel is continually exploring new design trends, materials, and techniques to bring the best solutions to his clients.
+    <main>
+      <section className="section-space border-b border-white/8">
+        <div className="site-shell grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-end">
+          <div data-reveal="fade-up">
+            <p className="eyebrow">About the company</p>
+            <h1 className="page-title mt-4">
+              A quieter, cleaner approach to interior remodeling in Queens.
+            </h1>
+            <p className="lead mt-6">
+              {siteData.name} is led by {siteData.owner} and built around practical interior
+              renovation work: bathrooms, kitchens, tile installation, flooring, cabinets,
+              plaster, painting, doors, steps, and fireplace design.
             </p>
           </div>
 
-          {/* Mission & Values */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-olive-400 bg-opacity-30 backdrop-blur-xs border border-olive-50 border-opacity-10 rounded-lg p-8" data-reveal="fade-up">
-              <h3 className="text-2xl font-serif font-bold text-accent mb-4">Our Mission</h3>
-              <p className="text-olive-200 text-lg">
-                To create spaces that are comfortable, memorable and inspiring through exceptional craftsmanship, innovative design, and unwavering commitment to client satisfaction.
-              </p>
-            </div>
-
-            <div className="bg-olive-400 bg-opacity-30 backdrop-blur-xs border border-olive-50 border-opacity-10 rounded-lg p-8" data-reveal="fade-up" data-delay="1">
-              <h3 className="text-2xl font-serif font-bold text-accent mb-4">Our Values</h3>
-              <ul className="text-olive-200 text-lg space-y-2">
-                <li>Craftsmanship & Quality</li>
-                <li>Integrity & Transparency</li>
-                <li>Client-Centric Approach</li>
-                <li>Continuous Improvement</li>
-              </ul>
-            </div>
+          <div className="media-frame min-h-[23rem] sm:min-h-[34rem]" data-reveal="fade-in" data-delay="1">
+            <Image
+              src={featuredImages.aboutFeature.src}
+              alt={featuredImages.aboutFeature.alt}
+              fill
+              priority
+              sizes="(max-width: 1024px) 100vw, 50vw"
+              className="object-cover"
+            />
+            <div className="image-veil" />
           </div>
         </div>
       </section>
 
-      {/* Why Choose Us */}
-      <section className="py-20 bg-olive-600">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-serif font-bold text-center text-olive-50 mb-16" data-reveal="fade-up">
-            Why Choose LOKEIL inc
-          </h2>
+      <section className="section-space">
+        <div className="site-shell grid gap-10 lg:grid-cols-[1.05fr_0.95fr]">
+          <div data-reveal="fade-up">
+            <p className="eyebrow">Our story</p>
+            <h2 className="section-title mt-4">Built around rooms, materials, and the details that finish well.</h2>
+            <div className="mt-6 space-y-5 text-base leading-8 text-olive-100/76">
+              <p>
+                {siteData.name} works on interior spaces that need a stronger finish and a better
+                sense of order, whether that means a new shower surround, updated flooring,
+                cleaner cabinetry, or a more complete kitchen layout.
+              </p>
+              <p>
+                The company approach is practical and finish-focused. Materials need to look good,
+                but they also need to fit the room well and hold up in daily use.
+              </p>
+              <p>
+                That is why the portfolio leans into bathrooms, kitchens, tile work, flooring,
+                cabinetry, and the smaller transition details that make the final result feel complete.
+              </p>
+            </div>
+          </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
-              {
-                title: 'Expert Craftsmanship',
-                description: 'Meticulous attention to detail and years of experience in every project.',
-              },
-              {
-                title: 'Custom Solutions',
-                description: 'We tailor every remodel to match your unique vision, budget, and lifestyle.',
-              },
-              {
-                title: 'Reliable Service',
-                description: 'Professional, punctual, and dedicated to delivering on our promises.',
-              },
-              {
-                title: 'Wide Range of Services',
-                description: 'From bathrooms to kitchens to painting, we handle all interior remodeling needs.',
-              },
-              {
-                title: 'Local Expertise',
-                description: 'Deep knowledge of the Ridgewood, Queens area and NYC metro building codes.',
-              },
-              {
-                title: 'Client Communication',
-                description: 'Clear, honest communication throughout the entire remodeling process.',
-              },
-            ].map((item, index) => (
-              <div
-                key={item.title}
-                className="bg-olive-500 bg-opacity-40 backdrop-blur-xs border border-olive-50 border-opacity-10 rounded-lg p-8 card-hover"
-                data-reveal="scale-in"
-                data-delay={Math.min(index + 1, 5).toString()}
-              >
-                <h3 className="text-xl font-serif font-bold text-accent mb-3">{item.title}</h3>
-                <p className="text-olive-200">{item.description}</p>
+          <div className="surface p-6 sm:p-8" data-reveal="scale-in" data-delay="1">
+            <p className="text-sm uppercase tracking-[0.18em] text-accent/84">
+              Meet the owner
+            </p>
+            <h3 className="mt-3 text-4xl text-olive-50">{siteData.owner}</h3>
+            <p className="mt-5 text-base leading-8 text-olive-100/74">
+              Lorel Beqari is the owner behind {siteData.name}. He brings the company around
+              interior upgrades that benefit from patience and detail: bathrooms, kitchens, tile,
+              floors, cabinetry, trim, and finish work that should feel composed once the room is complete.
+            </p>
+            <p className="mt-5 text-base leading-8 text-olive-100/74">
+              The goal is simple: do the work cleanly, choose materials carefully, and leave the
+              space looking sharper, more functional, and more comfortable to live with.
+            </p>
+
+            <div className="mt-7 flex flex-wrap gap-3">
+              {valuePoints.map((item) => (
+                <span key={item} className="chip normal-case tracking-[0.06em] text-olive-100/82">
+                  {item}
+                </span>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="section-rule section-space bg-black/8">
+        <div className="site-shell grid gap-6 lg:grid-cols-3">
+          {principles.map((item, index) => (
+            <div
+              key={item.title}
+              className="surface px-6 py-7"
+              data-reveal="fade-up"
+              data-delay={String(index + 1)}
+            >
+              <h3 className="text-3xl text-olive-50">{item.title}</h3>
+              <p className="mt-3 text-base leading-7 text-olive-100/72">{item.body}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section className="section-rule section-space">
+        <div className="site-shell grid gap-10 lg:grid-cols-[0.95fr_1.05fr]">
+          <div data-reveal="fade-up">
+            <p className="eyebrow">Working style</p>
+            <h2 className="section-title mt-4">
+              A small process that respects the room and lands the finish.
+            </h2>
+          </div>
+
+          <div className="surface p-6 sm:p-8" data-reveal="scale-in" data-delay="1">
+            <div className="space-y-7">
+              {processSteps.map((step, index) => (
+                <div key={step.step} className="grid gap-4 sm:grid-cols-[auto_1fr]">
+                  <span className="text-4xl text-accent">{step.step}</span>
+                  <div>
+                    <h3 className="text-2xl text-olive-50">{step.title}</h3>
+                    <p className="mt-2 text-base leading-7 text-olive-100/72">{step.description}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="section-rule section-space">
+        <div className="site-shell">
+          <div className="surface overflow-hidden px-6 py-10 sm:px-10 lg:px-12 lg:py-12">
+            <div className="grid gap-8 lg:grid-cols-[1fr_auto] lg:items-center">
+              <div data-reveal="fade-up">
+                <p className="eyebrow">Contact</p>
+                <h2 className="section-title mt-4">Want to talk through the remodel?</h2>
+                <p className="lead mt-6">
+                  If you already know the room and the kind of upgrade you want, the next step is
+                  easy: call or email and start the estimate conversation.
+                </p>
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
-      {/* CTA Section */}
-      <section className="py-20 bg-olive-500">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center" data-reveal="fade-up">
-          <h2 className="text-4xl font-serif font-bold text-olive-50 mb-6">
-            Let's Create Something Beautiful
-          </h2>
-          <p className="text-xl text-olive-200 mb-8">
-            Contact LOKEIL inc today to discuss your interior remodeling project.
-          </p>
-          <a
-            href="tel:917-518-8753"
-            className="inline-block px-8 py-4 bg-accent text-olive-900 font-semibold rounded hover:bg-accent-hover transition-all hover:shadow-xl"
-          >
-            Call Now: 917-518-8753
-          </a>
+              <div className="flex flex-col gap-4 sm:flex-row lg:flex-col" data-reveal="fade-up" data-delay="1">
+                <a href={`tel:${siteData.phonePrimary}`} className="button-primary">
+                  Call {siteData.phonePrimary}
+                </a>
+                <Link href="/contact" className="button-secondary">
+                  Open Contact Page
+                </Link>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
     </main>

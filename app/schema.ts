@@ -1,26 +1,26 @@
+import { siteData } from './siteData';
+
 export const localBusinessSchema = {
   '@context': 'https://schema.org',
-  '@type': 'LocalBusiness',
-  name: 'LOKEIL inc',
-  description: 'Professional interior remodeling services in Ridgewood, Queens, NY',
-  url: 'https://lokeil.com',
-  telephone: '917-518-8753',
-  email: 'lokeil2024@gmail.com',
+  '@type': 'HomeAndConstructionBusiness',
+  name: siteData.name,
+  description:
+    'Interior remodeling services in Ridgewood, Queens focused on bathrooms, kitchens, tile work, flooring, plaster, painting, cabinetry, doors, steps, and fireplace design.',
+  telephone: siteData.phonePrimary,
+  email: siteData.email,
   address: {
     '@type': 'PostalAddress',
     addressLocality: 'Ridgewood',
-    addressRegion: 'Queens',
+    addressRegion: 'NY',
     postalCode: '11385',
     addressCountry: 'US',
-    streetAddress: 'Ridgewood, Queens, NY',
+    streetAddress: siteData.location,
   },
-  image: 'https://lokeil.com/og-image.jpg',
   sameAs: [
-    'https://instagram.com/lokeil.inc',
+    siteData.instagram,
   ],
   priceRange: '$$',
-  businessType: 'Interior Remodeling Service',
-  areaServed: ['Queens', 'Brooklyn', 'Manhattan', 'Long Island', 'Westchester'],
+  areaServed: ['Queens', 'Brooklyn', 'Manhattan', 'Long Island', 'Westchester County'],
   openingHoursSpecification: [
     {
       '@type': 'OpeningHoursSpecification',

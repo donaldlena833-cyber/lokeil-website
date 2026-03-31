@@ -1,182 +1,158 @@
 'use client';
 
-import { useState, useEffect } from 'react';
-import ScrollReveal from '../components/ScrollReveal';
+import Image from 'next/image';
+import { useState } from 'react';
 
-type GalleryCategory = 'all' | 'bathroom-tiles' | 'bathroom-flooring' | 'bathroom-shower' | 'bathroom-painting' | 'kitchen-cabinets' | 'videos';
-
-const categories = [
-  { id: 'all', label: 'All' },
-  { id: 'bathroom-tiles', label: 'Bathroom Tiles' },
-  { id: 'bathroom-flooring', label: 'Bathroom Flooring' },
-  { id: 'bathroom-shower', label: 'Bathroom Showers' },
-  { id: 'bathroom-painting', label: 'Bathroom Painting' },
-  { id: 'kitchen-cabinets', label: 'Kitchen Cabinets' },
-  { id: 'videos', label: 'Videos' },
-];
-
-const galleryItems = [
-  // Bathroom Tiles
-  ...Array.from({ length: 10 }, (_, i) => ({
-    id: `bathroom-tiles-${i + 1}`,
-    category: 'bathroom-tiles',
-    type: 'image' as const,
-    src: `/gallery/bathroom-tiles/${i + 1}.jpg`,
-    alt: `Bathroom Tiles Project ${i + 1}`,
-  })),
-  // Bathroom Flooring
-  ...Array.from({ length: 9 }, (_, i) => ({
-    id: `bathroom-flooring-${i + 1}`,
-    category: 'bathroom-flooring',
-    type: 'image' as const,
-    src: `/gallery/bathroom-flooring/${i + 1}.jpg`,
-    alt: `Bathroom Flooring Project ${i + 1}`,
-  })),
-  // Bathroom Shower
-  ...Array.from({ length: 9 }, (_, i) => ({
-    id: `bathroom-shower-${i + 1}`,
-    category: 'bathroom-shower',
-    type: 'image' as const,
-    src: `/gallery/bathroom-shower/${i + 1}.jpg`,
-    alt: `Bathroom Shower Project ${i + 1}`,
-  })),
-  // Bathroom Painting
-  ...Array.from({ length: 6 }, (_, i) => ({
-    id: `bathroom-painting-${i + 1}`,
-    category: 'bathroom-painting',
-    type: 'image' as const,
-    src: `/gallery/bathroom-painting/${i + 1}.jpg`,
-    alt: `Bathroom Painting Project ${i + 1}`,
-  })),
-  // Kitchen Cabinets
-  ...Array.from({ length: 9 }, (_, i) => ({
-    id: `kitchen-cabinets-${i + 1}`,
-    category: 'kitchen-cabinets',
-    type: 'image' as const,
-    src: `/gallery/kitchen-cabinets/${i + 1}.jpg`,
-    alt: `Kitchen Cabinets Project ${i + 1}`,
-  })),
-  // Videos
-  { id: 'video-1', category: 'videos', type: 'video' as const, src: '/gallery/videos/1.mp4', alt: 'Project Video 1' },
-  { id: 'video-2', category: 'videos', type: 'video' as const, src: '/gallery/videos/2.mp4', alt: 'Project Video 2' },
-  { id: 'video-3', category: 'videos', type: 'video' as const, src: '/gallery/videos/3.mp4', alt: 'Project Video 3' },
-];
+import {
+  GalleryCategory,
+  galleryCategories,
+  galleryItems,
+  siteData,
+} from '../siteData';
 
 export default function Gallery() {
   const [activeCategory, setActiveCategory] = useState<GalleryCategory>('all');
-  const [mounted, setMounted] = useState(false);
 
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
-  if (!mounted) {
-    return null;
-  }
-
-  const filteredItems = activeCategory === 'all'
-    ? galleryItems
-    : galleryItems.filter(item => item.category === activeCategory);
+  const filteredItems =
+    activeCategory === 'all'
+      ? galleryItems
+      : galleryItems.filter((item) => item.category === activeCategory);
 
   return (
-    <main className="bg-olive-500">
-      {/* Hero Section */}
-      <section className="py-16 bg-gradient-to-b from-olive-600 to-olive-500">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-5xl md:text-6xl font-serif font-bold text-olive-50 mb-6" data-reveal="fade-up">
-            Our Gallery
-          </h1>
-          <p className="text-xl text-olive-200 max-w-2xl mx-auto" data-reveal="fade-up" data-delay="1">
-            Showcasing our finest interior remodeling projects
-          </p>
+    <main>
+      <section className="section-space border-b border-white/8">
+        <div className="site-shell grid gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:items-end">
+          <div data-reveal="fade-up">
+            <p className="eyebrow">Gallery</p>
+            <h1 className="page-title mt-4">
+              Real bathrooms, kitchens, tile details, and walkthroughs from recent work.
+            </h1>
+            <p className="lead mt-6">
+              Browse bathrooms, flooring, shower work, painting and prep, kitchen cabinetry, and
+              a few short project videos to get a better feel for the finished direction.
+            </p>
+          </div>
+
+          <div className="surface p-6 sm:p-8" data-reveal="scale-in" data-delay="1">
+            <div className="grid gap-5 sm:grid-cols-3">
+              <div>
+                <p className="text-sm uppercase tracking-[0.18em] text-accent/82">Photos</p>
+                <p className="mt-3 text-4xl text-olive-50">43</p>
+              </div>
+              <div>
+                <p className="text-sm uppercase tracking-[0.18em] text-accent/82">Videos</p>
+                <p className="mt-3 text-4xl text-olive-50">3</p>
+              </div>
+              <div>
+                <p className="text-sm uppercase tracking-[0.18em] text-accent/82">Location</p>
+                <p className="mt-3 text-2xl text-olive-50">Queens + NYC</p>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
-      {/* Filter Tabs */}
-      <section className="py-8 sticky top-20 z-30 bg-olive-500 bg-opacity-95 backdrop-blur-xs border-b border-olive-50 border-opacity-10">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-wrap gap-2 justify-center">
-            {categories.map((cat) => (
+      <section className="sticky top-[104px] z-30 border-b border-white/8 bg-olive-600/85 py-4 backdrop-blur-xl">
+        <div className="site-shell">
+          <div className="flex flex-wrap gap-2">
+            {galleryCategories.map((category) => (
               <button
-                key={cat.id}
-                onClick={() => setActiveCategory(cat.id as GalleryCategory)}
-                className={`px-4 py-2 rounded transition-all ${
-                  activeCategory === cat.id
-                    ? 'bg-accent text-olive-900 font-semibold'
-                    : 'bg-olive-400 bg-opacity-30 text-olive-200 hover:bg-opacity-50 border border-olive-50 border-opacity-10'
+                key={category.id}
+                type="button"
+                onClick={() => setActiveCategory(category.id)}
+                className={`rounded-full px-4 py-2 text-sm font-medium transition-all ${
+                  activeCategory === category.id
+                    ? 'bg-accent text-olive-900'
+                    : 'border border-white/10 bg-white/[0.04] text-olive-100/78 hover:border-accent/30 hover:text-olive-50'
                 }`}
               >
-                {cat.label}
+                {category.label}
               </button>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Gallery Grid */}
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          {filteredItems.length === 0 ? (
-            <div className="text-center py-20">
-              <p className="text-olive-200 text-xl">No items found in this category.</p>
+      <section className="section-space">
+        <div className="site-shell">
+          <div className="mb-8 flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
+            <div data-reveal="fade-up">
+              <p className="eyebrow">Current selection</p>
+              <h2 className="section-title mt-4">
+                {activeCategory === 'all'
+                  ? 'All available project media'
+                  : galleryCategories.find((category) => category.id === activeCategory)?.label}
+              </h2>
             </div>
-          ) : (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {filteredItems.map((item) => (
-                <div
-                  key={item.id}
-                  className="group relative rounded-lg overflow-hidden bg-olive-600 card-hover h-64"
-                  data-reveal="fade-in"
-                >
-                  {item.type === 'image' ? (
-                    <>
-                      <img
-                        src={item.src}
-                        alt={item.alt}
-                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                      />
-                      <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-40 transition-all duration-300 flex items-end">
-                        <div className="p-6 w-full">
-                          <p className="text-olive-50 font-semibold">{item.alt}</p>
-                        </div>
-                      </div>
-                    </>
-                  ) : (
-                    <>
-                      <video
-                        src={item.src}
-                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                        controls
-                      />
-                      <div className="absolute inset-0 bg-black bg-opacity-20 group-hover:bg-opacity-40 transition-all duration-300 flex items-center justify-center">
-                        <svg className="w-16 h-16 text-accent opacity-0 group-hover:opacity-100 transition-opacity" fill="currentColor" viewBox="0 0 24 24">
-                          <path d="M8 5v14l11-7z" />
-                        </svg>
-                      </div>
-                    </>
-                  )}
+            <p className="text-sm uppercase tracking-[0.18em] text-olive-100/56" data-reveal="fade-up" data-delay="1">
+              {filteredItems.length} items
+            </p>
+          </div>
+
+          <div className="columns-1 gap-5 md:columns-2 xl:columns-3">
+            {filteredItems.map((item, index) => (
+              <article
+                key={item.id}
+                className="surface tile-hover mb-5 break-inside-avoid overflow-hidden"
+                data-reveal="fade-up"
+                data-delay={String((index % 5) + 1)}
+              >
+                {item.type === 'image' ? (
+                  <Image
+                    src={item.src}
+                    alt={item.alt}
+                    width={1200}
+                    height={1600}
+                    sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw"
+                    className="h-auto w-full"
+                  />
+                ) : (
+                  <video
+                    src={item.src}
+                    controls
+                    playsInline
+                    preload="none"
+                    className="h-auto w-full bg-olive-700"
+                  />
+                )}
+
+                <div className="px-5 py-4">
+                  <p className="text-sm uppercase tracking-[0.18em] text-accent/82">
+                    {item.category === 'videos'
+                      ? 'Video walkthrough'
+                      : galleryCategories.find((category) => category.id === item.category)?.label}
+                  </p>
+                  <p className="mt-2 text-lg text-olive-50">{item.title}</p>
                 </div>
-              ))}
-            </div>
-          )}
+              </article>
+            ))}
+          </div>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20 bg-olive-600">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center" data-reveal="fade-up">
-          <h2 className="text-4xl font-serif font-bold text-olive-50 mb-6">
-            Inspired by Our Work?
-          </h2>
-          <p className="text-xl text-olive-200 mb-8">
-            Let's create something beautiful for your space. Contact us today for a free consultation.
-          </p>
-          <a
-            href="tel:917-518-8753"
-            className="inline-block px-8 py-4 bg-accent text-olive-900 font-semibold rounded hover:bg-accent-hover transition-all hover:shadow-xl"
-          >
-            Call Now: 917-518-8753
-          </a>
+      <section className="section-rule section-space">
+        <div className="site-shell">
+          <div className="surface overflow-hidden px-6 py-10 sm:px-10 lg:px-12 lg:py-12">
+            <div className="grid gap-8 lg:grid-cols-[1fr_auto] lg:items-center">
+              <div data-reveal="fade-up">
+                <p className="eyebrow">Next step</p>
+                <h2 className="section-title mt-4">See something close to your space?</h2>
+                <p className="lead mt-6">
+                  Use the gallery as a reference point, then call {siteData.phonePrimary} or email
+                  {siteData.email} with your own room photos and scope.
+                </p>
+              </div>
+
+              <div className="flex flex-col gap-4 sm:flex-row lg:flex-col" data-reveal="fade-up" data-delay="1">
+                <a href={`tel:${siteData.phonePrimary}`} className="button-primary">
+                  Call {siteData.phonePrimary}
+                </a>
+                <a href={`mailto:${siteData.email}`} className="button-secondary">
+                  Send Email
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
     </main>

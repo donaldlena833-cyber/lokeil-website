@@ -27,7 +27,7 @@ const config: Config = {
       },
       fontFamily: {
         serif: ['Instrument Serif', 'serif'],
-        sans: ['Inter', 'sans-serif'],
+        sans: ['Manrope', 'sans-serif'],
       },
       animation: {
         'fade-up': 'fadeUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards',

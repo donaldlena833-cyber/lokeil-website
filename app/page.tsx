@@ -1,166 +1,269 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import Link from 'next/link';
-import ScrollReveal from './components/ScrollReveal';
+
+import {
+  coreServices,
+  craftsmanshipPoints,
+  featuredImages,
+  featuredWork,
+  heroStats,
+  processSteps,
+  siteData,
+  valuePoints,
+} from './siteData';
 
 export const metadata: Metadata = {
-  title: 'Home | LOKEIL inc - Interior Remodeling Queens NY',
-  description: 'Professional interior remodeling services. Creating spaces that are comfortable, memorable and inspiring.',
+  title: `Home | ${siteData.name} - Interior Remodeling Queens NY`,
+  description:
+    'Interior remodeling in Ridgewood, Queens with bathrooms, kitchens, tile work, flooring, plaster, painting, cabinetry, and finish-focused upgrades.',
 };
 
 export default function Home() {
-  const services = [
-    { name: 'Bathroom Remodeling', icon: '🚿' },
-    { name: 'Kitchen Remodeling', icon: '🍳' },
-    { name: 'Flooring', icon: '⬜' },
-    { name: 'Painting', icon: '🎨' },
-    { name: 'Tile Installation', icon: '◼️' },
-    { name: 'Cabinet Installation', icon: '🚪' },
-  ];
-
   return (
     <>
-      {/* Hero Section */}
-      <section className="relative h-screen flex items-center justify-center overflow-hidden bg-gradient-to-b from-olive-500 to-olive-600">
-        <div className="absolute inset-0 opacity-20">
-          <div className="absolute inset-0 bg-[url('data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22100%22 height=%22100%22><rect fill=%22%234A5440%22 width=%22100%22 height=%22100%22/><path d=%22M0 50 Q25 25 50 50 T100 50%22 fill=%22none%22 stroke=%22%23C8A96E%22 opacity=%220.1%22 stroke-width=%221%22/></svg>')] bg-repeat" />
-        </div>
+      <section className="relative overflow-hidden border-b border-white/8">
+        <div className="grid-lines absolute inset-0 opacity-[0.18]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(200,169,110,0.14),transparent_28%)]" />
 
-        <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-5xl md:text-7xl font-serif font-bold text-olive-50 mb-6 leading-tight" data-reveal="fade-up">
-            Creating Spaces That Inspire
-          </h1>
-          <p className="text-xl md:text-2xl text-olive-200 mb-8 max-w-2xl mx-auto" data-reveal="fade-up" data-delay="1">
-            Professional interior remodeling services for kitchens, bathrooms, and more. Serving Ridgewood, Queens and the NYC metro area.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center" data-reveal="fade-up" data-delay="2">
-            <Link
-              href="/gallery"
-              className="px-8 py-4 bg-accent text-olive-900 font-semibold rounded hover:bg-accent-hover transition-all hover:shadow-xl"
-            >
-              View Our Work
-            </Link>
-            <Link
-              href="/contact"
-              className="px-8 py-4 border-2 border-accent text-accent font-semibold rounded hover:bg-olive-600 transition-colors"
-            >
-              Get Free Estimate
-            </Link>
+        <div className="site-shell relative grid gap-12 pb-20 pt-10 lg:min-h-[calc(100svh-6rem)] lg:grid-cols-[0.96fr_1.04fr] lg:items-center lg:gap-16 lg:pb-24 lg:pt-20">
+          <div className="max-w-[38rem]">
+            <p className="eyebrow" data-reveal="fade-up">
+              {siteData.tagline}
+            </p>
+            <h1 className="display-title mt-5" data-reveal="fade-up" data-delay="1">
+              Cleaner bathrooms, kitchens, and finish work.
+            </h1>
+            <p className="lead mt-6" data-reveal="fade-up" data-delay="2">
+              {siteData.name} handles bathrooms, kitchens, flooring, plaster, painting,
+              cabinets, doors, steps, and fireplace design across Queens and the wider
+              New York City area.
+            </p>
+
+            <div className="mt-9 flex flex-col gap-4 sm:flex-row" data-reveal="fade-up" data-delay="3">
+              <Link href="/gallery" className="button-primary">
+                View Our Work
+              </Link>
+              <Link href="/contact" className="button-secondary">
+                Get Free Estimate
+              </Link>
+            </div>
+
+            <div className="mt-10 grid gap-4 sm:grid-cols-3" data-reveal="fade-up" data-delay="4">
+              {heroStats.map((item) => (
+                <div key={item.value} className="info-chip">
+                  <p className="text-sm font-semibold uppercase tracking-[0.16em] text-accent/85">
+                    {item.value}
+                  </p>
+                  <p className="mt-2 text-sm leading-6 text-olive-100/68">{item.label}</p>
+                </div>
+              ))}
+            </div>
           </div>
-        </div>
 
-        {/* Scroll indicator */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-          <svg className="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-          </svg>
-        </div>
-      </section>
-
-      {/* Services Overview */}
-      <section className="py-20 bg-olive-500">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl md:text-5xl font-serif font-bold text-center mb-4 text-olive-50" data-reveal="fade-up">
-            Our Services
-          </h2>
-          <p className="text-center text-olive-200 text-lg mb-16 max-w-2xl mx-auto" data-reveal="fade-up" data-delay="1">
-            Comprehensive interior remodeling solutions tailored to your vision and budget.
-          </p>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {services.map((service, index) => (
-              <div
-                key={service.name}
-                className="group card-hover bg-olive-400 bg-opacity-40 backdrop-blur-xs border border-olive-50 border-opacity-10 rounded-lg p-8 text-center hover:border-accent hover:border-opacity-30 transition-all"
-                data-reveal="scale-in"
-                data-delay={Math.min(index + 1, 5).toString()}
-              >
-                <div className="text-5xl mb-4">{service.icon}</div>
-                <h3 className="text-xl font-serif font-bold text-olive-50 mb-2">{service.name}</h3>
-                <p className="text-olive-200 text-sm">Expert craftsmanship and attention to detail in every project.</p>
+          <div className="grid gap-4 sm:grid-cols-[1.05fr_0.95fr] lg:gap-5" data-reveal="fade-in" data-delay="2">
+            <div className="media-frame min-h-[24rem] sm:min-h-[38rem]">
+              <Image
+                src={featuredImages.heroMain.src}
+                alt={featuredImages.heroMain.alt}
+                fill
+                priority
+                sizes="(max-width: 1024px) 100vw, 42vw"
+                className="object-cover"
+              />
+              <div className="image-veil" />
+              <div className="absolute bottom-0 left-0 right-0 p-6">
+                <span className="chip">{featuredImages.heroMain.label}</span>
               </div>
-            ))}
-          </div>
+            </div>
 
-          <div className="text-center mt-12">
-            <Link
-              href="/services"
-              className="inline-block px-8 py-3 bg-accent text-olive-900 font-semibold rounded hover:bg-accent-hover transition-colors"
-            >
-              Explore All Services
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Gallery Preview */}
-      <section className="py-20 bg-olive-600">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl md:text-5xl font-serif font-bold text-center mb-4 text-olive-50" data-reveal="fade-up">
-            Our Gallery
-          </h2>
-          <p className="text-center text-olive-200 text-lg mb-16 max-w-2xl mx-auto" data-reveal="fade-up" data-delay="1">
-            See some of our recent projects and transformations.
-          </p>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-            {[
-              { src: '/gallery/bathroom-tiles/1.jpg', alt: 'Bathroom Tiles' },
-              { src: '/gallery/bathroom-flooring/1.jpg', alt: 'Bathroom Flooring' },
-              { src: '/gallery/kitchen-cabinets/1.jpg', alt: 'Kitchen Cabinets' },
-            ].map((image, index) => (
-              <div
-                key={image.alt}
-                className="group relative h-64 rounded-lg overflow-hidden bg-olive-500 card-hover"
-                data-reveal="fade-in"
-                data-delay={Math.min(index + 1, 5).toString()}
-              >
-                <img
-                  src={image.src}
-                  alt={image.alt}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                />
-                <div className="absolute inset-0 bg-black bg-opacity-20 group-hover:bg-opacity-40 transition-all duration-300 flex items-end">
-                  <div className="p-6 w-full">
-                    <p className="text-olive-50 font-semibold">{image.alt}</p>
+            <div className="grid gap-4 lg:gap-5">
+              {[featuredImages.heroSideTop, featuredImages.heroSideBottom].map((image, index) => (
+                <div
+                  key={image.src}
+                  className="media-frame min-h-[15rem] sm:min-h-[18rem]"
+                  data-reveal="scale-in"
+                  data-delay={String(index + 3)}
+                >
+                  <Image
+                    src={image.src}
+                    alt={image.alt}
+                    fill
+                    sizes="(max-width: 1024px) 100vw, 24vw"
+                    className="object-cover"
+                  />
+                  <div className="image-veil" />
+                  <div className="absolute bottom-0 left-0 right-0 p-5">
+                    <span className="chip">{image.label}</span>
                   </div>
                 </div>
-              </div>
-            ))}
-          </div>
-
-          <div className="text-center">
-            <Link
-              href="/gallery"
-              className="inline-block px-8 py-3 bg-accent text-olive-900 font-semibold rounded hover:bg-accent-hover transition-colors"
-            >
-              View Full Gallery
-            </Link>
+              ))}
+            </div>
           </div>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20 bg-olive-500">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center" data-reveal="fade-up">
-          <h2 className="text-4xl md:text-5xl font-serif font-bold mb-6 text-olive-50">
-            Ready to Transform Your Space?
-          </h2>
-          <p className="text-xl text-olive-200 mb-8">
-            Contact LOKEIL inc today for a free consultation and estimate. Let's create something beautiful together.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="tel:917-518-8753"
-              className="px-8 py-4 bg-accent text-olive-900 font-semibold rounded hover:bg-accent-hover transition-all hover:shadow-xl inline-block"
-            >
-              Call: 917-518-8753
-            </a>
-            <a
-              href="mailto:lokeil2024@gmail.com"
-              className="px-8 py-4 border-2 border-accent text-accent font-semibold rounded hover:bg-olive-600 transition-colors inline-block"
-            >
-              Email Us
-            </a>
+      <section className="section-space">
+        <div className="site-shell grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
+          <div data-reveal="fade-up">
+            <p className="eyebrow">What we focus on</p>
+            <h2 className="section-title mt-4">
+              Interior upgrades that feel more finished, more usable, and easier to live with.
+            </h2>
+            <p className="lead mt-6">
+              We focus on the rooms and surfaces that change everyday living the most:
+              bathrooms, kitchens, tile work, cabinetry, flooring, and the finish details that
+              bring the whole space together.
+            </p>
+
+            <div className="mt-8 space-y-6">
+              {craftsmanshipPoints.map((point, index) => (
+                <div key={point.title} className="border-l border-accent/50 pl-5" data-reveal="fade-up" data-delay={String(index + 1)}>
+                  <h3 className="text-2xl text-olive-50">{point.title}</h3>
+                  <p className="mt-2 text-base leading-7 text-olive-100/72">{point.body}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="surface overflow-hidden" data-reveal="scale-in" data-delay="2">
+            <div className="grid divide-y divide-white/8">
+              {coreServices.slice(0, 6).map((service, index) => (
+                <div key={service.title} className="grid gap-3 px-6 py-6 sm:grid-cols-[auto_1fr] sm:px-8">
+                  <span className="text-sm font-semibold uppercase tracking-[0.22em] text-accent/82">
+                    {String(index + 1).padStart(2, '0')}
+                  </span>
+                  <div>
+                    <h3 className="text-2xl text-olive-50">{service.title}</h3>
+                    <p className="mt-2 text-base leading-7 text-olive-100/70">{service.summary}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <div className="border-t border-white/8 px-6 py-6 sm:px-8">
+              <Link href="/services" className="button-secondary">
+                Explore All Services
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="section-rule section-space bg-black/8">
+        <div className="site-shell">
+          <div className="max-w-3xl" data-reveal="fade-up">
+            <p className="eyebrow">Featured work</p>
+            <h2 className="section-title mt-4">
+              Bathrooms, kitchens, and finish details from recent interior projects.
+            </h2>
+            <p className="lead mt-6">
+              From tile layouts and shower walls to cabinetry and flooring, these project photos
+              show the kind of clean, modern interior work LOKEIL is hired to deliver.
+            </p>
+          </div>
+
+          <div className="mt-12 grid gap-6 lg:grid-cols-3">
+            {featuredWork.map((item, index) => (
+              <article
+                key={item.title}
+                className="tile-hover"
+                data-reveal="fade-up"
+                data-delay={String(index + 1)}
+              >
+                <div className="media-frame h-[30rem]">
+                  <Image
+                    src={item.src}
+                    alt={item.alt}
+                    fill
+                    sizes="(max-width: 1024px) 100vw, 32vw"
+                    className="object-cover"
+                  />
+                  <div className="image-veil" />
+                </div>
+                <div className="mt-5">
+                  <h3 className="text-3xl text-olive-50">{item.title}</h3>
+                  <p className="mt-3 text-base leading-7 text-olive-100/72">{item.body}</p>
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="section-rule section-space">
+        <div className="site-shell grid gap-10 lg:grid-cols-[0.92fr_1.08fr]">
+          <div data-reveal="fade-up">
+            <p className="eyebrow">How the work moves</p>
+            <h2 className="section-title mt-4">A simple process with clearer expectations.</h2>
+            <p className="lead mt-6">
+              This isn&apos;t padded with buzzwords. It stays focused on what homeowners actually
+              care about: understanding the room, choosing finishes well, executing cleanly, and
+              landing the final details.
+            </p>
+
+            <div className="mt-8 flex flex-wrap gap-3">
+              {valuePoints.map((item) => (
+                <span key={item} className="chip normal-case tracking-[0.06em] text-olive-100/82">
+                  {item}
+                </span>
+              ))}
+            </div>
+          </div>
+
+          <div className="surface p-6 sm:p-8" data-reveal="scale-in" data-delay="2">
+            <div className="space-y-8">
+              {processSteps.map((step, index) => (
+                <div
+                  key={step.step}
+                  className="grid gap-4 border-b border-white/8 pb-8 last:border-b-0 last:pb-0 sm:grid-cols-[auto_1fr]"
+                  data-reveal="slide-left"
+                  data-delay={String(index + 1)}
+                >
+                  <span className="text-4xl text-accent">{step.step}</span>
+                  <div>
+                    <h3 className="text-2xl text-olive-50">{step.title}</h3>
+                    <p className="mt-2 text-base leading-7 text-olive-100/72">{step.description}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <div className="mt-8 rounded-[22px] border border-white/10 bg-black/10 p-6">
+              <p className="text-sm uppercase tracking-[0.18em] text-accent/82">
+                Ready to talk through your space?
+              </p>
+              <p className="mt-3 text-base leading-7 text-olive-100/72">
+                Call {siteData.phonePrimary} or email {siteData.email} for a free estimate.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="section-rule section-space">
+        <div className="site-shell">
+          <div className="surface overflow-hidden px-6 py-10 sm:px-10 lg:px-12 lg:py-12">
+            <div className="grid gap-8 lg:grid-cols-[1fr_auto] lg:items-end">
+              <div data-reveal="fade-up">
+                <p className="eyebrow">Next step</p>
+                <h2 className="section-title mt-4">Let&apos;s make the room feel better, not busier.</h2>
+                <p className="lead mt-6">
+                  If you&apos;re planning a bathroom, kitchen, tile, cabinet, flooring, or finish
+                  update, the quickest way to start is still the simplest one: call or send an
+                  email and describe the project.
+                </p>
+              </div>
+
+              <div className="flex flex-col gap-4 sm:flex-row lg:flex-col" data-reveal="fade-up" data-delay="1">
+                <a href={`tel:${siteData.phonePrimary}`} className="button-primary">
+                  Call {siteData.phonePrimary}
+                </a>
+                <Link href="/contact" className="button-secondary">
+                  Visit Contact Page
+                </Link>
+              </div>
+            </div>
           </div>
         </div>
       </section>
