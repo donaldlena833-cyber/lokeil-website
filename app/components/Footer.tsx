@@ -9,7 +9,7 @@ export default function Footer() {
         <div className="grid gap-10 lg:grid-cols-[1.2fr_0.8fr_0.9fr_0.9fr]">
           <div>
             <p className="eyebrow">Interior remodeling</p>
-            <h3 className="mt-3 font-serif text-4xl text-accent">{siteData.shortName}</h3>
+            <h3 className="mt-3 font-serif text-4xl text-accent">{siteData.brandName}</h3>
             <p className="mt-4 max-w-md text-sm leading-7 text-olive-100/72">
               Bathrooms, kitchens, tile work, flooring, plaster, painting, cabinets,
               doors, steps, and fireplace design with a cleaner, modern finish language.
@@ -48,8 +48,8 @@ export default function Footer() {
             </h4>
             <ul className="mt-4 space-y-3 text-sm text-olive-100/76">
               <li>
-                <a href={`tel:${siteData.phonePrimary}`} className="hover:text-accent">
-                  {siteData.phonePrimary}
+                <a href={`tel:${siteData.phoneHref}`} className="hover:text-accent">
+                  {siteData.phoneDisplay}
                 </a>
               </li>
               <li>
@@ -74,7 +74,7 @@ export default function Footer() {
 
         <div className="mt-12 border-t border-white/10 pt-7 text-sm text-olive-100/48">
           <p>
-            &copy; {new Date().getFullYear()} {siteData.name}. Ridgewood, Queens, NY.
+            &copy; {new Date().getFullYear()} {siteData.legalName}. Ridgewood, Queens, NY.
           </p>
         </div>
       </div>

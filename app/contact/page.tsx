@@ -1,25 +1,21 @@
 import type { Metadata } from 'next';
 
 import { siteData } from '../siteData';
+import { buildPageMetadata } from '../seo';
 
-export const metadata: Metadata = {
-  title: `Contact | ${siteData.name} - Interior Remodeling Queens NY`,
+export const metadata: Metadata = buildPageMetadata({
+  title: 'Contact',
   description:
-    'Contact LOKEIL inc in Ridgewood, Queens for bathrooms, kitchens, tile work, flooring, painting, cabinetry, and other interior remodeling estimates.',
-};
+    'Contact LOKEIL Renovation in Ridgewood, Queens for bathrooms, kitchens, tile work, flooring, painting, cabinetry, and other interior remodeling estimates.',
+  path: '/contact',
+});
 
 const contactCards = [
   {
-    label: 'Primary phone',
-    value: siteData.phonePrimary,
-    href: `tel:${siteData.phonePrimary}`,
+    label: 'Phone',
+    value: siteData.phoneDisplay,
+    href: `tel:${siteData.phoneHref}`,
     note: 'Best for direct estimate calls',
-  },
-  {
-    label: 'Secondary phone',
-    value: siteData.phoneSecondary,
-    href: `tel:${siteData.phoneSecondary}`,
-    note: 'Alternative contact number',
   },
   {
     label: 'Email',
@@ -49,6 +45,27 @@ export default function Contact() {
               Reach out with the room, the rough scope, and any project photos you have. Phone is
               the fastest path, but email works well too for details and references.
             </p>
+
+            <div className="mt-8 flex flex-col gap-4 sm:flex-row">
+              <a href={`tel:${siteData.phoneHref}`} className="button-primary">
+                Call {siteData.phoneDisplay}
+              </a>
+              <a href={`mailto:${siteData.email}`} className="button-secondary">
+                Email Photos
+              </a>
+            </div>
+
+            <div className="mt-8 flex flex-wrap gap-3">
+              <span className="chip normal-case tracking-[0.06em] text-olive-100/82">
+                Ridgewood based
+              </span>
+              <span className="chip normal-case tracking-[0.06em] text-olive-100/82">
+                Queens + NYC service area
+              </span>
+              <span className="chip normal-case tracking-[0.06em] text-olive-100/82">
+                Free estimates
+              </span>
+            </div>
           </div>
 
           <div className="surface p-6 sm:p-8" data-reveal="scale-in" data-delay="1">
@@ -57,12 +74,29 @@ export default function Contact() {
             <p className="mt-4 text-base leading-7 text-olive-100/72">
               Serving {siteData.serviceArea}.
             </p>
+
+            <div className="mt-8 grid gap-3">
+              <a
+                href={siteData.instagram}
+                target="_blank"
+                rel="noreferrer"
+                className="soft-surface px-5 py-4 transition-colors hover:border-accent/30 hover:text-accent"
+              >
+                <p className="text-sm uppercase tracking-[0.18em] text-accent/82">Instagram</p>
+                <p className="mt-2 text-lg text-olive-50">{siteData.instagramHandle}</p>
+              </a>
+              <div className="soft-surface px-5 py-4">
+                <p className="text-sm uppercase tracking-[0.18em] text-accent/82">Fastest window</p>
+                <p className="mt-2 text-lg text-olive-50">{siteData.hours[0].label}</p>
+                <p className="mt-1 text-sm text-olive-100/72">{siteData.hours[0].value}</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
       <section className="section-space">
-        <div className="site-shell grid gap-6 lg:grid-cols-2 xl:grid-cols-4">
+        <div className="site-shell grid gap-6 md:grid-cols-2 xl:grid-cols-3">
           {contactCards.map((card, index) => (
             <a
               key={card.label}
@@ -132,7 +166,7 @@ export default function Contact() {
               allowFullScreen
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              title="LOKEIL inc service area map"
+              title="LOKEIL Renovation service area map"
             />
           </div>
         </div>
@@ -146,14 +180,14 @@ export default function Contact() {
                 <p className="eyebrow">Free estimate</p>
                 <h2 className="section-title mt-4">Call now or send the project by email.</h2>
                 <p className="lead mt-6">
-                  {siteData.phonePrimary} is the fastest path. If email is easier, send photos,
+                  {siteData.phoneDisplay} is the fastest path. If email is easier, send photos,
                   room dimensions, or a short description to {siteData.email}.
                 </p>
               </div>
 
               <div className="flex flex-col gap-4 sm:flex-row lg:flex-col" data-reveal="fade-up" data-delay="1">
-                <a href={`tel:${siteData.phonePrimary}`} className="button-primary">
-                  Call {siteData.phonePrimary}
+                <a href={`tel:${siteData.phoneHref}`} className="button-primary">
+                  Call {siteData.phoneDisplay}
                 </a>
                 <a href={`mailto:${siteData.email}`} className="button-secondary">
                   Email Us

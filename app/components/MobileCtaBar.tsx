@@ -5,7 +5,7 @@ export default function MobileCtaBar() {
     <div className="fixed bottom-0 left-0 right-0 z-40 border-t border-white/10 bg-olive-700/85 p-3 backdrop-blur-xl md:hidden">
       <div className="mx-auto flex max-w-[34rem] gap-3">
       <a
-        href={`tel:${siteData.phonePrimary}`}
+        href={`tel:${siteData.phoneHref}`}
         className="button-primary flex-1 px-4 py-3 text-sm"
       >
         Call Now

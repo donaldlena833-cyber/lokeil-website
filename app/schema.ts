@@ -1,38 +1,61 @@
 import { siteData } from './siteData';
 
-export const localBusinessSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'HomeAndConstructionBusiness',
-  name: siteData.name,
-  description:
-    'Interior remodeling services in Ridgewood, Queens focused on bathrooms, kitchens, tile work, flooring, plaster, painting, cabinetry, doors, steps, and fireplace design.',
-  telephone: siteData.phonePrimary,
-  email: siteData.email,
-  address: {
-    '@type': 'PostalAddress',
-    addressLocality: 'Ridgewood',
-    addressRegion: 'NY',
-    postalCode: '11385',
-    addressCountry: 'US',
-    streetAddress: siteData.location,
+export const structuredData = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: siteData.brandName,
+    url: siteData.siteUrl,
   },
-  sameAs: [
-    siteData.instagram,
-  ],
-  priceRange: '$$',
-  areaServed: ['Queens', 'Brooklyn', 'Manhattan', 'Long Island', 'Westchester County'],
-  openingHoursSpecification: [
-    {
-      '@type': 'OpeningHoursSpecification',
-      dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
-      opens: '10:00',
-      closes: '18:00',
+  {
+    '@context': 'https://schema.org',
+    '@type': 'HomeAndConstructionBusiness',
+    name: siteData.brandName,
+    legalName: siteData.legalName,
+    description: siteData.description,
+    url: siteData.siteUrl,
+    telephone: siteData.phoneDisplay,
+    email: siteData.email,
+    image: `${siteData.siteUrl}${siteData.ogImage}`,
+    priceRange: '$$',
+    sameAs: [siteData.instagram],
+    address: {
+      '@type': 'PostalAddress',
+      addressLocality: 'Ridgewood',
+      addressRegion: 'NY',
+      postalCode: '11385',
+      addressCountry: 'US',
+      streetAddress: siteData.location,
     },
-    {
-      '@type': 'OpeningHoursSpecification',
-      dayOfWeek: 'Saturday',
-      opens: '12:00',
-      closes: '17:00',
-    },
-  ],
-};
+    contactPoint: [
+      {
+        '@type': 'ContactPoint',
+        telephone: siteData.phoneDisplay,
+        contactType: 'customer service',
+        areaServed: 'US-NY',
+        availableLanguage: ['English'],
+      },
+    ],
+    areaServed: [
+      'Queens',
+      'Brooklyn',
+      'Manhattan',
+      'Long Island',
+      'Westchester County',
+    ],
+    openingHoursSpecification: [
+      {
+        '@type': 'OpeningHoursSpecification',
+        dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+        opens: '10:00',
+        closes: '18:00',
+      },
+      {
+        '@type': 'OpeningHoursSpecification',
+        dayOfWeek: 'Saturday',
+        opens: '12:00',
+        closes: '17:00',
+      },
+    ],
+  },
+];

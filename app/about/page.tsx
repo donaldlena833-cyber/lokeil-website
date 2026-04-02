@@ -8,12 +8,14 @@ import {
   siteData,
   valuePoints,
 } from '../siteData';
+import { buildPageMetadata } from '../seo';
 
-export const metadata: Metadata = {
-  title: `About | ${siteData.name} - Interior Remodeling Queens NY`,
+export const metadata: Metadata = buildPageMetadata({
+  title: 'About',
   description:
-    'Learn about LOKEIL inc, owner Lorel Beqari, and the interior remodeling approach behind the company\'s bathrooms, kitchens, tile, and finish work.',
-};
+    'Learn about LOKEIL Renovation, owner Lorel Beqari, and the interior remodeling approach behind the company\'s bathrooms, kitchens, tile, and finish work.',
+  path: '/about',
+});
 
 const principles = [
   {
@@ -41,7 +43,7 @@ export default function About() {
               A quieter, cleaner approach to interior remodeling in Queens.
             </h1>
             <p className="lead mt-6">
-              {siteData.name} is led by {siteData.owner} and built around practical interior
+              {siteData.brandName} is led by {siteData.owner} and built around practical interior
               renovation work: bathrooms, kitchens, tile installation, flooring, cabinets,
               plaster, painting, doors, steps, and fireplace design.
             </p>
@@ -53,7 +55,8 @@ export default function About() {
               alt={featuredImages.aboutFeature.alt}
               fill
               priority
-              sizes="(max-width: 1024px) 100vw, 50vw"
+              quality={68}
+              sizes="(max-width: 1023px) 100vw, 42vw"
               className="object-cover"
             />
             <div className="image-veil" />
@@ -68,7 +71,7 @@ export default function About() {
             <h2 className="section-title mt-4">Built around rooms, materials, and the details that finish well.</h2>
             <div className="mt-6 space-y-5 text-base leading-8 text-olive-100/76">
               <p>
-                {siteData.name} works on interior spaces that need a stronger finish and a better
+                {siteData.brandName} works on interior spaces that need a stronger finish and a better
                 sense of order, whether that means a new shower surround, updated flooring,
                 cleaner cabinetry, or a more complete kitchen layout.
               </p>
@@ -89,7 +92,7 @@ export default function About() {
             </p>
             <h3 className="mt-3 text-4xl text-olive-50">{siteData.owner}</h3>
             <p className="mt-5 text-base leading-8 text-olive-100/74">
-              Lorel Beqari is the owner behind {siteData.name}. He brings the company around
+              Lorel Beqari is the owner behind {siteData.brandName}. He brings the company around
               interior upgrades that benefit from patience and detail: bathrooms, kitchens, tile,
               floors, cabinetry, trim, and finish work that should feel composed once the room is complete.
             </p>
@@ -164,8 +167,8 @@ export default function About() {
               </div>
 
               <div className="flex flex-col gap-4 sm:flex-row lg:flex-col" data-reveal="fade-up" data-delay="1">
-                <a href={`tel:${siteData.phonePrimary}`} className="button-primary">
-                  Call {siteData.phonePrimary}
+                <a href={`tel:${siteData.phoneHref}`} className="button-primary">
+                  Call {siteData.phoneDisplay}
                 </a>
                 <Link href="/contact" className="button-secondary">
                   Open Contact Page

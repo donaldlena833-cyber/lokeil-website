@@ -12,12 +12,14 @@ import {
   siteData,
   valuePoints,
 } from './siteData';
+import { buildPageMetadata } from './seo';
 
-export const metadata: Metadata = {
-  title: `Home | ${siteData.name} - Interior Remodeling Queens NY`,
+export const metadata: Metadata = buildPageMetadata({
+  title: 'Interior Remodeling in Ridgewood, Queens',
   description:
     'Interior remodeling in Ridgewood, Queens with bathrooms, kitchens, tile work, flooring, plaster, painting, cabinetry, and finish-focused upgrades.',
-};
+  path: '/',
+});
 
 export default function Home() {
   return (
@@ -35,7 +37,7 @@ export default function Home() {
               Cleaner bathrooms, kitchens, and finish work.
             </h1>
             <p className="lead mt-6" data-reveal="fade-up" data-delay="2">
-              {siteData.name} handles bathrooms, kitchens, flooring, plaster, painting,
+              {siteData.brandName} handles bathrooms, kitchens, flooring, plaster, painting,
               cabinets, doors, steps, and fireplace design across Queens and the wider
               New York City area.
             </p>
@@ -68,7 +70,8 @@ export default function Home() {
                 alt={featuredImages.heroMain.alt}
                 fill
                 priority
-                sizes="(max-width: 1024px) 100vw, 42vw"
+                quality={68}
+                sizes="(max-width: 639px) 100vw, (max-width: 1023px) 90vw, 28vw"
                 className="object-cover"
               />
               <div className="image-veil" />
@@ -89,7 +92,8 @@ export default function Home() {
                     src={image.src}
                     alt={image.alt}
                     fill
-                    sizes="(max-width: 1024px) 100vw, 24vw"
+                    quality={68}
+                    sizes="(max-width: 639px) 100vw, (max-width: 1023px) 90vw, 18vw"
                     className="object-cover"
                   />
                   <div className="image-veil" />
@@ -176,7 +180,8 @@ export default function Home() {
                     src={item.src}
                     alt={item.alt}
                     fill
-                    sizes="(max-width: 1024px) 100vw, 32vw"
+                    quality={68}
+                    sizes="(max-width: 639px) 100vw, (max-width: 1279px) 50vw, 29vw"
                     className="object-cover"
                   />
                   <div className="image-veil" />
@@ -234,7 +239,7 @@ export default function Home() {
                 Ready to talk through your space?
               </p>
               <p className="mt-3 text-base leading-7 text-olive-100/72">
-                Call {siteData.phonePrimary} or email {siteData.email} for a free estimate.
+                Call {siteData.phoneDisplay} or email {siteData.email} for a free estimate.
               </p>
             </div>
           </div>
@@ -256,8 +261,8 @@ export default function Home() {
               </div>
 
               <div className="flex flex-col gap-4 sm:flex-row lg:flex-col" data-reveal="fade-up" data-delay="1">
-                <a href={`tel:${siteData.phonePrimary}`} className="button-primary">
-                  Call {siteData.phonePrimary}
+                <a href={`tel:${siteData.phoneHref}`} className="button-primary">
+                  Call {siteData.phoneDisplay}
                 </a>
                 <Link href="/contact" className="button-secondary">
                   Visit Contact Page

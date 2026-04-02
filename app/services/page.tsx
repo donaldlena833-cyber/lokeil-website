@@ -8,12 +8,14 @@ import {
   processSteps,
   siteData,
 } from '../siteData';
+import { buildPageMetadata } from '../seo';
 
-export const metadata: Metadata = {
-  title: `Services | ${siteData.name} - Interior Remodeling Queens NY`,
+export const metadata: Metadata = buildPageMetadata({
+  title: 'Services',
   description:
-    'Explore the interior remodeling services offered by LOKEIL inc, including bathrooms, kitchens, tile installation, flooring, plaster, painting, cabinets, doors, steps, and fireplace design.',
-};
+    'Explore the interior remodeling services offered by LOKEIL Renovation, including bathrooms, kitchens, tile installation, flooring, plaster, painting, cabinets, doors, steps, and fireplace design.',
+  path: '/services',
+});
 
 export default function Services() {
   return (
@@ -37,7 +39,8 @@ export default function Services() {
               alt={featuredImages.galleryFeature.alt}
               fill
               priority
-              sizes="(max-width: 1024px) 100vw, 52vw"
+              quality={68}
+              sizes="(max-width: 1023px) 100vw, 44vw"
               className="object-cover"
             />
             <div className="image-veil" />
@@ -121,8 +124,8 @@ export default function Services() {
               </div>
 
               <div className="flex flex-col gap-4 sm:flex-row lg:flex-col" data-reveal="fade-up" data-delay="1">
-                <a href={`tel:${siteData.phonePrimary}`} className="button-primary">
-                  Call {siteData.phonePrimary}
+                <a href={`tel:${siteData.phoneHref}`} className="button-primary">
+                  Call {siteData.phoneDisplay}
                 </a>
                 <Link href="/contact" className="button-secondary">
                   Contact LOKEIL

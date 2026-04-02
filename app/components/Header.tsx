@@ -53,8 +53,8 @@ export default function Header() {
           </ul>
 
           <div className="hidden items-center gap-3 lg:flex">
-            <a href={`tel:${siteData.phonePrimary}`} className="button-secondary px-5 py-3">
-              {siteData.phonePrimary}
+            <a href={`tel:${siteData.phoneHref}`} className="button-secondary px-5 py-3">
+              {siteData.phoneDisplay}
             </a>
             <Link href="/contact" className="button-primary px-5 py-3">
               Free Estimate
@@ -105,8 +105,8 @@ export default function Header() {
             </ul>
 
             <div className="mt-5 grid gap-3 sm:grid-cols-2">
-              <a href={`tel:${siteData.phonePrimary}`} className="button-primary">
-                Call {siteData.phonePrimary}
+              <a href={`tel:${siteData.phoneHref}`} className="button-primary">
+                Call {siteData.phoneDisplay}
               </a>
               <a href={`mailto:${siteData.email}`} className="button-secondary">
                 Email Us

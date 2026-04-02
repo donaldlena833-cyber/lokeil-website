@@ -7,6 +7,20 @@ export default function ScrollObserver() {
   const pathname = usePathname();
 
   useEffect(() => {
+    const root = document.documentElement;
+    const revealElements = Array.from(
+      document.querySelectorAll<HTMLElement>('[data-reveal]')
+    );
+
+    revealElements.forEach((element) => {
+      const rect = element.getBoundingClientRect();
+      if (rect.top <= window.innerHeight * 0.92) {
+        element.classList.add('visible');
+      }
+    });
+
+    root.classList.add('reveal-ready');
+
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -24,8 +38,8 @@ export default function ScrollObserver() {
     );
 
     const observeRevealElements = () => {
-      const revealElements = document.querySelectorAll('[data-reveal]:not(.visible)');
-      revealElements.forEach((element) => observer.observe(element));
+      const pendingElements = document.querySelectorAll('[data-reveal]:not(.visible)');
+      pendingElements.forEach((element) => observer.observe(element));
     };
 
     observeRevealElements();
