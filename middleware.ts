@@ -1,7 +1,7 @@
 import type { NextRequest } from 'next/server';
 import { NextResponse } from 'next/server';
 
-const apexDomain = 'lokeilrenovation.com';
+const apexDomain = 'lokeilremodeling.com';
 const wwwDomain = `www.${apexDomain}`;
 
 export function middleware(request: NextRequest) {

@@ -4,7 +4,7 @@ export const siteData = {
   shortName: 'LOKEIL',
   owner: 'Lorel Beqari',
   descriptor: 'Interior Remodeling',
-  siteUrl: 'https://lokeilrenovation.com',
+  siteUrl: 'https://lokeilremodeling.com',
   tagline: 'Ridgewood, Queens based interior remodeling',
   description:
     'LOKEIL Renovation handles bathrooms, kitchens, tile, flooring, plaster, painting, cabinets, doors, steps, and fireplace upgrades for interior renovation projects across Queens and the wider New York City area.',

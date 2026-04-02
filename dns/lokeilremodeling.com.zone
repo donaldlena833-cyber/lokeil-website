@@ -1,0 +1,6 @@
+$ORIGIN lokeilremodeling.com.
+$TTL 300
+
+; Vercel-required records for the LOKEIL website
+@       IN  A       76.76.21.21
+www     IN  A       76.76.21.21
