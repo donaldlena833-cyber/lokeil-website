@@ -103,7 +103,7 @@ export default function RootLayout({
         />
         <ScrollObserver />
         <Header />
-        <main className="min-h-screen overflow-x-hidden">{children}</main>
+        <main className="min-h-screen overflow-x-hidden pb-24 md:pb-0">{children}</main>
         <MobileCtaBar />
         <Footer />
       </body>

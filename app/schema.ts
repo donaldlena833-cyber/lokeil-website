@@ -14,7 +14,7 @@ export const structuredData = [
     legalName: siteData.legalName,
     description: siteData.description,
     url: siteData.siteUrl,
-    telephone: siteData.phoneDisplay,
+    telephone: siteData.phoneHref,
     email: siteData.email,
     image: `${siteData.siteUrl}${siteData.ogImage}`,
     priceRange: '$$',
@@ -30,7 +30,7 @@ export const structuredData = [
     contactPoint: [
       {
         '@type': 'ContactPoint',
-        telephone: siteData.phoneDisplay,
+        telephone: siteData.phoneHref,
         contactType: 'customer service',
         areaServed: 'US-NY',
         availableLanguage: ['English'],

@@ -103,10 +103,10 @@ Gallery Page (app/gallery/page.tsx):
 Contact Page (app/contact/page.tsx):
 - Primary phone: 917-518-8753
 - Secondary phone: 917-518-3866
-- Email: lokeil2024@gmail.com
+- Email: info@lokeilremodeling.com
 - Business hours (Mon-Fri 10am-6pm, Sat 12pm-5pm)
 - Google Maps embed (Ridgewood, Queens)
-- Instagram link: @lokeil.inc
+- Instagram link: @lokeil.remodeling
 - Contact info cards
 
 Components:
@@ -160,8 +160,8 @@ Owner: Lorel Beqari
 Location: Ridgewood, Queens, NY 11385
 Phone 1: 917-518-8753
 Phone 2: 917-518-3866
-Email: lokeil2024@gmail.com
-Instagram: @lokeil.inc
+Email: info@lokeilremodeling.com
+Instagram: @lokeil.remodeling
 Hours: Mon-Fri 10am-6pm, Sat 12pm-5pm
 Tagline: "Creating spaces that are comfortable, memorable and inspiring."
 

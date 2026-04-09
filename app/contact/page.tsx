@@ -79,8 +79,9 @@ export default function Contact() {
               <a
                 href={siteData.instagram}
                 target="_blank"
-                rel="noreferrer"
+                rel="noopener noreferrer"
                 className="soft-surface px-5 py-4 transition-colors hover:border-accent/30 hover:text-accent"
+                aria-label={`Open ${siteData.instagramHandle} on Instagram in a new tab`}
               >
                 <p className="text-sm uppercase tracking-[0.18em] text-accent/82">Instagram</p>
                 <p className="mt-2 text-lg text-olive-50">{siteData.instagramHandle}</p>
@@ -98,14 +99,14 @@ export default function Contact() {
       <section className="section-space">
         <div className="site-shell grid gap-6 md:grid-cols-2 xl:grid-cols-3">
           {contactCards.map((card, index) => (
-            <a
-              key={card.label}
-              href={card.href}
-              target={card.href.startsWith('http') ? '_blank' : undefined}
-              rel={card.href.startsWith('http') ? 'noreferrer' : undefined}
-              className="surface tile-hover px-6 py-7"
-              data-reveal="fade-up"
-              data-delay={String(index + 1)}
+              <a
+                key={card.label}
+                href={card.href}
+                target={card.href.startsWith('http') ? '_blank' : undefined}
+                rel={card.href.startsWith('http') ? 'noopener noreferrer' : undefined}
+                className="surface tile-hover px-6 py-7"
+                data-reveal="fade-up"
+                data-delay={String(index + 1)}
             >
               <p className="text-sm font-semibold uppercase tracking-[0.18em] text-accent/82">
                 {card.label}

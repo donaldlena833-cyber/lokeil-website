@@ -109,8 +109,8 @@ npm run build
 **Owner:** Lorel Beqari  
 **Location:** Ridgewood, Queens, NY 11385  
 **Phone:** 917-518-8753 / 917-518-3866  
-**Email:** lokeil2024@gmail.com  
-**Instagram:** @lokeil.inc  
+**Email:** info@lokeilremodeling.com  
+**Instagram:** @lokeil.remodeling  
 **Hours:** Mon-Fri 10am-6pm, Sat 12pm-5pm  
 
 ## Services Offered (10)

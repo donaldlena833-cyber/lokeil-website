@@ -8,8 +8,8 @@ A modern, professional website for LOKEIL inc, an interior remodeling company ba
 - **Owner**: Lorel Beqari
 - **Location**: Ridgewood, Queens, NY 11385
 - **Phone**: 917-518-8753 / 917-518-3866
-- **Email**: lokeil2024@gmail.com
-- **Instagram**: @lokeil.inc
+- **Email**: info@lokeilremodeling.com
+- **Instagram**: @lokeil.remodeling
 
 ## Technology Stack
 
@@ -167,10 +167,10 @@ All animations use CSS-only transitions with IntersectionObserver:
 
 - **Phone 1**: 917-518-8753
 - **Phone 2**: 917-518-3866
-- **Email**: lokeil2024@gmail.com
+- **Email**: info@lokeilremodeling.com
 - **Address**: Ridgewood, Queens, NY 11385
 - **Hours**: Mon-Fri 10am-6pm, Sat 12pm-5pm
-- **Instagram**: @lokeil.inc
+- **Instagram**: @lokeil.remodeling
 
 ## Deployment
 

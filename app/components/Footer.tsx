@@ -4,7 +4,7 @@ import { coreServices, navItems, siteData } from '../siteData';
 
 export default function Footer() {
   return (
-    <footer className="section-rule bg-olive-700/70 py-14">
+    <footer className="section-rule bg-olive-700/70 pt-14 pb-28 md:pb-14">
       <div className="site-shell">
         <div className="grid gap-10 lg:grid-cols-[1.2fr_0.8fr_0.9fr_0.9fr]">
           <div>
@@ -66,6 +66,7 @@ export default function Footer() {
               target="_blank"
               rel="noopener noreferrer"
               className="button-secondary mt-5 px-5 py-3"
+              aria-label={`Open ${siteData.instagramHandle} on Instagram in a new tab`}
             >
               Follow {siteData.instagramHandle}
             </a>

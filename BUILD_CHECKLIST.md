@@ -66,8 +66,8 @@
 - [x] Owner: Lorel Beqari
 - [x] Location: Ridgewood, Queens, NY 11385
 - [x] Phone: 917-518-8753 / 917-518-3866
-- [x] Email: lokeil2024@gmail.com
-- [x] Instagram: @lokeil.inc
+- [x] Email: info@lokeilremodeling.com
+- [x] Instagram: @lokeil.remodeling
 - [x] Hours: Mon-Fri 10am-6pm, Sat 12pm-5pm
 
 ## Build Instructions

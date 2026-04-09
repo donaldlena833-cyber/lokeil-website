@@ -10,9 +10,9 @@ export const siteData = {
     'LOKEIL Renovation handles bathrooms, kitchens, tile, flooring, plaster, painting, cabinets, doors, steps, and fireplace upgrades for interior renovation projects across Queens and the wider New York City area.',
   phoneDisplay: '(332)999-3846',
   phoneHref: '+13329993846',
-  email: 'lokeil2024@gmail.com',
-  instagram: 'https://www.instagram.com/lokeil.renovation/',
-  instagramHandle: '@lokeil.renovation',
+  email: 'info@lokeilremodeling.com',
+  instagram: 'https://www.instagram.com/lokeil.remodeling/',
+  instagramHandle: '@lokeil.remodeling',
   location: 'Ridgewood, Queens, NY 11385',
   serviceArea:
     'Queens, Brooklyn, Manhattan, parts of Long Island, and Westchester County',

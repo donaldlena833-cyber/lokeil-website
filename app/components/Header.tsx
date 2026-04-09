@@ -62,9 +62,11 @@ export default function Header() {
           </div>
 
           <button
+            type="button"
             className="relative flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/[0.03] lg:hidden"
             onClick={() => setMobileMenuOpen((open) => !open)}
-            aria-label="Toggle menu"
+            aria-controls="mobile-navigation"
+            aria-label={mobileMenuOpen ? 'Close navigation menu' : 'Open navigation menu'}
             aria-expanded={mobileMenuOpen}
           >
             <span
@@ -86,7 +88,7 @@ export default function Header() {
         </div>
 
         {mobileMenuOpen ? (
-          <div className="surface mt-3 rounded-[28px] px-5 py-5 lg:hidden">
+          <div id="mobile-navigation" className="surface mt-3 rounded-[28px] px-5 py-5 lg:hidden">
             <ul className="space-y-1">
               {navItems.map((item) => (
                 <li key={item.href}>

@@ -11,6 +11,19 @@ import {
   siteData,
 } from '../siteData';
 
+const categoryCounts = galleryCategories.reduce<Record<GalleryCategory, number>>(
+  (counts, category) => {
+    if (category.id === 'all') {
+      counts.all = photoCount;
+      return counts;
+    }
+
+    counts[category.id] = galleryItems.filter((item) => item.category === category.id).length;
+    return counts;
+  },
+  { all: photoCount } as Record<GalleryCategory, number>,
+);
+
 export default function GalleryClient() {
   const [activeCategory, setActiveCategory] = useState<GalleryCategory>('all');
 
@@ -25,23 +38,19 @@ export default function GalleryClient() {
         <div className="site-shell">
           <div className="-mx-1 flex gap-2 overflow-x-auto px-1 pb-1">
             {galleryCategories.map((category) => {
-              const count =
-                category.id === 'all'
-                  ? photoCount
-                  : galleryItems.filter((item) => item.category === category.id).length;
-
               return (
                 <button
                   key={category.id}
                   type="button"
                   onClick={() => setActiveCategory(category.id)}
+                  aria-pressed={activeCategory === category.id}
                   className={`shrink-0 rounded-full px-4 py-2 text-sm font-medium transition-all ${
                     activeCategory === category.id
                       ? 'bg-accent text-olive-900'
                       : 'border border-white/10 bg-white/[0.04] text-olive-100/78 hover:border-accent/30 hover:text-olive-50'
                   }`}
                 >
-                  {category.label} <span className="text-current/70">{count}</span>
+                  {category.label} <span className="text-current/70">{categoryCounts[category.id]}</span>
                 </button>
               );
             })}
