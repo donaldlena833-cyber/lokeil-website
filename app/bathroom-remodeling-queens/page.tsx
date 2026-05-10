@@ -37,9 +37,69 @@ const planningNotes = [
   },
 ] as const;
 
+const faqs = [
+  {
+    q: 'What bathroom remodeling work does LOKEIL handle in Queens?',
+    a:
+      'LOKEIL handles bathroom tile work, shower surrounds, flooring, plaster, painting, cabinetry details, doors, trim, and finish work for Queens interior remodels.',
+  },
+  {
+    q: 'Can LOKEIL work from project photos and a simple scope?',
+    a:
+      'Yes. The fastest estimate conversation starts with room photos, the neighborhood, and a clear list of the bathroom changes the client wants to make.',
+  },
+  {
+    q: 'Does LOKEIL only do bathrooms?',
+    a:
+      'No. Bathrooms are a strong service fit, but LOKEIL also handles kitchens, flooring, tile, plaster, painting, cabinets, doors, steps, and fireplace upgrades.',
+  },
+] as const;
+
+const serviceJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: 'Bathroom Remodeling Queens',
+  serviceType: 'Bathroom remodeling',
+  provider: {
+    '@type': 'HomeAndConstructionBusiness',
+    name: siteData.brandName,
+    url: siteData.siteUrl,
+    telephone: siteData.phoneHref,
+  },
+  areaServed: [
+    { '@type': 'AdministrativeArea', name: 'Queens, NY' },
+    { '@type': 'City', name: 'New York, NY' },
+  ],
+  url: `${siteData.siteUrl}/bathroom-remodeling-queens`,
+  description:
+    'Bathroom remodeling in Queens with tile work, shower surrounds, flooring, plaster, painting, cabinetry details, and finish-focused interior upgrades.',
+};
+
+const faqJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqs.map((faq) => ({
+    '@type': 'Question',
+    name: faq.q,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: faq.a,
+    },
+  })),
+};
+
 export default function BathroomRemodelingQueens() {
   return (
-    <main>
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
+      <main>
       <section className="section-space border-b border-white/8">
         <div className="site-shell grid gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:items-end">
           <div data-reveal="fade-up">
@@ -122,6 +182,27 @@ export default function BathroomRemodelingQueens() {
       </section>
 
       <section className="section-rule section-space">
+        <div className="site-shell grid gap-10 lg:grid-cols-[0.85fr_1.15fr]">
+          <div data-reveal="fade-up">
+            <p className="eyebrow">Bathroom remodeling FAQ</p>
+            <h2 className="section-title mt-4">Quick answers before starting the estimate.</h2>
+          </div>
+
+          <div className="surface px-6 py-6 sm:px-8">
+            {faqs.map((faq) => (
+              <details key={faq.q} className="group border-b border-white/8 py-5 first:pt-0 last:border-b-0 last:pb-0">
+                <summary className="flex cursor-pointer list-none items-center justify-between gap-5 text-left text-xl text-olive-50">
+                  <span>{faq.q}</span>
+                  <span className="text-accent transition-transform group-open:rotate-45">+</span>
+                </summary>
+                <p className="pt-4 text-base leading-7 text-olive-100/72">{faq.a}</p>
+              </details>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="section-rule section-space">
         <div className="site-shell">
           <div className="surface overflow-hidden px-6 py-10 sm:px-10 lg:px-12 lg:py-12">
             <div className="grid gap-8 lg:grid-cols-[1fr_auto] lg:items-end">
@@ -145,6 +226,7 @@ export default function BathroomRemodelingQueens() {
           </div>
         </div>
       </section>
-    </main>
+      </main>
+    </>
   );
 }
