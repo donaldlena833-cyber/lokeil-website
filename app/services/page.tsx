@@ -31,6 +31,11 @@ export default function Services() {
               From bathrooms and kitchens to tile work, flooring, plaster, painting, cabinets,
               and finish details, these are the services most often requested for interior projects.
             </p>
+            <div className="mt-8">
+              <Link href="/bathroom-remodeling-queens" className="button-secondary">
+                Bathroom Remodeling Queens
+              </Link>
+            </div>
           </div>
 
           <div className="media-frame min-h-[23rem] sm:min-h-[34rem]" data-reveal="fade-in" data-delay="1">
