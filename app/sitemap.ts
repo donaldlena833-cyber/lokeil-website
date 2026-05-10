@@ -1,5 +1,6 @@
 import type { MetadataRoute } from 'next';
 
+import { blogPosts } from './blog/blogData';
 import { siteData } from './siteData';
 
 const routes = [
@@ -7,6 +8,12 @@ const routes = [
   { path: '/about', priority: 0.8, changeFrequency: 'monthly' as const },
   { path: '/services', priority: 0.9, changeFrequency: 'monthly' as const },
   { path: '/bathroom-remodeling-queens', priority: 0.9, changeFrequency: 'monthly' as const },
+  { path: '/blog', priority: 0.8, changeFrequency: 'weekly' as const },
+  ...blogPosts.map((post) => ({
+    path: `/blog/${post.slug}`,
+    priority: 0.72,
+    changeFrequency: 'monthly' as const,
+  })),
   { path: '/gallery', priority: 0.8, changeFrequency: 'weekly' as const },
   { path: '/contact', priority: 0.8, changeFrequency: 'monthly' as const },
 ];
