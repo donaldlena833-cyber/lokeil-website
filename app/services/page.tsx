@@ -38,6 +38,9 @@ export default function Services() {
               <Link href="/kitchen-remodeling-queens" className="button-secondary">
                 Kitchen Remodeling Queens
               </Link>
+              <Link href="/tile-installation-queens" className="button-secondary">
+                Tile Installation Queens
+              </Link>
               <Link href="/blog" className="button-secondary">
                 Remodeling Guides
               </Link>
