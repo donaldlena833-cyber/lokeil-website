@@ -225,6 +225,23 @@ export default async function BlogPostPage({ params }: BlogPageProps) {
                   Get Free Estimate
                 </Link>
               </div>
+
+              {post.relatedServices ? (
+                <div className="mt-8 border-t border-white/10 pt-6">
+                  <p className="eyebrow">Related services</p>
+                  <div className="mt-4 grid gap-3">
+                    {post.relatedServices.map((service) => (
+                      <Link
+                        key={service.href}
+                        href={service.href}
+                        className="text-sm leading-6 text-accent hover:text-accent-hover"
+                      >
+                        {service.label}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              ) : null}
             </aside>
           </div>
         </section>

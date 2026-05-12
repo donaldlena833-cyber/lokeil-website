@@ -27,6 +27,10 @@ export type BlogPost = {
     label: string;
     href: string;
   }>;
+  relatedServices?: Array<{
+    label: string;
+    href: string;
+  }>;
 };
 
 export const blogPosts: BlogPost[] = [
@@ -117,6 +121,10 @@ export const blogPosts: BlogPost[] = [
           'Yes. Niche size, height, waterproofing, and tile alignment should be planned before installation so the finished shower looks intentional and works for daily storage.',
       },
     ],
+    relatedServices: [
+      { label: 'Bathroom Remodeling Queens', href: '/bathroom-remodeling-queens' },
+      { label: 'Tile Installation Queens', href: '/tile-installation-queens' },
+    ],
   },
   {
     slug: 'bathroom-remodeling-cost-queens-ny',
@@ -203,6 +211,10 @@ export const blogPosts: BlogPost[] = [
         href: 'https://www.nyc.gov/site/buildings/property-or-business-owner/renovating-kitchens-bathrooms.page',
       },
     ],
+    relatedServices: [
+      { label: 'Bathroom Remodeling Queens', href: '/bathroom-remodeling-queens' },
+      { label: 'Tile Installation Queens', href: '/tile-installation-queens' },
+    ],
   },
   {
     slug: 'small-bathroom-remodel-ideas-queens-apartments',
@@ -276,6 +288,10 @@ export const blogPosts: BlogPost[] = [
         answer:
           'It depends on how the home is used. A shower can improve daily access, but a tub may still matter for resale, kids, or personal preference. The decision should be practical, not just trend-driven.',
       },
+    ],
+    relatedServices: [
+      { label: 'Bathroom Remodeling Queens', href: '/bathroom-remodeling-queens' },
+      { label: 'Tile Installation Queens', href: '/tile-installation-queens' },
     ],
   },
   {
@@ -351,6 +367,10 @@ export const blogPosts: BlogPost[] = [
           'Usually no. Cabinets and counters set the main kitchen structure, then backsplash tile and paint can be selected to support that direction.',
       },
     ],
+    relatedServices: [
+      { label: 'Kitchen Remodeling Queens', href: '/kitchen-remodeling-queens' },
+      { label: 'Tile Installation Queens', href: '/tile-installation-queens' },
+    ],
   },
   {
     slug: 'shower-tile-installation-queens-guide',
@@ -423,6 +443,10 @@ export const blogPosts: BlogPost[] = [
         answer:
           'Yes. Bathroom shower tile, tub surrounds, niches, floors, and finish transitions are part of LOKEIL Renovation’s remodeling work.',
       },
+    ],
+    relatedServices: [
+      { label: 'Tile Installation Queens', href: '/tile-installation-queens' },
+      { label: 'Bathroom Remodeling Queens', href: '/bathroom-remodeling-queens' },
     ],
   },
   {
