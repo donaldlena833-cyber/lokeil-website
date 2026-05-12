@@ -138,7 +138,15 @@ export default function Home() {
                     {String(index + 1).padStart(2, '0')}
                   </span>
                   <div>
-                    <h3 className="text-2xl text-olive-50">{service.title}</h3>
+                    <h3 className="text-2xl text-olive-50">
+                      {'href' in service ? (
+                        <Link href={service.href} className="hover:text-accent">
+                          {service.title}
+                        </Link>
+                      ) : (
+                        service.title
+                      )}
+                    </h3>
                     <p className="mt-2 text-base leading-7 text-olive-100/70">{service.summary}</p>
                   </div>
                 </div>

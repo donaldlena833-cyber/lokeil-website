@@ -77,16 +77,19 @@ export const featuredImages = {
 export const coreServices = [
   {
     title: 'Bathroom remodeling',
+    href: '/bathroom-remodeling-queens',
     summary:
       'Tile layouts, shower surrounds, flooring, waterproofing details, fixtures, and finish work for tighter, cleaner bathroom upgrades.',
   },
   {
     title: 'Kitchen remodeling',
+    href: '/kitchen-remodeling-queens',
     summary:
       'Cabinet installation, backsplash work, flooring, trim, and finish coordination for more usable everyday kitchens.',
   },
   {
     title: 'Tile installation',
+    href: '/tile-installation-queens',
     summary:
       'Walls, floors, showers, niches, fireplaces, and feature surfaces installed with careful alignment and clean transitions.',
   },

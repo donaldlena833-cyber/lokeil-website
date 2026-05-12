@@ -37,7 +37,15 @@ export default function Footer() {
             </h4>
             <ul className="mt-4 space-y-3 text-sm text-olive-100/76">
               {coreServices.slice(0, 5).map((service) => (
-                <li key={service.title}>{service.title}</li>
+                <li key={service.title}>
+                  {'href' in service ? (
+                    <Link href={service.href} className="hover:text-accent">
+                      {service.title}
+                    </Link>
+                  ) : (
+                    service.title
+                  )}
+                </li>
               ))}
             </ul>
           </div>

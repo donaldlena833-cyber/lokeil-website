@@ -119,6 +119,9 @@ export default function BathroomRemodelingQueens() {
               <Link href="/gallery" className="button-secondary">
                 View Bathroom Work
               </Link>
+              <Link href="/tile-installation-queens" className="button-secondary">
+                Tile Installation
+              </Link>
             </div>
           </div>
 
@@ -218,6 +221,9 @@ export default function BathroomRemodelingQueens() {
                 <a href={`tel:${siteData.phoneHref}`} className="button-primary">
                   Call {siteData.phoneDisplay}
                 </a>
+                <Link href="/kitchen-remodeling-queens" className="button-secondary">
+                  Kitchen Remodeling
+                </Link>
                 <Link href="/contact" className="button-secondary">
                   Contact LOKEIL
                 </Link>

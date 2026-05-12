@@ -82,8 +82,21 @@ export default function Services() {
                     {String(index + 1).padStart(2, '0')}
                   </span>
                   <div>
-                    <h3 className="text-3xl text-olive-50">{service.title}</h3>
+                    <h3 className="text-3xl text-olive-50">
+                      {'href' in service ? (
+                        <Link href={service.href} className="hover:text-accent">
+                          {service.title}
+                        </Link>
+                      ) : (
+                        service.title
+                      )}
+                    </h3>
                     <p className="mt-3 text-base leading-7 text-olive-100/72">{service.summary}</p>
+                    {'href' in service ? (
+                      <Link href={service.href} className="mt-5 inline-flex text-sm font-semibold text-accent hover:text-accent-hover">
+                        View {service.title}
+                      </Link>
+                    ) : null}
                   </div>
                 </div>
               </article>
