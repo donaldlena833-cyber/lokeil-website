@@ -35,6 +35,110 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: 'bathroom-flooring-installation-queens-guide',
+    title: 'Bathroom Flooring Installation in Queens: Tile, Subfloor, and Finish Planning',
+    description:
+      'A Queens bathroom flooring installation guide covering tile, vinyl, subfloor prep, waterproofing, transitions, building rules, and estimate prep.',
+    eyebrow: 'Bathroom flooring Queens',
+    publishDate: '2026-05-12',
+    readTime: '6 min read',
+    heroImage: '/gallery/bathroom-flooring/4.jpg',
+    heroAlt: 'Bathroom flooring installation with clean tile transitions around a shower bench.',
+    primaryKeyword: 'bathroom flooring installation Queens',
+    keywords: [
+      'bathroom flooring installation Queens',
+      'Queens bathroom floor tile',
+      'bathroom flooring contractor Ridgewood',
+      'waterproof bathroom flooring Queens',
+      'NYC apartment bathroom flooring',
+    ],
+    intro: [
+      'Bathroom flooring installation in Queens is not just a finish choice. The right floor depends on the subfloor condition, water exposure, doorway transitions, toilet clearance, vanity footprint, and whether the project is a light refresh or part of a larger bathroom remodel.',
+      `${siteData.brandName} works from Ridgewood, Queens on bathroom tile, flooring, plaster, painting, shower remodels, cabinetry, and finish details. This guide helps homeowners prepare a clearer flooring estimate without turning a small project into a vague renovation.`,
+    ],
+    sections: [
+      {
+        heading: 'Start by checking what is under the old floor',
+        body: [
+          'The visible floor is only one layer. A bathroom floor can hide uneven plywood, old tile, soft spots, cracked underlayment, poor transitions, or moisture damage near the tub, toilet, or shower entry.',
+          'Before choosing a new material, the installer needs to understand whether the floor is sound enough to receive tile or another finish. Skipping that step can make a clean material look bad after installation.',
+        ],
+        list: [
+          'Look for soft areas around the toilet, tub edge, shower curb, and vanity.',
+          'Check doorway height so the new floor does not create an awkward transition.',
+          'Confirm whether old tile is being removed or the new system is being built over a suitable surface.',
+        ],
+      },
+      {
+        heading: 'Tile is durable, but prep decides the result',
+        body: [
+          'Porcelain and ceramic tile are common bathroom flooring choices because they handle water and daily wear well when installed correctly. The important part is not only the tile face. Layout, underlayment, movement joints, grout choice, cuts around fixtures, and edge transitions all affect the finished room.',
+          'In smaller Queens bathrooms, a cleaner tile layout with fewer awkward cuts often looks more expensive than a busy pattern forced into a tight room.',
+        ],
+      },
+      {
+        heading: 'Waterproofing questions belong in the flooring conversation',
+        body: [
+          'A bathroom floor is different from a shower pan, but water still finds weak spots. The areas around the tub, shower threshold, toilet, and vanity should be planned carefully, especially when flooring work connects to shower tile or a tub-to-shower remodel.',
+          'Homeowners should ask how the floor will be prepared, how wet edges will be handled, and whether the flooring scope connects to any plumbing, wall, or shower waterproofing work.',
+        ],
+      },
+      {
+        heading: 'Vinyl and floating floors need the right expectations',
+        body: [
+          'Some homeowners consider waterproof vinyl or floating flooring for speed, budget, or apartment constraints. These products can work in the right setting, but the floor still needs to be flat, dry, and installed according to the product requirements.',
+          'Vinyl is not a shortcut around water problems. If the subfloor is soft, the toilet leaks, or the transition is poorly planned, the finish can fail even when the product itself is water-resistant.',
+        ],
+      },
+      {
+        heading: 'Queens apartments may add building rules',
+        body: [
+          'Co-ops, condos, and managed apartment buildings may have rules for work hours, elevator use, hallway protection, insurance paperwork, debris removal, and sound control. Those rules are separate from the design decision, but they affect scheduling and prep.',
+          'If the project includes plumbing changes, electrical work, layout changes, or deeper bathroom renovation, NYC DOB and licensed professional guidance should be checked before assuming the job is cosmetic.',
+        ],
+      },
+      {
+        heading: 'What to send for a flooring estimate',
+        body: [
+          'A useful first estimate starts with photos of the bathroom from each corner, close-ups of damaged or uneven areas, the doorway transition, the toilet and tub or shower edge, and any flooring inspiration. Add rough room dimensions and mention whether the toilet, vanity, tub, or shower is staying in place.',
+          `When contacting ${siteData.brandName}, say whether this is only bathroom flooring or part of a larger bathroom remodel. That keeps the conversation focused and helps avoid pricing two different projects as if they were the same scope.`,
+        ],
+      },
+    ],
+    faqs: [
+      {
+        question: 'What bathroom flooring works best in Queens apartments?',
+        answer:
+          'Porcelain or ceramic tile is common for durable bathroom floors, while some waterproof vinyl products can work in the right setting. The best choice depends on subfloor condition, water exposure, transition height, budget, and building rules.',
+      },
+      {
+        question: 'Can LOKEIL install bathroom floor tile in Queens?',
+        answer:
+          'Yes. Bathroom floor tile, shower tile, waterproofing-related prep, flooring, plaster, painting, and finish details are part of LOKEIL Renovation’s interior remodeling scope.',
+      },
+      {
+        question: 'Does bathroom flooring in NYC need a permit?',
+        answer:
+          'Some cosmetic floor resurfacing may be simpler, but the full scope matters. Plumbing, electrical, wall, layout, or deeper bathroom renovation work may require DOB or licensed professional review.',
+      },
+    ],
+    sources: [
+      {
+        label: 'NYC Department of Buildings: Do I Need a Permit?',
+        href: 'https://www.nyc.gov/site/buildings/property-or-business-owner/do-i-need-a-permit.page',
+      },
+      {
+        label: 'NYC Department of Buildings: Renovating Kitchens & Bathrooms',
+        href: 'https://www.nyc.gov/site/buildings/property-or-business-owner/renovating-kitchens-bathrooms.page',
+      },
+    ],
+    relatedServices: [
+      { label: 'Tile Installation Queens', href: '/tile-installation-queens' },
+      { label: 'Bathroom Remodeling Queens', href: '/bathroom-remodeling-queens' },
+      { label: 'Gallery', href: '/gallery' },
+    ],
+  },
+  {
     slug: 'walk-in-shower-remodel-queens-planning-guide',
     title: 'Walk-In Shower Remodel in Queens: Planning the Tile, Drain, and Glass',
     description:
