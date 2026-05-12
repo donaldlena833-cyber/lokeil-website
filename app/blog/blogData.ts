@@ -31,6 +31,94 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: 'walk-in-shower-remodel-queens-planning-guide',
+    title: 'Walk-In Shower Remodel in Queens: Planning the Tile, Drain, and Glass',
+    description:
+      'A Queens walk-in shower remodel guide covering tile layout, waterproofing, shower niches, drains, glass planning, and estimate prep for NYC homes.',
+    eyebrow: 'Walk-in shower remodel',
+    publishDate: '2026-05-12',
+    readTime: '6 min read',
+    heroImage: '/gallery/bathroom-tiles/8.jpg',
+    heroAlt:
+      'Walk-in shower tile installation with large-format wall tile, mosaic accent, and in-progress layout spacers.',
+    primaryKeyword: 'walk-in shower remodel Queens',
+    keywords: [
+      'walk-in shower remodel Queens',
+      'walk-in shower renovation NYC',
+      'shower tile contractor Queens',
+      'bathroom remodeling Ridgewood Queens',
+      'Queens shower niche installation',
+    ],
+    intro: [
+      'A walk-in shower remodel can make a Queens bathroom feel cleaner, more open, and easier to use. The finished look matters, but the project should be planned around water control, tile layout, drain placement, glass clearances, and daily storage before the first wall tile goes up.',
+      `${siteData.brandName} works on bathroom tile, shower remodels, flooring, plaster, painting, and finish details from Ridgewood, Queens. This guide gives homeowners a practical way to prepare for the estimate conversation without overbuilding the scope.`,
+    ],
+    sections: [
+      {
+        heading: 'Start with the shower footprint',
+        body: [
+          'The first planning question is whether the shower footprint stays close to the existing tub or shower area. Keeping plumbing locations similar can keep the scope clearer, while moving the drain, valve, or shower entry can add coordination and cost.',
+          'In many Queens bathrooms, the room is narrow. Door swing, toilet clearance, vanity depth, and the glass panel location all affect whether a walk-in shower feels open or cramped.',
+        ],
+        list: [
+          'Confirm the usable shower width and entry space before choosing glass.',
+          'Decide whether the shower will use a curb, low curb, or more open entry.',
+          'Check whether the existing drain location works with the new tile plan.',
+        ],
+      },
+      {
+        heading: 'Plan waterproofing before choosing the final tile',
+        body: [
+          'Tile and grout are visible, but the waterproofing system behind them does the heavy lifting. Shower walls, seams, corners, niches, benches, curbs, and penetrations need a clear plan before tile installation starts.',
+          'Homeowners do not need to pick every technical product. They should ask how the wet area will be prepared, how the niche will be sealed, and how the floor slope will move water toward the drain.',
+        ],
+      },
+      {
+        heading: 'Use tile layout to make the shower feel intentional',
+        body: [
+          'A walk-in shower shows a lot of tile at once, so layout decisions become obvious. Large-format wall tile can reduce grout lines, while a mosaic floor or accent band can add grip and visual detail. The goal is controlled contrast, not too many competing patterns.',
+          'Before work starts, decide tile direction, grout color, niche height, edge trim, fixture placement, and where cuts will land. These choices are easier to solve on paper than after tile is already set.',
+        ],
+        list: [
+          'Use the niche location to support the tile layout instead of interrupting it.',
+          'Avoid skinny cuts at the most visible shower edges when possible.',
+          'Coordinate glass placement with tile edges, curb width, and fixture clearances.',
+        ],
+      },
+      {
+        heading: 'Glass should be part of the remodel plan',
+        body: [
+          'Walk-in showers often rely on fixed glass panels, hinged doors, or a combination of both. Glass decisions affect tile transitions, curb design, blocking, hardware placement, and how water is contained during daily use.',
+          'If glass is planned late, the bathroom may still work, but small details can feel patched together. Treat the glass plan as part of the remodel scope from the beginning.',
+        ],
+      },
+      {
+        heading: 'What to send for a clearer estimate',
+        body: [
+          'A useful walk-in shower estimate starts with photos, rough measurements, and a short description of what is changing. Include photos of the current shower or tub, the bathroom entry, the vanity and toilet area, and any known issues like cracked tile, soft flooring, leaks, or poor ventilation.',
+          `When contacting ${siteData.brandName}, mention whether the plumbing fixtures are staying close to their current positions and whether you already have tile, glass, or fixture inspiration.`,
+        ],
+      },
+    ],
+    faqs: [
+      {
+        question: 'Can a Queens tub be converted into a walk-in shower?',
+        answer:
+          'Often yes, but the right plan depends on the existing bathroom layout, drain location, wall condition, plumbing scope, waterproofing, and glass clearances.',
+      },
+      {
+        question: 'What tile works best for a walk-in shower?',
+        answer:
+          'Many walk-in showers use larger wall tile with a smaller mosaic or textured floor tile. The best choice depends on the room size, slope, maintenance preference, and desired finish.',
+      },
+      {
+        question: 'Should the shower niche be planned before tile starts?',
+        answer:
+          'Yes. Niche size, height, waterproofing, and tile alignment should be planned before installation so the finished shower looks intentional and works for daily storage.',
+      },
+    ],
+  },
+  {
     slug: 'bathroom-remodeling-cost-queens-ny',
     title: 'Bathroom Remodeling Cost in Queens, NY: What Changes the Price',
     description:
