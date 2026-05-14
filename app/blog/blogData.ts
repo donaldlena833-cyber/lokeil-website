@@ -35,6 +35,109 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: 'apartment-renovation-queens-planning-guide',
+    title: 'Apartment Renovation in Queens: Planning Scope, Surfaces, and Building Rules',
+    description:
+      'A Queens apartment renovation guide covering scope, bathroom and kitchen sequencing, flooring, plaster, tile, building rules, and estimate prep.',
+    eyebrow: 'Apartment renovation Queens',
+    publishDate: '2026-05-14',
+    readTime: '7 min read',
+    heroImage: '/gallery/kitchen-cabinets/3.jpg',
+    heroAlt: 'Queens apartment kitchen cabinet and backsplash renovation with new flooring.',
+    primaryKeyword: 'apartment renovation Queens',
+    keywords: [
+      'apartment renovation Queens',
+      'Queens apartment remodeling',
+      'Ridgewood renovation contractor',
+      'NYC apartment renovation planning',
+      'bathroom kitchen renovation Queens',
+    ],
+    intro: [
+      'Apartment renovation in Queens works best when the scope is clear before demolition starts. A project can be a focused finish refresh, a bathroom or kitchen remodel, or a larger multi-room update with flooring, tile, plaster, painting, cabinetry, and trim.',
+      `${siteData.brandName} works from Ridgewood, Queens on interior remodeling details across bathrooms, kitchens, tile, flooring, plaster, paint, cabinets, doors, steps, and fireplace upgrades. This guide helps homeowners organize the first estimate conversation around the actual room conditions.`,
+    ],
+    sections: [
+      {
+        heading: 'Separate cosmetic updates from deeper renovation',
+        body: [
+          'A Queens apartment may only need surface work: paint, plaster repair, cabinet adjustments, trim, flooring, or tile refreshes. A deeper renovation changes the build sequence because demolition, waterproofing, plumbing, electrical, walls, or layout decisions can enter the scope.',
+          'Before comparing estimates, write down what is staying, what is being replaced, and what might move. A contractor cannot price a paint-and-flooring refresh the same way as a bathroom and kitchen renovation with trade coordination.',
+        ],
+        list: [
+          'Surface refresh: paint, plaster, trim, cabinets, flooring, and finish repairs.',
+          'Room remodel: bathroom tile, shower work, kitchen cabinets, backsplash, or flooring changes.',
+          'Larger renovation: multiple rooms, layout changes, plumbing, electrical, or wall work.',
+        ],
+      },
+      {
+        heading: 'Plan bathrooms and kitchens first',
+        body: [
+          'Bathrooms and kitchens usually control the renovation schedule because they involve water, tile, cabinets, fixtures, and tighter sequencing. Tile layout, waterproofing, vanity sizing, cabinet installation, backsplash height, and flooring transitions should be solved before finish work begins.',
+          'If a project includes both rooms, decide which areas must remain usable during the work. That affects staging, debris removal, material storage, and whether the scope should be broken into phases.',
+        ],
+      },
+      {
+        heading: 'Use surfaces to connect the apartment',
+        body: [
+          'Flooring, plaster, paint, tile, cabinet faces, doors, and trim decide whether a renovation feels coherent. In many Queens apartments, the strongest improvement is not one dramatic feature. It is cleaner transitions from room to room.',
+          'Look for weak points before choosing finishes: uneven floors, cracked plaster, old doorway trim, damaged tile edges, soft subfloor areas, or cabinet lines that do not sit cleanly against the wall.',
+        ],
+        list: [
+          'Photograph floor transitions at every doorway.',
+          'Show damaged plaster, water marks, cracked tile, and uneven corners.',
+          'Mention whether flooring or cabinets need to align across more than one room.',
+        ],
+      },
+      {
+        heading: 'Queens apartments may add building coordination',
+        body: [
+          'Co-ops, condos, rentals, and managed buildings can add rules for work hours, insurance paperwork, elevator use, hallway protection, noise, debris removal, and superintendent communication. These rules do not change the design, but they can change the schedule.',
+          'NYC Department of Buildings guidance says many kitchen and bathroom renovations may require permits depending on scope, especially when multiple work types, plumbing, electrical, or layout changes are involved. Cosmetic work can be simpler, but homeowners should confirm the requirement before assuming a project is permit-free.',
+        ],
+      },
+      {
+        heading: 'Build the estimate around photos and decisions',
+        body: [
+          'The fastest way to make an apartment renovation estimate clearer is to send organized photos. Include wide photos of each room, close-ups of damaged or uneven areas, flooring transitions, bathroom fixtures, kitchen cabinets, tile edges, and any areas where water, plaster, or trim has failed.',
+          `When contacting ${siteData.brandName}, include the Queens neighborhood, building type, rooms involved, rough timeline, and whether you already have materials or inspiration photos. That keeps the conversation practical instead of turning one apartment into five different possible projects.`,
+        ],
+      },
+    ],
+    faqs: [
+      {
+        question: 'What apartment renovation work does LOKEIL handle in Queens?',
+        answer:
+          'LOKEIL handles interior renovation work including bathrooms, kitchens, tile, flooring, plaster, painting, cabinets, doors, steps, fireplace upgrades, and related finish details.',
+      },
+      {
+        question: 'Does a Queens apartment renovation need a permit?',
+        answer:
+          'It depends on the scope. Cosmetic work may be simpler, but kitchen, bathroom, plumbing, electrical, wall, or multi-trade renovation work may require DOB or licensed professional review.',
+      },
+      {
+        question: 'What should I send before asking for an apartment renovation estimate?',
+        answer:
+          'Send room photos, close-ups of problem areas, rough measurements, the Queens neighborhood, building rules if known, and a short list of what should stay, what should be replaced, and what might move.',
+      },
+    ],
+    sources: [
+      {
+        label: 'NYC Department of Buildings: Renovating Kitchens & Bathrooms',
+        href: 'https://www.nyc.gov/site/buildings/property-or-business-owner/renovating-kitchens-bathrooms.page',
+      },
+      {
+        label: 'NYC Department of Buildings: Do I Need a Permit?',
+        href: 'https://www.nyc.gov/site/buildings/property-or-business-owner/do-i-need-a-permit.page',
+      },
+    ],
+    relatedServices: [
+      { label: 'Bathroom Remodeling Queens', href: '/bathroom-remodeling-queens' },
+      { label: 'Kitchen Remodeling Queens', href: '/kitchen-remodeling-queens' },
+      { label: 'Tile Installation Queens', href: '/tile-installation-queens' },
+      { label: 'Gallery', href: '/gallery' },
+    ],
+  },
+  {
     slug: 'bathroom-flooring-installation-queens-guide',
     title: 'Bathroom Flooring Installation in Queens: Tile, Subfloor, and Finish Planning',
     description:
