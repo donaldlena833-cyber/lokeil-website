@@ -134,6 +134,7 @@ export const blogPosts: BlogPost[] = [
       { label: 'Bathroom Remodeling Queens', href: '/bathroom-remodeling-queens' },
       { label: 'Kitchen Remodeling Queens', href: '/kitchen-remodeling-queens' },
       { label: 'Tile Installation Queens', href: '/tile-installation-queens' },
+      { label: 'Flooring Installation Queens', href: '/flooring-installation-queens' },
       { label: 'Gallery', href: '/gallery' },
     ],
   },
@@ -236,6 +237,7 @@ export const blogPosts: BlogPost[] = [
       },
     ],
     relatedServices: [
+      { label: 'Flooring Installation Queens', href: '/flooring-installation-queens' },
       { label: 'Tile Installation Queens', href: '/tile-installation-queens' },
       { label: 'Bathroom Remodeling Queens', href: '/bathroom-remodeling-queens' },
       { label: 'Gallery', href: '/gallery' },

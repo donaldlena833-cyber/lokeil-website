@@ -95,6 +95,7 @@ export const coreServices = [
   },
   {
     title: 'Flooring',
+    href: '/flooring-installation-queens',
     summary:
       'Durable interior flooring updates that help rooms feel finished, level, and visually connected.',
   },

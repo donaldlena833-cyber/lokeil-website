@@ -41,6 +41,9 @@ export default function Services() {
               <Link href="/tile-installation-queens" className="button-secondary">
                 Tile Installation Queens
               </Link>
+              <Link href="/flooring-installation-queens" className="button-secondary">
+                Flooring Installation Queens
+              </Link>
               <Link href="/blog" className="button-secondary">
                 Remodeling Guides
               </Link>
@@ -143,7 +146,7 @@ export default function Services() {
             <div className="grid gap-8 lg:grid-cols-[1fr_auto] lg:items-end">
               <div data-reveal="fade-up">
                 <p className="eyebrow">Estimate</p>
-                <h2 className="section-title mt-4">Need a bathroom, kitchen, tile, or finish upgrade?</h2>
+                <h2 className="section-title mt-4">Need a bathroom, kitchen, tile, flooring, or finish upgrade?</h2>
                 <p className="lead mt-6">
                   Reach out and describe the room, the scope, and the kind of finish you&apos;re
                   aiming for. We&apos;ll help you start the estimate conversation.
