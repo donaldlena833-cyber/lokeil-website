@@ -35,6 +35,116 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: 'kitchen-remodeling-brooklyn-vs-queens-planning-guide',
+    title: 'Kitchen Remodeling in Brooklyn vs. Queens: What Changes the Plan',
+    description:
+      'A practical comparison guide for Brooklyn and Queens kitchen remodeling, covering layouts, building rules, cabinets, flooring, backsplash, permits, and estimate prep.',
+    eyebrow: 'Kitchen remodeling comparison',
+    publishDate: '2026-05-20',
+    readTime: '7 min read',
+    heroImage: '/gallery/kitchen-cabinets/3.jpg',
+    heroAlt: 'Gray kitchen cabinet installation with backsplash and flooring.',
+    primaryKeyword: 'kitchen remodeling Brooklyn vs Queens',
+    keywords: [
+      'kitchen remodeling Brooklyn vs Queens',
+      'kitchen remodeling Queens',
+      'kitchen renovation Brooklyn',
+      'NYC kitchen remodel planning',
+      'Ridgewood kitchen remodel contractor',
+    ],
+    intro: [
+      'Kitchen remodeling in Brooklyn and Queens can look similar on a mood board, but the planning details often change by building type, room size, access, flooring transitions, and how much of the kitchen is actually being rebuilt.',
+      `${siteData.brandName} works from Ridgewood, Queens on kitchen finish work, cabinets, backsplash tile, flooring, plaster, painting, and interior remodeling details. This guide helps homeowners compare the first planning questions before asking for an estimate.`,
+    ],
+    sections: [
+      {
+        heading: 'Start with the building, not the borough label',
+        body: [
+          'The most important difference is rarely only Brooklyn versus Queens. A walk-up apartment, co-op, condo, row house, two-family home, or mixed-use building can each change access, work hours, debris removal, elevator rules, protection requirements, and how materials get staged.',
+          'Before comparing quotes, homeowners should describe the building type, floor level, parking or loading situation, and whether the kitchen will be occupied during the work.',
+        ],
+        list: [
+          'Apartment buildings can add COI, elevator, hallway protection, and superintendent coordination.',
+          'Row houses and two-family homes may be simpler for access but still need careful dust control and material staging.',
+          'Occupied kitchens need a phasing conversation before demolition starts.',
+        ],
+      },
+      {
+        heading: 'Queens kitchens often need transition planning',
+        body: [
+          'Many Queens kitchens connect directly to hallways, dining areas, back rooms, or older flooring transitions. That makes cabinet depth, appliance clearance, doorway trim, and the meeting point between old and new flooring important early decisions.',
+          'A same-layout Queens kitchen remodel can still feel new when cabinets, backsplash, flooring, plaster, paint, lighting trim, and finish lines are planned together.',
+        ],
+      },
+      {
+        heading: 'Brooklyn kitchens can have tighter access and older surfaces',
+        body: [
+          'Brooklyn kitchen projects often involve older walls, compact rooms, narrow stairs, limited staging space, and existing finishes that may not be square or level. None of that prevents a clean remodel, but it changes how carefully cabinets, trim, plaster, backsplash, and flooring need to be checked.',
+          'The estimate should separate visible finish choices from prep work. A cabinet or backsplash installation can become more involved when the wall behind it needs repair or the floor line is uneven.',
+        ],
+      },
+      {
+        heading: 'Cabinets, backsplash, and flooring should be one conversation',
+        body: [
+          'Cabinets set the structure of the kitchen. Backsplash tile, paint, flooring, and trim decide whether the room feels finished. Choosing them separately can create awkward transitions at corners, outlets, appliances, and doorways.',
+          'For both Brooklyn and Queens, the cleanest plan usually starts with cabinet layout, appliance dimensions, sink and stove locations, then moves into backsplash height, outlet placement, flooring transitions, and finish details.',
+        ],
+        list: [
+          'Confirm appliance dimensions before cabinet installation.',
+          'Plan backsplash tile after cabinet and counter direction is clear.',
+          'Photograph flooring transitions and doorway trim before pricing the work.',
+        ],
+      },
+      {
+        heading: 'Permit questions depend on scope',
+        body: [
+          'NYC Department of Buildings guidance says many kitchen and bathroom renovations may require permits depending on complexity, especially when multiple work types, plumbing, electrical, or layout changes are involved. Cosmetic work can be simpler, but the exact scope matters.',
+          'A project that keeps cabinets, fixtures, and appliances in similar locations is a different planning conversation than one that moves plumbing, gas, electrical, walls, or ventilation. Homeowners should confirm permit requirements before assuming the job is only cosmetic.',
+        ],
+      },
+      {
+        heading: 'What to send before asking for a kitchen remodel estimate',
+        body: [
+          'A useful first estimate starts with organized photos. Send wide photos of the kitchen from every corner, close-ups of cabinets, backsplash, flooring transitions, damaged plaster, appliance locations, and any walls or openings that may change.',
+          `When contacting ${siteData.brandName}, include the borough, neighborhood, building type, floor level, rough scope, whether the layout is staying the same, and any cabinet, backsplash, flooring, or paint inspiration you already have.`,
+        ],
+      },
+    ],
+    faqs: [
+      {
+        question: 'Is kitchen remodeling more complicated in Brooklyn or Queens?',
+        answer:
+          'It depends more on the building, access, room condition, and scope than the borough. Apartments, co-ops, condos, row houses, and occupied homes each add different planning constraints.',
+      },
+      {
+        question: 'Can LOKEIL handle kitchen remodeling work in Brooklyn and Queens?',
+        answer:
+          'LOKEIL works from Ridgewood, Queens and handles kitchen finish work including cabinets, backsplash tile, flooring, plaster, painting, trim, and interior remodeling details across Queens and nearby NYC areas.',
+      },
+      {
+        question: 'Does an NYC kitchen remodel need a permit?',
+        answer:
+          'It depends on scope. Cosmetic work may be simpler, but moving plumbing, gas, electrical, walls, ventilation, or changing layout may require DOB or licensed professional review.',
+      },
+    ],
+    sources: [
+      {
+        label: 'NYC Department of Buildings: Renovating Kitchens & Bathrooms',
+        href: 'https://www.nyc.gov/site/buildings/property-or-business-owner/renovating-kitchens-bathrooms.page',
+      },
+      {
+        label: 'NYC Department of Buildings: Do I Need a Permit?',
+        href: 'https://www.nyc.gov/site/buildings/property-or-business-owner/do-i-need-a-permit.page',
+      },
+    ],
+    relatedServices: [
+      { label: 'Kitchen Remodeling Queens', href: '/kitchen-remodeling-queens' },
+      { label: 'Flooring Installation Queens', href: '/flooring-installation-queens' },
+      { label: 'Tile Installation Queens', href: '/tile-installation-queens' },
+      { label: 'Gallery', href: '/gallery' },
+    ],
+  },
+  {
     slug: 'apartment-renovation-queens-planning-guide',
     title: 'Apartment Renovation in Queens: Planning Scope, Surfaces, and Building Rules',
     description:
