@@ -106,6 +106,7 @@ export const coreServices = [
   },
   {
     title: 'Interior painting',
+    href: '/interior-painting-queens',
     summary:
       'Clean paint work that sharpens the final look and helps renovated spaces feel complete.',
   },
