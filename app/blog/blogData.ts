@@ -35,6 +35,117 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: 'bathroom-tile-installation-queens-planning-guide',
+    title: 'Bathroom Tile Installation in Queens: Planning Walls, Floors, and Wet Areas',
+    description:
+      'A Queens bathroom tile installation guide covering tile layout, waterproofing questions, substrate prep, grout, transitions, building rules, and estimate prep.',
+    eyebrow: 'Bathroom tile installation',
+    publishDate: '2026-05-22',
+    readTime: '7 min read',
+    heroImage: '/gallery/bathroom-tiles/8.jpg',
+    heroAlt:
+      'Large-format bathroom wall tile with a decorative shower niche band during a Queens bathroom remodel.',
+    primaryKeyword: 'bathroom tile installation Queens',
+    keywords: [
+      'bathroom tile installation Queens',
+      'Queens bathroom tile contractor',
+      'shower tile installation Queens',
+      'Ridgewood bathroom tile installer',
+      'NYC bathroom tile planning',
+    ],
+    intro: [
+      'Bathroom tile installation in Queens should be planned as a surface system, not only as a tile selection. Walls, floors, waterproofing, corners, niches, fixtures, grout, and doorway transitions all decide whether the room feels finished after the tile is set.',
+      `${siteData.brandName} works from Ridgewood, Queens on bathroom tile, shower remodels, flooring, plaster, painting, cabinetry, and finish details. This guide helps homeowners prepare a clearer tile estimate before the project turns into a vague bathroom renovation.`,
+    ],
+    sections: [
+      {
+        heading: 'Separate wall tile, floor tile, and shower tile',
+        body: [
+          'A bathroom can include several tile conditions in one small room: shower walls, tub surround, bathroom floor, niche, bench, curb, backsplash, and edge trim. Each area has different water exposure, movement, cuts, and finish details.',
+          'Before requesting an estimate, describe which surfaces are being tiled and which surfaces are staying. A floor-only update is a different job than a full shower rebuild with waterproofing, niches, plumbing fixtures, and glass planning.',
+        ],
+        list: [
+          'Bathroom floor tile needs subfloor and transition review.',
+          'Shower wall tile needs wet-area preparation and layout planning.',
+          'Niches, benches, curbs, and outside corners need edge details before tile starts.',
+        ],
+      },
+      {
+        heading: 'Waterproofing belongs in the first conversation',
+        body: [
+          'Tile and grout are not the whole water-control plan. Shower areas, tub surrounds, niches, benches, curbs, seams, corners, and penetrations need the right preparation behind the visible tile.',
+          'Homeowners do not need to pick every technical product before calling. They should ask how the wet area will be prepared, how old tile will be removed or assessed, and how the installer will handle corners, transitions, and penetrations.',
+        ],
+      },
+      {
+        heading: 'Tile layout can make a Queens bathroom feel calmer',
+        body: [
+          'Many Queens bathrooms are narrow or irregular. A good tile layout controls where cuts land, how grout lines align, how the niche sits inside the pattern, and how the floor meets the wall.',
+          'Large-format wall tile can reduce visual noise, while smaller mosaic or textured floor tile can help with slope and grip in shower areas. The right answer depends on the room, not only the showroom sample.',
+        ],
+        list: [
+          'Choose grout color with maintenance and contrast in mind.',
+          'Avoid skinny cuts at the most visible wall edges when possible.',
+          'Plan trim, thresholds, and doorway transitions before demolition.',
+        ],
+      },
+      {
+        heading: 'The surface under the tile decides a lot',
+        body: [
+          'Old tile can hide soft subfloor, uneven walls, cracked backing, moisture damage, or surfaces that are not ready for a durable installation. Those conditions affect labor and schedule more than the tile box does.',
+          'Photos help, but some conditions only become clear after removal. A responsible estimate should leave room for substrate findings instead of pretending every bathroom starts from a perfect surface.',
+        ],
+      },
+      {
+        heading: 'Queens apartment rules can affect tile work',
+        body: [
+          'Co-ops, condos, rentals, and managed buildings may require work-hour limits, hallway protection, elevator coordination, insurance paperwork, debris rules, and superintendent communication. These requirements can matter even when the tile work itself is straightforward.',
+          'NYC Department of Buildings guidance says many kitchen and bathroom renovations may require permits depending on complexity, especially when multiple work types, plumbing, electrical, or layout changes are involved. Cosmetic work can be simpler, but the exact tile scope matters.',
+        ],
+      },
+      {
+        heading: 'What to send for a bathroom tile estimate',
+        body: [
+          'Send photos from every corner of the bathroom, close-ups of the shower or tub area, current tile damage, floor transitions, vanity and toilet locations, and any inspiration photos. Add rough dimensions and mention whether plumbing fixtures, walls, or the layout are changing.',
+          `When contacting ${siteData.brandName}, say whether the request is tile-only, part of a shower remodel, or part of a larger bathroom renovation. That keeps the estimate conversation grounded in the real scope.`,
+        ],
+      },
+    ],
+    faqs: [
+      {
+        question: 'Can LOKEIL install bathroom tile in Queens?',
+        answer:
+          'Yes. LOKEIL handles bathroom tile, shower tile, bathroom flooring, plaster, painting, and related finish details from Ridgewood, Queens.',
+      },
+      {
+        question: 'Is bathroom tile installation the same as a bathroom remodel?',
+        answer:
+          'Not always. Tile-only work can be narrower, while a remodel may include demolition, waterproofing, plumbing, electrical, fixture changes, glass, plaster, painting, and other finish work.',
+      },
+      {
+        question: 'Does bathroom tile work in NYC need a permit?',
+        answer:
+          'It depends on scope. Cosmetic surface work may be simpler, but plumbing, electrical, wall, layout, or deeper wet-area renovation may require DOB or licensed professional review.',
+      },
+    ],
+    sources: [
+      {
+        label: 'NYC Department of Buildings: Renovating Kitchens & Bathrooms',
+        href: 'https://www.nyc.gov/site/buildings/property-or-business-owner/renovating-kitchens-bathrooms.page',
+      },
+      {
+        label: 'NYC Department of Consumer and Worker Protection: Hiring a Home Improvement Contractor',
+        href: 'https://home4.nyc.gov/site/dca/consumers/shopping-services-home-improvement.page',
+      },
+    ],
+    relatedServices: [
+      { label: 'Tile Installation Queens', href: '/tile-installation-queens' },
+      { label: 'Bathroom Remodeling Queens', href: '/bathroom-remodeling-queens' },
+      { label: 'Flooring Installation Queens', href: '/flooring-installation-queens' },
+      { label: 'Gallery', href: '/gallery' },
+    ],
+  },
+  {
     slug: 'kitchen-remodeling-brooklyn-vs-queens-planning-guide',
     title: 'Kitchen Remodeling in Brooklyn vs. Queens: What Changes the Plan',
     description:
