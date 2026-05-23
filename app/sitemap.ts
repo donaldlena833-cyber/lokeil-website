@@ -11,6 +11,7 @@ const routes = [
   { path: '/kitchen-remodeling-queens', priority: 0.88, changeFrequency: 'monthly' as const },
   { path: '/tile-installation-queens', priority: 0.86, changeFrequency: 'monthly' as const },
   { path: '/flooring-installation-queens', priority: 0.85, changeFrequency: 'monthly' as const },
+  { path: '/plaster-drywall-finishing-queens', priority: 0.84, changeFrequency: 'monthly' as const },
   { path: '/interior-painting-queens', priority: 0.84, changeFrequency: 'monthly' as const },
   { path: '/blog', priority: 0.8, changeFrequency: 'weekly' as const },
   ...blogPosts.map((post) => ({

@@ -44,6 +44,9 @@ export default function Services() {
               <Link href="/flooring-installation-queens" className="button-secondary">
                 Flooring Installation Queens
               </Link>
+              <Link href="/plaster-drywall-finishing-queens" className="button-secondary">
+                Plaster & Drywall Queens
+              </Link>
               <Link href="/interior-painting-queens" className="button-secondary">
                 Interior Painting Queens
               </Link>

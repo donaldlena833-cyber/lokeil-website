@@ -101,6 +101,7 @@ export const coreServices = [
   },
   {
     title: 'Plaster and drywall finishing',
+    href: '/plaster-drywall-finishing-queens',
     summary:
       'Surface repair, skim work, drywall installation, and prep that creates a smoother base before paint or trim.',
   },
