@@ -466,6 +466,7 @@ export const blogPosts: BlogPost[] = [
       { label: 'Kitchen Remodeling Queens', href: '/kitchen-remodeling-queens' },
       { label: 'Tile Installation Queens', href: '/tile-installation-queens' },
       { label: 'Flooring Installation Queens', href: '/flooring-installation-queens' },
+      { label: 'Plaster and Drywall Finishing Queens', href: '/plaster-drywall-finishing-queens' },
       { label: 'Gallery', href: '/gallery' },
     ],
   },
@@ -571,6 +572,7 @@ export const blogPosts: BlogPost[] = [
       { label: 'Flooring Installation Queens', href: '/flooring-installation-queens' },
       { label: 'Tile Installation Queens', href: '/tile-installation-queens' },
       { label: 'Bathroom Remodeling Queens', href: '/bathroom-remodeling-queens' },
+      { label: 'Plaster and Drywall Finishing Queens', href: '/plaster-drywall-finishing-queens' },
       { label: 'Gallery', href: '/gallery' },
     ],
   },
@@ -664,6 +666,7 @@ export const blogPosts: BlogPost[] = [
     relatedServices: [
       { label: 'Bathroom Remodeling Queens', href: '/bathroom-remodeling-queens' },
       { label: 'Tile Installation Queens', href: '/tile-installation-queens' },
+      { label: 'Flooring Installation Queens', href: '/flooring-installation-queens' },
     ],
   },
   {
@@ -754,6 +757,8 @@ export const blogPosts: BlogPost[] = [
     relatedServices: [
       { label: 'Bathroom Remodeling Queens', href: '/bathroom-remodeling-queens' },
       { label: 'Tile Installation Queens', href: '/tile-installation-queens' },
+      { label: 'Plaster and Drywall Finishing Queens', href: '/plaster-drywall-finishing-queens' },
+      { label: 'Interior Painting Queens', href: '/interior-painting-queens' },
     ],
   },
   {
@@ -910,6 +915,9 @@ export const blogPosts: BlogPost[] = [
     relatedServices: [
       { label: 'Kitchen Remodeling Queens', href: '/kitchen-remodeling-queens' },
       { label: 'Tile Installation Queens', href: '/tile-installation-queens' },
+      { label: 'Flooring Installation Queens', href: '/flooring-installation-queens' },
+      { label: 'Plaster and Drywall Finishing Queens', href: '/plaster-drywall-finishing-queens' },
+      { label: 'Interior Painting Queens', href: '/interior-painting-queens' },
     ],
   },
   {
@@ -987,6 +995,7 @@ export const blogPosts: BlogPost[] = [
     relatedServices: [
       { label: 'Tile Installation Queens', href: '/tile-installation-queens' },
       { label: 'Bathroom Remodeling Queens', href: '/bathroom-remodeling-queens' },
+      { label: 'Plaster and Drywall Finishing Queens', href: '/plaster-drywall-finishing-queens' },
     ],
   },
   {
