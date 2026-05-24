@@ -35,6 +35,116 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: 'bathroom-vanity-replacement-queens-planning-guide',
+    title: 'Bathroom Vanity Replacement in Queens: What to Check Before Ordering',
+    description:
+      'A Queens bathroom vanity replacement guide covering sizing, plumbing locations, wall repair, tile edges, storage, lighting, mirrors, and estimate prep.',
+    eyebrow: 'Bathroom vanity replacement',
+    publishDate: '2026-05-24',
+    readTime: '6 min read',
+    heroImage: '/gallery/bathroom-painting/1.jpg',
+    heroAlt: 'Finished bathroom with vanity, wall mirror, tile, and glass shower door.',
+    primaryKeyword: 'bathroom vanity replacement Queens',
+    keywords: [
+      'bathroom vanity replacement Queens',
+      'Queens bathroom vanity installation',
+      'Ridgewood bathroom remodel contractor',
+      'bathroom cabinet replacement Queens',
+      'NYC bathroom remodeling planning',
+    ],
+    intro: [
+      'Bathroom vanity replacement in Queens looks simple until the old cabinet comes out. The new vanity has to fit the room, line up with plumbing, meet the flooring and wall finishes cleanly, and work with the mirror, light, tile, and door swing.',
+      `${siteData.brandName} works from Ridgewood, Queens on bathroom remodeling, tile, flooring, plaster, painting, cabinetry, and finish details. This guide helps homeowners prepare a clearer vanity estimate before buying the wrong size or leaving repair work out of the scope.`,
+    ],
+    sections: [
+      {
+        heading: 'Measure the room before choosing the vanity',
+        body: [
+          'The best vanity is not only the one that looks good online. It has to fit between walls, trim, toilet clearance, tub or shower edges, heating covers, and the bathroom entry path.',
+          'Before ordering, measure the existing vanity width, depth, and height. Then check how much room is left for standing, opening drawers, using the toilet, and cleaning around the cabinet.',
+        ],
+        list: [
+          'Confirm the cabinet width and depth, not just the sink top size.',
+          'Check drawer and door swing against the toilet, shower, radiator, and bathroom door.',
+          'Photograph side walls, tile edges, baseboard, and any floor gap around the old vanity.',
+        ],
+      },
+      {
+        heading: 'Plumbing locations can decide what actually fits',
+        body: [
+          'A vanity swap is easier when the new cabinet works with the existing drain and supply lines. If drawers, shelves, or the sink location fight the plumbing, the job may need more adjustment than expected.',
+          'Homeowners should photograph the inside of the current vanity before removal. Those photos show where pipes enter the wall or floor, how much room the trap needs, and whether a new cabinet design may conflict with the existing plumbing path.',
+        ],
+      },
+      {
+        heading: 'Plan wall repair, paint, and tile edges',
+        body: [
+          'Old vanities often hide unfinished wall patches, cut tile, adhesive, water staining, or paint lines. A clean replacement may need plaster repair, drywall touch-up, caulk, paint, baseboard work, or tile-edge cleanup after the cabinet is removed.',
+          'This is why vanity replacement should be scoped with the surrounding finishes. The cabinet can be new and still look unfinished if the wall, tile, or floor around it is ignored.',
+        ],
+        list: [
+          'Ask what happens if the old vanity was larger than the new one.',
+          'Check whether tile continues behind and under the cabinet.',
+          'Plan paint and caulk after the vanity is set, not as an afterthought.',
+        ],
+      },
+      {
+        heading: 'Coordinate the vanity with mirror and lighting',
+        body: [
+          'A new vanity changes the visual center of the bathroom. The mirror width, medicine cabinet, sconces, light bar, outlets, backsplash, and faucet height should be reviewed together.',
+          'In smaller Queens bathrooms, storage matters as much as style. A floating vanity can make the floor feel open, while a floor-mounted cabinet may offer more storage and hide older floor conditions better.',
+        ],
+      },
+      {
+        heading: 'Permit questions depend on scope',
+        body: [
+          'NYC Department of Buildings guidance says some minor alterations may not need a work permit, including installing new cabinets, painting, plastering, and resurfacing floors. DOB also says kitchen and bathroom renovations may require permits depending on complexity.',
+          'That means a same-location vanity replacement is a different conversation from moving plumbing, electrical, walls, ventilation, or changing the bathroom layout. Homeowners should verify the full scope before assuming the project is only cosmetic.',
+        ],
+      },
+      {
+        heading: 'What to send for a vanity replacement estimate',
+        body: [
+          'Send wide photos of the bathroom, close-ups of the vanity, the inside plumbing, floor edges, wall damage, mirror and light area, and any inspiration vanity you are considering. Include rough dimensions and say whether the sink location will stay the same.',
+          `When contacting ${siteData.brandName}, mention whether this is a vanity-only swap or part of a larger bathroom remodel. That keeps the estimate grounded in the real finish work around the cabinet.`,
+        ],
+      },
+    ],
+    faqs: [
+      {
+        question: 'Can LOKEIL replace a bathroom vanity in Queens?',
+        answer:
+          'Yes. LOKEIL handles bathroom remodeling and finish work that can include vanity, cabinet, wall repair, tile-edge, paint, and flooring details around the replacement.',
+      },
+      {
+        question: 'Should I buy the vanity before asking for an estimate?',
+        answer:
+          'Not always. It is safer to confirm width, depth, plumbing location, drawer clearance, wall condition, and floor or tile edges before ordering a vanity that may not fit the room.',
+      },
+      {
+        question: 'Does vanity replacement in NYC need a permit?',
+        answer:
+          'It depends on scope. A same-location cabinet replacement may be simpler, but moving plumbing, electrical, walls, ventilation, or layout should be checked against DOB guidance and the right licensed professionals.',
+      },
+    ],
+    sources: [
+      {
+        label: 'NYC Department of Buildings: Do I Need a Permit?',
+        href: 'https://home4.nyc.gov/site/buildings/property-or-business-owner/do-i-need-a-permit.page',
+      },
+      {
+        label: 'NYC Department of Buildings: Renovating Kitchens & Bathrooms',
+        href: 'https://www.nyc.gov/site/buildings/property-or-business-owner/renovating-kitchens-bathrooms.page',
+      },
+    ],
+    relatedServices: [
+      { label: 'Bathroom Remodeling Queens', href: '/bathroom-remodeling-queens' },
+      { label: 'Plaster and Drywall Finishing Queens', href: '/plaster-drywall-finishing-queens' },
+      { label: 'Interior Painting Queens', href: '/interior-painting-queens' },
+      { label: 'Gallery', href: '/gallery' },
+    ],
+  },
+  {
     slug: 'bathroom-tile-installation-queens-planning-guide',
     title: 'Bathroom Tile Installation in Queens: Planning Walls, Floors, and Wet Areas',
     description:
