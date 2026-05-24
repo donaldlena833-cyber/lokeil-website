@@ -837,6 +837,8 @@ export const blogPosts: BlogPost[] = [
     relatedServices: [
       { label: 'Bathroom Remodeling Queens', href: '/bathroom-remodeling-queens' },
       { label: 'Tile Installation Queens', href: '/tile-installation-queens' },
+      { label: 'Plaster and Drywall Finishing Queens', href: '/plaster-drywall-finishing-queens' },
+      { label: 'Interior Painting Queens', href: '/interior-painting-queens' },
     ],
   },
   {
