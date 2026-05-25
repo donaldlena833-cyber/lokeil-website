@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 
+import EstimatePrepChecklist from '../components/EstimatePrepChecklist';
 import { featuredImages, siteData } from '../siteData';
 import { buildPageMetadata } from '../seo';
 
@@ -183,6 +184,8 @@ export default function BathroomRemodelingQueens() {
           </div>
         </div>
       </section>
+
+      <EstimatePrepChecklist />
 
       <section className="section-rule section-space">
         <div className="site-shell grid gap-10 lg:grid-cols-[0.85fr_1.15fr]">
