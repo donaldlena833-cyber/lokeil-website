@@ -50,6 +50,9 @@ export default function Services() {
               <Link href="/interior-painting-queens" className="button-secondary">
                 Interior Painting Queens
               </Link>
+              <Link href="/cabinet-installation-queens" className="button-secondary">
+                Cabinet Installation Queens
+              </Link>
               <Link href="/blog" className="button-secondary">
                 Remodeling Guides
               </Link>

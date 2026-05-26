@@ -113,6 +113,7 @@ export const coreServices = [
   },
   {
     title: 'Cabinet installation',
+    href: '/cabinet-installation-queens',
     summary:
       'Kitchen, bath, and storage cabinetry fitted with attention to reveal lines, hardware, and surrounding finishes.',
   },
