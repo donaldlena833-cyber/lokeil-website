@@ -1,4 +1,5 @@
 import { siteData } from '../siteData';
+import { nycLocalSeoPost } from './nycLocalSeoPost';
 
 export type BlogSection = {
   heading: string;
@@ -34,6 +35,7 @@ export type BlogPost = {
 };
 
 export const blogPosts: BlogPost[] = [
+  nycLocalSeoPost,
   {
     slug: 'bathroom-vanity-replacement-queens-planning-guide',
     title: 'Bathroom Vanity Replacement in Queens: What to Check Before Ordering',
