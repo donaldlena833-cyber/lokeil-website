@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from 'next';
 import { Instrument_Serif, Manrope } from 'next/font/google';
+import Script from 'next/script';
 
 import './globals.css';
 import Footer from './components/Footer';
@@ -8,6 +9,8 @@ import MobileCtaBar from './components/MobileCtaBar';
 import ScrollObserver from './components/ScrollObserver';
 import { structuredData } from './schema';
 import { siteData } from './siteData';
+
+const gaMeasurementId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
 
 const manrope = Manrope({
   subsets: ['latin'],
@@ -97,6 +100,22 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${manrope.variable} ${instrumentSerif.variable}`}>
       <body className="bg-olive-500 text-olive-50">
+        {gaMeasurementId ? (
+          <>
+            <Script
+              src={`https://www.googletagmanager.com/gtag/js?id=${gaMeasurementId}`}
+              strategy="afterInteractive"
+            />
+            <Script id="google-analytics" strategy="afterInteractive">
+              {`
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', '${gaMeasurementId}');
+              `}
+            </Script>
+          </>
+        ) : null}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
