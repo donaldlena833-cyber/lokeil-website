@@ -1,0 +1,11 @@
+# SEO Image Usage Ledger
+
+Hard rule from Donald, 2026-06-05: use the site-specific image folders on
+Desktop for future SEO publishes and do not reuse images that have already been
+used for published posts/pages.
+
+## Used Images
+
+| Date | Site | Published URL | Source image | Site image path | Notes |
+| --- | --- | --- | --- | --- | --- |
+| 2026-06-06 | LOKEIL | `/blog/bathroom-remodeling-astoria-nyc-planning-guide` | `/Users/donaldlena/Desktop/Lokeil/organized/bathroom-shower/white-tile-shower.jpg` | `/public/gallery/nyc-local/bathroom-remodeling-astoria-hero.jpg` | Fresh Desktop image logged before publish for Astoria bathroom remodeling guide. |

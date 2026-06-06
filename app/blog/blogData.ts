@@ -1,4 +1,5 @@
 import { siteData } from '../siteData';
+import { astoriaLocalSeoPost } from './astoriaLocalSeoPost';
 import { nycLocalSeoPost } from './nycLocalSeoPost';
 
 export type BlogSection = {
@@ -35,6 +36,7 @@ export type BlogPost = {
 };
 
 export const blogPosts: BlogPost[] = [
+  astoriaLocalSeoPost,
   nycLocalSeoPost,
   {
     slug: 'bathroom-vanity-replacement-queens-planning-guide',
