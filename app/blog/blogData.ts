@@ -1,5 +1,6 @@
 import { siteData } from '../siteData';
 import { astoriaLocalSeoPost } from './astoriaLocalSeoPost';
+import { longIslandCityBathroomRemodelingPost } from './longIslandCityBathroomRemodelingPost';
 import { nycLocalSeoPost } from './nycLocalSeoPost';
 import { ridgewoodBathroomRemodelingPost } from './ridgewoodBathroomRemodelingPost';
 
@@ -37,6 +38,7 @@ export type BlogPost = {
 };
 
 export const blogPosts: BlogPost[] = [
+  longIslandCityBathroomRemodelingPost,
   ridgewoodBathroomRemodelingPost,
   astoriaLocalSeoPost,
   nycLocalSeoPost,
