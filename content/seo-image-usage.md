@@ -8,6 +8,7 @@ used for published posts/pages.
 
 | Date | Site | Published URL | Source image | Site image path | Notes |
 | --- | --- | --- | --- | --- | --- |
+| 2026-06-10 | LOKEIL | `/blog/bathroom-remodeling-sunnyside-nyc-planning-guide` | `/Users/donaldlena/Desktop/Lokeil/organized/bathroom-shower/large-shower-enclosure.jpg` | `/public/gallery/nyc-local/bathroom-remodeling-sunnyside-hero.jpg` | Fresh Desktop image logged before publish for Sunnyside bathroom remodeling guide. |
 | 2026-06-08 | LOKEIL | `/blog/bathroom-remodeling-ridgewood-nyc-planning-guide` | `/Users/donaldlena/Desktop/Lokeil/organized/bathroom-shower/extensive-white-tile.jpg` | `/public/gallery/nyc-local/bathroom-remodeling-ridgewood-hero.jpg` | Fresh Desktop image logged before publish for Ridgewood bathroom remodeling guide. |
 | 2026-06-09 | LOKEIL | `/blog/bathroom-remodeling-long-island-city-nyc-planning-guide` | `/Users/donaldlena/Desktop/Lokeil/organized/bathroom-shower/granite-shower-niche.jpg` | `/public/gallery/nyc-local/bathroom-remodeling-long-island-city-hero.jpg` | Fresh Desktop image logged before publish for Long Island City bathroom remodeling guide. |
 | 2026-06-06 | LOKEIL | `/blog/bathroom-remodeling-astoria-nyc-planning-guide` | `/Users/donaldlena/Desktop/Lokeil/organized/bathroom-shower/white-tile-shower.jpg` | `/public/gallery/nyc-local/bathroom-remodeling-astoria-hero.jpg` | Fresh Desktop image logged before publish for Astoria bathroom remodeling guide. |

@@ -3,6 +3,7 @@ import { astoriaLocalSeoPost } from './astoriaLocalSeoPost';
 import { longIslandCityBathroomRemodelingPost } from './longIslandCityBathroomRemodelingPost';
 import { nycLocalSeoPost } from './nycLocalSeoPost';
 import { ridgewoodBathroomRemodelingPost } from './ridgewoodBathroomRemodelingPost';
+import { sunnysideBathroomRemodelingPost } from './sunnysideBathroomRemodelingPost';
 
 export type BlogSection = {
   heading: string;
@@ -38,6 +39,7 @@ export type BlogPost = {
 };
 
 export const blogPosts: BlogPost[] = [
+  sunnysideBathroomRemodelingPost,
   longIslandCityBathroomRemodelingPost,
   ridgewoodBathroomRemodelingPost,
   astoriaLocalSeoPost,
