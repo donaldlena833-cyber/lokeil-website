@@ -4,6 +4,7 @@ import { longIslandCityBathroomRemodelingPost } from './longIslandCityBathroomRe
 import { nycLocalSeoPost } from './nycLocalSeoPost';
 import { ridgewoodBathroomRemodelingPost } from './ridgewoodBathroomRemodelingPost';
 import { sunnysideBathroomRemodelingPost } from './sunnysideBathroomRemodelingPost';
+import { woodsideBathroomRemodelingPost } from './woodsideBathroomRemodelingPost';
 
 export type BlogSection = {
   heading: string;
@@ -39,6 +40,7 @@ export type BlogPost = {
 };
 
 export const blogPosts: BlogPost[] = [
+  woodsideBathroomRemodelingPost,
   sunnysideBathroomRemodelingPost,
   longIslandCityBathroomRemodelingPost,
   ridgewoodBathroomRemodelingPost,
