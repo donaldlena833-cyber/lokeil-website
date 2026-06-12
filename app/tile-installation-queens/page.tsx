@@ -38,6 +38,24 @@ const planningNotes = [
   },
 ] as const;
 
+const tileProofSignals = [
+  {
+    title: 'Layout quality is the visible proof',
+    body:
+      'Tile pages win trust when they explain cuts, grout lines, niches, corners, edge trim, and transitions. Those are the details a buyer can see in the finished room.',
+  },
+  {
+    title: 'Bathroom tile and flooring should connect',
+    body:
+      'Queens tile leads often overlap with bathroom flooring, shower surrounds, and finish repair. The page should keep those paths connected instead of isolating tile as a standalone task.',
+  },
+  {
+    title: 'Photos need to carry the page',
+    body:
+      'Bathroom tile photos help buyers compare layout, niche, edge, and transition details before starting an estimate conversation.',
+  },
+] as const;
+
 const faqs = [
   {
     q: 'What tile installation work does LOKEIL handle in Queens?',
@@ -179,6 +197,35 @@ export default function TileInstallationQueens() {
                 <article key={note.title} className="surface px-6 py-7 sm:px-8" data-reveal="fade-up" data-delay={String(index + 1)}>
                   <h3 className="text-3xl text-olive-50">{note.title}</h3>
                   <p className="mt-4 text-base leading-7 text-olive-100/72">{note.body}</p>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="section-rule section-space">
+          <div className="site-shell grid gap-10 lg:grid-cols-[0.85fr_1.15fr]">
+            <div data-reveal="fade-up">
+              <p className="eyebrow">Tile proof path</p>
+              <h2 className="section-title mt-4">Tile installation needs more detail than a service name.</h2>
+              <p className="lead mt-6">
+                Good tile work depends on layout, prep, transitions, and how the tile ties into the rest of the remodel.
+              </p>
+              <div className="mt-8 flex flex-col gap-4 sm:flex-row">
+                <Link href="/gallery" className="button-secondary">
+                  Tile Photos
+                </Link>
+                <Link href="/flooring-installation-queens" className="button-secondary">
+                  Flooring Installation
+                </Link>
+              </div>
+            </div>
+
+            <div className="grid gap-6">
+              {tileProofSignals.map((item, index) => (
+                <article key={item.title} className="surface px-6 py-7 sm:px-8" data-reveal="fade-up" data-delay={String(index + 1)}>
+                  <h3 className="text-3xl text-olive-50">{item.title}</h3>
+                  <p className="mt-4 text-base leading-7 text-olive-100/72">{item.body}</p>
                 </article>
               ))}
             </div>

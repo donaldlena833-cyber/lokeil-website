@@ -38,6 +38,24 @@ const planningNotes = [
   },
 ] as const;
 
+const localScopeSignals = [
+  {
+    title: 'Cabinets and finish lines first',
+    body:
+      'A Queens kitchen remodel needs more than a broad promise. Cabinets, reveals, trim, backsplash edges, paint, and flooring all have to land together.',
+  },
+  {
+    title: 'Partial updates still need sequencing',
+    body:
+      'Many kitchen leads are not full gut renovations. Cabinet work, backsplash, floor repair, and paint still need a clean order so one trade does not damage the next finish.',
+  },
+  {
+    title: 'Use the gallery as proof',
+    body:
+      'Kitchen cabinet photos and surrounding finish work make the estimate conversation more concrete than a generic service list.',
+  },
+] as const;
+
 const faqs = [
   {
     q: 'What kitchen remodeling work does LOKEIL handle in Queens?',
@@ -179,6 +197,35 @@ export default function KitchenRemodelingQueens() {
                 <article key={note.title} className="surface px-6 py-7 sm:px-8" data-reveal="fade-up" data-delay={String(index + 1)}>
                   <h3 className="text-3xl text-olive-50">{note.title}</h3>
                   <p className="mt-4 text-base leading-7 text-olive-100/72">{note.body}</p>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="section-rule section-space">
+          <div className="site-shell grid gap-10 lg:grid-cols-[0.85fr_1.15fr]">
+            <div data-reveal="fade-up">
+              <p className="eyebrow">Queens kitchen scope</p>
+              <h2 className="section-title mt-4">Kitchen updates work best when the cabinet, surface, and finish scope is clear.</h2>
+              <p className="lead mt-6">
+                A kitchen project can be a full room update, a cabinet-led scope, or a tighter finish repair. The first conversation should separate those paths so the estimate stays practical.
+              </p>
+              <div className="mt-8 flex flex-col gap-4 sm:flex-row">
+                <Link href="/gallery" className="button-secondary">
+                  Kitchen Photos
+                </Link>
+                <Link href="/cabinet-installation-queens" className="button-secondary">
+                  Cabinet Installation
+                </Link>
+              </div>
+            </div>
+
+            <div className="grid gap-6">
+              {localScopeSignals.map((item, index) => (
+                <article key={item.title} className="surface px-6 py-7 sm:px-8" data-reveal="fade-up" data-delay={String(index + 1)}>
+                  <h3 className="text-3xl text-olive-50">{item.title}</h3>
+                  <p className="mt-4 text-base leading-7 text-olive-100/72">{item.body}</p>
                 </article>
               ))}
             </div>

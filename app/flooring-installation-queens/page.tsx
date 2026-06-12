@@ -38,6 +38,24 @@ const planningNotes = [
   },
 ] as const;
 
+const flooringDecisionSignals = [
+  {
+    title: 'The transition details decide the finish',
+    body:
+      'Doorways, bathroom thresholds, cabinet runs, and hallway connections are where flooring work either looks intentional or patched.',
+  },
+  {
+    title: 'Flooring is usually part of a bigger room scope',
+    body:
+      'Queens flooring leads often connect to bathroom remodels, kitchens, tile, plaster, painting, or cabinet work. The page should route those buyers to the right connected service.',
+  },
+  {
+    title: 'Prep matters before material choice',
+    body:
+      'Uneven surfaces, old tile, soft spots, damaged underlayment, and height changes affect the work before the final flooring material is even selected.',
+  },
+] as const;
+
 const faqs = [
   {
     q: 'What flooring installation work does LOKEIL handle in Queens?',
@@ -179,6 +197,35 @@ export default function FlooringInstallationQueens() {
                 <article key={note.title} className="surface px-6 py-7 sm:px-8" data-reveal="fade-up" data-delay={String(index + 1)}>
                   <h3 className="text-3xl text-olive-50">{note.title}</h3>
                   <p className="mt-4 text-base leading-7 text-olive-100/72">{note.body}</p>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="section-rule section-space">
+          <div className="site-shell grid gap-10 lg:grid-cols-[0.85fr_1.15fr]">
+            <div data-reveal="fade-up">
+              <p className="eyebrow">Flooring decision path</p>
+              <h2 className="section-title mt-4">Flooring work has to explain prep, transitions, and the room around it.</h2>
+              <p className="lead mt-6">
+                A flooring estimate gets clearer when the room, surface condition, transitions, and connected remodeling work are understood first.
+              </p>
+              <div className="mt-8 flex flex-col gap-4 sm:flex-row">
+                <Link href="/gallery" className="button-secondary">
+                  Flooring Photos
+                </Link>
+                <Link href="/bathroom-remodeling-queens" className="button-secondary">
+                  Bathroom Remodeling
+                </Link>
+              </div>
+            </div>
+
+            <div className="grid gap-6">
+              {flooringDecisionSignals.map((item, index) => (
+                <article key={item.title} className="surface px-6 py-7 sm:px-8" data-reveal="fade-up" data-delay={String(index + 1)}>
+                  <h3 className="text-3xl text-olive-50">{item.title}</h3>
+                  <p className="mt-4 text-base leading-7 text-olive-100/72">{item.body}</p>
                 </article>
               ))}
             </div>
