@@ -41,8 +41,13 @@ export default function Home() {
               cabinets, doors, steps, and fireplace design across Queens and the wider
               New York City area.
             </p>
+            <p className="mt-5 text-base leading-7 text-olive-100/72" data-reveal="fade-up" data-delay="3">
+              Start with real project photos, choose the closest service page, then call or email
+              with the room details. The site is built to move from proof to scope without making
+              unsupported claims.
+            </p>
 
-            <div className="mt-9 flex flex-col gap-4 sm:flex-row" data-reveal="fade-up" data-delay="3">
+            <div className="mt-9 flex flex-col gap-4 sm:flex-row" data-reveal="fade-up" data-delay="4">
               <Link href="/gallery" className="button-primary">
                 View Our Work
               </Link>
@@ -51,7 +56,7 @@ export default function Home() {
               </Link>
             </div>
 
-            <div className="mt-10 grid gap-4 sm:grid-cols-3" data-reveal="fade-up" data-delay="4">
+            <div className="mt-10 grid gap-4 sm:grid-cols-3" data-reveal="fade-up" data-delay="5">
               {heroStats.map((item) => (
                 <div key={item.value} className="info-chip">
                   <p className="text-sm font-semibold uppercase tracking-[0.16em] text-accent/85">
@@ -171,8 +176,17 @@ export default function Home() {
             </h2>
             <p className="lead mt-6">
               From tile layouts and shower walls to cabinetry and flooring, these project photos
-              show the kind of clean, modern interior work LOKEIL is hired to deliver.
+              show the kind of clean, modern interior work homeowners can use as a reference before
+              calling about a room update.
             </p>
+            <div className="mt-7 flex flex-col gap-3 sm:flex-row">
+              <Link href="/gallery" className="button-secondary">
+                Browse Full Gallery
+              </Link>
+              <Link href="/services" className="button-secondary">
+                Match Photos to Services
+              </Link>
+            </div>
           </div>
 
           <div className="mt-12 grid gap-6 lg:grid-cols-3">

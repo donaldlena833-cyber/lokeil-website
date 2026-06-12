@@ -6,9 +6,9 @@ import { featuredImages, photoCount } from '../siteData';
 import GalleryClient from './GalleryClient';
 
 export const metadata: Metadata = buildPageMetadata({
-  title: 'Gallery',
+  title: 'Remodeling Gallery in Queens',
   description:
-    'Browse the LOKEIL Renovation photo gallery featuring bathrooms, showers, flooring, cabinets, paint preparation, and interior finish work across Queens and the wider NYC area.',
+    'Browse LOKEIL Renovation project photos for bathroom remodeling, tile installation, flooring, cabinets, paint preparation, and interior finish work in Queens and NYC.',
   path: '/gallery',
 });
 
@@ -23,13 +23,14 @@ export default function GalleryPage() {
               Real bathrooms, kitchens, tile details, and finish work from recent projects.
             </h1>
             <p className="lead mt-6">
-              Browse the photo archive by room and finish type. The gallery now keeps the focus on
-              the work itself, with a quieter layout and no video or caption clutter.
+              Browse the photo archive by room and finish type. The gallery is organized so Queens
+              homeowners can compare tile layouts, shower surrounds, floor transitions, cabinetry,
+              paint preparation, and finish details before starting an estimate.
             </p>
             <p className="mt-5 max-w-2xl text-base leading-7 text-olive-100/72">
-              This page is now part of the SEO proof system, not just a portfolio. Use it to compare
-              bathroom tile, shower surrounds, flooring, cabinet work, paint preparation, and finish
-              details before calling about a Queens remodeling project.
+              Use the photos to narrow what matters for your own project: a niche location, tile
+              direction, shower bench, cabinet reveal, floor pattern, or the level of wall prep you
+              want before paint. The more specific the reference, the better the first conversation.
             </p>
             <p className="mt-4 max-w-2xl text-base leading-7 text-olive-100/72">
               When you contact LOKEIL, reference the room type and the kind of finish you liked in
@@ -81,7 +82,7 @@ export default function GalleryPage() {
             {
               title: 'Bathrooms and showers',
               body:
-                'Review shower walls, niches, bathtub surrounds, marble-look tile, flooring, and finish transitions before planning a bathroom remodel.',
+                'Review shower walls, niches, bathtub surrounds, marble-look tile, flooring, and finish transitions before planning a Queens bathroom remodel.',
             },
             {
               title: 'Kitchens and cabinets',
@@ -99,6 +100,34 @@ export default function GalleryPage() {
               <p className="mt-4 text-base leading-7 text-olive-100/72">{item.body}</p>
             </article>
           ))}
+        </div>
+      </section>
+
+      <section className="section-rule section-space">
+        <div className="site-shell grid gap-10 lg:grid-cols-[0.95fr_1.05fr]">
+          <div data-reveal="fade-up">
+            <p className="eyebrow">Planning from photos</p>
+            <h2 className="section-title mt-4">Turn the gallery into a clearer estimate request.</h2>
+            <p className="lead mt-6">
+              The best estimate calls start with more than “I want to remodel.” Use the gallery to
+              point to the finish direction, surface condition, and room type you have in mind.
+            </p>
+          </div>
+
+          <div className="surface p-6 sm:p-8" data-reveal="scale-in" data-delay="1">
+            <div className="grid gap-6 sm:grid-cols-2">
+              {[
+                'Save two or three photos that match the tile, cabinet, flooring, or paint finish you like.',
+                'Take current photos of the room from each corner, plus close-ups of problem areas.',
+                'Note what must stay in place: tub, toilet, vanity, cabinets, doors, trim, or appliances.',
+                'Mention the property location and whether building access, elevator timing, or parking may affect work.',
+              ].map((item) => (
+                <p key={item} className="border-l border-accent/45 pl-4 text-base leading-7 text-olive-100/72">
+                  {item}
+                </p>
+              ))}
+            </div>
+          </div>
         </div>
       </section>
 

@@ -4,9 +4,9 @@ import { siteData } from '../siteData';
 import { buildPageMetadata } from '../seo';
 
 export const metadata: Metadata = buildPageMetadata({
-  title: 'Contact',
+  title: 'Contact LOKEIL Renovation',
   description:
-    'Contact LOKEIL Renovation in Ridgewood, Queens for bathrooms, kitchens, tile work, flooring, painting, cabinetry, and other interior remodeling estimates.',
+    'Contact LOKEIL Renovation in Ridgewood, Queens for bathroom remodeling, kitchen remodeling, tile work, flooring, painting, cabinetry, and interior estimate requests.',
   path: '/contact',
 });
 
@@ -44,6 +44,11 @@ export default function Contact() {
             <p className="lead mt-6">
               Reach out with the room, the rough scope, and any project photos you have. Phone is
               the fastest path, but email works well too for details and references.
+            </p>
+            <p className="mt-5 max-w-2xl text-base leading-7 text-olive-100/72">
+              The most useful first message includes the property location, room type, whether the
+              work is repair or full replacement, and any gallery photos that match the finish you
+              want.
             </p>
 
             <div className="mt-8 flex flex-col gap-4 sm:flex-row">
@@ -147,6 +152,35 @@ export default function Contact() {
               If your project is interior-focused and falls within that area, call or send an
               email with the room, location, and rough scope.
             </p>
+          </div>
+        </div>
+      </section>
+
+      <section className="section-rule section-space">
+        <div className="site-shell grid gap-10 lg:grid-cols-[0.9fr_1.1fr]">
+          <div data-reveal="fade-up">
+            <p className="eyebrow">Estimate prep</p>
+            <h2 className="section-title mt-4">What to send before a Queens remodeling estimate.</h2>
+            <p className="lead mt-6">
+              A few practical details make the first conversation faster and help LOKEIL understand
+              whether the job is mostly tile, plumbing-adjacent bathroom work, cabinet fitting,
+              flooring, plaster, paint, or another interior finish scope.
+            </p>
+          </div>
+
+          <div className="surface p-6 sm:p-8" data-reveal="scale-in" data-delay="1">
+            <div className="space-y-5">
+              {[
+                'Project address or neighborhood, especially if access, elevator windows, or parking may affect work.',
+                'Current photos of the room, including corners, floors, walls, ceilings, fixtures, and damaged areas.',
+                'The main goal: repair, refresh, full remodel, new tile, cabinet installation, flooring, plaster, or painting.',
+                'Any finish references from the gallery, service pages, or materials you already selected.',
+              ].map((item) => (
+                <p key={item} className="border-b border-white/8 pb-5 text-base leading-7 text-olive-100/72 last:border-b-0 last:pb-0">
+                  {item}
+                </p>
+              ))}
+            </div>
           </div>
         </div>
       </section>

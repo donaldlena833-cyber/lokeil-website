@@ -11,9 +11,9 @@ import {
 import { buildPageMetadata } from '../seo';
 
 export const metadata: Metadata = buildPageMetadata({
-  title: 'Services',
+  title: 'Interior Remodeling Services in Queens',
   description:
-    'Explore the interior remodeling services offered by LOKEIL Renovation, including bathrooms, kitchens, tile installation, flooring, plaster, painting, cabinets, doors, steps, and fireplace design.',
+    'Explore LOKEIL Renovation services in Queens: bathroom remodeling, kitchen remodeling, tile installation, flooring, plaster, painting, cabinets, doors, trim, and interior finish work.',
   path: '/services',
 });
 
@@ -29,9 +29,15 @@ export default function Services() {
             </h1>
             <p className="lead mt-6">
               From bathrooms and kitchens to tile work, flooring, plaster, painting, cabinets,
-              and finish details, these are the services most often requested for interior projects.
+              and finish details, these are the services most often requested for Queens interior
+              remodeling projects.
             </p>
-            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+            <p className="mt-5 max-w-2xl text-base leading-7 text-olive-100/72">
+              Start with the service page closest to your project, then use the gallery and contact
+              page to send room photos, finish references, and the practical constraints around the
+              work area.
+            </p>
+            <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
               <Link href="/bathroom-remodeling-queens" className="button-secondary">
                 Bathroom Remodeling Queens
               </Link>
@@ -79,6 +85,11 @@ export default function Services() {
           <div className="max-w-3xl" data-reveal="fade-up">
             <p className="eyebrow">What the client can hire for</p>
             <h2 className="section-title mt-4">Interior work for the rooms people use every day.</h2>
+            <p className="mt-5 text-base leading-7 text-olive-100/72">
+              LOKEIL is positioned for room-by-room interior upgrades rather than vague whole-home
+              claims. Each service page explains the surfaces, prep, and decisions that usually
+              shape the estimate.
+            </p>
           </div>
 
           <div className="mt-12 grid gap-6 lg:grid-cols-2">
@@ -146,6 +157,33 @@ export default function Services() {
               ))}
             </div>
           </div>
+        </div>
+      </section>
+
+      <section className="section-rule section-space">
+        <div className="site-shell grid gap-8 lg:grid-cols-3">
+          {[
+            {
+              title: 'Before the estimate',
+              body:
+                'Gather photos of the current room, rough dimensions, finish references, and a short list of what should change versus what can remain.',
+            },
+            {
+              title: 'During planning',
+              body:
+                'Clarify tile direction, cabinet scope, flooring transitions, wall prep, trim, access timing, and any building rules that may affect scheduling.',
+            },
+            {
+              title: 'After scope is clear',
+              body:
+                'Use the service page and gallery references to align on materials, room sequence, finish expectations, and the best next contact step.',
+            },
+          ].map((item, index) => (
+            <article key={item.title} className="surface px-6 py-7 sm:px-8" data-reveal="fade-up" data-delay={String(index + 1)}>
+              <h2 className="text-3xl text-olive-50">{item.title}</h2>
+              <p className="mt-4 text-base leading-7 text-olive-100/72">{item.body}</p>
+            </article>
+          ))}
         </div>
       </section>
 
