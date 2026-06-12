@@ -11,9 +11,9 @@ const routes = [
   { path: '/kitchen-remodeling-queens', priority: 0.88, changeFrequency: 'monthly' as const, lastModified: '2026-06-12' },
   { path: '/tile-installation-queens', priority: 0.86, changeFrequency: 'monthly' as const, lastModified: '2026-06-12' },
   { path: '/flooring-installation-queens', priority: 0.85, changeFrequency: 'monthly' as const, lastModified: '2026-06-12' },
-  { path: '/plaster-drywall-finishing-queens', priority: 0.84, changeFrequency: 'monthly' as const, lastModified: '2026-05-10' },
-  { path: '/interior-painting-queens', priority: 0.84, changeFrequency: 'monthly' as const, lastModified: '2026-05-10' },
-  { path: '/cabinet-installation-queens', priority: 0.84, changeFrequency: 'monthly' as const, lastModified: '2026-05-26' },
+  { path: '/plaster-drywall-finishing-queens', priority: 0.84, changeFrequency: 'monthly' as const, lastModified: '2026-06-12' },
+  { path: '/interior-painting-queens', priority: 0.84, changeFrequency: 'monthly' as const, lastModified: '2026-06-12' },
+  { path: '/cabinet-installation-queens', priority: 0.84, changeFrequency: 'monthly' as const, lastModified: '2026-06-12' },
   { path: '/blog', priority: 0.8, changeFrequency: 'weekly' as const, lastModified: '2026-06-12' },
   ...blogPosts.filter((post) => !post.slug.match(/^bathroom-remodeling-(astoria|jackson-heights|long-island-city|ridgewood|sunnyside|woodside)-nyc-planning-guide$/)).map((post) => ({
     path: `/blog/${post.slug}`,

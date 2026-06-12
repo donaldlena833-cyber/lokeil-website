@@ -7,9 +7,9 @@ import { siteData } from '../siteData';
 import { buildPageMetadata } from '../seo';
 
 export const metadata: Metadata = buildPageMetadata({
-  title: 'Interior Painting Queens',
+  title: 'Interior Painting Queens | Apartment and Remodel Painting',
   description:
-    'Interior painting in Queens for apartments, bathrooms, kitchens, and remodeling finish work from LOKEIL Renovation in Ridgewood.',
+    'Interior painting in Queens for apartments, bathrooms, kitchens, wall prep, trim, and remodeling finish work from LOKEIL Renovation in Ridgewood.',
   path: '/interior-painting-queens',
 });
 
@@ -35,6 +35,24 @@ const planningNotes = [
     title: 'Sequence around the remodel',
     body:
       'Paint should land at the right point in the project, after messy surface work and before the final trim, door, cabinet, or fixture details are fully closed out.',
+  },
+] as const;
+
+const paintingPlanning = [
+  {
+    title: 'Wall prep before color',
+    body:
+      'Paint does not fix uneven walls by itself. Before the finish coat, LOKEIL can discuss patching, sanding, plaster or drywall finishing, caulk lines, nail pops, and old repair areas that will show through new paint.',
+  },
+  {
+    title: 'Room-by-room finish choices',
+    body:
+      'Bathrooms, kitchens, bedrooms, hallways, and living rooms wear differently. Moisture, cleaning needs, natural light, children, pets, and rental turnover can all change which paint finish makes practical sense.',
+  },
+  {
+    title: 'Painting inside a remodel sequence',
+    body:
+      'Interior painting usually works best after dusty wall work and before final hardware or detail touch-ups. If the room also includes tile, flooring, cabinets, doors, or trim, the estimate should place paint in the right part of the schedule.',
   },
 ] as const;
 
@@ -179,6 +197,29 @@ export default function InteriorPaintingQueens() {
                 <article key={note.title} className="surface px-6 py-7 sm:px-8" data-reveal="fade-up" data-delay={String(index + 1)}>
                   <h3 className="text-3xl text-olive-50">{note.title}</h3>
                   <p className="mt-4 text-base leading-7 text-olive-100/72">{note.body}</p>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="section-rule section-space">
+          <div className="site-shell grid gap-10 lg:grid-cols-[0.82fr_1.18fr]">
+            <div data-reveal="fade-up">
+              <p className="eyebrow">Queens painting scope</p>
+              <h2 className="section-title mt-4">A useful painting estimate separates color, prep, and finish details.</h2>
+              <p className="lead mt-6">
+                For Queens apartments and remodels, the painting conversation should cover the
+                existing wall condition, what rooms are active, which surfaces need repair,
+                and how paint connects to the rest of the project.
+              </p>
+            </div>
+
+            <div className="grid gap-5">
+              {paintingPlanning.map((detail, index) => (
+                <article key={detail.title} className="surface px-6 py-7 sm:px-8" data-reveal="fade-up" data-delay={String(index + 1)}>
+                  <h3 className="text-2xl text-olive-50">{detail.title}</h3>
+                  <p className="mt-4 text-base leading-7 text-olive-100/72">{detail.body}</p>
                 </article>
               ))}
             </div>

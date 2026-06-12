@@ -7,9 +7,9 @@ import { siteData } from '../siteData';
 import { buildPageMetadata } from '../seo';
 
 export const metadata: Metadata = buildPageMetadata({
-  title: 'Plaster and Drywall Finishing Queens',
+  title: 'Plaster and Drywall Finishing Queens | Wall Repair and Skim Work',
   description:
-    'Plaster and drywall finishing in Queens for wall repair, skim work, paint prep, apartments, bathrooms, kitchens, and interior remodels from LOKEIL Renovation.',
+    'Plaster and drywall finishing in Queens for wall repair, skim work, sanding, paint prep, bathrooms, kitchens, and apartment remodels from LOKEIL Renovation.',
   path: '/plaster-drywall-finishing-queens',
 });
 
@@ -35,6 +35,24 @@ const planningNotes = [
     title: 'Coordinate with the room',
     body:
       'The best surface work connects to the full remodel: tile edges, flooring transitions, cabinet lines, bathroom walls, kitchen backsplashes, and paint finish.',
+  },
+] as const;
+
+const finishPlanning = [
+  {
+    title: 'Apartments with older wall conditions',
+    body:
+      'Queens apartments often have patched plaster, uneven drywall seams, old fastener marks, settlement cracks, or previous repairs under the paint. LOKEIL looks at the wall condition before recommending patching, skim work, sanding, or a larger surface-prep scope.',
+  },
+  {
+    title: 'Bathrooms, kitchens, and tile edges',
+    body:
+      'Drywall and plaster details matter around shower tile, backsplash tile, vanity walls, cabinet returns, flooring transitions, and door trim. The cleaner the substrate and edges are, the better the finish work reads after paint and fixtures are installed.',
+  },
+  {
+    title: 'Dust, access, and work sequence',
+    body:
+      'Surface work can affect nearby rooms, hallways, and occupied apartments. Estimate conversations should cover room access, furniture protection, dust control expectations, drying time, and when painting or trim work should follow.',
   },
 ] as const;
 
@@ -179,6 +197,29 @@ export default function PlasterDrywallFinishingQueens() {
                 <article key={note.title} className="surface px-6 py-7 sm:px-8" data-reveal="fade-up" data-delay={String(index + 1)}>
                   <h3 className="text-3xl text-olive-50">{note.title}</h3>
                   <p className="mt-4 text-base leading-7 text-olive-100/72">{note.body}</p>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="section-rule section-space">
+          <div className="site-shell grid gap-10 lg:grid-cols-[0.82fr_1.18fr]">
+            <div data-reveal="fade-up">
+              <p className="eyebrow">Queens finish planning</p>
+              <h2 className="section-title mt-4">Drywall and plaster work should solve the room condition, not just hide it.</h2>
+              <p className="lead mt-6">
+                A stronger plaster or drywall scope starts with why the wall needs work:
+                damage, old repairs, tile edges, cabinet returns, ceiling marks, or paint
+                prep before a larger interior update.
+              </p>
+            </div>
+
+            <div className="grid gap-5">
+              {finishPlanning.map((detail, index) => (
+                <article key={detail.title} className="surface px-6 py-7 sm:px-8" data-reveal="fade-up" data-delay={String(index + 1)}>
+                  <h3 className="text-2xl text-olive-50">{detail.title}</h3>
+                  <p className="mt-4 text-base leading-7 text-olive-100/72">{detail.body}</p>
                 </article>
               ))}
             </div>

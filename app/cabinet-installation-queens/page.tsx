@@ -7,9 +7,9 @@ import { siteData } from '../siteData';
 import { buildPageMetadata } from '../seo';
 
 export const metadata: Metadata = buildPageMetadata({
-  title: 'Cabinet Installation Queens',
+  title: 'Cabinet Installation Queens | Kitchen and Bathroom Cabinets',
   description:
-    'Cabinet installation in Queens for kitchens, bathrooms, storage areas, and interior remodeling projects with finish-focused detail from LOKEIL Renovation in Ridgewood.',
+    'Cabinet installation in Queens for kitchens, bathrooms, storage areas, appliance clearances, trim, and interior remodeling projects from LOKEIL Renovation.',
   path: '/cabinet-installation-queens',
 });
 
@@ -35,6 +35,24 @@ const planningNotes = [
     title: 'Coordinate backsplash and paint',
     body:
       'Cabinets rarely stand alone. Backsplash tile, plaster repair, flooring transitions, paint, hardware, and trim should be planned before final placement closes the room.',
+  },
+] as const;
+
+const cabinetPlanning = [
+  {
+    title: 'Kitchen cabinet fit and clearances',
+    body:
+      'Cabinet installation should account for appliance openings, sink and plumbing locations, countertop expectations, backsplash edges, door swings, filler strips, toe kicks, and how level the walls and floors actually are.',
+  },
+  {
+    title: 'Bathroom vanities and storage',
+    body:
+      'Bathroom cabinet work often touches tile, flooring, mirror placement, lighting, wall repair, paint, and plumbing access. Planning those details together helps avoid awkward gaps around the vanity or storage area.',
+  },
+  {
+    title: 'Finish details after the boxes are set',
+    body:
+      'The room is not finished when the cabinet boxes are simply placed. Trim, hardware, caulk lines, wall touch-ups, paint edges, and adjacent flooring or tile transitions decide whether the installation looks complete.',
   },
 ] as const;
 
@@ -180,6 +198,29 @@ export default function CabinetInstallationQueens() {
                 <article key={note.title} className="surface px-6 py-7 sm:px-8" data-reveal="fade-up" data-delay={String(index + 1)}>
                   <h3 className="text-3xl text-olive-50">{note.title}</h3>
                   <p className="mt-4 text-base leading-7 text-olive-100/72">{note.body}</p>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="section-rule section-space">
+          <div className="site-shell grid gap-10 lg:grid-cols-[0.82fr_1.18fr]">
+            <div data-reveal="fade-up">
+              <p className="eyebrow">Cabinet planning</p>
+              <h2 className="section-title mt-4">Good cabinet work depends on the room around it.</h2>
+              <p className="lead mt-6">
+                For Queens kitchens, bathrooms, and storage areas, the cabinet estimate should
+                cover the cabinet plan, wall and floor conditions, clearances, hardware, and
+                the finish details that surround the installation.
+              </p>
+            </div>
+
+            <div className="grid gap-5">
+              {cabinetPlanning.map((detail, index) => (
+                <article key={detail.title} className="surface px-6 py-7 sm:px-8" data-reveal="fade-up" data-delay={String(index + 1)}>
+                  <h3 className="text-2xl text-olive-50">{detail.title}</h3>
+                  <p className="mt-4 text-base leading-7 text-olive-100/72">{detail.body}</p>
                 </article>
               ))}
             </div>
