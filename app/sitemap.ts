@@ -14,7 +14,7 @@ const routes = [
   { path: '/plaster-drywall-finishing-queens', priority: 0.84, changeFrequency: 'monthly' as const, lastModified: '2026-05-10' },
   { path: '/interior-painting-queens', priority: 0.84, changeFrequency: 'monthly' as const, lastModified: '2026-05-10' },
   { path: '/cabinet-installation-queens', priority: 0.84, changeFrequency: 'monthly' as const, lastModified: '2026-05-26' },
-  { path: '/blog', priority: 0.8, changeFrequency: 'weekly' as const, lastModified: '2026-05-24' },
+  { path: '/blog', priority: 0.8, changeFrequency: 'weekly' as const, lastModified: '2026-06-12' },
   ...blogPosts.map((post) => ({
     path: `/blog/${post.slug}`,
     priority: 0.72,
