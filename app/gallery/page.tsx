@@ -26,6 +26,16 @@ export default function GalleryPage() {
               Browse the photo archive by room and finish type. The gallery now keeps the focus on
               the work itself, with a quieter layout and no video or caption clutter.
             </p>
+            <p className="mt-5 max-w-2xl text-base leading-7 text-olive-100/72">
+              This page is now part of the SEO proof system, not just a portfolio. Use it to compare
+              bathroom tile, shower surrounds, flooring, cabinet work, paint preparation, and finish
+              details before calling about a Queens remodeling project.
+            </p>
+            <p className="mt-4 max-w-2xl text-base leading-7 text-olive-100/72">
+              When you contact LOKEIL, reference the room type and the kind of finish you liked in
+              the gallery. That makes the first estimate conversation more specific and helps avoid
+              vague remodeling requests that are hard to price.
+            </p>
           </div>
 
           <div className="grid gap-5 lg:grid-cols-[0.72fr_0.28fr]">
@@ -62,6 +72,33 @@ export default function GalleryPage() {
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      <section className="section-rule section-space bg-black/8">
+        <div className="site-shell grid gap-8 lg:grid-cols-3">
+          {[
+            {
+              title: 'Bathrooms and showers',
+              body:
+                'Review shower walls, niches, bathtub surrounds, marble-look tile, flooring, and finish transitions before planning a bathroom remodel.',
+            },
+            {
+              title: 'Kitchens and cabinets',
+              body:
+                'Use the cabinet and kitchen photos to discuss storage, backsplash, floor transitions, hardware, and the level of finish expected.',
+            },
+            {
+              title: 'Paint, plaster, and prep',
+              body:
+                'Surface preparation matters. Wall repair, skim work, paint, trim, and clean edges often decide whether the final room feels polished.',
+            },
+          ].map((item, index) => (
+            <article key={item.title} className="surface px-6 py-7 sm:px-8" data-reveal="fade-up" data-delay={String(index + 1)}>
+              <h2 className="text-3xl text-olive-50">{item.title}</h2>
+              <p className="mt-4 text-base leading-7 text-olive-100/72">{item.body}</p>
+            </article>
+          ))}
         </div>
       </section>
 

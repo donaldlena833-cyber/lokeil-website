@@ -14,8 +14,14 @@ export const metadata: Metadata = buildPageMetadata({
 });
 
 export default function BlogIndex() {
-  const featuredPost = blogPosts[0];
-  const otherPosts = blogPosts.slice(1);
+  const visiblePosts = blogPosts.filter(
+    (post) =>
+      !post.slug.match(
+        /^bathroom-remodeling-(astoria|jackson-heights|long-island-city|ridgewood|sunnyside|woodside)-nyc-planning-guide$/,
+      ),
+  );
+  const featuredPost = visiblePosts[0];
+  const otherPosts = visiblePosts.slice(1);
 
   return (
     <main>

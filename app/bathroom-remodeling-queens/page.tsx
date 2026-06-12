@@ -20,6 +20,32 @@ const projectFit = [
   'Queens apartment and home projects where clean sequencing matters',
 ] as const;
 
+const queensPlanningDetails = [
+  {
+    title: 'Tile, waterproofing, and shower surfaces',
+    body:
+      'Bathroom remodeling searches in Queens are already showing up in Search Console, but homeowners need more than a generic service page. Wet areas should be planned around the existing walls, tile substrate, niche placement, curb or tub edge, grout lines, and the way the shower will be used every day.',
+  },
+  {
+    title: 'Vanity, flooring, and finish transitions',
+    body:
+      'A bathroom can look unfinished if the vanity, floor edge, baseboard, mirror, lighting, paint, and door trim are scoped separately. LOKEIL keeps those finish details in the same conversation so the room feels complete after the main surfaces are done.',
+  },
+  {
+    title: 'Queens buildings and access',
+    body:
+      'Ridgewood, Astoria, Jackson Heights, Sunnyside, Woodside, Long Island City, Forest Hills, and nearby Queens neighborhoods all bring different building conditions. Co-ops, condos, two-family homes, and older apartments may require work-hour planning, hallway protection, debris coordination, or superintendent communication.',
+  },
+] as const;
+
+const photoChecklist = [
+  'One wide photo from the bathroom doorway',
+  'Straight-on photos of the tub or shower wall',
+  'Close-ups of damaged tile, grout, plaster, or flooring',
+  'Vanity, mirror, lighting, toilet, and doorway clearance photos',
+  'Any inspiration images, tile choices, or fixture finish preferences',
+] as const;
+
 const planningNotes = [
   {
     title: 'Start with the existing room',
@@ -181,6 +207,56 @@ export default function BathroomRemodelingQueens() {
                 <p className="mt-4 text-base leading-7 text-olive-100/72">{note.body}</p>
               </article>
             ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="section-rule section-space">
+        <div className="site-shell grid gap-10 lg:grid-cols-[0.82fr_1.18fr]">
+          <div data-reveal="fade-up">
+            <p className="eyebrow">Queens scope</p>
+            <h2 className="section-title mt-4">The bathroom page now carries the neighborhood intent.</h2>
+            <p className="lead mt-6">
+              Instead of spreading thin pages across every Queens neighborhood, this page is the main
+              bathroom remodeling surface for Ridgewood and nearby Queens searches. It should answer
+              the core planning questions first, then link into gallery proof and related services.
+            </p>
+          </div>
+
+          <div className="grid gap-5">
+            {queensPlanningDetails.map((detail, index) => (
+              <article key={detail.title} className="surface px-6 py-7 sm:px-8" data-reveal="fade-up" data-delay={String(index + 1)}>
+                <h3 className="text-2xl text-olive-50">{detail.title}</h3>
+                <p className="mt-4 text-base leading-7 text-olive-100/72">{detail.body}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="section-rule section-space bg-black/8">
+        <div className="site-shell grid gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-start">
+          <div data-reveal="fade-up">
+            <p className="eyebrow">Estimate prep</p>
+            <h2 className="section-title mt-4">What to send before asking for a bathroom estimate.</h2>
+            <p className="lead mt-6">
+              Clear photos help separate a cosmetic refresh from a larger remodel. They also make it
+              easier to discuss tile, flooring, wall repair, vanity fit, painting, and finish details
+              without guessing from a short text message.
+            </p>
+          </div>
+
+          <div className="surface p-6 sm:p-8" data-reveal="scale-in" data-delay="1">
+            <div className="grid gap-4">
+              {photoChecklist.map((item, index) => (
+                <div key={item} className="grid grid-cols-[auto_1fr] gap-4 border-b border-white/8 pb-4 last:border-b-0 last:pb-0">
+                  <span className="text-sm font-semibold uppercase tracking-[0.2em] text-accent/84">
+                    {String(index + 1).padStart(2, '0')}
+                  </span>
+                  <p className="text-base leading-7 text-olive-100/76">{item}</p>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>

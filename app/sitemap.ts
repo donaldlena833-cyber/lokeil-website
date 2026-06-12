@@ -15,7 +15,7 @@ const routes = [
   { path: '/interior-painting-queens', priority: 0.84, changeFrequency: 'monthly' as const, lastModified: '2026-05-10' },
   { path: '/cabinet-installation-queens', priority: 0.84, changeFrequency: 'monthly' as const, lastModified: '2026-05-26' },
   { path: '/blog', priority: 0.8, changeFrequency: 'weekly' as const, lastModified: '2026-06-12' },
-  ...blogPosts.map((post) => ({
+  ...blogPosts.filter((post) => !post.slug.match(/^bathroom-remodeling-(astoria|jackson-heights|long-island-city|ridgewood|sunnyside|woodside)-nyc-planning-guide$/)).map((post) => ({
     path: `/blog/${post.slug}`,
     priority: 0.72,
     changeFrequency: 'monthly' as const,
