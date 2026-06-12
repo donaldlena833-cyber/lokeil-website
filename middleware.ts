@@ -24,6 +24,14 @@ export function middleware(request: NextRequest) {
     return NextResponse.redirect(redirectUrl, 308);
   }
 
+  if (pathname === '/sitemap') {
+    const redirectUrl = request.nextUrl.clone();
+    redirectUrl.pathname = '/sitemap.xml';
+    redirectUrl.search = '';
+
+    return NextResponse.redirect(redirectUrl, 301);
+  }
+
   const consolidatedTarget = consolidatedBlogRedirects.get(pathname);
 
   if (consolidatedTarget) {
