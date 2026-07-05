@@ -1098,6 +1098,12 @@ export const blogPosts: BlogPost[] = [
         href: 'https://www.nyc.gov/site/buildings/property-or-business-owner/plumbing-permits.page',
       },
     ],
+    relatedServices: [
+      { label: 'Bathroom Remodeling Queens', href: '/bathroom-remodeling-queens' },
+      { label: 'Kitchen Remodeling Queens', href: '/kitchen-remodeling-queens' },
+      { label: 'Tile Installation Queens', href: '/tile-installation-queens' },
+      { label: 'Flooring Installation Queens', href: '/flooring-installation-queens' },
+    ],
   },
 ];
 

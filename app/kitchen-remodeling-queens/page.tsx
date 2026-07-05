@@ -7,9 +7,9 @@ import { siteData } from '../siteData';
 import { buildPageMetadata } from '../seo';
 
 export const metadata: Metadata = buildPageMetadata({
-  title: 'Kitchen Remodeling Queens',
+  title: 'Kitchen Remodeling Queens | Renovation and Cabinets',
   description:
-    'Kitchen remodeling in Queens with cabinet installation, tile, flooring, painting, plaster, trim, doors, and finish-focused interior work from LOKEIL Renovation in Ridgewood.',
+    'Kitchen remodeling and kitchen renovation in Queens with cabinet installation, backsplash tile, flooring, painting, plaster, trim, doors, and finish work from LOKEIL.',
   path: '/kitchen-remodeling-queens',
 });
 
@@ -39,6 +39,11 @@ const planningNotes = [
 ] as const;
 
 const localScopeSignals = [
+  {
+    title: 'Queens kitchen remodeling and renovation are both in play',
+    body:
+      'Search Console is already showing near-page-two demand for Queens kitchen remodeling and Queens kitchen renovation. The page needs to speak to both: cabinet-led updates, backsplash and flooring work, finish repairs, and larger room changes when the scope calls for it.',
+  },
   {
     title: 'Cabinets and finish lines first',
     body:
@@ -140,6 +145,9 @@ export default function KitchenRemodelingQueens() {
                 </Link>
                 <Link href="/bathroom-remodeling-queens" className="button-secondary">
                   Bathroom Remodeling
+                </Link>
+                <Link href="/blog/nyc-kitchen-bathroom-remodel-permits-queens" className="button-secondary">
+                  Permit Questions
                 </Link>
               </div>
             </div>
@@ -273,6 +281,9 @@ export default function KitchenRemodelingQueens() {
                   </a>
                   <Link href="/tile-installation-queens" className="button-secondary">
                     Tile Installation
+                  </Link>
+                  <Link href="/blog/kitchen-remodeling-queens-planning-guide" className="button-secondary">
+                    Kitchen Planning Guide
                   </Link>
                   <Link href="/contact" className="button-secondary">
                     Contact LOKEIL

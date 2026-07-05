@@ -7,9 +7,9 @@ import { featuredImages, siteData } from '../siteData';
 import { buildPageMetadata } from '../seo';
 
 export const metadata: Metadata = buildPageMetadata({
-  title: 'Bathroom Remodeling Queens',
+  title: 'Bathroom Remodeling Queens | Ridgewood, Steinway, Astoria',
   description:
-    'Bathroom remodeling in Queens with tile work, shower surrounds, flooring, painting, plaster, cabinetry details, and direct estimates from LOKEIL Renovation in Ridgewood.',
+    'Bathroom remodeling in Queens for Ridgewood, Steinway, Astoria, Sunnyside, Woodside, and nearby apartments with tile, shower, flooring, plaster, painting, and finish work.',
   path: '/bathroom-remodeling-queens',
 });
 
@@ -21,6 +21,11 @@ const projectFit = [
 ] as const;
 
 const queensPlanningDetails = [
+  {
+    title: 'Ridgewood, Steinway, Astoria, and nearby Queens bathrooms',
+    body:
+      'Search Console is already showing bathroom remodeling demand in Queens and early neighborhood signals around Steinway. This page should answer the local question directly: LOKEIL is a Ridgewood-based remodeler for Queens bathrooms, especially apartments and homes where tile, floors, plaster, paint, and finish details all touch the same room.',
+  },
   {
     title: 'Tile, waterproofing, and shower surfaces',
     body:
@@ -148,6 +153,9 @@ export default function BathroomRemodelingQueens() {
               </Link>
               <Link href="/tile-installation-queens" className="button-secondary">
                 Tile Installation
+              </Link>
+              <Link href="/blog/nyc-kitchen-bathroom-remodel-permits-queens" className="button-secondary">
+                Permit Questions
               </Link>
             </div>
           </div>
@@ -300,12 +308,15 @@ export default function BathroomRemodelingQueens() {
                 <a href={`tel:${siteData.phoneHref}`} className="button-primary">
                   Call {siteData.phoneDisplay}
                 </a>
-                <Link href="/kitchen-remodeling-queens" className="button-secondary">
-                  Kitchen Remodeling
-                </Link>
-                <Link href="/contact" className="button-secondary">
-                  Contact LOKEIL
-                </Link>
+              <Link href="/kitchen-remodeling-queens" className="button-secondary">
+                Kitchen Remodeling
+              </Link>
+              <Link href="/blog/bathroom-remodeling-cost-queens-ny" className="button-secondary">
+                Bathroom Cost Guide
+              </Link>
+              <Link href="/contact" className="button-secondary">
+                Contact LOKEIL
+              </Link>
               </div>
             </div>
           </div>
