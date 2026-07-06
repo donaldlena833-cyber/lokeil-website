@@ -7,9 +7,9 @@ import { siteData } from '../siteData';
 import { buildPageMetadata } from '../seo';
 
 export const metadata: Metadata = buildPageMetadata({
-  title: 'Tile Installation Queens',
+  title: 'Tile Installation Queens | Shower and Bathroom Tile',
   description:
-    'Tile installation in Queens for bathroom walls, shower surrounds, floors, niches, backsplashes, and clean finish transitions from LOKEIL Renovation in Ridgewood.',
+    'Tile installation in Queens for shower tile, bathroom walls, floors, niches, backsplashes, and clean finish transitions in Ridgewood, Astoria, Sunnyside, Woodside, and nearby areas.',
   path: '/tile-installation-queens',
 });
 
@@ -53,6 +53,30 @@ const tileProofSignals = [
     title: 'Photos need to carry the page',
     body:
       'Bathroom tile photos help buyers compare layout, niche, edge, and transition details before starting an estimate conversation.',
+  },
+] as const;
+
+const localTilePaths = [
+  {
+    title: 'Shower and bathroom tile',
+    body:
+      'Most Queens tile searches are really bathroom searches: shower walls, tub surrounds, niches, benches, floors, waterproofing conversations, and the edges around glass or fixtures.',
+    href: '/bathroom-remodeling-queens',
+    label: 'Bathroom Remodeling Queens',
+  },
+  {
+    title: 'Kitchen backsplash and floor tile',
+    body:
+      'Kitchen tile has to line up with cabinets, counters, outlets, appliances, flooring, and paint. A backsplash or floor can look weak if the surrounding finish plan is not clear first.',
+    href: '/kitchen-remodeling-queens',
+    label: 'Kitchen Remodeling Queens',
+  },
+  {
+    title: 'Ridgewood and nearby Queens apartments',
+    body:
+      'Ridgewood, Astoria, Sunnyside, Woodside, and nearby Queens homes often bring older walls, uneven floors, tight access, and finish transitions that should be discussed before tile starts.',
+    href: '/blog/shower-tile-installation-queens-guide',
+    label: 'Shower Tile Guide',
   },
 ] as const;
 
@@ -128,8 +152,8 @@ export default function TileInstallationQueens() {
               </h1>
               <p className="lead mt-6">
                 {siteData.brandName} is based in Ridgewood and handles tile installation across
-                Queens and nearby New York City areas, including bathroom walls, shower surrounds,
-                floors, niches, backsplashes, and finish details around the tile work.
+                Queens and nearby New York City areas, including shower tile, bathroom walls,
+                tub surrounds, floors, niches, backsplashes, and finish details around the tile work.
               </p>
               <div className="mt-8 flex flex-col gap-4 sm:flex-row">
                 <a href={`tel:${siteData.phoneHref}`} className="button-primary">
@@ -226,6 +250,31 @@ export default function TileInstallationQueens() {
                 <article key={item.title} className="surface px-6 py-7 sm:px-8" data-reveal="fade-up" data-delay={String(index + 1)}>
                   <h3 className="text-3xl text-olive-50">{item.title}</h3>
                   <p className="mt-4 text-base leading-7 text-olive-100/72">{item.body}</p>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="section-rule section-space bg-black/8">
+          <div className="site-shell">
+            <div className="max-w-3xl" data-reveal="fade-up">
+              <p className="eyebrow">Queens tile paths</p>
+              <h2 className="section-title mt-4">Tile leads usually start with a room, not just a material.</h2>
+              <p className="mt-5 text-base leading-7 text-olive-100/72">
+                A clearer estimate starts by naming where the tile is going, what is around it, and
+                which finish details have to land cleanly.
+              </p>
+            </div>
+
+            <div className="mt-12 grid gap-6 lg:grid-cols-3">
+              {localTilePaths.map((item, index) => (
+                <article key={item.title} className="surface px-6 py-7 sm:px-8" data-reveal="fade-up" data-delay={String(index + 1)}>
+                  <h3 className="text-3xl text-olive-50">{item.title}</h3>
+                  <p className="mt-4 text-base leading-7 text-olive-100/72">{item.body}</p>
+                  <Link href={item.href} className="mt-5 inline-flex text-sm font-semibold text-accent hover:text-accent-hover">
+                    {item.label}
+                  </Link>
                 </article>
               ))}
             </div>

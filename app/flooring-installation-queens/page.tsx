@@ -7,9 +7,9 @@ import { siteData } from '../siteData';
 import { buildPageMetadata } from '../seo';
 
 export const metadata: Metadata = buildPageMetadata({
-  title: 'Flooring Installation Queens',
+  title: 'Flooring Installation Queens | Bathroom and Kitchen Floors',
   description:
-    'Flooring installation in Queens for bathrooms, kitchens, apartments, and interior remodels from LOKEIL Renovation in Ridgewood.',
+    'Flooring installation in Queens for bathroom floors, kitchen floors, apartment flooring, transitions, prep, and interior remodels in Ridgewood and nearby Queens.',
   path: '/flooring-installation-queens',
 });
 
@@ -53,6 +53,30 @@ const flooringDecisionSignals = [
     title: 'Prep matters before material choice',
     body:
       'Uneven surfaces, old tile, soft spots, damaged underlayment, and height changes affect the work before the final flooring material is even selected.',
+  },
+] as const;
+
+const localFlooringPaths = [
+  {
+    title: 'Bathroom floor installation',
+    body:
+      'Bathroom flooring has to deal with tile edges, shower or tub transitions, soft spots, moisture concerns, thresholds, and the way the new floor meets the vanity and walls.',
+    href: '/bathroom-remodeling-queens',
+    label: 'Bathroom Remodeling Queens',
+  },
+  {
+    title: 'Kitchen floor and cabinet transitions',
+    body:
+      'Kitchen flooring should be planned with cabinets, appliances, toe kicks, door swings, hallway transitions, backsplash work, and painting so the room does not feel pieced together.',
+    href: '/kitchen-remodeling-queens',
+    label: 'Kitchen Remodeling Queens',
+  },
+  {
+    title: 'Queens apartment flooring constraints',
+    body:
+      'Ridgewood, Astoria, Sunnyside, Woodside, and nearby Queens apartments can bring older subfloors, uneven surfaces, building access limits, and room sequencing that should be scoped early.',
+    href: '/blog/bathroom-flooring-installation-queens-guide',
+    label: 'Bathroom Flooring Guide',
   },
 ] as const;
 
@@ -128,8 +152,9 @@ export default function FlooringInstallationQueens() {
               </h1>
               <p className="lead mt-6">
                 {siteData.brandName} is based in Ridgewood and handles flooring installation
-                across Queens and nearby New York City areas, especially when floors connect to
-                bathroom, kitchen, tile, plaster, painting, cabinet, door, and trim work.
+                across Queens and nearby New York City areas, especially when bathroom floors,
+                kitchen floors, apartment flooring, and transitions connect to tile, plaster,
+                painting, cabinet, door, and trim work.
               </p>
               <div className="mt-8 flex flex-col gap-4 sm:flex-row">
                 <a href={`tel:${siteData.phoneHref}`} className="button-primary">
@@ -226,6 +251,31 @@ export default function FlooringInstallationQueens() {
                 <article key={item.title} className="surface px-6 py-7 sm:px-8" data-reveal="fade-up" data-delay={String(index + 1)}>
                   <h3 className="text-3xl text-olive-50">{item.title}</h3>
                   <p className="mt-4 text-base leading-7 text-olive-100/72">{item.body}</p>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="section-rule section-space bg-black/8">
+          <div className="site-shell">
+            <div className="max-w-3xl" data-reveal="fade-up">
+              <p className="eyebrow">Queens flooring paths</p>
+              <h2 className="section-title mt-4">Flooring estimates get clearer when the connected room is named.</h2>
+              <p className="mt-5 text-base leading-7 text-olive-100/72">
+                The same floor question can mean a bathroom repair, kitchen update, apartment
+                refresh, or a larger finish sequence. The page should route that intent quickly.
+              </p>
+            </div>
+
+            <div className="mt-12 grid gap-6 lg:grid-cols-3">
+              {localFlooringPaths.map((item, index) => (
+                <article key={item.title} className="surface px-6 py-7 sm:px-8" data-reveal="fade-up" data-delay={String(index + 1)}>
+                  <h3 className="text-3xl text-olive-50">{item.title}</h3>
+                  <p className="mt-4 text-base leading-7 text-olive-100/72">{item.body}</p>
+                  <Link href={item.href} className="mt-5 inline-flex text-sm font-semibold text-accent hover:text-accent-hover">
+                    {item.label}
+                  </Link>
                 </article>
               ))}
             </div>
