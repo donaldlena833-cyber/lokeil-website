@@ -42,7 +42,7 @@ const localScopeSignals = [
   {
     title: 'Queens kitchen remodeling and renovation are both in play',
     body:
-      'Search Console is already showing near-page-two demand for Queens kitchen remodeling and Queens kitchen renovation. The page needs to speak to both: cabinet-led updates, backsplash and flooring work, finish repairs, and larger room changes when the scope calls for it.',
+      'Queens kitchen remodeling and Queens kitchen renovation can mean different scopes: cabinet-led updates, backsplash and flooring work, finish repairs, or larger room changes when the project calls for it. LOKEIL keeps those paths separate so a partial update does not get priced like a full gut renovation.',
   },
   {
     title: 'Cabinets and finish lines first',
@@ -53,6 +53,16 @@ const localScopeSignals = [
     title: 'Partial updates still need sequencing',
     body:
       'Many kitchen leads are not full gut renovations. Cabinet work, backsplash, floor repair, and paint still need a clean order so one trade does not damage the next finish.',
+  },
+  {
+    title: 'Ridgewood, Astoria, Sunnyside, Woodside, and nearby Queens kitchens',
+    body:
+      'Kitchen work in Ridgewood, Astoria, Sunnyside, Woodside, Long Island City, Jackson Heights, Forest Hills, and nearby Queens neighborhoods often comes with older walls, tight access, apartment rules, and finish transitions between rooms. The plan should account for those constraints before cabinets, backsplash, floors, and paint are scheduled.',
+  },
+  {
+    title: 'Board, permit, and building questions',
+    body:
+      'Cabinet, paint, plaster, and surface work can be simpler than plumbing, gas, electrical, layout, or wall changes. If a kitchen remodel touches building systems, LOKEIL keeps that question visible early so the client can confirm board, building, DOB, or licensed trade requirements before the scope moves forward.',
   },
   {
     title: 'Use the gallery as proof',
@@ -149,6 +159,9 @@ export default function KitchenRemodelingQueens() {
                 <Link href="/blog/nyc-kitchen-bathroom-remodel-permits-queens" className="button-secondary">
                   Permit Questions
                 </Link>
+                <Link href="/tile-installation-queens" className="button-secondary">
+                  Backsplash Tile
+                </Link>
               </div>
             </div>
 
@@ -226,6 +239,9 @@ export default function KitchenRemodelingQueens() {
                 <Link href="/cabinet-installation-queens" className="button-secondary">
                   Cabinet Installation
                 </Link>
+                <Link href="/flooring-installation-queens" className="button-secondary">
+                  Kitchen Flooring
+                </Link>
               </div>
             </div>
 
@@ -272,7 +288,8 @@ export default function KitchenRemodelingQueens() {
                   <h2 className="section-title mt-4">Planning a Queens kitchen remodel?</h2>
                   <p className="lead mt-6">
                     Call or email with the room, photos if available, and the kitchen changes you
-                    want to make. LOKEIL can help turn that into a clearer scope conversation.
+                    want to make. LOKEIL can help turn that into a clearer scope conversation for
+                    cabinets, backsplash tile, flooring, painting, permits questions, and any nearby bathroom work.
                   </p>
                 </div>
                 <div className="flex flex-col gap-4 sm:flex-row lg:flex-col" data-reveal="fade-up" data-delay="1">

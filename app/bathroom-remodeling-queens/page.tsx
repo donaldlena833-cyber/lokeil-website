@@ -24,7 +24,7 @@ const queensPlanningDetails = [
   {
     title: 'Ridgewood, Steinway, Astoria, and nearby Queens bathrooms',
     body:
-      'Search Console is already showing bathroom remodeling demand in Queens and early neighborhood signals around Steinway. This page should answer the local question directly: LOKEIL is a Ridgewood-based remodeler for Queens bathrooms, especially apartments and homes where tile, floors, plaster, paint, and finish details all touch the same room.',
+      'LOKEIL is a Ridgewood-based remodeler for Queens bathrooms, especially apartments and homes in Ridgewood, Steinway, Astoria, Sunnyside, Woodside, Long Island City, Jackson Heights, and Forest Hills where tile, floors, plaster, paint, and finish details all touch the same room.',
   },
   {
     title: 'Tile, waterproofing, and shower surfaces',
@@ -39,7 +39,12 @@ const queensPlanningDetails = [
   {
     title: 'Queens buildings and access',
     body:
-      'Ridgewood, Astoria, Jackson Heights, Sunnyside, Woodside, Long Island City, Forest Hills, and nearby Queens neighborhoods all bring different building conditions. Co-ops, condos, two-family homes, and older apartments may require work-hour planning, hallway protection, debris coordination, or superintendent communication.',
+      'Ridgewood, Astoria, Jackson Heights, Sunnyside, Woodside, Long Island City, Forest Hills, and nearby Queens neighborhoods all bring different building conditions. Co-ops, condos, two-family homes, and older apartments may require work-hour planning, hallway protection, debris coordination, elevator timing, or superintendent communication.',
+  },
+  {
+    title: 'Board, permit, and scope questions',
+    body:
+      'Some bathroom updates stay cosmetic, while plumbing, electrical, layout, or building-system changes can require a different review path. LOKEIL keeps those questions visible early so the estimate can separate surface work from anything that needs board, building, DOB, or licensed trade guidance.',
   },
 ] as const;
 
@@ -156,6 +161,9 @@ export default function BathroomRemodelingQueens() {
               </Link>
               <Link href="/blog/nyc-kitchen-bathroom-remodel-permits-queens" className="button-secondary">
                 Permit Questions
+              </Link>
+              <Link href="/flooring-installation-queens" className="button-secondary">
+                Bathroom Flooring
               </Link>
             </div>
           </div>
@@ -301,7 +309,8 @@ export default function BathroomRemodelingQueens() {
                 <h2 className="section-title mt-4">Planning a Queens bathroom remodel?</h2>
                 <p className="lead mt-6">
                   Call or email with the room, photos if available, and the bathroom changes you
-                  want to make. LOKEIL can help turn that into a clearer scope conversation.
+                  want to make. LOKEIL can help turn that into a clearer scope conversation for
+                  tile, flooring, painting, permits questions, and any nearby kitchen work.
                 </p>
               </div>
               <div className="flex flex-col gap-4 sm:flex-row lg:flex-col" data-reveal="fade-up" data-delay="1">
