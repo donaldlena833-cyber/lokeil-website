@@ -7,9 +7,9 @@ import { siteData } from '../siteData';
 import { buildPageMetadata } from '../seo';
 
 export const metadata: Metadata = buildPageMetadata({
-  title: 'Interior Painting Queens | Apartment and Remodel Painting',
+  title: 'Interior Painting Queens | Apartment Painters and Remodel Prep',
   description:
-    'Interior painting in Queens for apartments, bathrooms, kitchens, wall prep, trim, and remodeling finish work from LOKEIL Renovation in Ridgewood.',
+    'Interior painting in Queens for apartments, co-ops, hallways, bathrooms, kitchens, wall prep, trim, and remodeling finish work from LOKEIL Renovation.',
   path: '/interior-painting-queens',
 });
 
@@ -56,6 +56,24 @@ const paintingPlanning = [
   },
 ] as const;
 
+const queensPaintingFit = [
+  {
+    title: 'Queens apartment painters for lived-in rooms',
+    body:
+      'For Ridgewood, Astoria, Sunnyside, Woodside, Long Island City, Jackson Heights, and Forest Hills apartments, the plan should cover room access, furniture protection, old wall repairs, trim edges, and how quickly the room needs to go back into use.',
+  },
+  {
+    title: 'Hallway, entry, and co-op finish work',
+    body:
+      'Hallways, entries, stair-adjacent walls, and co-op apartment transitions often need more than a color change. Scuffs, patch marks, uneven corners, door trim, and old plaster can decide whether the finished paint looks sharp or tired.',
+  },
+  {
+    title: 'Painting tied to interior remodeling',
+    body:
+      'When painting follows a bathroom, kitchen, tile, flooring, cabinet, plaster, or drywall scope, the estimate should place paint after dusty prep and before final touch-ups so the room closes cleanly.',
+  },
+] as const;
+
 const faqs = [
   {
     q: 'What interior painting work does LOKEIL handle in Queens?',
@@ -88,6 +106,11 @@ const serviceJsonLd = {
   areaServed: [
     { '@type': 'AdministrativeArea', name: 'Queens, NY' },
     { '@type': 'City', name: 'New York, NY' },
+    { '@type': 'Place', name: 'Ridgewood, Queens' },
+    { '@type': 'Place', name: 'Astoria, Queens' },
+    { '@type': 'Place', name: 'Sunnyside, Queens' },
+    { '@type': 'Place', name: 'Woodside, Queens' },
+    { '@type': 'Place', name: 'Long Island City, Queens' },
   ],
   url: `${siteData.siteUrl}/interior-painting-queens`,
   description:
@@ -137,6 +160,9 @@ export default function InteriorPaintingQueens() {
                 </a>
                 <Link href="/services" className="button-secondary">
                   View Services
+                </Link>
+                <Link href="/plaster-drywall-finishing-queens" className="button-secondary">
+                  Wall Prep
                 </Link>
                 <Link href="/gallery" className="button-secondary">
                   See Project Photos
@@ -226,6 +252,29 @@ export default function InteriorPaintingQueens() {
           </div>
         </section>
 
+        <section className="section-rule section-space bg-black/8">
+          <div className="site-shell grid gap-10 lg:grid-cols-[0.86fr_1.14fr]">
+            <div data-reveal="fade-up">
+              <p className="eyebrow">Local painting fit</p>
+              <h2 className="section-title mt-4">Interior painting in Queens should match the building, not just the color.</h2>
+              <p className="lead mt-6">
+                The useful estimate conversation is specific: apartment or house, occupied room or
+                empty room, old plaster or drywall, hallway wear, trim condition, and whether the
+                paint is part of a bigger interior remodeling scope.
+              </p>
+            </div>
+
+            <div className="grid gap-5">
+              {queensPaintingFit.map((detail, index) => (
+                <article key={detail.title} className="surface px-6 py-7 sm:px-8" data-reveal="fade-up" data-delay={String(index + 1)}>
+                  <h3 className="text-2xl text-olive-50">{detail.title}</h3>
+                  <p className="mt-4 text-base leading-7 text-olive-100/72">{detail.body}</p>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+
         <EstimatePrepChecklist />
 
         <section className="section-rule section-space">
@@ -267,6 +316,12 @@ export default function InteriorPaintingQueens() {
                   </a>
                   <Link href="/contact" className="button-secondary">
                     Contact LOKEIL
+                  </Link>
+                  <Link href="/bathroom-remodeling-queens" className="button-secondary">
+                    Bathroom Painting
+                  </Link>
+                  <Link href="/kitchen-remodeling-queens" className="button-secondary">
+                    Kitchen Painting
                   </Link>
                 </div>
               </div>

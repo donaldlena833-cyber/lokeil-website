@@ -12,7 +12,7 @@ const routes = [
   { path: '/tile-installation-queens', priority: 0.86, changeFrequency: 'monthly' as const, lastModified: '2026-07-05' },
   { path: '/flooring-installation-queens', priority: 0.85, changeFrequency: 'monthly' as const, lastModified: '2026-07-05' },
   { path: '/plaster-drywall-finishing-queens', priority: 0.84, changeFrequency: 'monthly' as const, lastModified: '2026-06-12' },
-  { path: '/interior-painting-queens', priority: 0.84, changeFrequency: 'monthly' as const, lastModified: '2026-06-12' },
+  { path: '/interior-painting-queens', priority: 0.84, changeFrequency: 'monthly' as const, lastModified: '2026-07-05' },
   { path: '/cabinet-installation-queens', priority: 0.84, changeFrequency: 'monthly' as const, lastModified: '2026-06-12' },
   { path: '/blog', priority: 0.8, changeFrequency: 'weekly' as const, lastModified: '2026-06-12' },
   ...blogPosts.filter((post) => !post.slug.match(/^bathroom-remodeling-(astoria|jackson-heights|long-island-city|ridgewood|sunnyside|woodside)-nyc-planning-guide$/)).map((post) => ({
