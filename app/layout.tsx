@@ -28,8 +28,8 @@ const instrumentSerif = Instrument_Serif({
 export const metadata: Metadata = {
   metadataBase: new URL(siteData.siteUrl),
   title: {
-    default: `${siteData.brandName} | Interior Remodeling in Ridgewood, Queens`,
-    template: `%s | ${siteData.brandName}`,
+    default: `Interior Remodeling Queens | ${siteData.shortName}`,
+    template: `%s | ${siteData.shortName}`,
   },
   description: siteData.description,
   applicationName: siteData.brandName,
@@ -99,17 +99,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${manrope.variable} ${instrumentSerif.variable}`}>
-      <head>
-        <Script id="google-tag-manager" strategy="beforeInteractive">
-          {`
-            (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-            })(window,document,'script','dataLayer','${gtmId}');
-          `}
-        </Script>
-      </head>
       <body className="bg-olive-500 text-olive-50">
         <noscript>
           <iframe
@@ -128,6 +117,15 @@ export default function RootLayout({
         <main className="min-h-screen overflow-x-hidden pb-24 md:pb-0">{children}</main>
         <MobileCtaBar />
         <Footer />
+        <Script id="google-tag-manager" strategy="afterInteractive">
+          {`
+            (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer','${gtmId}');
+          `}
+        </Script>
       </body>
     </html>
   );

@@ -15,9 +15,9 @@ import {
 import { buildPageMetadata } from './seo';
 
 export const metadata: Metadata = buildPageMetadata({
-  title: 'Interior Remodeling in Ridgewood, Queens',
+  title: 'Interior Remodeling Ridgewood & Queens',
   description:
-    'Interior remodeling in Ridgewood, Queens with bathrooms, kitchens, tile work, flooring, plaster, painting, cabinetry, and finish-focused upgrades.',
+    'Interior remodeling in Ridgewood and Queens for bathrooms, kitchens, tile, flooring, plaster, painting, cabinets, and finish-focused upgrades.',
   path: '/',
 });
 

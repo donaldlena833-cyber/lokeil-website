@@ -4,12 +4,15 @@ export const structuredData = [
   {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
+    '@id': `${siteData.siteUrl}/#website`,
     name: siteData.brandName,
     url: siteData.siteUrl,
+    publisher: { '@id': `${siteData.siteUrl}/#business` },
   },
   {
     '@context': 'https://schema.org',
     '@type': 'HomeAndConstructionBusiness',
+    '@id': `${siteData.siteUrl}/#business`,
     name: siteData.brandName,
     legalName: siteData.legalName,
     description: siteData.description,
@@ -25,7 +28,6 @@ export const structuredData = [
       addressRegion: 'NY',
       postalCode: '11385',
       addressCountry: 'US',
-      streetAddress: siteData.location,
     },
     contactPoint: [
       {
@@ -37,11 +39,11 @@ export const structuredData = [
       },
     ],
     areaServed: [
-      'Queens',
-      'Brooklyn',
-      'Manhattan',
-      'Long Island',
-      'Westchester County',
+      { '@type': 'AdministrativeArea', name: 'Queens, NY' },
+      { '@type': 'AdministrativeArea', name: 'Brooklyn, NY' },
+      { '@type': 'AdministrativeArea', name: 'Manhattan, NY' },
+      { '@type': 'AdministrativeArea', name: 'Long Island, NY' },
+      { '@type': 'AdministrativeArea', name: 'Westchester County, NY' },
     ],
     openingHoursSpecification: [
       {

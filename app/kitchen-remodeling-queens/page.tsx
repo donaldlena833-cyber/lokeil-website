@@ -7,9 +7,9 @@ import { siteData } from '../siteData';
 import { buildPageMetadata } from '../seo';
 
 export const metadata: Metadata = buildPageMetadata({
-  title: 'Kitchen Remodeling Queens | Renovation and Cabinets',
+  title: 'Kitchen Remodeling Queens | Renovation & Cabinets',
   description:
-    'Kitchen remodeling and kitchen renovation in Queens with cabinet installation, backsplash tile, flooring, painting, plaster, trim, doors, and finish work from LOKEIL.',
+    'Kitchen remodeling and renovation in Queens with cabinets, backsplash tile, flooring, painting, plaster, trim, doors, and coordinated finish work.',
   path: '/kitchen-remodeling-queens',
 });
 

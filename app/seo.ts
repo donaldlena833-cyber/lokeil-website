@@ -13,11 +13,15 @@ export function buildPageMetadata({
   description,
   path,
 }: MetadataArgs): Metadata {
-  const fullTitle = `${title} | ${siteData.brandName}`;
+  const fullTitle = `${title} | ${siteData.shortName}`;
+  const metaDescription =
+    description.length <= 155
+      ? description
+      : `${description.slice(0, 152).replace(/\s+\S*$/, '')}…`;
 
   return {
     title: path === '/' ? fullTitle : title,
-    description,
+    description: metaDescription,
     alternates: {
       canonical: path,
     },
@@ -26,7 +30,7 @@ export function buildPageMetadata({
       locale: 'en_US',
       url: path,
       title: fullTitle,
-      description,
+      description: metaDescription,
       siteName: siteData.brandName,
       images: [
         {
@@ -38,7 +42,7 @@ export function buildPageMetadata({
     twitter: {
       card: 'summary_large_image',
       title: fullTitle,
-      description,
+      description: metaDescription,
       images: [siteData.socialImage],
     },
   };

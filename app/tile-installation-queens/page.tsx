@@ -7,9 +7,9 @@ import { siteData } from '../siteData';
 import { buildPageMetadata } from '../seo';
 
 export const metadata: Metadata = buildPageMetadata({
-  title: 'Tile Installation Queens | Shower and Bathroom Tile',
+  title: 'Tile Installation Queens | Bathrooms & Showers',
   description:
-    'Tile installation in Queens for shower tile, bathroom walls, floors, niches, backsplashes, and clean finish transitions in Ridgewood, Astoria, Sunnyside, Woodside, and nearby areas.',
+    'Tile installation in Queens for showers, bathroom walls, floors, niches, backsplashes, and clean transitions in Ridgewood and nearby neighborhoods.',
   path: '/tile-installation-queens',
 });
 

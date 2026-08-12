@@ -7,9 +7,9 @@ import { featuredImages, siteData } from '../siteData';
 import { buildPageMetadata } from '../seo';
 
 export const metadata: Metadata = buildPageMetadata({
-  title: 'Bathroom Remodeling Queens | Ridgewood, Steinway, Astoria',
+  title: 'Bathroom Remodeling Queens | Ridgewood & Astoria',
   description:
-    'Bathroom remodeling in Queens for Ridgewood, Steinway, Astoria, Sunnyside, Woodside, and nearby apartments with tile, shower, flooring, plaster, painting, and finish work.',
+    'Bathroom remodeling in Queens for Ridgewood, Steinway, Astoria, Sunnyside, and Woodside, including tile, showers, flooring, plaster, and painting.',
   path: '/bathroom-remodeling-queens',
 });
 

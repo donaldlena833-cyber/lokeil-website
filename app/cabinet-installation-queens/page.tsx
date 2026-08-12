@@ -7,9 +7,9 @@ import { siteData } from '../siteData';
 import { buildPageMetadata } from '../seo';
 
 export const metadata: Metadata = buildPageMetadata({
-  title: 'Cabinet Installation Queens | Kitchen and Bathroom Cabinets',
+  title: 'Cabinet Installation Queens | Kitchens & Bathrooms',
   description:
-    'Cabinet installation in Queens for kitchens, bathrooms, storage areas, appliance clearances, trim, and interior remodeling projects from LOKEIL Renovation.',
+    'Cabinet installation in Queens for kitchens, bathrooms, storage, appliance clearances, trim, and coordinated interior remodeling projects.',
   path: '/cabinet-installation-queens',
 });
 

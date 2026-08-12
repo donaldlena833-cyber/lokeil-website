@@ -7,9 +7,9 @@ import { siteData } from '../siteData';
 import { buildPageMetadata } from '../seo';
 
 export const metadata: Metadata = buildPageMetadata({
-  title: 'Flooring Installation Queens | Bathroom and Kitchen Floors',
+  title: 'Flooring Contractor Queens | Installation & Prep',
   description:
-    'Flooring installation in Queens for bathroom floors, kitchen floors, apartment flooring, transitions, prep, and interior remodels in Ridgewood and nearby Queens.',
+    'Flooring installation in Queens for bathrooms, kitchens, apartments, transitions, surface preparation, and interior remodels around Ridgewood.',
   path: '/flooring-installation-queens',
 });
 

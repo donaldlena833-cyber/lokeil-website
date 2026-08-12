@@ -7,9 +7,9 @@ import { siteData } from '../siteData';
 import { buildPageMetadata } from '../seo';
 
 export const metadata: Metadata = buildPageMetadata({
-  title: 'Plaster and Drywall Finishing Queens | Wall Repair and Skim Work',
+  title: 'Plaster & Drywall Queens | Wall Repair & Skim Work',
   description:
-    'Plaster and drywall finishing in Queens for wall repair, skim work, sanding, paint prep, bathrooms, kitchens, and apartment remodels from LOKEIL Renovation.',
+    'Plaster and drywall finishing in Queens for wall repair, skim work, sanding, paint preparation, bathrooms, kitchens, and apartment remodels.',
   path: '/plaster-drywall-finishing-queens',
 });
 

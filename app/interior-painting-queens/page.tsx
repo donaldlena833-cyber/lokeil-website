@@ -7,9 +7,9 @@ import { siteData } from '../siteData';
 import { buildPageMetadata } from '../seo';
 
 export const metadata: Metadata = buildPageMetadata({
-  title: 'Interior Painting Queens | Apartment Painters and Remodel Prep',
+  title: 'Interior Painters Queens | Apartments & Remodels',
   description:
-    'Interior painting in Queens for apartments, co-ops, hallways, bathrooms, kitchens, wall prep, trim, and remodeling finish work from LOKEIL Renovation.',
+    'Interior painting in Queens for apartments, co-ops, hallways, bathrooms, kitchens, wall preparation, trim, and remodeling finish work.',
   path: '/interior-painting-queens',
 });
 

@@ -11,7 +11,7 @@ import {
 import { buildPageMetadata } from '../seo';
 
 export const metadata: Metadata = buildPageMetadata({
-  title: 'About',
+  title: 'About Our Queens Remodeling Team',
   description:
     'Learn about LOKEIL Renovation, owner Lorel Beqari, and the interior remodeling approach behind the company\'s bathrooms, kitchens, tile, and finish work.',
   path: '/about',
