@@ -86,10 +86,9 @@ export default function Contact() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="soft-surface px-5 py-4 transition-colors hover:border-accent/30 hover:text-accent"
-                aria-label={`Open ${siteData.instagramHandle} on Instagram in a new tab`}
               >
                 <p className="text-sm uppercase tracking-[0.18em] text-accent/82">Instagram</p>
-                <p className="mt-2 text-lg text-olive-50">{siteData.instagramHandle}</p>
+                <p className="mt-2 text-lg text-olive-50">{siteData.instagramHandle}<span className="sr-only">, opens in a new tab</span></p>
               </a>
               <div className="soft-surface px-5 py-4">
                 <p className="text-sm uppercase tracking-[0.18em] text-accent/82">Fastest window</p>

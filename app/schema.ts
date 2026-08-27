@@ -11,7 +11,7 @@ export const structuredData = [
   },
   {
     '@context': 'https://schema.org',
-    '@type': 'HomeAndConstructionBusiness',
+    '@type': ['Organization', 'HomeAndConstructionBusiness'],
     '@id': `${siteData.siteUrl}/#business`,
     name: siteData.brandName,
     legalName: siteData.legalName,
@@ -33,6 +33,7 @@ export const structuredData = [
       {
         '@type': 'ContactPoint',
         telephone: siteData.phoneHref,
+        email: siteData.email,
         contactType: 'customer service',
         areaServed: 'US-NY',
         availableLanguage: ['English'],

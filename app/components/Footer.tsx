@@ -74,17 +74,17 @@ export default function Footer() {
               target="_blank"
               rel="noopener noreferrer"
               className="button-secondary mt-5 px-5 py-3"
-              aria-label={`Open ${siteData.instagramHandle} on Instagram in a new tab`}
             >
-              Follow {siteData.instagramHandle}
+              Follow {siteData.instagramHandle}<span className="sr-only">, opens in a new tab</span>
             </a>
           </div>
         </div>
 
         <div className="mt-12 border-t border-white/10 pt-7 text-sm text-olive-100/48">
-          <p>
-            &copy; {new Date().getFullYear()} {siteData.legalName}. Ridgewood, Queens, NY.
-          </p>
+          <div className="flex flex-wrap items-center justify-between gap-4">
+            <p>&copy; {new Date().getFullYear()} {siteData.legalName}. Ridgewood, Queens, NY.</p>
+            <div className="flex gap-5"><Link href="/privacy" className="hover:text-accent">Privacy</Link><a href="/llms.txt" className="hover:text-accent">Agent instructions</a></div>
+          </div>
         </div>
       </div>
     </footer>

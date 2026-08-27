@@ -23,6 +23,7 @@ const routes = [
   })),
   { path: '/gallery', priority: 0.8, changeFrequency: 'weekly' as const, lastModified: '2026-06-12' },
   { path: '/contact', priority: 0.8, changeFrequency: 'monthly' as const, lastModified: '2026-06-12' },
+  { path: '/privacy', priority: 0.3, changeFrequency: 'yearly' as const, lastModified: '2026-08-21' },
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
