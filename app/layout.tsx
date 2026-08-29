@@ -3,6 +3,7 @@ import { Instrument_Serif, Manrope } from 'next/font/google';
 import Script from 'next/script';
 
 import './globals.css';
+import ContactIntentAnalytics from './components/ContactIntentAnalytics';
 import Footer from './components/Footer';
 import Header from './components/Header';
 import MobileCtaBar from './components/MobileCtaBar';
@@ -112,6 +113,7 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
         />
+        <ContactIntentAnalytics />
         <ScrollObserver />
         <Header />
         <main className="min-h-screen overflow-x-hidden pb-24 md:pb-0">{children}</main>
