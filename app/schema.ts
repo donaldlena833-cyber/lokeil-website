@@ -19,6 +19,10 @@ export const structuredData = [
     url: siteData.siteUrl,
     telephone: siteData.phoneHref,
     email: siteData.email,
+    logo: {
+      '@type': 'ImageObject',
+      url: `${siteData.siteUrl}${siteData.logo}`,
+    },
     image: `${siteData.siteUrl}${siteData.ogImage}`,
     priceRange: '$$',
     sameAs: [siteData.instagram],
