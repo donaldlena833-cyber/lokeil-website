@@ -98,11 +98,21 @@ export default async function BlogPostPage({ params }: BlogPageProps) {
     dateModified: post.publishDate,
     author: {
       '@type': 'Organization',
+      '@id': `${siteData.siteUrl}/#business`,
       name: siteData.brandName,
+      logo: {
+        '@type': 'ImageObject',
+        url: `${siteData.siteUrl}${siteData.logo}`,
+      },
     },
     publisher: {
       '@type': 'Organization',
+      '@id': `${siteData.siteUrl}/#business`,
       name: siteData.brandName,
+      logo: {
+        '@type': 'ImageObject',
+        url: `${siteData.siteUrl}${siteData.logo}`,
+      },
     },
     mainEntityOfPage: `${siteData.siteUrl}/blog/${post.slug}`,
     keywords: post.keywords,
