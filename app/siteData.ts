@@ -16,6 +16,7 @@ export const siteData = {
   location: 'Ridgewood, Queens, NY 11385',
   serviceArea:
     'Queens, Brooklyn, Manhattan, parts of Long Island, and Westchester County',
+  logo: '/icon.svg',
   ogImage: '/gallery/bathroom-shower/1.jpg',
   ogImageAlt: 'Bathroom remodel with marble-look tile surround and recessed niche.',
   socialImage: '/opengraph-image',
