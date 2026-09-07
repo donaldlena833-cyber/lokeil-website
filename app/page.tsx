@@ -23,7 +23,7 @@ export const metadata: Metadata = buildPageMetadata({
 
 export default function Home() {
   return (
-    <>
+    <main>
       <section className="relative overflow-hidden border-b border-white/8">
         <div className="grid-lines absolute inset-0 opacity-[0.18]" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(200,169,110,0.14),transparent_28%)]" />
@@ -294,6 +294,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-    </>
+    </main>
   );
 }
