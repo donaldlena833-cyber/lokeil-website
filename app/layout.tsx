@@ -116,7 +116,7 @@ export default function RootLayout({
         <ContactIntentAnalytics />
         <ScrollObserver />
         <Header />
-        <main className="min-h-screen overflow-x-hidden pb-24 md:pb-0">{children}</main>
+        <div className="min-h-screen overflow-x-hidden pb-24 md:pb-0">{children}</div>
         <MobileCtaBar />
         <Footer />
         <Script id="google-tag-manager" strategy="afterInteractive">
