@@ -29,7 +29,7 @@ const queensPlanningDetails = [
   {
     title: 'Tile, waterproofing, and shower surfaces',
     body:
-      'Bathroom remodeling searches in Queens are already showing up in Search Console, but homeowners need more than a generic service page. Wet areas should be planned around the existing walls, tile substrate, niche placement, curb or tub edge, grout lines, and the way the shower will be used every day.',
+      'Before choosing new tile, photograph the existing shower walls, floor, niche, and curb or tub edge. Include close-ups of damaged areas and note what you want to keep or change so the estimate conversation covers the room as well as the finish.',
   },
   {
     title: 'Vanity, flooring, and finish transitions',
@@ -231,11 +231,11 @@ export default function BathroomRemodelingQueens() {
         <div className="site-shell grid gap-10 lg:grid-cols-[0.82fr_1.18fr]">
           <div data-reveal="fade-up">
             <p className="eyebrow">Queens scope</p>
-            <h2 className="section-title mt-4">The bathroom page now carries the neighborhood intent.</h2>
+            <h2 className="section-title mt-4">Plan the bathroom scope around your room and building.</h2>
             <p className="lead mt-6">
-              Instead of spreading thin pages across every Queens neighborhood, this page is the main
-              bathroom remodeling surface for Ridgewood and nearby Queens searches. It should answer
-              the core planning questions first, then link into gallery proof and related services.
+              Start with what you want to keep, replace, or repair. Share room photos, your Queens
+              neighborhood, and any building access requirements, then use the gallery and related
+              services to explain the finishes you have in mind.
             </p>
           </div>
 
