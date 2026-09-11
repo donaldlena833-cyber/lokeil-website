@@ -40,9 +40,9 @@ const planningNotes = [
 
 const localScopeSignals = [
   {
-    title: 'Queens kitchen remodeling and renovation are both in play',
+    title: 'Choose the level of kitchen update first',
     body:
-      'Queens kitchen remodeling and Queens kitchen renovation can mean different scopes: cabinet-led updates, backsplash and flooring work, finish repairs, or larger room changes when the project calls for it. LOKEIL keeps those paths separate so a partial update does not get priced like a full gut renovation.',
+      'A cabinet refresh, backsplash and flooring work, finish repairs, or a larger room change all need different scopes. Identify what stays and what changes first so a partial update does not get planned or priced like a full gut renovation.',
   },
   {
     title: 'Cabinets and finish lines first',
@@ -50,9 +50,9 @@ const localScopeSignals = [
       'A Queens kitchen remodel needs more than a broad promise. Cabinets, reveals, trim, backsplash edges, paint, and flooring all have to land together.',
   },
   {
-    title: 'Partial updates still need sequencing',
+    title: 'Plan partial updates in the right order',
     body:
-      'Many kitchen leads are not full gut renovations. Cabinet work, backsplash, floor repair, and paint still need a clean order so one trade does not damage the next finish.',
+      'Cabinet adjustments, backsplash, floor repair, plaster, and paint can overlap. Set the order before work begins so demolition or a later installation does not damage a finished surface.',
   },
   {
     title: 'Ridgewood, Astoria, Sunnyside, Woodside, and nearby Queens kitchens',
@@ -65,9 +65,9 @@ const localScopeSignals = [
       'Cabinet, paint, plaster, and surface work can be simpler than plumbing, gas, electrical, layout, or wall changes. If a kitchen remodel touches building systems, LOKEIL keeps that question visible early so the client can confirm board, building, DOB, or licensed trade requirements before the scope moves forward.',
   },
   {
-    title: 'Use the gallery as proof',
+    title: 'Use the gallery to discuss visible details',
     body:
-      'Kitchen cabinet photos and surrounding finish work make the estimate conversation more concrete than a generic service list.',
+      'Kitchen cabinet photos and surrounding finish work can help identify the cabinet style, trim, edge details, flooring transitions, and finish level you want included in the estimate.',
   },
 ] as const;
 
