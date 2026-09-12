@@ -40,19 +40,19 @@ const planningNotes = [
 
 const tileProofSignals = [
   {
-    title: 'Layout quality is the visible proof',
+    title: 'Layout decisions shape the finished room',
     body:
-      'Tile pages win trust when they explain cuts, grout lines, niches, corners, edge trim, and transitions. Those are the details a buyer can see in the finished room.',
+      'Before installation, review where cuts, grout lines, niches, corners, edge trim, and transitions will land. Those details decide whether the finished room looks balanced.',
   },
   {
-    title: 'Bathroom tile and flooring should connect',
+    title: 'Bathroom tile and flooring should be planned together',
     body:
-      'Queens tile leads often overlap with bathroom flooring, shower surrounds, and finish repair. The page should keep those paths connected instead of isolating tile as a standalone task.',
+      'Bathroom flooring, shower surrounds, waterproofing, trim, and nearby finish repairs can affect one another. Include the connected surfaces in the estimate conversation instead of treating each tile area in isolation.',
   },
   {
-    title: 'Photos need to carry the page',
+    title: 'Use photos to compare finish details',
     body:
-      'Bathroom tile photos help buyers compare layout, niche, edge, and transition details before starting an estimate conversation.',
+      'Room photos and examples of preferred tile work help identify layout, niche, edge, and transition details before the estimate conversation begins.',
   },
 ] as const;
 
@@ -60,7 +60,7 @@ const localTilePaths = [
   {
     title: 'Shower and bathroom tile',
     body:
-      'Most Queens tile searches are really bathroom searches: shower walls, tub surrounds, niches, benches, floors, waterproofing conversations, and the edges around glass or fixtures.',
+      'Many Queens tile projects involve a bathroom: shower walls, tub surrounds, niches, benches, floors, waterproofing conversations, and the edges around glass or fixtures.',
     href: '/bathroom-remodeling-queens',
     label: 'Bathroom Remodeling Queens',
   },
@@ -230,7 +230,7 @@ export default function TileInstallationQueens() {
         <section className="section-rule section-space">
           <div className="site-shell grid gap-10 lg:grid-cols-[0.85fr_1.15fr]">
             <div data-reveal="fade-up">
-              <p className="eyebrow">Tile proof path</p>
+              <p className="eyebrow">Finish details</p>
               <h2 className="section-title mt-4">Tile installation needs more detail than a service name.</h2>
               <p className="lead mt-6">
                 Good tile work depends on layout, prep, transitions, and how the tile ties into the rest of the remodel.
@@ -260,7 +260,7 @@ export default function TileInstallationQueens() {
           <div className="site-shell">
             <div className="max-w-3xl" data-reveal="fade-up">
               <p className="eyebrow">Queens tile paths</p>
-              <h2 className="section-title mt-4">Tile leads usually start with a room, not just a material.</h2>
+              <h2 className="section-title mt-4">Tile projects usually start with a room, not just a material.</h2>
               <p className="mt-5 text-base leading-7 text-olive-100/72">
                 A clearer estimate starts by naming where the tile is going, what is around it, and
                 which finish details have to land cleanly.
