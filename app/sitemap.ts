@@ -4,6 +4,7 @@ import { blogPosts } from './blog/blogData';
 import { siteData } from './siteData';
 
 const routes = [
+  { path: '/terms', priority: 0.2, changeFrequency: 'yearly' as const, lastModified: '2026-09-13' },
   { path: '', priority: 1, changeFrequency: 'weekly' as const, lastModified: '2026-08-12' },
   { path: '/about', priority: 0.8, changeFrequency: 'monthly' as const, lastModified: '2026-05-10' },
   { path: '/services', priority: 0.9, changeFrequency: 'monthly' as const, lastModified: '2026-06-12' },

@@ -53,4 +53,4 @@ export function middleware(request: NextRequest) {
   return response;
 }
 
-export const config = { matcher: ['/((?!api/|agent-markdown|_next/|.*\\.[^/]+$).*)'] };
+export const config = { matcher: ['/((?!api/|agent-markdown|opengraph-image|twitter-image|_next/|.*\\.[^/]+$).*)'] };

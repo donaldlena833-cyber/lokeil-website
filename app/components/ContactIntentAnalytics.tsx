@@ -21,6 +21,10 @@ export default function ContactIntentAnalytics() {
         window.location.pathname,
       );
       if (!payload) return;
+      try {
+        const consent = JSON.parse(localStorage.getItem('site-cookie-choice-v1') || 'null');
+        if (!consent || !consent.analytics || !consent.marketing || consent.expires <= Date.now()) return;
+      } catch { return; }
 
       const analyticsWindow = window as AnalyticsWindow;
       analyticsWindow.dataLayer ??= [];

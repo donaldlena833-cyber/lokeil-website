@@ -1,3 +1,5 @@
+import type { Metadata } from "next";
+export const metadata: Metadata = { title: { absolute: "Page not found | LOKEIL Renovation" }, description: "Find your way back to LOKEIL Renovation.", robots: { index: false, follow: true } };
 import Link from 'next/link';
 
 export default function NotFound() {

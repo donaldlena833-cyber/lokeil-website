@@ -192,16 +192,7 @@ export default function Contact() {
           </div>
 
           <div className="media-frame h-[24rem] overflow-hidden sm:h-[32rem]" data-reveal="scale-in" data-delay="1">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12096.634!2d-73.9055!3d40.7004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25e3e2a3d7f0b%3A0x2b71f791d3a62e4c!2sRidgewood%2C%20Queens%2C%20NY!5e0!3m2!1sen!2sus!4v1711843200000"
-              width="100%"
-              height="100%"
-              style={{ border: 0 }}
-              allowFullScreen
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              title="LOKEIL Renovation service area map"
-            />
+            <a className="flex h-full flex-col items-center justify-center gap-5 p-8 text-center" href="https://www.google.com/maps/search/?api=1&amp;query=Ridgewood%20Queens%20NY" target="_blank" rel="noopener noreferrer"><span className="section-title">Ridgewood, Queens</span><span className="button-secondary">Open Google Maps — new tab</span></a>
           </div>
         </div>
       </section>

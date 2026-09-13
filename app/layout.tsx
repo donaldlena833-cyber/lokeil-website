@@ -1,7 +1,8 @@
 import type { Metadata, Viewport } from 'next';
 import { Instrument_Serif, Manrope } from 'next/font/google';
-import Script from 'next/script';
+import { CookieConsent } from './components/CookieConsent';
 
+import './readiness.css';
 import './globals.css';
 import ContactIntentAnalytics from './components/ContactIntentAnalytics';
 import Footer from './components/Footer';
@@ -74,7 +75,7 @@ export const metadata: Metadata = {
   icons: {
     icon: '/icon.svg',
     shortcut: '/icon.svg',
-    apple: '/icon.svg',
+    apple: '/apple-icon.png',
   },
   robots: {
     index: true,
@@ -101,14 +102,6 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${manrope.variable} ${instrumentSerif.variable}`}>
       <body className="bg-olive-500 text-olive-50">
-        <noscript>
-          <iframe
-            src={`https://www.googletagmanager.com/ns.html?id=${gtmId}`}
-            height="0"
-            width="0"
-            style={{ display: 'none', visibility: 'hidden' }}
-          />
-        </noscript>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
@@ -119,15 +112,7 @@ export default function RootLayout({
         <div className="min-h-screen overflow-x-hidden pb-24 md:pb-0">{children}</div>
         <MobileCtaBar />
         <Footer />
-        <Script id="google-tag-manager" strategy="afterInteractive">
-          {`
-            (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-            })(window,document,'script','dataLayer','${gtmId}');
-          `}
-        </Script>
+<CookieConsent tagManagerId={gtmId} />
       </body>
     </html>
   );
