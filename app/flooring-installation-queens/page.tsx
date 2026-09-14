@@ -45,9 +45,9 @@ const flooringDecisionSignals = [
       'Doorways, bathroom thresholds, cabinet runs, and hallway connections are where flooring work either looks intentional or patched.',
   },
   {
-    title: 'Flooring is usually part of a bigger room scope',
+    title: 'Plan connected room finishes together',
     body:
-      'Queens flooring leads often connect to bathroom remodels, kitchens, tile, plaster, painting, or cabinet work. The page should route those buyers to the right connected service.',
+      'If the flooring connects to bathroom, kitchen, tile, plaster, painting, or cabinet work, include those nearby finishes in the estimate so transitions and the work sequence can be planned together.',
   },
   {
     title: 'Prep matters before material choice',
@@ -264,7 +264,8 @@ export default function FlooringInstallationQueens() {
               <h2 className="section-title mt-4">Flooring estimates get clearer when the connected room is named.</h2>
               <p className="mt-5 text-base leading-7 text-olive-100/72">
                 The same floor question can mean a bathroom repair, kitchen update, apartment
-                refresh, or a larger finish sequence. The page should route that intent quickly.
+                refresh, or a larger finish sequence. Naming the room and nearby finishes helps
+                separate a focused floor repair from a kitchen, bathroom, or apartment renovation.
               </p>
             </div>
 
