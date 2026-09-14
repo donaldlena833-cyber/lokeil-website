@@ -11,7 +11,7 @@ const routes = [
   { path: '/bathroom-remodeling-queens', priority: 0.9, changeFrequency: 'monthly' as const, lastModified: '2026-09-10' },
   { path: '/kitchen-remodeling-queens', priority: 0.88, changeFrequency: 'monthly' as const, lastModified: '2026-09-11' },
   { path: '/tile-installation-queens', priority: 0.86, changeFrequency: 'monthly' as const, lastModified: '2026-09-12' },
-  { path: '/flooring-installation-queens', priority: 0.85, changeFrequency: 'monthly' as const, lastModified: '2026-08-12' },
+  { path: '/flooring-installation-queens', priority: 0.85, changeFrequency: 'monthly' as const, lastModified: '2026-09-14' },
   { path: '/plaster-drywall-finishing-queens', priority: 0.84, changeFrequency: 'monthly' as const, lastModified: '2026-08-12' },
   { path: '/interior-painting-queens', priority: 0.84, changeFrequency: 'monthly' as const, lastModified: '2026-08-12' },
   { path: '/cabinet-installation-queens', priority: 0.84, changeFrequency: 'monthly' as const, lastModified: '2026-08-12' },

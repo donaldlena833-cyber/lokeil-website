@@ -8,6 +8,7 @@ const verifiedUpdates = {
   '/bathroom-remodeling-queens': '2026-09-10',
   '/kitchen-remodeling-queens': '2026-09-11',
   '/tile-installation-queens': '2026-09-12',
+  '/flooring-installation-queens': '2026-09-14',
 };
 
 test('priority service sitemap dates match their verified content updates', () => {
