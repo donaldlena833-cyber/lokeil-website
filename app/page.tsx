@@ -42,9 +42,9 @@ export default function Home() {
               New York City area.
             </p>
             <p className="mt-5 text-base leading-7 text-olive-100/72" data-reveal="fade-up" data-delay="3">
-              Start with real project photos, choose the closest service page, then call or email
-              with the room details. The site is built to move from proof to scope without making
-              unsupported claims.
+              Browse recent project photos, choose the service that best matches your room, then
+              call or email with the details. Wide room photos and close-ups of the areas you want
+              to change can make the first estimate conversation more useful.
             </p>
 
             <div className="mt-9 flex flex-col gap-4 sm:flex-row" data-reveal="fade-up" data-delay="4">
