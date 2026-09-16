@@ -243,7 +243,7 @@ export default async function BlogPostPage({ params }: BlogPageProps) {
             </div>
 
             <aside className="surface sticky top-32 p-6">
-              <p className="eyebrow">Keywords</p>
+              <p className="eyebrow">Planning topics</p>
               <div className="mt-4 flex flex-wrap gap-2">
                 {post.keywords.map((keyword) => (
                   <span key={keyword} className="chip normal-case tracking-[0.04em]">
