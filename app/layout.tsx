@@ -73,8 +73,11 @@ export const metadata: Metadata = {
     images: [siteData.socialImage],
   },
   icons: {
-    icon: '/icon.svg',
-    shortcut: '/icon.svg',
+    icon: [
+      { url: '/favicon-32x32.png?v=20260919', type: 'image/png', sizes: '32x32' },
+      { url: '/icon.svg?v=20260919', type: 'image/svg+xml', sizes: 'any' },
+    ],
+    shortcut: '/favicon.ico?v=20260919',
     apple: '/apple-icon.png',
   },
   robots: {
