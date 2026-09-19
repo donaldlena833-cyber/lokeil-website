@@ -15,7 +15,7 @@ const contactCards = [
     label: 'Phone',
     value: siteData.phoneDisplay,
     href: `tel:${siteData.phoneHref}`,
-    note: 'Best for direct estimate calls',
+    note: 'For direct estimate conversations',
   },
   {
     label: 'Email',
@@ -42,8 +42,8 @@ export default function Contact() {
               Start the estimate conversation with a direct phone call or email.
             </h1>
             <p className="lead mt-6">
-              Reach out with the room, the rough scope, and any project photos you have. Phone is
-              the fastest path, but email works well too for details and references.
+              Reach out with the room, the rough scope, and any project photos you have. Call for
+              a direct conversation, or email photos and project details for review.
             </p>
             <p className="mt-5 max-w-2xl text-base leading-7 text-olive-100/72">
               The most useful first message includes the property location, room type, whether the
@@ -68,7 +68,7 @@ export default function Contact() {
                 Queens + NYC service area
               </span>
               <span className="chip normal-case tracking-[0.06em] text-olive-100/82">
-                Free estimates
+                Project-specific estimates
               </span>
             </div>
           </div>
@@ -91,7 +91,7 @@ export default function Contact() {
                 <p className="mt-2 text-lg text-olive-50">{siteData.instagramHandle}<span className="sr-only">, opens in a new tab</span></p>
               </a>
               <div className="soft-surface px-5 py-4">
-                <p className="text-sm uppercase tracking-[0.18em] text-accent/82">Fastest window</p>
+                <p className="text-sm uppercase tracking-[0.18em] text-accent/82">Business hours</p>
                 <p className="mt-2 text-lg text-olive-50">{siteData.hours[0].label}</p>
                 <p className="mt-1 text-sm text-olive-100/72">{siteData.hours[0].value}</p>
               </div>
@@ -202,11 +202,11 @@ export default function Contact() {
           <div className="surface overflow-hidden px-6 py-10 sm:px-10 lg:px-12 lg:py-12">
             <div className="grid gap-8 lg:grid-cols-[1fr_auto] lg:items-end">
               <div data-reveal="fade-up">
-                <p className="eyebrow">Free estimate</p>
+                <p className="eyebrow">Estimate request</p>
                 <h2 className="section-title mt-4">Call now or send the project by email.</h2>
                 <p className="lead mt-6">
-                  {siteData.phoneDisplay} is the fastest path. If email is easier, send photos,
-                  room dimensions, or a short description to {siteData.email}.
+                  Call {siteData.phoneDisplay} for a direct conversation, or send photos,
+                  room dimensions, and a short description to {siteData.email}.
                 </p>
               </div>
 
