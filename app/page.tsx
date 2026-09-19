@@ -268,6 +268,20 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="section-rule section-space" aria-labelledby="le-yard-renovation">
+        <div className="site-shell max-w-4xl">
+          <p className="eyebrow">In progress · Manhattan</p>
+          <h2 id="le-yard-renovation" className="section-title mt-4">Helping Le Yard take shape.</h2>
+          <p className="mt-6 text-lg leading-8 text-olive-100/80">
+            LOKEIL is handling the renovation of <a href="https://leyardny.com/" className="underline underline-offset-4 hover:text-accent">Le Yard</a>,
+            a neighborhood restaurant coming to Ninth Avenue in Hell&apos;s Kitchen.
+            The project brings together our renovation work,
+            <a href="https://metroglasspro.com/" className="underline underline-offset-4 hover:text-accent"> MetroGlass Pro</a> for the glass work,
+            and Le Yard co-founder <a href="https://donaldlena.com/" className="underline underline-offset-4 hover:text-accent">Donald Lena</a>.
+          </p>
+        </div>
+      </section>
+
       <section className="section-rule section-space">
         <div className="site-shell">
           <div className="surface overflow-hidden px-6 py-10 sm:px-10 lg:px-12 lg:py-12">
