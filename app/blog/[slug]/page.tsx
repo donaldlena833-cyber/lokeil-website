@@ -259,7 +259,7 @@ export default async function BlogPostPage({ params }: BlogPageProps) {
                   conversation clearly.
                 </p>
                 <Link href="/contact" className="button-primary mt-5 w-full">
-                  Get Free Estimate
+                  Request an Estimate
                 </Link>
               </div>
 
