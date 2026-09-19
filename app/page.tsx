@@ -52,7 +52,7 @@ export default function Home() {
                 View Our Work
               </Link>
               <Link href="/contact" className="button-secondary">
-                Get Free Estimate
+                Request an Estimate
               </Link>
             </div>
 
@@ -261,7 +261,7 @@ export default function Home() {
                 Ready to talk through your space?
               </p>
               <p className="mt-3 text-base leading-7 text-olive-100/72">
-                Call {siteData.phoneDisplay} or email {siteData.email} for a free estimate.
+                Call {siteData.phoneDisplay} or email {siteData.email} to discuss an estimate.
               </p>
             </div>
           </div>
