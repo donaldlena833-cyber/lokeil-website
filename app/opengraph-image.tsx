@@ -121,7 +121,7 @@ export default function OpenGraphImage() {
               }}
             >
               <div style={{ fontSize: 24, color: '#c8a96e', textTransform: 'uppercase' }}>
-                Free estimate
+                Request estimate
               </div>
               <div style={{ fontSize: 38 }}>{siteData.phoneDisplay}</div>
             </div>
