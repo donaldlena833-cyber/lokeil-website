@@ -1,4 +1,4 @@
-import { siteData } from '../siteData';
+import { estimateEmailHref, siteData } from '../siteData';
 
 export default function MobileCtaBar() {
   return (
@@ -7,8 +7,8 @@ export default function MobileCtaBar() {
         <a href={`tel:${siteData.phoneHref}`} className="button-primary flex-1 px-4 py-3 text-sm">
           Call Now
         </a>
-        <a href={`mailto:${siteData.email}`} className="button-secondary flex-1 px-4 py-3 text-sm">
-          Email
+        <a href={estimateEmailHref} className="button-secondary flex-1 px-4 py-3 text-sm">
+          Email Project
         </a>
       </div>
     </div>

@@ -24,7 +24,6 @@ export const structuredData = [
       url: `${siteData.siteUrl}${siteData.logo}`,
     },
     image: `${siteData.siteUrl}${siteData.ogImage}`,
-    priceRange: '$$',
     sameAs: [siteData.instagram],
     address: {
       '@type': 'PostalAddress',

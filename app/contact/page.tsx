@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 
-import { siteData } from '../siteData';
+import { estimateEmailHref, siteData } from '../siteData';
 import { buildPageMetadata } from '../seo';
 
 export const metadata: Metadata = buildPageMetadata({
@@ -20,8 +20,8 @@ const contactCards = [
   {
     label: 'Email',
     value: siteData.email,
-    href: `mailto:${siteData.email}`,
-    note: 'Send room details and project photos',
+    href: estimateEmailHref,
+    note: 'Opens an email draft with the details we need',
   },
   {
     label: 'Instagram',
@@ -38,25 +38,22 @@ export default function Contact() {
         <div className="site-shell grid gap-10 lg:grid-cols-[1fr_0.9fr] lg:items-end">
           <div data-reveal="fade-up">
             <p className="eyebrow">Contact</p>
-            <h1 className="page-title mt-4">
-              Start the estimate conversation with a direct phone call or email.
-            </h1>
+            <h1 className="page-title mt-4">Request a remodeling estimate in Queens.</h1>
             <p className="lead mt-6">
-              Reach out with the room, the rough scope, and any project photos you have. Call for
-              a direct conversation, or email photos and project details for review.
+              Call LOKEIL Renovation or email your project details. We are based in Ridgewood
+              and handle bathrooms, kitchens, tile, flooring, cabinets, and interior finishes.
             </p>
             <p className="mt-5 max-w-2xl text-base leading-7 text-olive-100/72">
-              The most useful first message includes the property location, room type, whether the
-              work is repair or full replacement, and any gallery photos that match the finish you
-              want.
+              Include your neighborhood, the room, what you want to change, and current photos.
+              The email button opens a draft you can fill in and send from your own email app.
             </p>
 
             <div className="mt-8 flex flex-col gap-4 sm:flex-row">
               <a href={`tel:${siteData.phoneHref}`} className="button-primary">
                 Call {siteData.phoneDisplay}
               </a>
-              <a href={`mailto:${siteData.email}`} className="button-secondary">
-                Email Photos
+              <a href={estimateEmailHref} className="button-secondary">
+                Draft Estimate Email
               </a>
             </div>
 
@@ -214,8 +211,8 @@ export default function Contact() {
                 <a href={`tel:${siteData.phoneHref}`} className="button-primary">
                   Call {siteData.phoneDisplay}
                 </a>
-                <a href={`mailto:${siteData.email}`} className="button-secondary">
-                  Email Us
+                <a href={estimateEmailHref} className="button-secondary">
+                  Draft Estimate Email
                 </a>
               </div>
             </div>

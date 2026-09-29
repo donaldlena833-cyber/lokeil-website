@@ -7,12 +7,12 @@ const sitemap = readFileSync(new URL('../app/sitemap.ts', import.meta.url), 'utf
 
 test('homepage guides homeowners instead of exposing internal editorial language', () => {
   assert.doesNotMatch(page, /move from proof to scope|unsupported claims/i);
-  assert.match(page, /Wide room photos and close-ups of the areas you want/);
-  assert.match(page, /first estimate conversation more useful/);
+  assert.match(page, /Tell us what room you want to change and where the property is/);
+  assert.match(page, /How do I request an estimate\?/);
 });
 
 test('homepage preserves primary project and estimate routes', () => {
   assert.match(page, /href="\/gallery"/);
   assert.match(page, /href="\/contact"/);
-  assert.match(sitemap, /path: '', priority: 1, changeFrequency: 'weekly' as const, lastModified: '2026-09-15'/);
+  assert.match(sitemap, /path: '', priority: 1, changeFrequency: 'weekly' as const, lastModified: '2026-09-28'/);
 });

@@ -5,9 +5,9 @@ import Link from 'next/link';
 import {
   coreServices,
   craftsmanshipPoints,
+  estimateEmailHref,
   featuredImages,
   featuredWork,
-  heroStats,
   processSteps,
   siteData,
   valuePoints,
@@ -15,9 +15,9 @@ import {
 import { buildPageMetadata } from './seo';
 
 export const metadata: Metadata = buildPageMetadata({
-  title: 'Interior Remodeling Ridgewood & Queens',
+  title: 'Bathroom & Kitchen Remodeling in Queens',
   description:
-    'Interior remodeling in Ridgewood and Queens for bathrooms, kitchens, tile, flooring, plaster, painting, cabinets, and finish-focused upgrades.',
+    'LOKEIL Renovation remodels bathrooms and kitchens in Queens from its Ridgewood base. View real project photos and request an estimate by phone or email.',
   path: '/',
 });
 
@@ -34,37 +34,36 @@ export default function Home() {
               {siteData.tagline}
             </p>
             <h1 className="display-title mt-5" data-reveal="fade-up" data-delay="1">
-              Cleaner bathrooms, kitchens, and finish work.
+              Bathroom and kitchen remodeling in Queens.
             </h1>
             <p className="lead mt-6" data-reveal="fade-up" data-delay="2">
-              {siteData.brandName} handles bathrooms, kitchens, flooring, plaster, painting,
-              cabinets, doors, steps, and fireplace design across Queens and the wider
-              New York City area.
+              {siteData.brandName} is based in Ridgewood. We handle bathroom and kitchen
+              updates, tile, flooring, cabinets, plaster, painting, and interior finishes
+              across Queens and nearby New York City neighborhoods.
             </p>
             <p className="mt-5 text-base leading-7 text-olive-100/72" data-reveal="fade-up" data-delay="3">
-              Browse recent project photos, choose the service that best matches your room, then
-              call or email with the details. Wide room photos and close-ups of the areas you want
-              to change can make the first estimate conversation more useful.
+              Tell us what room you want to change and where the property is. Photos of the
+              current space help us start a useful estimate conversation.
             </p>
 
             <div className="mt-9 flex flex-col gap-4 sm:flex-row" data-reveal="fade-up" data-delay="4">
-              <Link href="/gallery" className="button-primary">
-                View Our Work
-              </Link>
-              <Link href="/contact" className="button-secondary">
-                Request an Estimate
-              </Link>
+              <a href={`tel:${siteData.phoneHref}`} className="button-primary">
+                Call {siteData.phoneDisplay}
+              </a>
+              <a href={estimateEmailHref} className="button-secondary">
+                Email Project Details
+              </a>
             </div>
-
-            <div className="mt-10 grid gap-4 sm:grid-cols-3" data-reveal="fade-up" data-delay="5">
-              {heroStats.map((item) => (
-                <div key={item.value} className="info-chip">
-                  <p className="text-sm font-semibold uppercase tracking-[0.16em] text-accent/85">
-                    {item.value}
-                  </p>
-                  <p className="mt-2 text-sm leading-6 text-olive-100/68">{item.label}</p>
-                </div>
-              ))}
+            <div className="mt-8 flex flex-wrap gap-x-6 gap-y-2 text-sm text-olive-100/72" data-reveal="fade-up" data-delay="5">
+              <Link href="/bathroom-remodeling-queens" className="underline underline-offset-4 hover:text-accent">
+                Bathroom remodeling
+              </Link>
+              <Link href="/kitchen-remodeling-queens" className="underline underline-offset-4 hover:text-accent">
+                Kitchen remodeling
+              </Link>
+              <Link href="/gallery" className="underline underline-offset-4 hover:text-accent">
+                Real project photos
+              </Link>
             </div>
           </div>
 
@@ -107,6 +106,36 @@ export default function Home() {
                   </div>
                 </div>
               ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="section-space border-b border-white/8" aria-labelledby="remodeling-answers">
+        <div className="site-shell grid gap-10 lg:grid-cols-[0.9fr_1.1fr]">
+          <div>
+            <p className="eyebrow">At a glance</p>
+            <h2 id="remodeling-answers" className="section-title mt-4">What does LOKEIL Renovation do?</h2>
+            <p className="lead mt-6">
+              LOKEIL is a Ridgewood, Queens based interior remodeler focused on bathrooms,
+              kitchens, tile, flooring, cabinets, plaster, painting, and finish work.
+            </p>
+          </div>
+          <div className="surface divide-y divide-white/8 px-6 sm:px-8">
+            <div className="py-6">
+              <h3 className="text-2xl text-olive-50">Where do you work?</h3>
+              <p className="mt-2 text-base leading-7 text-olive-100/72">
+                We are based in Ridgewood and serve Queens, Brooklyn, Manhattan, parts of
+                Long Island, and Westchester County. Include your neighborhood when you contact us.
+              </p>
+            </div>
+            <div className="py-6">
+              <h3 className="text-2xl text-olive-50">How do I request an estimate?</h3>
+              <p className="mt-2 text-base leading-7 text-olive-100/72">
+                Call <a href={`tel:${siteData.phoneHref}`} className="underline underline-offset-4 hover:text-accent">{siteData.phoneDisplay}</a> or{' '}
+                <a href={estimateEmailHref} className="underline underline-offset-4 hover:text-accent">email your project details</a>.
+                Share the room, location, work you want done, and current photos if available.
+              </p>
             </div>
           </div>
         </div>
