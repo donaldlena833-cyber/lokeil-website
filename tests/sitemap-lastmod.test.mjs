@@ -5,8 +5,8 @@ import test from 'node:test';
 const sitemap = readFileSync(new URL('../app/sitemap.ts', import.meta.url), 'utf8');
 
 const verifiedUpdates = {
-  '/bathroom-remodeling-queens': '2026-09-10',
-  '/kitchen-remodeling-queens': '2026-09-11',
+  '/bathroom-remodeling-queens': '2026-09-28',
+  '/kitchen-remodeling-queens': '2026-09-28',
   '/tile-installation-queens': '2026-09-12',
   '/flooring-installation-queens': '2026-09-14',
 };

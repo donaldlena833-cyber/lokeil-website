@@ -3,13 +3,13 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 import EstimatePrepChecklist from '../components/EstimatePrepChecklist';
-import { featuredImages, siteData } from '../siteData';
+import { estimateEmailHref, featuredImages, siteData } from '../siteData';
 import { buildPageMetadata } from '../seo';
 
 export const metadata: Metadata = buildPageMetadata({
-  title: 'Bathroom Remodeling Queens | Ridgewood & Astoria',
+  title: 'Bathroom Remodeling in Queens',
   description:
-    'Bathroom remodeling in Queens for Ridgewood, Steinway, Astoria, Sunnyside, and Woodside, including tile, showers, flooring, plaster, and painting.',
+    'Bathroom remodeling from Ridgewood across Queens. See LOKEIL shower and tile work, learn what to send for an estimate, and call or email your project.',
   path: '/bathroom-remodeling-queens',
 });
 
@@ -142,7 +142,7 @@ export default function BathroomRemodelingQueens() {
           <div data-reveal="fade-up">
             <p className="eyebrow">Queens bathroom remodeling</p>
             <h1 className="page-title mt-4">
-              Bathroom remodeling in Queens with cleaner tile, surfaces, and finish work.
+              Bathroom remodeling in Queens, from tile to the final details.
             </h1>
             <p className="lead mt-6">
               {siteData.brandName} is based in Ridgewood and handles bathroom upgrades across
@@ -153,19 +153,16 @@ export default function BathroomRemodelingQueens() {
               <a href={`tel:${siteData.phoneHref}`} className="button-primary">
                 Call {siteData.phoneDisplay}
               </a>
-              <Link href="/gallery" className="button-secondary">
-                View Bathroom Work
-              </Link>
-              <Link href="/tile-installation-queens" className="button-secondary">
-                Tile Installation
-              </Link>
-              <Link href="/blog/nyc-kitchen-bathroom-remodel-permits-queens" className="button-secondary">
-                Permit Questions
-              </Link>
-              <Link href="/flooring-installation-queens" className="button-secondary">
-                Bathroom Flooring
-              </Link>
+              <a href={estimateEmailHref} className="button-secondary">
+                Email Project Details
+              </a>
             </div>
+            <p className="mt-6 text-sm leading-6 text-olive-100/72">
+              Send your Queens neighborhood, room photos, and what you want to keep or replace.{' '}
+              <Link href="/gallery" className="underline underline-offset-4 hover:text-accent">See bathroom work</Link>,
+              explore <Link href="/tile-installation-queens" className="underline underline-offset-4 hover:text-accent">tile installation</Link>,
+              or read about <Link href="/blog/nyc-kitchen-bathroom-remodel-permits-queens" className="underline underline-offset-4 hover:text-accent">permit questions</Link>.
+            </p>
           </div>
 
           <div className="media-frame min-h-[24rem] sm:min-h-[34rem]" data-reveal="fade-in" data-delay="1">

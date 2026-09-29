@@ -3,13 +3,13 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 import EstimatePrepChecklist from '../components/EstimatePrepChecklist';
-import { siteData } from '../siteData';
+import { estimateEmailHref, siteData } from '../siteData';
 import { buildPageMetadata } from '../seo';
 
 export const metadata: Metadata = buildPageMetadata({
-  title: 'Kitchen Remodeling Queens | Renovation & Cabinets',
+  title: 'Kitchen Remodeling in Queens',
   description:
-    'Kitchen remodeling and renovation in Queens with cabinets, backsplash tile, flooring, painting, plaster, trim, doors, and coordinated finish work.',
+    'Kitchen remodeling from Ridgewood across Queens. See LOKEIL cabinet and finish work, learn what to send for an estimate, and call or email your project.',
   path: '/kitchen-remodeling-queens',
 });
 
@@ -139,7 +139,7 @@ export default function KitchenRemodelingQueens() {
             <div data-reveal="fade-up">
               <p className="eyebrow">Queens kitchen remodeling</p>
               <h1 className="page-title mt-4">
-                Kitchen remodeling in Queens with cleaner cabinets, surfaces, and finish work.
+                Kitchen remodeling in Queens, from cabinets to finishes.
               </h1>
               <p className="lead mt-6">
                 {siteData.brandName} is based in Ridgewood and handles kitchen updates across
@@ -150,19 +150,15 @@ export default function KitchenRemodelingQueens() {
                 <a href={`tel:${siteData.phoneHref}`} className="button-primary">
                   Call {siteData.phoneDisplay}
                 </a>
-                <Link href="/gallery" className="button-secondary">
-                  View Kitchen Work
-                </Link>
-                <Link href="/bathroom-remodeling-queens" className="button-secondary">
-                  Bathroom Remodeling
-                </Link>
-                <Link href="/blog/nyc-kitchen-bathroom-remodel-permits-queens" className="button-secondary">
-                  Permit Questions
-                </Link>
-                <Link href="/tile-installation-queens" className="button-secondary">
-                  Backsplash Tile
-                </Link>
+                <a href={estimateEmailHref} className="button-secondary">
+                  Email Project Details
+                </a>
               </div>
+              <p className="mt-6 text-sm leading-6 text-olive-100/72">
+                Send your Queens neighborhood, kitchen photos, and what you want to keep or change.{' '}
+                <Link href="/gallery" className="underline underline-offset-4 hover:text-accent">See kitchen work</Link>{' '}
+                or read about <Link href="/blog/nyc-kitchen-bathroom-remodel-permits-queens" className="underline underline-offset-4 hover:text-accent">permit questions</Link>.
+              </p>
             </div>
 
             <div className="media-frame min-h-[24rem] sm:min-h-[34rem]" data-reveal="fade-in" data-delay="1">

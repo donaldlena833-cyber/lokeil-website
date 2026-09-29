@@ -8,7 +8,7 @@ export const siteData = {
   tagline: 'Ridgewood, Queens based interior remodeling',
   description:
     'LOKEIL Renovation handles bathrooms, kitchens, tile, flooring, plaster, painting, cabinets, doors, steps, and fireplace upgrades for interior renovation projects across Queens and the wider New York City area.',
-  phoneDisplay: '(332)999-3846',
+  phoneDisplay: '(332) 999-3846',
   phoneHref: '+13329993846',
   email: 'info@lokeilremodeling.com',
   instagram: 'https://www.instagram.com/lokeil.remodeling/',
@@ -27,6 +27,8 @@ export const siteData = {
     { label: 'Sunday', value: 'Closed' },
   ],
 } as const;
+
+export const estimateEmailHref = `mailto:${siteData.email}?subject=${encodeURIComponent('Queens remodeling estimate request')}&body=${encodeURIComponent('Project neighborhood: \nRoom or service: \nWhat I want to change: \nApproximate timeline: \nBest number to reach me: \n\nI can attach current room photos and finish references to this email.')}`;
 
 export const navItems = [
   { href: '/', label: 'Home' },
