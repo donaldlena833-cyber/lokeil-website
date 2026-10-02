@@ -4,7 +4,7 @@ import { resolve } from 'node:path';
 import test from 'node:test';
 import { loadTypeScriptExports } from './load-ts.mjs';
 
-const imports = Object.fromEntries(['gowanus', 'financialDistrict', 'midtownWest', 'longIslandCity', 'downtownBrooklyn', 'mottHaven', 'bedStuy', 'crownHeights', 'harlem', 'bushwick', 'greenpoint', 'astoria', 'upperWestSide', 'upperEastSide', 'eastVillage', 'lowerEastSide', 'chelsea', 'williamsburg', 'inwood', 'ridgewood', 'parkSlope', 'carrollGardens', 'sunnyside', 'jacksonHeights', 'sunsetPark', 'portRichmond', 'flushing', 'riverdale', 'stapleton', 'bayRidge', 'forestHills', 'ditmasPark', 'pelhamBay']
+const imports = Object.fromEntries(['gowanus', 'financialDistrict', 'midtownWest', 'longIslandCity', 'downtownBrooklyn', 'mottHaven', 'bedStuy', 'crownHeights', 'harlem', 'bushwick', 'greenpoint', 'astoria', 'upperWestSide', 'upperEastSide', 'eastVillage', 'lowerEastSide', 'chelsea', 'williamsburg', 'inwood', 'ridgewood', 'parkSlope', 'carrollGardens', 'sunnyside', 'jacksonHeights', 'sunsetPark', 'portRichmond', 'flushing', 'riverdale', 'stapleton', 'bayRidge', 'forestHills', 'ditmasPark', 'pelhamBay', 'bayside', 'tottenville', 'cityIsland']
   .map(name => [`./${name}`, loadTypeScriptExports(resolve(`app/blog/neighborhoods/${name}.ts`))]));
 const overrides = loadTypeScriptExports(resolve('app/blog/neighborhoods/index.ts'), imports);
 const { neighborhoodArticleSlugs } = loadTypeScriptExports(resolve('app/blog/neighborhoods/routes.ts'));

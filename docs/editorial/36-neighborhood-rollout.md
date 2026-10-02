@@ -1,6 +1,6 @@
 # Neighborhood rollout: LOKEIL first, MetroGlass additive
 
-The supplied order is preserved. These are editorial assignments, not verified rankings of demand. LOKEIL batches 1 through 11 are written, with three assignments remaining. Each later assignment needs its own source check, evidence, original writing, illustration where useful, and evaluation before publication. Match existing LOKEIL articles individually to the subjects, retaining URLs when rewriting; preserve existing MetroGlass articles and add separate glazing content. MetroGlass directions in this table remain separate assignments and are not declared published by a LOKEIL release.
+The supplied order is preserved. These are editorial assignments, not verified rankings of demand. LOKEIL batches 1 through 12 are written, with all 36 individual expanded editions now prepared. Each later assignment needs its own source check, evidence, original writing, illustration where useful, and evaluation before publication. Match existing LOKEIL articles individually to the subjects, retaining URLs when rewriting; preserve existing MetroGlass articles and add separate glazing content. MetroGlass directions in this table remain separate assignments and are not declared published by a LOKEIL release.
 
 Publish three completed articles together. Recommended operating pace: one evaluated batch per week, with flexibility when a story needs more evidence. No recurring publication has been scheduled. Check crawl/index status separately from client response. Review search response after 2–4 weeks and business results over 90 days; an email click is not a received inquiry, and an estimate is not a credited job.
 
@@ -39,13 +39,13 @@ Publish three completed articles together. Recommended operating pace: one evalu
 | 11 | Forest Hills | Giving two shower storage levels a purpose and coordinating optional lighting | Apartment owner | Shower glass and neighboring cabinet movement | LOKEIL rewritten |
 | 11 | Flatbush / Ditmas Park | Defining interior, shelf and surrounding wall boundaries around an open niche | House owner | Glass and mirror installation beside older finishes | LOKEIL rewritten |
 | 11 | Pelham Bay | Connecting a progress photograph to a visible question, current scope and next update | Homeowner | Glass damage photos that support an estimate | LOKEIL rewritten |
-| 12 | Bayside | Choosing flooring as a whole-room decision | House owner | Interior glass with floor and ceiling mounting conditions | Queued |
-| 12 | Tottenville | Planning bathroom work around access, protection, and daily use | House owner | Custom glass installation access and delivery planning | Queued |
-| 12 | City Island | A focused kitchen or bathroom finish scope in an occupied home | Homeowner | Glass and mirror care, and assessing replacement needs | Queued |
+| 12 | Bayside | Balancing a bold floor with quieter room finishes and checking the exact product | House owner | Interior glass with floor and ceiling mounting conditions | LOKEIL rewritten |
+| 12 | Tottenville | Recording, protecting and reviewing a retained tub during surrounding work | House owner | Custom glass installation access and delivery planning | LOKEIL rewritten |
+| 12 | City Island | Naming adjoining surfaces, trade responsibilities and the complete bathroom finish result | Homeowner | Glass and mirror care, and assessing replacement needs | LOKEIL rewritten |
 
 ## Remaining photo fit
 
-Three photographs still have baseline articles after batch eleven, all showing bathroom work. The remaining kitchen and cabinet directions must be adjusted to the actual photographed subject before writing; the neighborhood order can remain. Folder names, a former title, or an editorial assignment do not establish a room, project history, or location. Keep the separate MetroGlass directions intact.
+All 36 photographs now have individual expanded editions. The final three assignments follow the actual bathroom photographs: a whole room finish grouping, a protected retained tub, and a defined adjoining surface scope. Neighborhoods are reader contexts rather than invented job locations. Folder names, a former title, or an editorial assignment do not establish a room, project history, or location. Keep the separate MetroGlass directions intact.
 
 ## Evaluation gate for every group of three
 

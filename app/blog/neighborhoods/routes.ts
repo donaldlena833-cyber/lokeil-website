@@ -32,4 +32,7 @@ export const neighborhoodArticleSlugs = [
   'two-recessed-niches-in-a-narrow-white-shower',
   'an-open-shower-niche-before-the-tile-edges-are-finished',
   'large-shower-wall-tile-meets-a-mosaic-floor',
+  'small-hex-shower-floor-tile-around-a-drain',
+  'a-horizontal-tile-tub-wall-with-a-storage-niche',
+  'a-colorful-mosaic-niche-in-a-white-shower',
 ] as const;
