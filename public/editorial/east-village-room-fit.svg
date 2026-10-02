@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1600" viewBox="0 0 600 800" role="img" aria-labelledby="title desc">
+  <title id="title">Measure a compact room where the fixtures will fit</title>
+  <desc id="desc">An original abstract plan has an exaggerated irregular right wall, two width checks at different positions, a cabinet edge beside that wall, and a door movement arc. It is not a measured drawing of the photographed bathroom.</desc>
+  <g fill="none" stroke="#45614A" stroke-width="3" stroke-linejoin="round">
+    <path d="M100 180H485L505 350L480 620H100Z" fill="#FAFAF3" stroke="none"/>
+    <path d="M100 180H485L505 350L480 620H295M195 620H100V180"/>
+    <path d="M340 360H465V530H340Z" fill="#E3E8D8"/>
+    <path d="M465 360L503 360L487 530H465Z" fill="#D4C7A7" stroke-dasharray="7 6"/>
+    <path d="M120 275H476M130 267L120 275L130 283M466 267L476 275L466 283M120 575H469M130 567L120 575L130 583M459 567L469 575L459 583" stroke="#A18B5E"/>
+    <path d="M195 620V520M195 520A100 100 0 0 1 295 620" stroke="#A18B5E"/>
+  </g>
+  <g font-family="Arial, sans-serif" fill="#293B30" font-size="29"><text x="60" y="70">Fit follows the actual room</text><text x="60" y="123" fill="#45614A" font-size="21">Illustrative plan, exaggerated irregularity</text><text x="172" y="244" font-size="24">Measure at the fixtures</text><text x="355" y="450" font-size="23">Cabinet</text><text x="120" y="716" font-size="24">Review door movement</text></g>
+  <g fill="#45614A"><circle cx="205" cy="319" r="25"/><circle cx="464" cy="322" r="25"/><circle cx="290" cy="653" r="25"/></g>
+  <g font-family="Arial, sans-serif" fill="#FAFAF3" font-size="27" font-weight="bold" text-anchor="middle"><text x="205" y="328">1</text><text x="464" y="331">2</text><text x="290" y="662">3</text></g>
+</svg>

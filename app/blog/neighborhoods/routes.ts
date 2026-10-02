@@ -11,4 +11,7 @@ export const neighborhoodArticleSlugs = [
   'gray-kitchen-cabinets-with-a-patterned-backsplash',
   'blue-scallop-tile-and-the-problem-of-starting-the-pattern',
   'marble-look-tub-surround-with-a-recessed-shelf',
+  'the-unfinished-wall-edge-beside-a-countertop',
+  'a-dark-bathroom-vanity-against-a-pale-wall',
+  'large-white-shower-tile-before-the-fixtures-go-in',
 ] as const;
