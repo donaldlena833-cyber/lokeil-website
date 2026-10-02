@@ -1,6 +1,6 @@
 # Neighborhood rollout: LOKEIL first, MetroGlass additive
 
-The supplied order is preserved. These are editorial assignments, not verified rankings of demand. LOKEIL batches 1 through 10 are written, with six assignments remaining. Each later assignment needs its own source check, evidence, original writing, illustration where useful, and evaluation before publication. Match existing LOKEIL articles individually to the subjects, retaining URLs when rewriting; preserve existing MetroGlass articles and add separate glazing content. MetroGlass directions in this table remain separate assignments and are not declared published by a LOKEIL release.
+The supplied order is preserved. These are editorial assignments, not verified rankings of demand. LOKEIL batches 1 through 11 are written, with three assignments remaining. Each later assignment needs its own source check, evidence, original writing, illustration where useful, and evaluation before publication. Match existing LOKEIL articles individually to the subjects, retaining URLs when rewriting; preserve existing MetroGlass articles and add separate glazing content. MetroGlass directions in this table remain separate assignments and are not declared published by a LOKEIL release.
 
 Publish three completed articles together. Recommended operating pace: one evaluated batch per week, with flexibility when a story needs more evidence. No recurring publication has been scheduled. Check crawl/index status separately from client response. Review search response after 2–4 weeks and business results over 90 days; an email click is not a received inquiry, and an estimate is not a credited job.
 
@@ -36,16 +36,16 @@ Publish three completed articles together. Recommended operating pace: one evalu
 | 10 | Riverdale | Bathroom floor boundaries at the shower, fixtures, and occupied room doorway | Homeowner | Glass divider placement and everyday circulation | LOKEIL rewritten |
 | 10 | Stapleton | Tile boundaries, assessed openings, edge selection, and finish handover | Homeowner | Final enclosure measurement after edge details are complete | LOKEIL rewritten |
 | 10 | Bay Ridge | Comparing a retained tub with an assessed shower change from use and room conditions | Homeowner | Comparing enclosure opening styles | LOKEIL rewritten |
-| 11 | Forest Hills | Balancing vanity storage with room clearance | Apartment owner | Shower glass and neighboring cabinet movement | Queued |
-| 11 | Flatbush / Ditmas Park | Keeping character while defining plaster and paint repairs | House owner | Glass and mirror installation beside older finishes | Queued |
-| 11 | Pelham Bay | A renovation photo brief that makes repair work visible | Homeowner | Glass damage photos that support an estimate | Queued |
+| 11 | Forest Hills | Giving two shower storage levels a purpose and coordinating optional lighting | Apartment owner | Shower glass and neighboring cabinet movement | LOKEIL rewritten |
+| 11 | Flatbush / Ditmas Park | Defining interior, shelf and surrounding wall boundaries around an open niche | House owner | Glass and mirror installation beside older finishes | LOKEIL rewritten |
+| 11 | Pelham Bay | Connecting a progress photograph to a visible question, current scope and next update | Homeowner | Glass damage photos that support an estimate | LOKEIL rewritten |
 | 12 | Bayside | Choosing flooring as a whole-room decision | House owner | Interior glass with floor and ceiling mounting conditions | Queued |
 | 12 | Tottenville | Planning bathroom work around access, protection, and daily use | House owner | Custom glass installation access and delivery planning | Queued |
 | 12 | City Island | A focused kitchen or bathroom finish scope in an occupied home | Homeowner | Glass and mirror care, and assessing replacement needs | Queued |
 
 ## Remaining photo fit
 
-Six unused distinct photographs remain after batch ten, all showing bathroom work. The remaining kitchen and cabinet directions must be adjusted to the actual photographed subject before writing; the neighborhood order can remain. Folder names, a former title, or an editorial assignment do not establish a room, project history, or location. Keep the separate MetroGlass directions intact.
+Three photographs still have baseline articles after batch eleven, all showing bathroom work. The remaining kitchen and cabinet directions must be adjusted to the actual photographed subject before writing; the neighborhood order can remain. Folder names, a former title, or an editorial assignment do not establish a room, project history, or location. Keep the separate MetroGlass directions intact.
 
 ## Evaluation gate for every group of three
 

@@ -29,4 +29,7 @@ export const neighborhoodArticleSlugs = [
   'how-a-patterned-bathroom-floor-meets-the-shower',
   'planning-the-last-tile-cuts-around-a-gray-tub-niche',
   'gray-tub-tile-before-fixtures-and-final-trim',
+  'two-recessed-niches-in-a-narrow-white-shower',
+  'an-open-shower-niche-before-the-tile-edges-are-finished',
+  'large-shower-wall-tile-meets-a-mosaic-floor',
 ] as const;
