@@ -23,14 +23,14 @@ export default function Header() {
   };
 
   return (
-    <header className="sticky top-0 z-50 px-3 pt-3 sm:px-4">
-      <div className="site-shell">
-        <div className="surface relative flex min-h-[84px] items-center justify-between rounded-[28px] px-5 py-4 sm:px-7">
+    <header className="sticky top-0 z-50 border-b border-white/10 bg-olive-700/95 backdrop-blur-xl">
+      <div className="site-shell relative">
+        <div className="relative flex min-h-[70px] items-center justify-between gap-4 py-3">
           <Link href="/" className="group shrink-0">
-            <span className="block font-serif text-[1.7rem] leading-none text-accent">
+            <span className="block font-serif text-[1.65rem] leading-none text-accent">
               {siteData.shortName}
             </span>
-            <span className="mt-1 block text-[0.68rem] uppercase tracking-[0.26em] text-olive-100/58">
+            <span className="mt-1 block text-[0.61rem] uppercase tracking-[0.2em] text-olive-100/70">
               {siteData.descriptor}
             </span>
           </Link>
@@ -63,7 +63,7 @@ export default function Header() {
 
           <button
             type="button"
-            className="relative flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/[0.03] lg:hidden"
+            className="relative flex h-11 w-11 items-center justify-center rounded-full border border-white/25 lg:hidden"
             onClick={() => setMobileMenuOpen((open) => !open)}
             aria-controls="mobile-navigation"
             aria-label={mobileMenuOpen ? 'Close navigation menu' : 'Open navigation menu'}
@@ -88,7 +88,7 @@ export default function Header() {
         </div>
 
         {mobileMenuOpen ? (
-          <div id="mobile-navigation" className="surface mt-3 rounded-[28px] px-5 py-5 lg:hidden">
+          <div id="mobile-navigation" className="absolute inset-x-0 top-full max-h-[calc(100svh-70px)] overflow-y-auto border-b border-white/15 bg-olive-700 px-5 pb-5 pt-2 shadow-xl sm:px-8 lg:hidden">
             <ul className="space-y-1">
               {navItems.map((item) => (
                 <li key={item.href}>

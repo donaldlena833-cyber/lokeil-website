@@ -44,6 +44,9 @@ export type BlogPost = {
     alt: string;
     caption: string;
   };
+  diagramAfter?: number;
+  diagramHeading?: string;
+  processSteps?: string[];
 };
 
 export const blogPosts: BlogPost[] = [
