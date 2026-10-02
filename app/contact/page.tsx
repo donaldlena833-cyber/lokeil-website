@@ -54,6 +54,20 @@ export default function Contact() {
           </aside>
         </div>
       </section>
+      <section id="payment-options" className="scroll-mt-20 border-t border-ink/10 py-10 sm:py-12" aria-labelledby="payment-options-title">
+        <div className="site-shell grid max-w-5xl gap-8 sm:grid-cols-2">
+          <div>
+            <h2 id="payment-options-title" className="text-3xl">Payment options</h2>
+            <p className="mt-4 text-base leading-7 text-ink/80">We accept {siteData.paymentMethods.join(', ')}.</p>
+            <p className="mt-3 text-sm leading-7 text-ink/80">We’ll agree on the project price, payment schedule, and chosen method before work begins.</p>
+          </div>
+          <div>
+            <h2 className="text-3xl">Communication</h2>
+            <p className="mt-4 text-base leading-7 text-ink/80">{siteData.communicationNote}</p>
+            <p className="mt-3 text-sm leading-7 text-ink/80">Let us know how you prefer to communicate when you contact us about your project.</p>
+          </div>
+        </div>
+      </section>
       <section className="border-t border-ink/10 bg-sage-soft/45 py-10 sm:py-12">
         <div className="site-shell grid max-w-5xl gap-7 sm:grid-cols-2">
           <div><h2 className="text-3xl">Have photos ready?</h2><p className="mt-4 max-w-md text-base leading-7 text-ink/80">A wide view, one close detail, and approximate measurements help us understand the starting point. Attach them to your estimate email.</p></div>
