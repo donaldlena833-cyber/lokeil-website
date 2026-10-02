@@ -24,7 +24,7 @@ export const structuredData = [
       url: `${siteData.siteUrl}${siteData.logo}`,
     },
     image: `${siteData.siteUrl}${siteData.ogImage}`,
-    sameAs: [siteData.instagram],
+    sameAs: [siteData.instagram, siteData.yelp],
     address: {
       '@type': 'PostalAddress',
       addressLocality: 'Ridgewood',

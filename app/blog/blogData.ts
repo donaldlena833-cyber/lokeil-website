@@ -20,6 +20,7 @@ export type BlogPost = {
   description: string;
   eyebrow: string;
   publishDate: string;
+  modifiedDate?: string;
   readTime: string;
   heroImage: string;
   heroAlt: string;

@@ -11,9 +11,9 @@ import {
 import { buildPageMetadata } from '../seo';
 
 export const metadata: Metadata = buildPageMetadata({
-  title: 'Interior Remodeling Services in Queens',
+  title: 'Interior Remodeling Services in New York City',
   description:
-    'Explore LOKEIL Renovation services in Queens: bathroom remodeling, kitchen remodeling, tile installation, flooring, plaster, painting, cabinets, doors, trim, and interior finish work.',
+    'LOKEIL Renovation offers bathroom, kitchen, tile, flooring, cabinet, plaster, and painting services across all five NYC boroughs from Ridgewood, Queens.',
   path: '/services',
 });
 
@@ -25,11 +25,12 @@ export default function Services() {
           <div data-reveal="fade-up">
             <p className="eyebrow">Services</p>
             <h1 className="page-title mt-4">
-              Interior remodeling services shaped around the work in the portfolio.
+              Interior remodeling services across New York City.
             </h1>
             <p className="lead mt-6">
               Explore bathroom and kitchen remodeling, tile, flooring, cabinets, painting,
-              plaster, and the finish details that bring a room together.
+              plaster, and the finish details that bring a room together. We work across
+              Queens, Brooklyn, Manhattan, the Bronx, and Staten Island.
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
               <Link href="/bathroom-remodeling-queens" className="button-secondary">

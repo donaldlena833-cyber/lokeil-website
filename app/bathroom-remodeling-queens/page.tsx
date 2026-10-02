@@ -1,8 +1,10 @@
+import { projectFit, queensPlanningDetails, photoChecklist, planningNotes, faqs } from '../services/content/bathroom-remodeling';
 import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 
-import EstimatePrepChecklist from '../components/EstimatePrepChecklist';
+import Breadcrumbs from '../components/Breadcrumbs';
+import ServicePhotoReferences from '../components/ServicePhotoReferences';
 import { estimateEmailHref, featuredImages, siteData } from '../siteData';
 import { buildPageMetadata } from '../seo';
 
@@ -13,92 +15,15 @@ export const metadata: Metadata = buildPageMetadata({
   path: '/bathroom-remodeling-queens',
 });
 
-const projectFit = [
-  'Bathroom tile replacement, shower walls, niches, and floor updates',
-  'Plaster, drywall, painting, trim, and finish work around the remodel',
-  'Vanity, cabinet, door, and detail upgrades that help the room feel complete',
-  'Queens apartment and home projects where clean sequencing matters',
-] as const;
-
-const queensPlanningDetails = [
-  {
-    title: 'Ridgewood, Steinway, Astoria, and nearby Queens bathrooms',
-    body:
-      'LOKEIL is a Ridgewood-based remodeler for Queens bathrooms, especially apartments and homes in Ridgewood, Steinway, Astoria, Sunnyside, Woodside, Long Island City, Jackson Heights, and Forest Hills where tile, floors, plaster, paint, and finish details all touch the same room.',
-  },
-  {
-    title: 'Tile, waterproofing, and shower surfaces',
-    body:
-      'Before choosing new tile, photograph the existing shower walls, floor, niche, and curb or tub edge. Include close-ups of damaged areas and note what you want to keep or change so the estimate conversation covers the room as well as the finish.',
-  },
-  {
-    title: 'Vanity, flooring, and finish transitions',
-    body:
-      'A bathroom can look unfinished if the vanity, floor edge, baseboard, mirror, lighting, paint, and door trim are scoped separately. LOKEIL keeps those finish details in the same conversation so the room feels complete after the main surfaces are done.',
-  },
-  {
-    title: 'Queens buildings and access',
-    body:
-      'Ridgewood, Astoria, Jackson Heights, Sunnyside, Woodside, Long Island City, Forest Hills, and nearby Queens neighborhoods all bring different building conditions. Co-ops, condos, two-family homes, and older apartments may require work-hour planning, hallway protection, debris coordination, elevator timing, or superintendent communication.',
-  },
-  {
-    title: 'Board, permit, and scope questions',
-    body:
-      'Some bathroom updates stay cosmetic, while plumbing, electrical, layout, or building-system changes can require a different review path. LOKEIL keeps those questions visible early so the estimate can separate surface work from anything that needs board, building, DOB, or licensed trade guidance.',
-  },
-] as const;
-
-const photoChecklist = [
-  'One wide photo from the bathroom doorway',
-  'Straight-on photos of the tub or shower wall',
-  'Close-ups of damaged tile, grout, plaster, or flooring',
-  'Vanity, mirror, lighting, toilet, and doorway clearance photos',
-  'Any inspiration images, tile choices, or fixture finish preferences',
-] as const;
-
-const planningNotes = [
-  {
-    title: 'Start with the existing room',
-    body:
-      'Older Queens bathrooms often need practical planning before finishes: wall condition, flooring transitions, fixture locations, and how the tile layout will land in the actual space.',
-  },
-  {
-    title: 'Keep the scope clear',
-    body:
-      'A focused bathroom remodel can include tile, surfaces, paint, cabinetry, doors, and detail work without turning every conversation into a full-house renovation.',
-  },
-  {
-    title: 'Use real project references',
-    body:
-      'LOKEIL shows real bathroom, tile, flooring, and finish photos so clients can talk about style and expectations from visible work instead of stock examples.',
-  },
-] as const;
-
-const faqs = [
-  {
-    q: 'What bathroom remodeling work does LOKEIL handle in Queens?',
-    a:
-      'LOKEIL handles bathroom tile work, shower surrounds, flooring, plaster, painting, cabinetry details, doors, trim, and finish work for Queens interior remodels.',
-  },
-  {
-    q: 'Can LOKEIL work from project photos and a simple scope?',
-    a:
-      'Yes. The fastest estimate conversation starts with room photos, the neighborhood, and a clear list of the bathroom changes the client wants to make.',
-  },
-  {
-    q: 'Does LOKEIL only do bathrooms?',
-    a:
-      'No. Bathrooms are a strong service fit, but LOKEIL also handles kitchens, flooring, tile, plaster, painting, cabinets, doors, steps, and fireplace upgrades.',
-  },
-] as const;
-
 const serviceJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'Service',
+  '@id': `${siteData.siteUrl}/bathroom-remodeling-queens#service`,
   name: 'Bathroom Remodeling Queens',
   serviceType: 'Bathroom remodeling',
   provider: {
     '@type': 'HomeAndConstructionBusiness',
+    '@id': `${siteData.siteUrl}/#business`,
     name: siteData.brandName,
     url: siteData.siteUrl,
     telephone: siteData.phoneHref,
@@ -137,6 +62,7 @@ export default function BathroomRemodelingQueens() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
       <main>
+        <Breadcrumbs items={[{ label: 'Services', href: '/services' }, { label: 'Bathroom remodeling', href: '/bathroom-remodeling-queens' }]} />
       <section className="section-space border-b border-ink/8">
         <div className="site-shell grid gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:items-end">
           <div data-reveal="fade-up">
@@ -274,7 +200,7 @@ export default function BathroomRemodelingQueens() {
         </div>
       </section>
 
-      <EstimatePrepChecklist />
+      <ServicePhotoReferences servicePath="/bathroom-remodeling-queens" />
 
       <section className="section-rule section-space">
         <div className="site-shell grid gap-10 lg:grid-cols-[0.85fr_1.15fr]">

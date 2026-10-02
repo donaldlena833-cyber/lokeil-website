@@ -1,31 +1,32 @@
 import type { MetadataRoute } from 'next';
 
 import { blogPosts } from './blog/blogData';
+import { isPublishedPost } from './blog/relatedPosts';
 import { galleryItems, siteData } from './siteData';
 
 const routes = [
   { path: '/terms', priority: 0.2, changeFrequency: 'yearly' as const, lastModified: '2026-09-13' },
-  { path: '', priority: 1, changeFrequency: 'weekly' as const, lastModified: '2026-09-28' },
-  { path: '/about', priority: 0.8, changeFrequency: 'monthly' as const, lastModified: '2026-05-10' },
-  { path: '/services', priority: 0.9, changeFrequency: 'monthly' as const, lastModified: '2026-06-12' },
-  { path: '/bathroom-remodeling-queens', priority: 0.9, changeFrequency: 'monthly' as const, lastModified: '2026-09-28' },
-  { path: '/kitchen-remodeling-queens', priority: 0.88, changeFrequency: 'monthly' as const, lastModified: '2026-09-28' },
-  { path: '/tile-installation-queens', priority: 0.86, changeFrequency: 'monthly' as const, lastModified: '2026-09-12' },
-  { path: '/flooring-installation-queens', priority: 0.85, changeFrequency: 'monthly' as const, lastModified: '2026-09-14' },
-  { path: '/plaster-drywall-finishing-queens', priority: 0.84, changeFrequency: 'monthly' as const, lastModified: '2026-08-12' },
-  { path: '/interior-painting-queens', priority: 0.84, changeFrequency: 'monthly' as const, lastModified: '2026-08-12' },
-  { path: '/cabinet-installation-queens', priority: 0.84, changeFrequency: 'monthly' as const, lastModified: '2026-08-12' },
-  { path: '/blog', priority: 0.8, changeFrequency: 'weekly' as const, lastModified: '2026-10-01' },
-  ...blogPosts.filter((post) => !post.slug.match(/^bathroom-remodeling-(astoria|jackson-heights|long-island-city|ridgewood|sunnyside|woodside)-nyc-planning-guide$/)).map((post) => ({
+  { path: '', priority: 1, changeFrequency: 'weekly' as const, lastModified: '2026-10-02' },
+  { path: '/about', priority: 0.8, changeFrequency: 'monthly' as const, lastModified: '2026-10-02' },
+  { path: '/services', priority: 0.9, changeFrequency: 'monthly' as const, lastModified: '2026-10-02' },
+  { path: '/bathroom-remodeling-queens', priority: 0.9, changeFrequency: 'monthly' as const, lastModified: '2026-10-02' },
+  { path: '/kitchen-remodeling-queens', priority: 0.88, changeFrequency: 'monthly' as const, lastModified: '2026-10-02' },
+  { path: '/tile-installation-queens', priority: 0.86, changeFrequency: 'monthly' as const, lastModified: '2026-10-02' },
+  { path: '/flooring-installation-queens', priority: 0.85, changeFrequency: 'monthly' as const, lastModified: '2026-10-02' },
+  { path: '/plaster-drywall-finishing-queens', priority: 0.84, changeFrequency: 'monthly' as const, lastModified: '2026-10-02' },
+  { path: '/interior-painting-queens', priority: 0.84, changeFrequency: 'monthly' as const, lastModified: '2026-10-02' },
+  { path: '/cabinet-installation-queens', priority: 0.84, changeFrequency: 'monthly' as const, lastModified: '2026-10-02' },
+  { path: '/blog', priority: 0.8, changeFrequency: 'weekly' as const, lastModified: '2026-10-02' },
+  ...blogPosts.filter(isPublishedPost).map((post) => ({
     path: `/blog/${post.slug}`,
     priority: 0.72,
     changeFrequency: 'monthly' as const,
-    lastModified: post.publishDate,
+    lastModified: post.modifiedDate || post.publishDate,
     images: [post.heroImage],
   })),
-  { path: '/gallery', priority: 0.8, changeFrequency: 'weekly' as const, lastModified: '2026-10-01', images: galleryItems.map((item) => item.src) },
+  { path: '/gallery', priority: 0.8, changeFrequency: 'weekly' as const, lastModified: '2026-10-02', images: galleryItems.map((item) => item.src) },
   { path: '/contact', priority: 0.8, changeFrequency: 'monthly' as const, lastModified: '2026-09-28' },
-  { path: '/privacy', priority: 0.3, changeFrequency: 'yearly' as const, lastModified: '2026-08-21' },
+  { path: '/privacy', priority: 0.3, changeFrequency: 'yearly' as const, lastModified: '2026-10-02' },
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {

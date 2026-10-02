@@ -1,185 +1,50 @@
-# LOKEIL inc - Interior Remodeling Website
+# LOKEIL Renovation website
 
-A modern, professional website for LOKEIL inc, an interior remodeling company based in Ridgewood, Queens, NY.
+Public site: https://lokeilremodeling.com
 
-## Project Overview
-
-- **Company**: LOKEIL inc
-- **Owner**: Lorel Beqari
-- **Location**: Ridgewood, Queens, NY 11385
-- **Phone**: 917-518-8753 / 917-518-3866
-- **Email**: info@lokeilremodeling.com
-- **Instagram**: @lokeil.remodeling
-
-## Technology Stack
-
-- **Framework**: Next.js 15 with TypeScript
-- **Styling**: Tailwind CSS 3.4
-- **Deployment**: Static Export (output: 'export')
-- **Fonts**: Google Fonts (Instrument Serif + Inter)
-- **Animations**: CSS-only with IntersectionObserver
-- **Images**: Unoptimized for static export
-
-## Color Scheme - Matte Olive Green
-
-- **Background**: #4A5440 (matte olive green)
-- **Background Light**: #5C6652
-- **Background Dark**: #3A4332
-- **Accent**: #C8A96E (warm gold/brass)
-- **Accent Hover**: #D4B87A
-- **Text Primary**: #F5F0E8 (warm off-white)
-- **Text Secondary**: #C4BFB3 (muted cream)
-
-## Project Structure
-
-```
-lokeil-website/
-├── app/
-│   ├── components/
-│   │   ├── Header.tsx
-│   │   ├── Footer.tsx
-│   │   ├── ScrollObserver.tsx
-│   │   ├── ScrollReveal.tsx
-│   │   ├── MobileCtaBar.tsx
-│   │   └── PageTransition.tsx
-│   ├── about/
-│   │   └── page.tsx
-│   ├── services/
-│   │   └── page.tsx
-│   ├── gallery/
-│   │   └── page.tsx
-│   ├── contact/
-│   │   └── page.tsx
-│   ├── layout.tsx
-│   ├── page.tsx (Home)
-│   ├── globals.css
-│   └── schema.ts
-├── public/
-│   ├── gallery/
-│   │   ├── bathroom-tiles/ (10 images)
-│   │   ├── bathroom-flooring/ (9 images)
-│   │   ├── bathroom-shower/ (9 images)
-│   │   ├── bathroom-painting/ (6 images)
-│   │   ├── kitchen-cabinets/ (9 images)
-│   │   └── videos/ (3 MP4 files)
-│   ├── robots.txt
-│   └── sitemap.xml
-├── tailwind.config.ts
-├── tsconfig.json
-├── postcss.config.mjs
-├── next.config.ts
-└── package.json
-```
-
-## Pages
-
-1. **Home** (`/`) - Hero section, services overview, gallery preview, CTA
-2. **About** (`/about`) - Company story, owner information, mission, values
-3. **Services** (`/services`) - All services with descriptions and process
-4. **Gallery** (`/gallery`) - Categorized photo grid with filter tabs and videos
-5. **Contact** (`/contact`) - Contact info, hours, map, social links
-
-## Features
-
-- Responsive design (mobile, tablet, desktop)
-- Sticky header with mobile hamburger menu
-- Mobile CTA bar with call and email buttons
-- Scroll-based animations using IntersectionObserver
-- Gallery with category filtering
-- Google Maps embed
-- SEO optimized with metadata and structured data
-- Static export ready
-- Performance optimized
-
-## Installation
-
-```bash
-npm install
-```
+LOKEIL Inc. is based in Ridgewood, Queens. The website estimate contact is (332) 999-3846 and info@lokeilremodeling.com. Business facts live in `app/siteData.ts`; keep website contact routing consistent with the business agreement.
 
 ## Development
 
-```bash
+```sh
+npm ci
 npm run dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) to view in your browser.
-
-## Building
-
-```bash
+npm test
 npm run build
+npm start
 ```
 
-This creates a static export in the `out/` directory.
+The site uses Next.js 15, React 19, TypeScript, and Tailwind CSS 3.4. Vercel deploys the GitHub repository. It is a Next.js application, not a static export: most public pages are prerendered, while the text representation uses a route handler. Images use Next.js optimization. Fonts are Instrument Serif and Manrope.
 
-## Key Components
+## Content and design
 
-### ScrollObserver
-Observes elements with `data-reveal` attributes and applies animation classes when they come into view.
+- The light palette uses cream `#F1F3E8`, a raised surface `#FAFAF3`, soft sage `#E3E8D8`, deep green text `#293B30`, and leaf green actions `#45614A`.
+- The service hub connects to seven existing Queens service URLs. Visible service copy and FAQs are shared from `app/services/content/`.
+- `app/services/photoReferences.ts` selects real photographs that match each service. Original gallery folder names are not a reliable description of their contents.
+- There are 36 distinct photo stories. Seven repeated gallery files resolve to those stories through aliases in `app/blog/photoStories.ts`.
+- Each photo has its own title, lead, editorial outline, process placement, and illustration in `app/blog/photoStoryPlans.json` and `public/process/stories/`.
+- Individual photo locations, concealed construction products, reviews, licenses, prices, and completion dates must not be invented.
+- Article recommendations use subject and service relevance, not matching image filenames. Consolidated location articles are excluded from public navigation and sitemap entries.
+- Organization, service, article, and breadcrumb structured data describe visible facts. Schema and AI text files do not guarantee indexing, rich results, citations, or rankings.
 
-### ScrollReveal
-Wrapper component for animated sections. Supports variants:
-- `fade-up` (default)
-- `fade-in`
-- `scale-in`
-- `slide-left`
-- `slide-right`
+## Text representation
 
-### MobileCtaBar
-Fixed bottom bar on mobile devices with call and email CTA buttons.
+Normal HTML is the primary representation. Request the same page with `Accept: text/markdown` for readable text. The route is `app/agent-markdown/[[...slug]]/route.ts`; service text comes from the same service content modules, and blog text comes from the same post data. Gallery text links each distinct photograph to its story.
 
-### Header
-Sticky navigation with mobile-responsive hamburger menu.
+Middleware handles canonical host and consolidated route redirects before representation negotiation. Missing pages return 404; unsupported media requests return 406. The route handler supplies `Vary: Accept` and a canonical Link header. Vercel also includes Accept in its CDN cache key by default; verify alternating responses after a release.
 
-## Animations
+`public/llms.txt` is a factual site directory, maintained as a compatibility convenience. No Google ranking benefit is claimed for it.
 
-All animations use CSS-only transitions with IntersectionObserver:
-- Easing: `cubic-bezier(0.16, 1, 0.3, 1)`
-- Stagger delays via `data-delay` attribute
-- Respects `prefers-reduced-motion` preference
-- No GSAP or heavy JavaScript libraries
+## Inquiries and measurement
 
-## SEO Features
+The estimate action opens an email draft with project details, or initiates a call. Neither action confirms receipt of an inquiry. There is no server submission form in this version.
 
-- Full metadata on every page
-- Schema.org LocalBusiness structured data
-- Open Graph tags
-- Semantic HTML with proper heading hierarchy
-- Alt text on all images
-- Sitemap and robots.txt
-- Title format: "Page Name | LOKEIL inc - Interior Remodeling Queens NY"
+Optional Google tools are consent gated. Contact intent events use `click_call` and `click_email`, with the page path only; destinations and project details are excluded. The existing GTM container loads only when both optional purposes are accepted because its tags can include advertising. An intent event is not a qualified lead or completed sale.
 
-## Services Offered
+Use Search Console and Bing Webmaster Tools for their respective visibility reports, and a separate inquiry ledger for estimates and credited jobs. Do not infer attribution from a page event or a citation alone.
 
-- Bathroom Remodeling
-- Kitchen Remodeling
-- Tiling & Tile Installation
-- Flooring
-- Plaster & Drywall
-- Painting
-- Cabinet Installation
-- Door Installation
-- Steps Design
-- Fireplace Design
+## Release checks
 
-## Contact Information
+Run tests and a production build. Start the built application and inspect the affected pages visually at desktop and mobile widths. Run `python3 scripts/audit-public-pages.py http://localhost:3000 --output /tmp/lokeil-audit.json` for the public response checks.
 
-- **Phone 1**: 917-518-8753
-- **Phone 2**: 917-518-3866
-- **Email**: info@lokeilremodeling.com
-- **Address**: Ridgewood, Queens, NY 11385
-- **Hours**: Mon-Fri 10am-6pm, Sat 12pm-5pm
-- **Instagram**: @lokeil.remodeling
-
-## Deployment
-
-This site is built as a static export and can be deployed to:
-- Vercel
-- Netlify
-- GitHub Pages
-- Any static hosting service
-
-## License
-
-All rights reserved by LOKEIL inc.
+After merging, verify that the hosting deployment matches the merged commit. Repeat the response audit on the custom domain, check the actual user actions, and save screenshots. Build success and HTTP 200 responses alone do not prove a successful release.

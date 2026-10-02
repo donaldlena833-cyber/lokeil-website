@@ -395,12 +395,33 @@ type StoryPlan = {
 
 const storyPlans = plans as StoryPlan[];
 
+const photoServiceLinks = (note: PhotoNote) => {
+  const bathroom = { label: 'Bathroom remodeling', href: '/bathroom-remodeling-queens' };
+  const tile = { label: 'Tile installation', href: '/tile-installation-queens' };
+  const cabinet = { label: 'Cabinet installation', href: '/cabinet-installation-queens' };
+  const kitchen = { label: 'Kitchen remodeling', href: '/kitchen-remodeling-queens' };
+  if (note.diagram === 'cabinet') {
+    return /vanity/.test(note.keyword) ? [cabinet, bathroom] : [kitchen, cabinet, tile];
+  }
+  if (note.diagram === 'paint') {
+    return [
+      { label: 'Interior painting', href: '/interior-painting-queens' },
+      { label: 'Plaster and drywall finishing', href: '/plaster-drywall-finishing-queens' },
+    ];
+  }
+  if (note.diagram === 'floor') {
+    return [tile, { label: 'Flooring installation', href: '/flooring-installation-queens' }, bathroom];
+  }
+  return [bathroom, tile];
+};
+
 export const photoStoryPosts: BlogPost[] = photoStoryNotes.map((note, index) => ({
   slug: note.slug,
   title: note.title,
   description: storyPlans[index].description,
   eyebrow: 'From the project gallery',
   publishDate: '2026-10-01',
+  modifiedDate: '2026-10-02',
   readTime: '3 min read',
   heroImage: note.image,
   heroAlt: note.visible.split('.')[0] + '.',
@@ -427,6 +448,7 @@ export const photoStoryPosts: BlogPost[] = photoStoryNotes.map((note, index) => 
   processSteps: storyPlans[index].steps,
   sources: [processSources[note.diagram]],
   relatedServices: [
+    ...photoServiceLinks(note),
     { label: 'See all project photos', href: '/gallery' },
     { label: 'Request an estimate', href: '/contact' },
   ],

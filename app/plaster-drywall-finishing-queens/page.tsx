@@ -1,7 +1,10 @@
+import { projectFit, planningNotes, finishPlanning, faqs } from '../services/content/plaster-drywall-finishing';
 import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 
+import Breadcrumbs from '../components/Breadcrumbs';
+import ServicePhotoReferences from '../components/ServicePhotoReferences';
 import EstimatePrepChecklist from '../components/EstimatePrepChecklist';
 import { siteData } from '../siteData';
 import { buildPageMetadata } from '../seo';
@@ -13,74 +16,15 @@ export const metadata: Metadata = buildPageMetadata({
   path: '/plaster-drywall-finishing-queens',
 });
 
-const projectFit = [
-  'Wall and ceiling repair before interior painting, trim, cabinet, or tile finish work',
-  'Drywall installation, patching, skim work, sanding, and cleaner surface prep',
-  'Queens apartment refreshes where older walls need attention before the final finish',
-  'Bathroom and kitchen remodels where surfaces need to meet tile, flooring, doors, or cabinetry cleanly',
-] as const;
-
-const planningNotes = [
-  {
-    title: 'Repair before finish',
-    body:
-      'Paint and trim expose wall problems quickly. Patching, skim work, sanding, and edge prep should be handled before the final coat or finish details go in.',
-  },
-  {
-    title: 'Sequence the messy work',
-    body:
-      'Drywall and plaster work can create dust and touch-up needs. Planning it before paint, doors, cabinets, and final trim keeps the project cleaner.',
-  },
-  {
-    title: 'Coordinate with the room',
-    body:
-      'The best surface work connects to the full remodel: tile edges, flooring transitions, cabinet lines, bathroom walls, kitchen backsplashes, and paint finish.',
-  },
-] as const;
-
-const finishPlanning = [
-  {
-    title: 'Apartments with older wall conditions',
-    body:
-      'Queens apartments often have patched plaster, uneven drywall seams, old fastener marks, settlement cracks, or previous repairs under the paint. LOKEIL looks at the wall condition before recommending patching, skim work, sanding, or a larger surface-prep scope.',
-  },
-  {
-    title: 'Bathrooms, kitchens, and tile edges',
-    body:
-      'Drywall and plaster details matter around shower tile, backsplash tile, vanity walls, cabinet returns, flooring transitions, and door trim. The cleaner the substrate and edges are, the better the finish work reads after paint and fixtures are installed.',
-  },
-  {
-    title: 'Dust, access, and work sequence',
-    body:
-      'Surface work can affect nearby rooms, hallways, and occupied apartments. Estimate conversations should cover room access, furniture protection, dust control expectations, drying time, and when painting or trim work should follow.',
-  },
-] as const;
-
-const faqs = [
-  {
-    q: 'What plaster and drywall finishing work does LOKEIL handle in Queens?',
-    a:
-      'LOKEIL handles interior plaster and drywall finishing tied to remodeling work, including patching, skim work, surface prep, sanding, and wall or ceiling repair before paint, trim, tile, cabinets, doors, or flooring.',
-  },
-  {
-    q: 'Can LOKEIL help before an interior painting project?',
-    a:
-      'Yes. Wall prep, patching, drywall or plaster finishing, sanding, and cleaner edges can be planned before interior painting so the final room looks more finished.',
-  },
-  {
-    q: 'What should I send for a plaster or drywall estimate?',
-    a:
-      'Send photos of the damaged or uneven surfaces, the Queens neighborhood, rough room count, whether ceilings are involved, and whether the work connects to painting, bathroom, kitchen, flooring, or other interior remodeling.',
-  },
-] as const;
-
 const serviceJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'Service',
+  '@id': `${siteData.siteUrl}/plaster-drywall-finishing-queens#service`,
   name: 'Plaster and Drywall Finishing Queens',
   serviceType: 'Plaster and drywall finishing',
   provider: {
     '@type': 'HomeAndConstructionBusiness',
+    '@id': `${siteData.siteUrl}/#business`,
     name: siteData.brandName,
     url: siteData.siteUrl,
     telephone: siteData.phoneHref,
@@ -119,6 +63,7 @@ export default function PlasterDrywallFinishingQueens() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
       <main>
+        <Breadcrumbs items={[{ label: 'Services', href: '/services' }, { label: 'Plaster drywall finishing', href: '/plaster-drywall-finishing-queens' }]} />
         <section className="section-space border-b border-ink/8">
           <div className="site-shell grid gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:items-end">
             <div data-reveal="fade-up">
@@ -226,6 +171,7 @@ export default function PlasterDrywallFinishingQueens() {
           </div>
         </section>
 
+        <ServicePhotoReferences servicePath="/plaster-drywall-finishing-queens" />
         <EstimatePrepChecklist />
 
         <section className="section-rule section-space">

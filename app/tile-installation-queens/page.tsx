@@ -1,7 +1,10 @@
+import { projectFit, planningNotes, tileProofSignals, localTilePaths, faqs } from '../services/content/tile-installation';
 import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 
+import Breadcrumbs from '../components/Breadcrumbs';
+import ServicePhotoReferences from '../components/ServicePhotoReferences';
 import EstimatePrepChecklist from '../components/EstimatePrepChecklist';
 import { siteData } from '../siteData';
 import { buildPageMetadata } from '../seo';
@@ -13,98 +16,15 @@ export const metadata: Metadata = buildPageMetadata({
   path: '/tile-installation-queens',
 });
 
-const projectFit = [
-  'Bathroom wall tile, shower surrounds, niches, benches, and tub areas',
-  'Bathroom floors, kitchen backsplashes, and interior tile feature surfaces',
-  'Layout planning for grout lines, edge trim, corners, and transitions',
-  'Queens apartments and homes where tile work connects to plaster, paint, flooring, and finish details',
-] as const;
-
-const planningNotes = [
-  {
-    title: 'Plan the layout before setting tile',
-    body:
-      'The finished look depends on where full tiles, cuts, grout lines, niches, fixtures, and trim edges land. A cleaner layout conversation avoids awkward slivers in the most visible places.',
-  },
-  {
-    title: 'Think about the surface behind the tile',
-    body:
-      'Tile installation is not only the visible material. Wet areas, older walls, uneven floors, and patched surfaces all need the right prep before the finish layer can look clean.',
-  },
-  {
-    title: 'Tie tile into the whole room',
-    body:
-      'LOKEIL can connect tile work with surrounding paint, plaster, flooring, cabinets, doors, and trim so the room feels finished instead of partly updated.',
-  },
-] as const;
-
-const tileProofSignals = [
-  {
-    title: 'Layout decisions shape the finished room',
-    body:
-      'Before installation, review where cuts, grout lines, niches, corners, edge trim, and transitions will land. Those details decide whether the finished room looks balanced.',
-  },
-  {
-    title: 'Bathroom tile and flooring should be planned together',
-    body:
-      'Bathroom flooring, shower surrounds, waterproofing, trim, and nearby finish repairs can affect one another. Include the connected surfaces in the estimate conversation instead of treating each tile area in isolation.',
-  },
-  {
-    title: 'Use photos to compare finish details',
-    body:
-      'Room photos and examples of preferred tile work help identify layout, niche, edge, and transition details before the estimate conversation begins.',
-  },
-] as const;
-
-const localTilePaths = [
-  {
-    title: 'Shower and bathroom tile',
-    body:
-      'Many Queens tile projects involve a bathroom: shower walls, tub surrounds, niches, benches, floors, waterproofing conversations, and the edges around glass or fixtures.',
-    href: '/bathroom-remodeling-queens',
-    label: 'Bathroom Remodeling Queens',
-  },
-  {
-    title: 'Kitchen backsplash and floor tile',
-    body:
-      'Kitchen tile has to line up with cabinets, counters, outlets, appliances, flooring, and paint. A backsplash or floor can look weak if the surrounding finish plan is not clear first.',
-    href: '/kitchen-remodeling-queens',
-    label: 'Kitchen Remodeling Queens',
-  },
-  {
-    title: 'Ridgewood and nearby Queens apartments',
-    body:
-      'Ridgewood, Astoria, Sunnyside, Woodside, and nearby Queens homes often bring older walls, uneven floors, tight access, and finish transitions that should be discussed before tile starts.',
-    href: '/blog/shower-tile-installation-queens-guide',
-    label: 'Shower Tile Guide',
-  },
-] as const;
-
-const faqs = [
-  {
-    q: 'What tile installation work does LOKEIL handle in Queens?',
-    a:
-      'LOKEIL handles bathroom wall tile, shower surrounds, tub areas, floors, niches, kitchen backsplashes, and interior tile feature surfaces as part of Queens remodeling work.',
-  },
-  {
-    q: 'Can LOKEIL help with shower tile installation?',
-    a:
-      'Yes. Shower tile, tub surrounds, niches, benches, floor transitions, and finish details are part of LOKEIL Renovation’s bathroom remodeling scope.',
-  },
-  {
-    q: 'What should I send for a tile installation estimate?',
-    a:
-      'Send photos of the room, the surface that needs tile, any tile inspiration or material already selected, the neighborhood, and whether the work is part of a bathroom, kitchen, floor, or backsplash project.',
-  },
-] as const;
-
 const serviceJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'Service',
+  '@id': `${siteData.siteUrl}/tile-installation-queens#service`,
   name: 'Tile Installation Queens',
   serviceType: 'Tile installation',
   provider: {
     '@type': 'HomeAndConstructionBusiness',
+    '@id': `${siteData.siteUrl}/#business`,
     name: siteData.brandName,
     url: siteData.siteUrl,
     telephone: siteData.phoneHref,
@@ -143,6 +63,7 @@ export default function TileInstallationQueens() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
       <main>
+        <Breadcrumbs items={[{ label: 'Services', href: '/services' }, { label: 'Tile installation', href: '/tile-installation-queens' }]} />
         <section className="section-space border-b border-ink/8">
           <div className="site-shell grid gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:items-end">
             <div data-reveal="fade-up">
@@ -281,6 +202,7 @@ export default function TileInstallationQueens() {
           </div>
         </section>
 
+        <ServicePhotoReferences servicePath="/tile-installation-queens" />
         <EstimatePrepChecklist />
 
         <section className="section-rule section-space">

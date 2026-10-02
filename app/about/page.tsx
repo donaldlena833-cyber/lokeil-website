@@ -40,13 +40,25 @@ export default function About() {
           <div data-reveal="fade-up">
             <p className="eyebrow">About the company</p>
             <h1 className="page-title mt-4">
-              A quieter, cleaner approach to interior remodeling in Queens.
+              LOKEIL Renovation, based in Ridgewood and working across New York City.
             </h1>
             <p className="lead mt-6">
               {siteData.brandName} is led by {siteData.owner} and built around practical interior
               renovation work: bathrooms, kitchens, tile installation, flooring, cabinets,
               plaster, painting, doors, steps, and fireplace design.
             </p>
+            <p className="mt-5 text-base leading-7 text-ink/80">
+              Our company is {siteData.legalName} We serve Queens, Brooklyn, Manhattan, the Bronx,
+              and Staten Island, plus parts of Long Island and Westchester County.
+            </p>
+            <div className="mt-6 flex flex-wrap gap-x-6 gap-y-3 text-sm">
+              <a href={siteData.yelp} target="_blank" rel="noopener noreferrer" className="text-accent underline underline-offset-4">
+                LOKEIL on Yelp<span className="sr-only">, opens in a new tab</span>
+              </a>
+              <a href={siteData.instagram} target="_blank" rel="noopener noreferrer" className="text-accent underline underline-offset-4">
+                {siteData.instagramHandle}<span className="sr-only">, opens in a new tab</span>
+              </a>
+            </div>
           </div>
 
           <div className="media-frame min-h-[23rem] sm:min-h-[34rem]" data-reveal="fade-in" data-delay="1">

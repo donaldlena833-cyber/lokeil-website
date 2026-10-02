@@ -15,6 +15,7 @@ export const siteData = {
   email: 'info@lokeilremodeling.com',
   instagram: 'https://www.instagram.com/lokeil.remodeling/',
   instagramHandle: '@lokeil.remodeling',
+  yelp: 'https://www.yelp.com/biz/lokeil-ridgewood',
   location: 'Ridgewood, Queens, NY 11385',
   serviceArea:
     'Queens, Brooklyn, Manhattan, the Bronx, Staten Island, and parts of Long Island and Westchester County',
@@ -66,7 +67,7 @@ export const featuredImages = {
   },
   heroSideBottom: {
     src: '/gallery/kitchen-cabinets/3.jpg',
-    alt: 'Gray kitchen cabinets with patterned backsplash and new flooring.',
+    alt: 'Gray kitchen cabinets with a patterned backsplash and a wood look floor.',
     label: 'Cabinets and finishes',
   },
   aboutFeature: {
@@ -233,8 +234,8 @@ export const featuredWork = [
     title: 'Tile-led bathrooms',
     body:
       'Shower walls, niches, floors, benches, and marble-look surfaces that make bathrooms feel more complete.',
-    src: '/gallery/bathroom-shower/9.jpg',
-    alt: 'Finished shower enclosure with marble-look tile and hex floor.',
+    src: '/gallery/bathroom-tiles/6.jpg',
+    alt: 'Shower with marble look tile, a recessed niche, and a glass enclosure.',
   },
   {
     title: 'Cabinet and kitchen updates',
