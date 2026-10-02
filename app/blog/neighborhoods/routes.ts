@@ -23,4 +23,7 @@ export const neighborhoodArticleSlugs = [
   'cabinet-door-alignment-before-a-kitchen-is-handed-over',
   'testing-a-geometric-tile-sample-against-the-real-floor',
   'shower-floor-and-wall-tile-before-final-hardware',
+  'patterned-bathroom-floor-tile-before-the-room-is-finished',
+  'marble-look-shower-tile-framed-by-glass',
+  'herringbone-shower-walls-with-a-bench-and-hex-floor',
 ] as const;

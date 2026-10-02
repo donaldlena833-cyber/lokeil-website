@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+<title id="title">Give the chosen floor a care record</title><desc id="desc">An original floor pattern is connected to product, joint, care, and spare piece records.</desc>
+<defs><pattern id="tiles" x="80" y="160" width="120" height="120" patternUnits="userSpaceOnUse"><rect width="120" height="120" fill="#edf0e4"/><path d="M60 0L120 60L60 120L0 60Z" fill="#cdd8c7"/><path d="M0 0H120V120H0Z" fill="none" stroke="#617261" stroke-width="3"/></pattern></defs>
+<g stroke="#617261" stroke-width="4" stroke-linejoin="round"><rect x="80" y="160" width="480" height="480" fill="url(#tiles)"/><path d="M560 400H650M628 378L650 400L628 422" fill="none"/></g>
+<g font-family="Arial,sans-serif" fill="#293b30"><text x="320" y="115" text-anchor="middle" font-size="46">The floor you chose</text><text x="320" y="710" text-anchor="middle" font-size="38">Keep its details together</text></g>
+<g fill="#fafaf3" stroke="#617261" stroke-width="3"><rect x="700" y="125" width="430" height="120"/><rect x="700" y="270" width="430" height="120"/><rect x="700" y="415" width="430" height="120"/><rect x="700" y="560" width="430" height="120"/></g>
+<g font-family="Arial,sans-serif" fill="#293b30" font-size="46"><text x="730" y="197">Selected product</text><text x="730" y="342">Joint details</text><text x="730" y="487">Care guidance</text><text x="730" y="632">Labeled spares</text></g>
+</svg>

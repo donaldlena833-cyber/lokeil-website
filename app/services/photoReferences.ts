@@ -2,7 +2,7 @@
 export const servicePhotoReferences: Record<string, { heading: string; intro: string; images: string[] }> = {
   '/bathroom-remodeling-queens': {
     heading: 'Look at the bathroom details before choosing your scope.',
-    intro: 'Compare a vanity beside glass, a shower bench, and a niche in progress. Each photograph opens its own story about the decisions behind that detail.',
+    intro: 'Compare a vanity beside glass, recessed shower storage, and a niche in progress. Each photograph opens its own story about the decisions behind that detail.',
     images: ['/gallery/bathroom-tiles/3.jpg', '/gallery/bathroom-flooring/4.jpg', '/gallery/bathroom-tiles/9.jpg'],
   },
   '/kitchen-remodeling-queens': {
@@ -12,7 +12,7 @@ export const servicePhotoReferences: Record<string, { heading: string; intro: st
   },
   '/tile-installation-queens': {
     heading: 'See how a tile choice changes the layout.',
-    intro: 'A vertical shower wall, a patterned floor, and a tub niche each need a different plan for cuts and edges. Read the detail that fits your room.',
+    intro: 'A vertical shower wall, a loose floor selection, and a tub niche bring different questions: layout, future care, and finished edges. Open the detail closest to your project.',
     images: ['/gallery/bathroom-tiles/1.jpg', '/gallery/bathroom-flooring/1.jpg', '/gallery/bathroom-tiles/10.jpg'],
   },
   '/flooring-installation-queens': {
