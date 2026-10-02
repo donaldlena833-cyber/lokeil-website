@@ -4,7 +4,7 @@ import { resolve } from 'node:path';
 import test from 'node:test';
 import { loadTypeScriptExports } from './load-ts.mjs';
 
-const imports = Object.fromEntries(['gowanus', 'financialDistrict', 'midtownWest', 'longIslandCity', 'downtownBrooklyn', 'mottHaven']
+const imports = Object.fromEntries(['gowanus', 'financialDistrict', 'midtownWest', 'longIslandCity', 'downtownBrooklyn', 'mottHaven', 'bedStuy', 'crownHeights', 'harlem']
   .map(name => [`./${name}`, loadTypeScriptExports(resolve(`app/blog/neighborhoods/${name}.ts`))]));
 const overrides = loadTypeScriptExports(resolve('app/blog/neighborhoods/index.ts'), imports);
 const { neighborhoodArticleSlugs } = loadTypeScriptExports(resolve('app/blog/neighborhoods/routes.ts'));
@@ -29,5 +29,8 @@ test('neighborhood overrides preserve each photo route and its mobile estimate b
     assert.equal(note?.alt, rewrite.heroAlt);
     assert.ok(existsSync(resolve('public' + rewrite.processDiagram.src)), rewrite.slug);
     assert.ok(rewrite.diagramAfter >= 0 && rewrite.diagramAfter < rewrite.sections.length);
+    for (const link of [...rewrite.relatedServices || [], ...rewrite.sections.flatMap(section => section.links || [])]) {
+      assert.ok(existsSync(resolve('app' + link.href + '/page.tsx')), `Canonical service page missing: ${link.href}`);
+    }
   }
 });

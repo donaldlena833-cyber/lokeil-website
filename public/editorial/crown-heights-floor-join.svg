@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1536" height="1024" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+  <title id="title">Compare the two finished floor levels</title>
+  <desc id="desc">Two abstract floor sections contrast similar finished levels with different levels. A separate door sketch indicates that the finished floor and door movement must be considered together. This is not a product profile or dimensioned installation detail.</desc>
+  <g fill="none" stroke="#45614A" stroke-width="3" stroke-linejoin="round">
+    <path d="M95 300H525M675 300H1105" stroke-dasharray="8 8" opacity=".45"/>
+    <path d="M95 300H288V378H95Z" fill="#E3E8D8"/><path d="M312 300H525V378H312Z" fill="#D4C7A7"/>
+    <path d="M675 300H862V378H675Z" fill="#E3E8D8"/><path d="M917 340H1105V418H917Z" fill="#D4C7A7"/>
+    <path d="M862 300L917 340" stroke="#A18B5E" stroke-width="7"/>
+    <path d="M288 293H312" stroke="#A18B5E" stroke-width="7"/>
+    <path d="M95 389H525M675 429H1105" opacity=".3"/>
+    <path d="M285 470V648H905V690H240V470" fill="#FAFAF3"/>
+    <path d="M470 482H675V621H470Z" fill="#E3E8D8"/><path d="M470 620H675" stroke="#A18B5E" stroke-width="5"/>
+    <path d="M735 621V647M725 621H745M725 647H745" stroke="#A18B5E"/>
+  </g>
+  <g font-family="Arial, sans-serif" font-size="30" fill="#293B30">
+    <text x="95" y="107">A doorway connects two finished surfaces</text>
+    <text x="95" y="225">Similar levels</text><text x="675" y="225">Different levels</text>
+    <text x="95" y="423" font-size="25">Both materials shape the edge detail</text><text x="675" y="463" font-size="25">The height change shapes the choice</text>
+    <text x="305" y="540">Door</text><text x="780" y="605">Check movement</text>
+    <text x="95" y="747" font-size="25" fill="#45614A">Planning comparison only. Measure the actual floors and door.</text>
+  </g>
+  <g fill="#45614A"><circle cx="300" cy="300" r="25"/><circle cx="890" cy="320" r="25"/><circle cx="735" cy="572" r="25"/></g>
+  <g fill="#FAFAF3" font-family="Arial, sans-serif" font-size="27" font-weight="bold" text-anchor="middle"><text x="300" y="309">1</text><text x="890" y="329">2</text><text x="735" y="581">3</text></g>
+</svg>

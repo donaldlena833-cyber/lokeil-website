@@ -5,4 +5,7 @@ export const neighborhoodArticleSlugs = [
   'kitchen-cabinet-installation-seen-from-the-work-area',
   'tiling-a-shower-while-the-bathroom-ceiling-is-still-open',
   'blue-gray-bathroom-walls-beside-a-new-floor',
+  'black-and-white-checkered-tile-in-a-bathroom-under-construction',
+  'checkerboard-floor-cuts-at-an-unfinished-wall',
+  'blue-kitchen-backsplash-while-cabinets-are-still-in-progress',
 ] as const;

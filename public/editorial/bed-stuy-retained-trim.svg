@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1536" height="1024" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+  <title id="title">The wall repair and the trim that stays</title>
+  <desc id="desc">An illustrative wall elevation marks retained doorway casing, a nearby repair area, and the wall edge at a retained baseboard. No dimensions or construction system are specified.</desc>
+  <defs><pattern id="repair" width="18" height="18" patternUnits="userSpaceOnUse"><path d="M0 18L18 0" stroke="#A18B5E" stroke-width="1.5" opacity=".4"/></pattern></defs>
+  <g stroke="#45614A" stroke-width="3" stroke-linejoin="round">
+    <path d="M100 150H1100V650H100Z" fill="#FAFAF3"/>
+    <path d="M225 235H495V650H225Z" fill="#E3E8D8"/>
+    <path d="M206 214H516V650H490V240H232V650H206Z" fill="#D4C7A7"/>
+    <path d="M215 222H507M215 222V645M507 222V645" fill="none" stroke="#A18B5E" stroke-width="2"/>
+    <path d="M527 272C606 245 645 291 655 352C684 397 650 433 591 421L527 405Z" fill="url(#repair)" stroke="#A18B5E" stroke-dasharray="10 8"/>
+    <path d="M100 608H206V650H100ZM516 608H1100V650H516Z" fill="#D4C7A7"/>
+    <path d="M100 618H206M516 618H1100" stroke="#A18B5E" stroke-width="2"/>
+    <path d="M540 422H770M780 422H1030" fill="none" stroke="#45614A" stroke-dasharray="5 8" opacity=".4"/>
+  </g>
+  <g font-family="Arial, sans-serif" font-size="30" fill="#293B30">
+    <text x="105" y="104">Keep the details in the repair plan</text>
+    <text x="735" y="242">Retained casing</text><path d="M713 253H514" stroke="#45614A" stroke-width="2"/>
+    <text x="735" y="340">Repair boundary</text><path d="M715 350H650" stroke="#A18B5E" stroke-width="2"/>
+    <text x="735" y="540">Wall meets trim</text><path d="M718 550L656 608" stroke="#45614A" stroke-width="2"/>
+    <text x="105" y="715" font-size="26" fill="#45614A">A concept elevation for discussing scope</text>
+  </g>
+  <g fill="#45614A"><circle cx="516" cy="192" r="25"/><circle cx="592" cy="298" r="25"/><circle cx="656" cy="608" r="25"/></g>
+  <g fill="#FAFAF3" font-family="Arial, sans-serif" font-size="27" font-weight="bold" text-anchor="middle"><text x="516" y="201">1</text><text x="592" y="307">2</text><text x="656" y="617">3</text></g>
+</svg>
