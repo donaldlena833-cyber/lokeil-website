@@ -17,7 +17,7 @@ export const servicePhotoReferences: Record<string, { heading: string; intro: st
   },
   '/flooring-installation-queens': {
     heading: 'Start with the places where the floor meets something else.',
-    intro: 'A floor layout, the boundaries beside a shower entry, and tile around a drain show why flooring needs more than a material choice.',
+    intro: 'A floor layout, the boundaries beside a shower entry, and a bold hexagon pattern show why flooring needs more than a material choice.',
     images: ['/gallery/bathroom-flooring/3.jpg', '/gallery/bathroom-flooring/6.jpg', '/gallery/bathroom-flooring/8.jpg'],
   },
   '/cabinet-installation-queens': {

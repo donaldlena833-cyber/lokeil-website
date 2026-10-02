@@ -74,18 +74,18 @@ const notes: PhotoNote[] = [
   {
     image: '/gallery/bathroom-tiles/8.jpg',
     title: 'Large Shower Wall Tile Meets a Mosaic Floor',
-    visible: 'Large wall tiles are held with spacing clips while a smaller mosaic pattern covers the shower floor. The contrast is practical as well as visual: the floor has to turn toward the drain, while the wall can read as broad, quiet planes.',
-    process: 'The shower floor slope and drain position govern the floor tile choice. Mosaic pieces can follow changes in plane more readily than large rigid pieces. Wall layout, waterproofing, and floor transitions need to be planned as one wet area, not as unrelated surfaces.',
-    decision: 'If you like this combination, ask to see the proposed floor tile at its actual scale. Include a photo of your existing drain and doorway so the installer can discuss the shower base, entry, and tile transitions.',
-    keyword: 'large shower wall tile mosaic floor', diagram: 'floor',
+    visible: "Broad pale tiles frame a long patterned recess in this shower progress photograph. Below them, a floor of square pieces meets the raised entry. The three surfaces have different appearances, but they will be seen together each time someone enters the room.",
+    process: "Discuss the assessed room, selected products, support and finishing scope with the responsible installer.",
+    decision: "Share current room views, selected finishes, retained fixtures and the surrounding surfaces you expect to be complete.",
+    keyword: "large shower wall tile and patterned shelf", diagram: 'floor',
   },
   {
     image: '/gallery/bathroom-tiles/9.jpg',
     title: 'An Open Shower Niche Before the Tile Edges Are Finished',
-    visible: 'Gray tile surrounds a recessed niche whose interior is still open in this photograph. It shows a stage that homeowners rarely see in finished galleries. The opening is where storage, waterproofing, tile thickness, and edge treatment have to agree.',
-    process: 'A niche needs solid backing and a waterproof connection to the surrounding shower assembly before tile covers it. The bottom surface should shed water toward the shower. Tile sizes and trim choices affect how many cuts appear around the opening.',
-    decision: 'Choose niche height around the people who will use the shower and the items they store. Ask where the niche can fit within the wall framing and how its sill and outside edges will be finished.',
-    keyword: 'shower niche installation process', diagram: 'niche',
+    visible: "Wood lath remains visible inside this rectangular opening, surrounded by gray tile. The recess has not received its complete interior finish in this view. Use that pause to ask what will support the storage, what finish will cover it, and which edges still need completion.",
+    process: "Discuss the assessed room, selected products, support and finishing scope with the responsible installer.",
+    decision: "Share current room views, selected finishes, retained fixtures and the surrounding surfaces you expect to be complete.",
+    keyword: "open wall niche finish planning", diagram: 'niche',
   },
   {
     image: '/gallery/bathroom-tiles/10.jpg',
@@ -154,10 +154,10 @@ const notes: PhotoNote[] = [
   {
     image: '/gallery/bathroom-flooring/8.jpg',
     title: 'Small Hex Shower Floor Tile Around a Drain',
-    visible: 'Black and white hex pieces cover a shower floor with the drain visible. The small format makes the slope legible and turns the drain into part of the layout rather than an afterthought.',
-    process: 'A shower floor must slope toward its drain within a complete waterproof system. Tile size and sheet layout need to follow that shape without lippage or awkward cuts at the drain. The drain connection is part of the waterproofing plan beneath the tile.',
-    decision: 'Show the existing drain and shower opening when asking for a quote. Decide whether the drain style and position will stay, since changing either can affect plumbing, slope, and tile layout.',
-    keyword: 'hex shower floor tile around drain', diagram: 'floor',
+    visible: "Dark outlines turn this bathroom floor into a strong geometric field. Pale wall tiles surround it, while unfinished fittings and the room doorway keep the photograph grounded in a renovation stage. No exposed drain is identifiable in this view.",
+    process: "Discuss the assessed room, selected products, support and finishing scope with the responsible installer.",
+    decision: "Share current room views, selected finishes, retained fixtures and the surrounding surfaces you expect to be complete.",
+    keyword: "hexagon pattern bathroom floor", diagram: 'floor',
   },
   {
     image: '/gallery/bathroom-flooring/9.jpg',
@@ -218,10 +218,10 @@ const notes: PhotoNote[] = [
   {
     image: '/gallery/bathroom-shower/7.jpg',
     title: 'A Colorful Mosaic Niche in a White Shower',
-    visible: 'Most of this shower uses quiet white tile, while the niche introduces a small field of color. Spacing clips and incomplete edges show a stage of installation, not the final cleaned and sealed room.',
-    process: 'A mosaic insert can change tile thickness and grout spacing inside a niche. The installer needs to plan how the insert meets the larger wall tile, while keeping the niche backing, waterproofing, and sloped sill continuous.',
-    decision: 'If you want one colorful detail, a niche can carry it without changing every wall. Bring both tile samples to the estimate and ask how their thicknesses and edge finishes will meet.',
-    keyword: 'mosaic shower niche accent tile', diagram: 'niche',
+    visible: "The patterned recess makes a horizontal focal point across a pale shower wall. It is a quiet color palette with a stronger repeated shape, not a colorful mosaic insert. The wider view also shows the entry, bathroom floor, and unfinished wall surfaces outside the shower.",
+    process: "Discuss the assessed room, selected products, support and finishing scope with the responsible installer.",
+    decision: "Share current room views, selected finishes, retained fixtures and the surrounding surfaces you expect to be complete.",
+    keyword: "patterned recessed shower shelf", diagram: 'niche',
   },
   {
     image: '/gallery/bathroom-shower/8.jpg',
@@ -450,15 +450,15 @@ const generatedPhotoStoryPosts: BlogPost[] = photoStoryNotes.map((note, index) =
     return { heading, body: keys.map((key) => content[key]) };
   }),
   faqs: [],
-  processDiagram: {
+  processDiagram: photoArticleBodies[note.image]?.processDiagram || {
     src: `/process/stories/${note.slug}.svg`,
     alt: `${storyPlans[index].diagramHeading}. ${storyPlans[index].steps.join('. ')}.`,
     caption: `${storyPlans[index].diagramHeading}. The exact assembly and product specifications depend on the room and chosen materials.`,
   },
   diagramAfter: photoArticleBodies[note.image]?.diagramAfter ?? storyPlans[index].diagramAfter,
-  diagramHeading: storyPlans[index].diagramHeading,
-  processSteps: storyPlans[index].steps,
-  sources: [processSources[note.diagram]],
+  diagramHeading: photoArticleBodies[note.image]?.diagramHeading || storyPlans[index].diagramHeading,
+  processSteps: photoArticleBodies[note.image]?.processSteps || storyPlans[index].steps,
+  sources: photoArticleBodies[note.image]?.sources || [processSources[note.diagram]],
   relatedServices: [
     ...photoServiceLinks(note),
     { label: 'See all project photos', href: '/gallery' },

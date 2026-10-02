@@ -131,7 +131,7 @@ export default async function BlogPostPage({ params }: BlogPageProps) {
   const processFigure = post.processDiagram ? (
     <figure className="mt-10 border-t border-black/10 pt-9">
       <h2>{post.diagramHeading || 'The typical process'}</h2>
-      {post.processSteps ? <ol className="mt-6 grid gap-2 sm:hidden">
+      {post.processSteps ? <ol className={`mt-6 grid gap-2 ${post.processDiagram.displayOnMobile ? '' : 'sm:hidden'}`}>
         {post.processSteps.map((step, index) => (
           <li key={step} className="flex items-center gap-4 rounded-lg border border-black/10 bg-[#eeede6] p-4 text-sm font-medium">
             <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[#6c7868] text-white">{index + 1}</span>
@@ -139,12 +139,12 @@ export default async function BlogPostPage({ params }: BlogPageProps) {
           </li>
         ))}
       </ol> : null}
-      <div className="process-scroll mt-6 hidden rounded-xl bg-[#eeede6] p-3 sm:block sm:p-5" tabIndex={0} aria-label="Process illustration">
+      <div className={`process-scroll mt-6 rounded-xl bg-[#eeede6] p-3 sm:p-5 ${post.processDiagram.displayOnMobile ? 'block' : 'hidden sm:block'}`} tabIndex={0} aria-label="Process illustration">
         <Image
           src={post.processDiagram.src}
           alt={post.processDiagram.alt}
-          width={1200}
-          height={680}
+          width={post.processDiagram.width || 1200}
+          height={post.processDiagram.height || 680}
           className="h-auto w-full"
         />
       </div>
