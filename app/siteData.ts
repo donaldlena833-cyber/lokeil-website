@@ -222,7 +222,7 @@ export const galleryItems = photoStoryNotes.map((note) => ({
   id: note.slug,
   category: categoryForPhoto(note.image),
   src: note.image,
-  alt: note.visible.split('.')[0] + '.',
+  alt: note.alt,
   storyHref: `/blog/${note.slug}`,
   title: note.title,
 }));
