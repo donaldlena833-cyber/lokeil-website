@@ -125,7 +125,7 @@ export default async function BlogPostPage({ params }: BlogPageProps) {
   } : null;
 
   if (post.editorial) {
-    return <NeighborhoodArticle post={post} schema={faqSchema ? [articleSchema, faqSchema] : [articleSchema]} relatedPosts={blogPosts.filter((item) => item.editorial && item.slug !== post.slug)} />;
+    return <NeighborhoodArticle post={post} schema={faqSchema ? [articleSchema, faqSchema] : [articleSchema]} relatedPosts={relatedPosts} />;
   }
 
   const processFigure = post.processDiagram ? (
