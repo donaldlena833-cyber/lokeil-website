@@ -15,6 +15,6 @@ export const privacySections = [
   },
   {
     heading: 'Providers and security',
-    body: 'Limited information may be processed by providers used for website hosting, analytics, communications, estimating, scheduling, and recordkeeping, or shared with project participants when reasonably necessary to perform requested work. Do not send payment-card details, account passwords, or unrelated sensitive records through ordinary email.',
+    body: 'Limited information may be processed by providers used for website hosting, analytics, communications, estimating, scheduling, and recordkeeping, or shared with project participants when reasonably necessary to perform requested work. The estimate brief stays in this page until you choose to send it, open an email draft, or copy it. When web submission is available, the brief is sent through Resend to the LOKEIL estimate inbox. A request reference connects the submission with its email delivery record. Hosting security processes network information to limit abuse. Do not send payment-card details, account passwords, or unrelated sensitive records through an initial inquiry.',
   },
 ] as const;
