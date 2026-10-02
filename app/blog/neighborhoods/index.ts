@@ -16,6 +16,9 @@ import { eastVillageRoomFitPost } from './eastVillage';
 import { lowerEastSideMoisturePost } from './lowerEastSide';
 import { chelseaKitchenFloorPost } from './chelsea';
 import { williamsburgKitchenPalettePost } from './williamsburg';
+import { inwoodWallFinishPost } from './inwood';
+import { ridgewoodBathroomBriefPost } from './ridgewood';
+import { parkSlopeKitchenEdgesPost } from './parkSlope';
 
 // Each entry is written and reviewed individually. Existing article URLs stay intact.
-export const neighborhoodOverrides = [gowanusPost, financialDistrictPost, midtownWestPost, longIslandCityCabinetPost, downtownBrooklynBathroomPost, mottHavenPaintingPost, bedStuyTrimPost, crownHeightsFloorPost, harlemKitchenStoragePost, bushwickBacksplashPost, greenpointTilePost, astoriaBathroomUsePost, upperWestSideKitchenPost, upperEastSideVanityPost, eastVillageRoomFitPost, lowerEastSideMoisturePost, chelseaKitchenFloorPost, williamsburgKitchenPalettePost];
+export const neighborhoodOverrides = [gowanusPost, financialDistrictPost, midtownWestPost, longIslandCityCabinetPost, downtownBrooklynBathroomPost, mottHavenPaintingPost, bedStuyTrimPost, crownHeightsFloorPost, harlemKitchenStoragePost, bushwickBacksplashPost, greenpointTilePost, astoriaBathroomUsePost, upperWestSideKitchenPost, upperEastSideVanityPost, eastVillageRoomFitPost, lowerEastSideMoisturePost, chelseaKitchenFloorPost, williamsburgKitchenPalettePost, inwoodWallFinishPost, ridgewoodBathroomBriefPost, parkSlopeKitchenEdgesPost];

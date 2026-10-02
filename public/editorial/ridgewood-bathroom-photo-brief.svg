@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1600" viewBox="0 0 1200 1600" role="img" aria-labelledby="title desc">
+  <title id="title">Four useful bathroom views</title>
+  <desc id="desc">Original concepts show the whole room, a close junction, retained and changed items, and the approach to the bathroom.</desc>
+  <g stroke-linecap="round" stroke-linejoin="round">
+    <g transform="translate(70 85)">
+      <path d="M0 280V20H430V280M0 280H430" fill="#fafaf3" stroke="#526751" stroke-width="5"/>
+      <path d="M20 280L85 210H345L410 280" fill="#e3e8d8" stroke="#526751" stroke-width="4"/>
+      <rect x="205" y="68" width="143" height="125" rx="6" fill="#d5e0e0" stroke="#526751" stroke-width="5"/>
+      <path d="M228 77V186M277 77V186M206 128H345" fill="none" stroke="#fafaf3" stroke-width="4"/>
+      <path d="M183 195H382L369 241H197Z" fill="#f2eadb" stroke="#526751" stroke-width="5"/>
+      <rect x="38" y="140" width="112" height="78" fill="#e1d9c8" stroke="#526751" stroke-width="4"/>
+      <path d="M30 134H158M95 166V200" stroke="#526751" stroke-width="4"/>
+    </g>
+    <g transform="translate(70 465)">
+      <rect x="0" y="15" width="430" height="265" fill="#d5e0e0" stroke="#526751" stroke-width="5"/>
+      <path d="M0 103H430M0 191H430M85 15V280M195 15V280M305 15V280" fill="none" stroke="#fafaf3" stroke-width="4"/>
+      <rect x="118" y="46" width="194" height="172" fill="#e3e8d8" stroke="#293b30" stroke-width="8"/>
+      <path d="M126 130H304" stroke="#293b30" stroke-width="7"/>
+      <circle cx="126" cy="217" r="35" fill="none" stroke="#45614a" stroke-width="8"/>
+      <path d="M105 241L75 268" stroke="#45614a" stroke-width="8"/>
+    </g>
+    <g transform="translate(70 845)">
+      <rect x="40" y="160" width="290" height="111" fill="#e1d9c8" stroke="#526751" stroke-width="5"/>
+      <path d="M27 151H343M180 171V250" stroke="#526751" stroke-width="5"/>
+      <rect x="77" y="20" width="216" height="102" rx="5" fill="#d5e0e0" stroke="#526751" stroke-width="5"/>
+      <path d="M100 62L130 89L188 44" fill="none" stroke="#45614a" stroke-width="9"/>
+      <path d="M318 61H411M388 38L413 61L388 84" fill="none" stroke="#45614a" stroke-width="8"/>
+      <path d="M42 280H330" stroke="#526751" stroke-width="4"/>
+    </g>
+    <g transform="translate(70 1225)">
+      <path d="M20 280V30H390V280M65 280V72H345V280" fill="none" stroke="#526751" stroke-width="7"/>
+      <path d="M85 265V93L240 143V280" fill="#e1d9c8" stroke="#526751" stroke-width="5"/>
+      <circle cx="218" cy="211" r="7" fill="#45614a"/>
+      <path d="M378 280H450M378 236H410V280M378 192H380V236" fill="none" stroke="#526751" stroke-width="5"/>
+      <path d="M269 275V168M250 188L269 165L288 188" fill="none" stroke="#45614a" stroke-width="8"/>
+    </g>
+    <path d="M70 410H1130M70 790H1130M70 1170H1130" stroke="#becbb5" stroke-width="3"/>
+  </g>
+  <g font-family="Arial, sans-serif" fill="#293b30">
+    <g font-size="60" font-weight="600"><text x="555" y="150">01  Whole room</text><text x="555" y="530">02  Close detail</text><text x="555" y="910">03  Keep or change</text><text x="555" y="1290">04  Approach</text></g>
+    <g font-size="47" fill="#536154"><text x="555" y="223">Layout and daily use</text><text x="555" y="287">Current conditions first</text><text x="555" y="603">Junctions and concerns</text><text x="555" y="667">Connected to a wide view</text><text x="555" y="983">Name each decision</text><text x="555" y="1047">Separate open questions</text><text x="555" y="1363">Access and occupancy</text><text x="555" y="1427">Plan the site review</text></g>
+  </g>
+</svg>
