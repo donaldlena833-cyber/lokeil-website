@@ -20,7 +20,7 @@ export const metadata: Metadata = buildPageMetadata({
 export default function Services() {
   return (
     <main>
-      <section className="section-space border-b border-white/8">
+      <section className="section-space border-b border-ink/8">
         <div className="site-shell grid gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:items-end">
           <div data-reveal="fade-up">
             <p className="eyebrow">Services</p>
@@ -64,7 +64,7 @@ export default function Services() {
           <div className="max-w-3xl" data-reveal="fade-up">
             <p className="eyebrow">What the client can hire for</p>
             <h2 className="section-title mt-4">Interior work for the rooms people use every day.</h2>
-            <p className="mt-5 text-base leading-7 text-olive-100/72">
+            <p className="mt-5 text-base leading-7 text-ink/80">
               Pick the room or surface you want to change. Each service page shows the preparation,
               finish choices, and project details worth discussing before an estimate.
             </p>
@@ -79,11 +79,11 @@ export default function Services() {
                 data-delay={String((index % 5) + 1)}
               >
                 <div className="flex items-start gap-4">
-                  <span className="text-sm font-semibold uppercase tracking-[0.2em] text-accent/84">
+                  <span className="text-sm font-semibold uppercase tracking-[0.2em] text-accent/95">
                     {String(index + 1).padStart(2, '0')}
                   </span>
                   <div>
-                    <h3 className="text-3xl text-olive-50">
+                    <h3 className="text-3xl text-ink">
                       {'href' in service ? (
                         <Link href={service.href} className="hover:text-accent">
                           {service.title}
@@ -92,7 +92,7 @@ export default function Services() {
                         service.title
                       )}
                     </h3>
-                    <p className="mt-3 text-base leading-7 text-olive-100/72">{service.summary}</p>
+                    <p className="mt-3 text-base leading-7 text-ink/80">{service.summary}</p>
                     {'href' in service ? (
                       <Link href={service.href} className="mt-5 inline-flex text-sm font-semibold text-accent hover:text-accent-hover">
                         View {service.title}
@@ -106,7 +106,7 @@ export default function Services() {
         </div>
       </section>
 
-      <section className="section-rule section-space bg-black/8">
+      <section className="section-rule section-space bg-sage-soft/60">
         <div className="site-shell grid gap-10 lg:grid-cols-[0.9fr_1.1fr]">
           <div data-reveal="fade-up">
             <p className="eyebrow">How projects move</p>
@@ -122,14 +122,14 @@ export default function Services() {
               {processSteps.map((step, index) => (
                 <div
                   key={step.step}
-                  className="grid gap-4 border-b border-white/8 pb-8 last:border-b-0 last:pb-0 sm:grid-cols-[auto_1fr]"
+                  className="grid gap-4 border-b border-ink/8 pb-8 last:border-b-0 last:pb-0 sm:grid-cols-[auto_1fr]"
                   data-reveal="slide-left"
                   data-delay={String(index + 1)}
                 >
                   <span className="text-4xl text-accent">{step.step}</span>
                   <div>
-                    <h3 className="text-2xl text-olive-50">{step.title}</h3>
-                    <p className="mt-2 text-base leading-7 text-olive-100/72">{step.description}</p>
+                    <h3 className="text-2xl text-ink">{step.title}</h3>
+                    <p className="mt-2 text-base leading-7 text-ink/80">{step.description}</p>
                   </div>
                 </div>
               ))}
@@ -158,8 +158,8 @@ export default function Services() {
             },
           ].map((item, index) => (
             <article key={item.title} className="surface px-6 py-7 sm:px-8" data-reveal="fade-up" data-delay={String(index + 1)}>
-              <h2 className="text-3xl text-olive-50">{item.title}</h2>
-              <p className="mt-4 text-base leading-7 text-olive-100/72">{item.body}</p>
+              <h2 className="text-3xl text-ink">{item.title}</h2>
+              <p className="mt-4 text-base leading-7 text-ink/80">{item.body}</p>
             </article>
           ))}
         </div>

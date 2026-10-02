@@ -23,14 +23,14 @@ export default function Header() {
   };
 
   return (
-    <header className="sticky top-0 z-50 border-b border-white/10 bg-olive-700/95 backdrop-blur-xl">
+    <header className="sticky top-0 z-50 border-b border-ink/10 bg-paper/95 backdrop-blur-xl">
       <div className="site-shell relative">
         <div className="relative flex min-h-[70px] items-center justify-between gap-4 py-3">
           <Link href="/" className="group shrink-0">
             <span className="block font-serif text-[1.65rem] leading-none text-accent">
               {siteData.shortName}
             </span>
-            <span className="mt-1 block text-[0.61rem] uppercase tracking-[0.2em] text-olive-100/70">
+            <span className="mt-1 block text-[0.61rem] uppercase tracking-[0.2em] text-ink/80">
               {siteData.descriptor}
             </span>
           </Link>
@@ -43,7 +43,7 @@ export default function Header() {
                   className={`text-sm tracking-[0.08em] transition-colors ${
                     isActive(item.href)
                       ? 'text-accent'
-                      : 'text-olive-100/80 hover:text-olive-50'
+                      : 'text-ink/80 hover:text-ink'
                   }`}
                 >
                   {item.label}
@@ -63,24 +63,24 @@ export default function Header() {
 
           <button
             type="button"
-            className="relative flex h-11 w-11 items-center justify-center rounded-full border border-white/25 lg:hidden"
+            className="relative flex h-11 w-11 items-center justify-center rounded-full border border-ink/25 lg:hidden"
             onClick={() => setMobileMenuOpen((open) => !open)}
             aria-controls="mobile-navigation"
             aria-label={mobileMenuOpen ? 'Close navigation menu' : 'Open navigation menu'}
             aria-expanded={mobileMenuOpen}
           >
             <span
-              className={`absolute h-0.5 w-5 bg-olive-50 transition-all ${
+              className={`absolute h-0.5 w-5 bg-ink transition-all ${
                 mobileMenuOpen ? 'rotate-45' : '-translate-y-1.5'
               }`}
             />
             <span
-              className={`absolute h-0.5 w-5 bg-olive-50 transition-all ${
+              className={`absolute h-0.5 w-5 bg-ink transition-all ${
                 mobileMenuOpen ? 'opacity-0' : 'opacity-100'
               }`}
             />
             <span
-              className={`absolute h-0.5 w-5 bg-olive-50 transition-all ${
+              className={`absolute h-0.5 w-5 bg-ink transition-all ${
                 mobileMenuOpen ? '-rotate-45' : 'translate-y-1.5'
               }`}
             />
@@ -88,7 +88,7 @@ export default function Header() {
         </div>
 
         {mobileMenuOpen ? (
-          <div id="mobile-navigation" className="absolute inset-x-0 top-full max-h-[calc(100svh-70px)] overflow-y-auto border-b border-white/15 bg-olive-700 px-5 pb-5 pt-2 shadow-xl sm:px-8 lg:hidden">
+          <div id="mobile-navigation" className="absolute inset-x-0 top-full max-h-[calc(100svh-70px)] overflow-y-auto border-b border-ink/15 bg-paper px-5 pb-5 pt-2 shadow-xl sm:px-8 lg:hidden">
             <ul className="space-y-1">
               {navItems.map((item) => (
                 <li key={item.href}>
@@ -96,8 +96,8 @@ export default function Header() {
                     href={item.href}
                     className={`block rounded-2xl px-4 py-3 text-base ${
                       isActive(item.href)
-                        ? 'bg-white/[0.08] text-accent'
-                        : 'text-olive-100/82 hover:bg-white/[0.05] hover:text-olive-50'
+                        ? 'bg-sage-soft text-accent'
+                        : 'text-ink/82 hover:bg-sage-soft/60 hover:text-ink'
                     }`}
                   >
                     {item.label}

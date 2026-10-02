@@ -143,7 +143,7 @@ export default function FlooringInstallationQueens() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
       <main>
-        <section className="section-space border-b border-white/8">
+        <section className="section-space border-b border-ink/8">
           <div className="site-shell grid gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:items-end">
             <div data-reveal="fade-up">
               <p className="eyebrow">Queens flooring installation</p>
@@ -198,11 +198,11 @@ export default function FlooringInstallationQueens() {
             <div className="surface p-6 sm:p-8" data-reveal="scale-in" data-delay="1">
               <div className="grid gap-5">
                 {projectFit.map((item, index) => (
-                  <div key={item} className="grid gap-3 border-b border-white/8 pb-5 last:border-b-0 last:pb-0 sm:grid-cols-[auto_1fr]">
-                    <span className="text-sm font-semibold uppercase tracking-[0.2em] text-accent/84">
+                  <div key={item} className="grid gap-3 border-b border-ink/8 pb-5 last:border-b-0 last:pb-0 sm:grid-cols-[auto_1fr]">
+                    <span className="text-sm font-semibold uppercase tracking-[0.2em] text-accent/95">
                       {String(index + 1).padStart(2, '0')}
                     </span>
-                    <p className="text-lg leading-8 text-olive-100/78">{item}</p>
+                    <p className="text-lg leading-8 text-ink/80">{item}</p>
                   </div>
                 ))}
               </div>
@@ -210,7 +210,7 @@ export default function FlooringInstallationQueens() {
           </div>
         </section>
 
-        <section className="section-rule section-space bg-black/8">
+        <section className="section-rule section-space bg-sage-soft/60">
           <div className="site-shell">
             <div className="max-w-3xl" data-reveal="fade-up">
               <p className="eyebrow">Planning notes</p>
@@ -220,8 +220,8 @@ export default function FlooringInstallationQueens() {
             <div className="mt-12 grid gap-6 lg:grid-cols-3">
               {planningNotes.map((note, index) => (
                 <article key={note.title} className="surface px-6 py-7 sm:px-8" data-reveal="fade-up" data-delay={String(index + 1)}>
-                  <h3 className="text-3xl text-olive-50">{note.title}</h3>
-                  <p className="mt-4 text-base leading-7 text-olive-100/72">{note.body}</p>
+                  <h3 className="text-3xl text-ink">{note.title}</h3>
+                  <p className="mt-4 text-base leading-7 text-ink/80">{note.body}</p>
                 </article>
               ))}
             </div>
@@ -249,20 +249,20 @@ export default function FlooringInstallationQueens() {
             <div className="grid gap-6">
               {flooringDecisionSignals.map((item, index) => (
                 <article key={item.title} className="surface px-6 py-7 sm:px-8" data-reveal="fade-up" data-delay={String(index + 1)}>
-                  <h3 className="text-3xl text-olive-50">{item.title}</h3>
-                  <p className="mt-4 text-base leading-7 text-olive-100/72">{item.body}</p>
+                  <h3 className="text-3xl text-ink">{item.title}</h3>
+                  <p className="mt-4 text-base leading-7 text-ink/80">{item.body}</p>
                 </article>
               ))}
             </div>
           </div>
         </section>
 
-        <section className="section-rule section-space bg-black/8">
+        <section className="section-rule section-space bg-sage-soft/60">
           <div className="site-shell">
             <div className="max-w-3xl" data-reveal="fade-up">
               <p className="eyebrow">Queens flooring paths</p>
               <h2 className="section-title mt-4">Flooring estimates get clearer when the connected room is named.</h2>
-              <p className="mt-5 text-base leading-7 text-olive-100/72">
+              <p className="mt-5 text-base leading-7 text-ink/80">
                 The same floor question can mean a bathroom repair, kitchen update, apartment
                 refresh, or a larger finish sequence. Naming the room and nearby finishes helps
                 separate a focused floor repair from a kitchen, bathroom, or apartment renovation.
@@ -272,8 +272,8 @@ export default function FlooringInstallationQueens() {
             <div className="mt-12 grid gap-6 lg:grid-cols-3">
               {localFlooringPaths.map((item, index) => (
                 <article key={item.title} className="surface px-6 py-7 sm:px-8" data-reveal="fade-up" data-delay={String(index + 1)}>
-                  <h3 className="text-3xl text-olive-50">{item.title}</h3>
-                  <p className="mt-4 text-base leading-7 text-olive-100/72">{item.body}</p>
+                  <h3 className="text-3xl text-ink">{item.title}</h3>
+                  <p className="mt-4 text-base leading-7 text-ink/80">{item.body}</p>
                   <Link href={item.href} className="mt-5 inline-flex text-sm font-semibold text-accent hover:text-accent-hover">
                     {item.label}
                   </Link>
@@ -294,12 +294,12 @@ export default function FlooringInstallationQueens() {
 
             <div className="surface px-6 py-6 sm:px-8">
               {faqs.map((faq) => (
-                <details key={faq.q} className="group border-b border-white/8 py-5 first:pt-0 last:border-b-0 last:pb-0">
-                  <summary className="flex cursor-pointer list-none items-center justify-between gap-5 text-left text-xl text-olive-50">
+                <details key={faq.q} className="group border-b border-ink/8 py-5 first:pt-0 last:border-b-0 last:pb-0">
+                  <summary className="flex cursor-pointer list-none items-center justify-between gap-5 text-left text-xl text-ink">
                     <span>{faq.q}</span>
                     <span className="text-accent transition-transform group-open:rotate-45">+</span>
                   </summary>
-                  <p className="pt-4 text-base leading-7 text-olive-100/72">{faq.a}</p>
+                  <p className="pt-4 text-base leading-7 text-ink/80">{faq.a}</p>
                 </details>
               ))}
             </div>

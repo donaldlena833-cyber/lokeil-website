@@ -20,8 +20,8 @@ export default function OpenGraphImage() {
           height: '100%',
           width: '100%',
           background:
-            'radial-gradient(circle at top left, rgba(200,169,110,0.24), transparent 30%), linear-gradient(180deg, #55604b 0%, #4a5440 40%, #303728 100%)',
-          color: '#f5f0e8',
+            'linear-gradient(120deg, #f6f6ed 0%, #e6eddb 100%)',
+          color: '#293b30',
           fontFamily: 'sans-serif',
         }}
       >
@@ -42,7 +42,7 @@ export default function OpenGraphImage() {
               fontSize: 26,
               letterSpacing: '0.22em',
               textTransform: 'uppercase',
-              color: '#c8a96e',
+              color: '#45614a',
             }}
           >
             <div>{siteData.shortName}</div>
@@ -70,7 +70,7 @@ export default function OpenGraphImage() {
               style={{
                 fontSize: 30,
                 lineHeight: 1.4,
-                color: 'rgba(245, 240, 232, 0.82)',
+                color: '#536154',
                 maxWidth: 820,
               }}
             >
@@ -99,11 +99,11 @@ export default function OpenGraphImage() {
                     key={label}
                     style={{
                       display: 'flex',
-                      border: '1px solid rgba(255,255,255,0.14)',
+                      border: '1px solid rgba(41,59,48,0.2)',
                       borderRadius: 999,
                       padding: '12px 22px',
                       fontSize: 22,
-                      color: 'rgba(245, 240, 232, 0.78)',
+                      color: '#536154',
                     }}
                   >
                     {label}
@@ -120,7 +120,7 @@ export default function OpenGraphImage() {
                 gap: 8,
               }}
             >
-              <div style={{ fontSize: 24, color: '#c8a96e', textTransform: 'uppercase' }}>
+              <div style={{ fontSize: 24, color: '#45614a', textTransform: 'uppercase' }}>
                 Request estimate
               </div>
               <div style={{ fontSize: 38 }}>{siteData.phoneDisplay}</div>

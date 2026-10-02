@@ -24,9 +24,9 @@ export const metadata: Metadata = buildPageMetadata({
 export default function Home() {
   return (
     <main>
-      <section className="relative overflow-hidden border-b border-white/8">
+      <section className="relative overflow-hidden border-b border-ink/8">
         <div className="grid-lines absolute inset-0 opacity-[0.18]" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(200,169,110,0.14),transparent_28%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(174,193,151,0.16),transparent_28%)]" />
 
         <div className="site-shell relative grid gap-12 pb-20 pt-10 lg:min-h-[calc(100svh-6rem)] lg:grid-cols-[0.96fr_1.04fr] lg:items-center lg:gap-16 lg:pb-24 lg:pt-20">
           <div className="max-w-[38rem]">
@@ -41,7 +41,7 @@ export default function Home() {
               updates, tile, flooring, cabinets, plaster, painting, and interior finishes
               across Queens and nearby New York City neighborhoods.
             </p>
-            <p className="mt-5 text-base leading-7 text-olive-100/72" data-reveal="fade-up" data-delay="3">
+            <p className="mt-5 text-base leading-7 text-ink/80" data-reveal="fade-up" data-delay="3">
               Tell us what room you want to change and where the property is. Photos of the
               current space help us start a useful estimate conversation.
             </p>
@@ -54,7 +54,7 @@ export default function Home() {
                 Email Project Details
               </a>
             </div>
-            <div className="mt-8 flex flex-wrap gap-x-6 gap-y-2 text-sm text-olive-100/72" data-reveal="fade-up" data-delay="5">
+            <div className="mt-8 flex flex-wrap gap-x-6 gap-y-2 text-sm text-ink/80" data-reveal="fade-up" data-delay="5">
               <Link href="/bathroom-remodeling-queens" className="underline underline-offset-4 hover:text-accent">
                 Bathroom remodeling
               </Link>
@@ -111,7 +111,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section-space border-b border-white/8" aria-labelledby="remodeling-answers">
+      <section className="section-space border-b border-ink/8" aria-labelledby="remodeling-answers">
         <div className="site-shell grid gap-10 lg:grid-cols-[0.9fr_1.1fr]">
           <div>
             <p className="eyebrow">At a glance</p>
@@ -121,17 +121,17 @@ export default function Home() {
               kitchens, tile, flooring, cabinets, plaster, painting, and finish work.
             </p>
           </div>
-          <div className="surface divide-y divide-white/8 px-6 sm:px-8">
+          <div className="surface divide-y divide-ink/8 px-6 sm:px-8">
             <div className="py-6">
-              <h3 className="text-2xl text-olive-50">Where do you work?</h3>
-              <p className="mt-2 text-base leading-7 text-olive-100/72">
+              <h3 className="text-2xl text-ink">Where do you work?</h3>
+              <p className="mt-2 text-base leading-7 text-ink/80">
                 We are based in Ridgewood and serve all five New York City boroughs, plus parts of
                 Long Island and Westchester County. Include your neighborhood when you contact us.
               </p>
             </div>
             <div className="py-6">
-              <h3 className="text-2xl text-olive-50">How do I request an estimate?</h3>
-              <p className="mt-2 text-base leading-7 text-olive-100/72">
+              <h3 className="text-2xl text-ink">How do I request an estimate?</h3>
+              <p className="mt-2 text-base leading-7 text-ink/80">
                 Call <a href={`tel:${siteData.phoneHref}`} className="underline underline-offset-4 hover:text-accent">{siteData.phoneDisplay}</a> or{' '}
                 <a href={estimateEmailHref} className="underline underline-offset-4 hover:text-accent">email your project details</a>.
                 Share the room, location, work you want done, and current photos if available.
@@ -157,22 +157,22 @@ export default function Home() {
             <div className="mt-8 space-y-6">
               {craftsmanshipPoints.map((point, index) => (
                 <div key={point.title} className="border-l border-accent/50 pl-5" data-reveal="fade-up" data-delay={String(index + 1)}>
-                  <h3 className="text-2xl text-olive-50">{point.title}</h3>
-                  <p className="mt-2 text-base leading-7 text-olive-100/72">{point.body}</p>
+                  <h3 className="text-2xl text-ink">{point.title}</h3>
+                  <p className="mt-2 text-base leading-7 text-ink/80">{point.body}</p>
                 </div>
               ))}
             </div>
           </div>
 
           <div className="surface overflow-hidden" data-reveal="scale-in" data-delay="2">
-            <div className="grid divide-y divide-white/8">
+            <div className="grid divide-y divide-ink/8">
               {coreServices.slice(0, 6).map((service, index) => (
                 <div key={service.title} className="grid gap-3 px-6 py-6 sm:grid-cols-[auto_1fr] sm:px-8">
-                  <span className="text-sm font-semibold uppercase tracking-[0.22em] text-accent/82">
+                  <span className="text-sm font-semibold uppercase tracking-[0.22em] text-accent/95">
                     {String(index + 1).padStart(2, '0')}
                   </span>
                   <div>
-                    <h3 className="text-2xl text-olive-50">
+                    <h3 className="text-2xl text-ink">
                       {'href' in service ? (
                         <Link href={service.href} className="hover:text-accent">
                           {service.title}
@@ -181,13 +181,13 @@ export default function Home() {
                         service.title
                       )}
                     </h3>
-                    <p className="mt-2 text-base leading-7 text-olive-100/70">{service.summary}</p>
+                    <p className="mt-2 text-base leading-7 text-ink/80">{service.summary}</p>
                   </div>
                 </div>
               ))}
             </div>
 
-            <div className="border-t border-white/8 px-6 py-6 sm:px-8">
+            <div className="border-t border-ink/8 px-6 py-6 sm:px-8">
               <Link href="/services" className="button-secondary">
                 Explore All Services
               </Link>
@@ -196,7 +196,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section-rule section-space bg-black/8">
+      <section className="section-rule section-space bg-sage-soft/60">
         <div className="site-shell">
           <div className="max-w-3xl" data-reveal="fade-up">
             <p className="eyebrow">Featured work</p>
@@ -238,8 +238,8 @@ export default function Home() {
                   <div className="image-veil" />
                 </div>
                 <div className="mt-5">
-                  <h3 className="text-3xl text-olive-50">{item.title}</h3>
-                  <p className="mt-3 text-base leading-7 text-olive-100/72">{item.body}</p>
+                  <h3 className="text-3xl text-ink">{item.title}</h3>
+                  <p className="mt-3 text-base leading-7 text-ink/80">{item.body}</p>
                 </div>
               </article>
             ))}
@@ -260,7 +260,7 @@ export default function Home() {
 
             <div className="mt-8 flex flex-wrap gap-3">
               {valuePoints.map((item) => (
-                <span key={item} className="chip normal-case tracking-[0.06em] text-olive-100/82">
+                <span key={item} className="chip normal-case tracking-[0.06em] text-ink/82">
                   {item}
                 </span>
               ))}
@@ -272,24 +272,24 @@ export default function Home() {
               {processSteps.map((step, index) => (
                 <div
                   key={step.step}
-                  className="grid gap-4 border-b border-white/8 pb-8 last:border-b-0 last:pb-0 sm:grid-cols-[auto_1fr]"
+                  className="grid gap-4 border-b border-ink/8 pb-8 last:border-b-0 last:pb-0 sm:grid-cols-[auto_1fr]"
                   data-reveal="slide-left"
                   data-delay={String(index + 1)}
                 >
                   <span className="text-4xl text-accent">{step.step}</span>
                   <div>
-                    <h3 className="text-2xl text-olive-50">{step.title}</h3>
-                    <p className="mt-2 text-base leading-7 text-olive-100/72">{step.description}</p>
+                    <h3 className="text-2xl text-ink">{step.title}</h3>
+                    <p className="mt-2 text-base leading-7 text-ink/80">{step.description}</p>
                   </div>
                 </div>
               ))}
             </div>
 
-            <div className="mt-8 rounded-[22px] border border-white/10 bg-black/10 p-6">
-              <p className="text-sm uppercase tracking-[0.18em] text-accent/82">
+            <div className="mt-8 rounded-[22px] border border-ink/10 bg-sage-soft p-6">
+              <p className="text-sm uppercase tracking-[0.18em] text-accent/95">
                 Ready to talk through your space?
               </p>
-              <p className="mt-3 text-base leading-7 text-olive-100/72">
+              <p className="mt-3 text-base leading-7 text-ink/80">
                 Call {siteData.phoneDisplay} or email {siteData.email} to discuss an estimate.
               </p>
             </div>
@@ -301,7 +301,7 @@ export default function Home() {
         <div className="site-shell max-w-4xl">
           <p className="eyebrow">In progress · Manhattan</p>
           <h2 id="le-yard-renovation" className="section-title mt-4">Helping Le Yard take shape.</h2>
-          <p className="mt-6 text-lg leading-8 text-olive-100/80">
+          <p className="mt-6 text-lg leading-8 text-ink/80">
             LOKEIL is handling the renovation of <a href="https://leyardny.com/" className="underline underline-offset-4 hover:text-accent">Le Yard</a>,
             a neighborhood restaurant coming to Ninth Avenue in Hell&apos;s Kitchen.
             The project brings together our renovation work,

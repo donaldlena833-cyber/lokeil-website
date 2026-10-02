@@ -2,7 +2,7 @@ import { estimateEmailHref, siteData } from '../siteData';
 
 export default function MobileCtaBar() {
   return (
-    <div className="mobile-cta fixed bottom-0 left-0 right-0 z-40 border-t border-white/15 bg-olive-700/95 px-4 pb-[calc(0.55rem+env(safe-area-inset-bottom))] pt-2 backdrop-blur-xl md:hidden">
+    <div className="mobile-cta fixed bottom-0 left-0 right-0 z-40 border-t border-ink/15 bg-paper/95 px-4 pb-[calc(0.55rem+env(safe-area-inset-bottom))] pt-2 backdrop-blur-xl md:hidden">
       <div className="mx-auto flex max-w-[34rem] gap-2">
         <a href={`tel:${siteData.phoneHref}`} className="button-primary flex-1 px-4 py-3 text-sm">
           Call Now

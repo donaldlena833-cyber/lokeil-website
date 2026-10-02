@@ -15,7 +15,7 @@ export const metadata: Metadata = buildPageMetadata({
 export default function GalleryPage() {
   return (
     <main>
-      <section className="section-space border-b border-white/8">
+      <section className="section-space border-b border-ink/8">
         <div className="site-shell grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-end">
           <div data-reveal="fade-up">
             <p className="eyebrow">Gallery</p>
@@ -48,16 +48,16 @@ export default function GalleryPage() {
             <div className="surface p-6 sm:p-8" data-reveal="fade-up" data-delay="2">
               <div className="grid gap-5 sm:grid-cols-3 lg:grid-cols-1">
                 <div>
-                  <p className="text-sm uppercase tracking-[0.18em] text-accent/82">Photos</p>
-                  <p className="mt-3 text-4xl text-olive-50">{photoCount}</p>
+                  <p className="text-sm uppercase tracking-[0.18em] text-accent/95">Photos</p>
+                  <p className="mt-3 text-4xl text-ink">{photoCount}</p>
                 </div>
                 <div>
-                  <p className="text-sm uppercase tracking-[0.18em] text-accent/82">Collections</p>
-                  <p className="mt-3 text-4xl text-olive-50">5</p>
+                  <p className="text-sm uppercase tracking-[0.18em] text-accent/95">Collections</p>
+                  <p className="mt-3 text-4xl text-ink">5</p>
                 </div>
                 <div>
-                  <p className="text-sm uppercase tracking-[0.18em] text-accent/82">Location</p>
-                  <p className="mt-3 text-2xl text-olive-50">Five boroughs</p>
+                  <p className="text-sm uppercase tracking-[0.18em] text-accent/95">Location</p>
+                  <p className="mt-3 text-2xl text-ink">Five boroughs</p>
                 </div>
               </div>
             </div>
@@ -65,7 +65,7 @@ export default function GalleryPage() {
         </div>
       </section>
 
-      <section className="section-rule section-space bg-black/8">
+      <section className="section-rule section-space bg-sage-soft/60">
         <div className="site-shell grid gap-8 lg:grid-cols-3">
           {[
             {
@@ -85,8 +85,8 @@ export default function GalleryPage() {
             },
           ].map((item, index) => (
             <article key={item.title} className="surface px-6 py-7 sm:px-8" data-reveal="fade-up" data-delay={String(index + 1)}>
-              <h2 className="text-3xl text-olive-50">{item.title}</h2>
-              <p className="mt-4 text-base leading-7 text-olive-100/72">{item.body}</p>
+              <h2 className="text-3xl text-ink">{item.title}</h2>
+              <p className="mt-4 text-base leading-7 text-ink/80">{item.body}</p>
             </article>
           ))}
         </div>
@@ -111,7 +111,7 @@ export default function GalleryPage() {
                 'Note what must stay in place: tub, toilet, vanity, cabinets, doors, trim, or appliances.',
                 'Mention the property location and whether building access, elevator timing, or parking may affect work.',
               ].map((item) => (
-                <p key={item} className="border-l border-accent/45 pl-4 text-base leading-7 text-olive-100/72">
+                <p key={item} className="border-l border-accent/45 pl-4 text-base leading-7 text-ink/80">
                   {item}
                 </p>
               ))}

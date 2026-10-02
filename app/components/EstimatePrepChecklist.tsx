@@ -23,12 +23,12 @@ export default function EstimatePrepChecklist() {
             {checklistItems.map((item, index) => (
               <div
                 key={item}
-                className="grid gap-3 border-b border-white/8 pb-5 last:border-b-0 last:pb-0 sm:grid-cols-[auto_1fr]"
+                className="grid gap-3 border-b border-ink/8 pb-5 last:border-b-0 last:pb-0 sm:grid-cols-[auto_1fr]"
               >
-                <span className="text-sm font-semibold uppercase tracking-[0.2em] text-accent/84">
+                <span className="text-sm font-semibold uppercase tracking-[0.2em] text-accent/95">
                   {String(index + 1).padStart(2, '0')}
                 </span>
-                <p className="text-lg leading-8 text-olive-100/78">{item}</p>
+                <p className="text-lg leading-8 text-ink/80">{item}</p>
               </div>
             ))}
           </div>
