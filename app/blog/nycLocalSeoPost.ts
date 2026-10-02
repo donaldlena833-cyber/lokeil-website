@@ -10,7 +10,7 @@ export const nycLocalSeoPost: BlogPost = {
   publishDate: '2026-06-05',
   readTime: '7 min read',
   heroImage: '/gallery/bathroom-shower/1.jpg',
-  heroAlt: 'Bathroom shower remodel with marble-look tile, niche, and glass panel in the New York City area.',
+  heroAlt: 'Marble look tub surround with a recessed niche during remodeling.',
   primaryKeyword: 'apartment bathroom remodeling Ridgewood Queens',
   keywords: [
     'apartment bathroom remodeling Ridgewood Queens',

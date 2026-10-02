@@ -32,6 +32,10 @@ export default function BlogIndex() {
               Start with a room, a detail, or a neighborhood. Explore LOKEIL project photographs,
               illustrated planning advice, and practical questions to bring to your own renovation.
             </p>
+            <nav aria-label="Browse remodeling articles" className="mt-7 flex flex-wrap gap-x-6 gap-y-3 text-base font-medium text-accent">
+              <a href="#project-photos" className="underline underline-offset-4">Explore the photos</a>
+              <a href="#planning-guides" className="underline underline-offset-4">Find a planning guide</a>
+            </nav>
           </div>
 
           <Link
@@ -65,7 +69,24 @@ export default function BlogIndex() {
         </div>
       </section>
 
-      <section className="section-space">
+      <section className="section-space border-b border-ink/8" aria-labelledby="start-planning">
+        <div className="site-shell">
+          <p className="eyebrow">Start with your question</p>
+          <h2 id="start-planning" className="section-title mt-4">Before you choose the finishes.</h2>
+          <div className="mt-8 grid gap-7 divide-y divide-ink/10 md:grid-cols-3 md:divide-y-0">
+            {[
+              ['Compare bathroom estimates', 'See what belongs in the scope and what to ask about allowances.', 'bathroom-remodeling-cost-queens-ny'],
+              ['Check the permit questions', 'Separate cosmetic work, trade changes, and building approval.', 'nyc-kitchen-bathroom-remodel-permits-queens'],
+              ['Understand the shower layers', 'See the support and waterproofing behind the visible tile.', 'shower-tile-installation-queens-guide'],
+            ].map(([label, description, slug]) => <Link key={slug} href={`/blog/${slug}`} className="group pt-6 first:pt-0 md:pt-0">
+              <h3 className="text-3xl leading-tight text-accent underline-offset-4 group-hover:underline">{label}</h3>
+              <p className="mt-3 max-w-sm text-base leading-7 text-ink/80">{description}</p>
+            </Link>)}
+          </div>
+        </div>
+      </section>
+
+      <section className="section-space" id="project-photos">
         <div className="site-shell">
           <h2 className="section-title mb-8">Explore the renovation journal</h2>
           <div className="grid gap-6 lg:grid-cols-2">
@@ -100,7 +121,7 @@ export default function BlogIndex() {
             ))}
           </div>
 
-          <h2 className="section-title mb-8 mt-16">Remodeling planning guides</h2>
+          <h2 className="section-title mb-8 mt-16" id="planning-guides">Remodeling planning guides</h2>
           <div className="grid gap-6 lg:grid-cols-2">
             {guidePosts.map((post, index) => (
               <Link

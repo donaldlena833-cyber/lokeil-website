@@ -33,6 +33,10 @@ class Page(HTMLParser):
         self.links = set()
         self.images = set()
         self.text = []
+        self.table_cells = []
+        self.figure_captions = []
+        self.cell_text = ''
+        self.caption_text = ''
         self.script = None
         self.script_text = ''
 
@@ -52,10 +56,18 @@ class Page(HTMLParser):
         if tag == 'script':
             self.script = attrs.get('type', '')
             self.script_text = ''
+        if tag in {'th', 'td', 'caption'}:
+            self.cell_text = ''
+        if tag == 'figcaption':
+            self.caption_text = ''
         if tag not in VOID:
             self.stack.append((tag, attrs))
 
     def handle_endtag(self, tag):
+        if tag in {'th', 'td', 'caption'}:
+            self.table_cells.append(normalize(self.cell_text))
+        if tag == 'figcaption':
+            self.figure_captions.append(normalize(self.caption_text))
         if tag == 'script':
             if self.script == 'application/ld+json':
                 try:
@@ -76,6 +88,10 @@ class Page(HTMLParser):
         if 'style' in tags:
             return
         self.text.append(data)
+        if tags & {'th', 'td', 'caption'}:
+            self.cell_text += data
+        if 'figcaption' in tags:
+            self.caption_text += data
         if 'title' in tags:
             self.title += data
         if 'h1' in tags and self.headings:
@@ -97,7 +113,7 @@ def fetch(url, accept='text/html', user_agent='LOKEIL public response audit'):
     except urllib.error.HTTPError as error:
         response = error
     with response:
-        return response.status, {key.lower(): ', '.join(response.headers.get_all(key)) for key in set(response.headers.keys())}, response.read().decode('utf-8')
+        return response.status, {key.lower(): ', '.join(response.headers.get_all(key)) for key in set(response.headers.keys())}, response.read().decode('utf-8', errors='replace')
 
 
 def main():
@@ -150,22 +166,46 @@ def main():
         if 'accept' not in md_headers.get('vary', '').lower() or not any(value.rstrip('/') == canonical.rstrip('/') for value in re.findall(r'<([^>]+)>', md_headers.get('link', ''))):
             issues.append('Markdown variation or canonical link missing')
         process_images = [image for image in page.images if image.startswith('/process/stories/')]
-        if process_images:
+        decoded_images = [urllib.parse.parse_qs(urllib.parse.urlsplit(image).query).get('url', [image])[0] for image in page.images]
+        editorial_images = [image for image in decoded_images if image.startswith('/editorial/')]
+        guide_images = [image for image in decoded_images if image.startswith('/process/guides/')]
+        for cell in page.table_cells:
+            if cell and cell not in normalize(markdown):
+                issues.append('comparison table information missing from Markdown')
+        for caption in page.figure_captions if path.startswith('/blog/') else []:
+            if caption and caption not in normalize(markdown):
+                issues.append('illustration caption missing from Markdown')
+        for image in guide_images:
+            if image not in markdown:
+                issues.append('guide illustration missing from Markdown')
+            asset_status, _, _ = fetch(base + image, '*/*')
+            if asset_status != 200:
+                issues.append('guide illustration asset missing')
+        for schema in schemas:
+            if schema.get('@type') == 'BlogPosting':
+                for citation in schema.get('citation', []):
+                    if citation not in page.links or citation not in markdown:
+                        issues.append('article citation missing from visible links or Markdown')
+        for link in page.links:
+            if link.startswith('/blog/') and (CANONICAL + link) not in urls:
+                issues.append('article link points outside the published URL set: ' + link)
+        if process_images or editorial_images:
             other_stories = {link for link in page.links if link.startswith('/blog/') and link != path}
-            if len(other_stories) < 3:
-                issues.append('fewer than three useful related article links')
+            if len(other_stories) < (2 if editorial_images else 3):
+                issues.append('useful related article links missing')
             if not any(link.endswith('-queens') for link in page.links):
                 issues.append('photo story has no service link')
             if 'By LOKEIL Renovation' not in text:
                 issues.append('visible article author missing')
-            for image in process_images:
+            for image in process_images + editorial_images:
                 asset_status, _, _ = fetch(base + image, '*/*')
                 if asset_status != 200:
                     issues.append('photo process asset missing')
         if any(re.search(r'/blog/bathroom-remodeling-(astoria|jackson-heights|long-island-city|ridgewood|sunnyside|woodside)-nyc-planning-guide$', link) for link in page.links):
             issues.append('retired location page remains in main navigation')
         return {'path': path, 'title': normalize(page.title), 'html': status, 'markdown': md_status,
-                'server_visible_h1': not page.hidden_h1, 'photo_story': bool(process_images), 'issues': issues}
+                'server_visible_h1': not page.hidden_h1, 'photo_story': bool(process_images or editorial_images),
+                'comparison_cells': len(page.table_cells), 'guide_illustrations': len(guide_images), 'issues': issues}
 
     with concurrent.futures.ThreadPoolExecutor(max_workers=6) as pool:
         results = list(pool.map(check, urls))
