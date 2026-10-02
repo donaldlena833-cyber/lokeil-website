@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1536" height="1024" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+  <title id="title">Turn the pattern before fixing the starting point</title>
+  <desc id="desc">Two original abstract room plans compare opposite directions of a generic fan motif. A larger detail shows fan shapes being cut at a straight boundary. This is a visual layout study, not an approved floor product or a dimensioned tile pattern.</desc>
+  <defs>
+    <pattern id="up" width="90" height="78" patternUnits="userSpaceOnUse"><path d="M5 71Q45 2 85 71Z" fill="#D4DFD9" stroke="#45614A" stroke-width="2"/></pattern>
+    <pattern id="down" width="90" height="78" patternUnits="userSpaceOnUse"><path d="M5 7Q45 76 85 7Z" fill="#D4DFD9" stroke="#45614A" stroke-width="2"/></pattern>
+    <clipPath id="edge"><path d="M775 248H1080V488H775Z"/></clipPath>
+  </defs>
+  <g stroke="#45614A" stroke-width="3" stroke-linejoin="round">
+    <path d="M80 205H375V590H290V613H185V590H80Z" fill="#FAFAF3"/><path d="M95 225H360V570H95Z" fill="url(#up)"/>
+    <path d="M435 205H730V590H645V613H540V590H435Z" fill="#FAFAF3"/><path d="M450 225H715V570H450Z" fill="url(#down)"/>
+    <path d="M185 590V692M540 590V692" stroke="#A18B5E" stroke-width="3" stroke-dasharray="8 7"/>
+    <path d="M195 674L185 692L175 674M550 674L540 692L530 674" fill="none" stroke="#A18B5E"/>
+    <path d="M775 248H1080V488H775Z" fill="#FAFAF3"/>
+    <g clip-path="url(#edge)" fill="#D4DFD9" stroke-width="3"><path d="M720 365Q775 245 830 365ZM830 365Q885 245 940 365ZM940 365Q995 245 1050 365ZM1050 365Q1105 245 1160 365ZM720 476Q775 356 830 476ZM830 476Q885 356 940 476ZM940 476Q995 356 1050 476ZM1050 476Q1105 356 1160 476Z"/></g>
+    <path d="M775 248V488" stroke="#A18B5E" stroke-width="8"/>
+  </g>
+  <g font-family="Arial, sans-serif" font-size="35" fill="#293B30"><text x="80" y="102">A loose layout leaves the choice open</text><text x="80" y="177" font-size="30">Direction A</text><text x="435" y="177" font-size="30">Direction B</text><text x="775" y="207" font-size="30">Edge cuts</text><text x="95" y="746" font-size="29">Compare from the entrance</text><text x="775" y="550" font-size="27">Review the pieces</text><text x="775" y="585" font-size="27">at the boundary</text></g>
+  <g fill="#45614A"><circle cx="230" cy="428" r="30"/><circle cx="585" cy="428" r="30"/><circle cx="775" cy="648" r="30"/></g>
+  <g fill="#FAFAF3" font-family="Arial, sans-serif" font-size="32" font-weight="bold" text-anchor="middle"><text x="230" y="439">1</text><text x="585" y="439">1</text><text x="775" y="659">2</text></g>
+</svg>

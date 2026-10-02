@@ -7,6 +7,9 @@ import { mottHavenPaintingPost } from './mottHaven';
 import { bedStuyTrimPost } from './bedStuy';
 import { crownHeightsFloorPost } from './crownHeights';
 import { harlemKitchenStoragePost } from './harlem';
+import { bushwickBacksplashPost } from './bushwick';
+import { greenpointTilePost } from './greenpoint';
+import { astoriaBathroomUsePost } from './astoria';
 
 // Each entry is written and reviewed individually. Existing article URLs stay intact.
-export const neighborhoodOverrides = [gowanusPost, financialDistrictPost, midtownWestPost, longIslandCityCabinetPost, downtownBrooklynBathroomPost, mottHavenPaintingPost, bedStuyTrimPost, crownHeightsFloorPost, harlemKitchenStoragePost];
+export const neighborhoodOverrides = [gowanusPost, financialDistrictPost, midtownWestPost, longIslandCityCabinetPost, downtownBrooklynBathroomPost, mottHavenPaintingPost, bedStuyTrimPost, crownHeightsFloorPost, harlemKitchenStoragePost, bushwickBacksplashPost, greenpointTilePost, astoriaBathroomUsePost];

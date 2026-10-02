@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1600" viewBox="0 0 600 800" role="img" aria-labelledby="title desc">
+  <title id="title">Plan the bathroom's return to everyday use</title>
+  <desc id="desc">An original vertical sequence connects five decisions: household use, material readiness, concealed checks, required waiting periods, and return to use. No day counts, inspection approval, or guaranteed completion are implied.</desc>
+  <path d="M85 138V672" fill="none" stroke="#A18B5E" stroke-width="4"/>
+  <g fill="#FAFAF3" stroke="#45614A" stroke-width="2"><rect x="125" y="94" width="420" height="102" rx="16"/><rect x="125" y="224" width="420" height="102" rx="16"/><rect x="125" y="354" width="420" height="102" rx="16"/><rect x="125" y="484" width="420" height="102" rx="16"/><rect x="125" y="614" width="420" height="102" rx="16"/></g>
+  <g fill="#45614A"><circle cx="85" cy="145" r="28"/><circle cx="85" cy="275" r="28"/><circle cx="85" cy="405" r="28"/><circle cx="85" cy="535" r="28"/><circle cx="85" cy="665" r="28"/></g>
+  <g font-family="Arial, sans-serif" fill="#FAFAF3" font-size="28" font-weight="bold" text-anchor="middle"><text x="85" y="155">1</text><text x="85" y="285">2</text><text x="85" y="415">3</text><text x="85" y="545">4</text><text x="85" y="675">5</text></g>
+  <g font-family="Arial, sans-serif" fill="#293B30" font-size="26"><text x="55" y="52" font-size="29">A sequence for daily use</text><text x="150" y="133">Household use</text><text x="150" y="263">Materials ready</text><text x="150" y="393">Concealed checks</text><text x="150" y="523">Required waiting</text><text x="150" y="653">Return to use</text></g>
+  <g font-family="Arial, sans-serif" fill="#45614A" font-size="21"><text x="150" y="168">Agree on fixture interruptions</text><text x="150" y="298">Confirm the next stage's items</text><text x="150" y="428">Review before covering the work</text><text x="150" y="558">Follow the actual product timings</text><text x="150" y="688">Check operation and care</text><text x="55" y="772">Planning sequence, not a fixed duration</text></g>
+</svg>
