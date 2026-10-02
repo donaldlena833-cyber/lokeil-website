@@ -253,9 +253,8 @@ export default function Home() {
             <p className="eyebrow">How the work moves</p>
             <h2 className="section-title mt-4">A simple process with clearer expectations.</h2>
             <p className="lead mt-6">
-              This isn&apos;t padded with buzzwords. It stays focused on what homeowners actually
-              care about: understanding the room, choosing finishes well, executing cleanly, and
-              landing the final details.
+              Start with the room and the result you want. Then plan the materials, the order
+              of work, and the final details before installation begins.
             </p>
 
             <div className="mt-8 flex flex-wrap gap-3">

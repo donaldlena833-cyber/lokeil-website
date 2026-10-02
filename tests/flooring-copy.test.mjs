@@ -2,7 +2,7 @@ import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import test from 'node:test';
 
-const page = readFileSync(new URL('../app/flooring-installation-queens/page.tsx', import.meta.url), 'utf8');
+const page = readFileSync(new URL('../app/flooring-installation-queens/page.tsx', import.meta.url), 'utf8') + '\n' + readFileSync(new URL('../app/services/content/flooring-installation.ts', import.meta.url), 'utf8');
 
 test('flooring service copy addresses homeowners instead of internal marketing planning', () => {
   assert.doesNotMatch(page, /Queens flooring leads|route those buyers|route that intent/i);

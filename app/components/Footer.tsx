@@ -11,8 +11,9 @@ export default function Footer() {
             <p className="eyebrow">Interior remodeling</p>
             <h3 className="mt-3 font-serif text-4xl text-accent">{siteData.brandName}</h3>
             <p className="mt-4 max-w-md text-sm leading-7 text-ink/80">
-              Bathrooms, kitchens, tile work, flooring, plaster, painting, cabinets,
-              doors, steps, and fireplace design with a cleaner, modern finish language.
+              Interior renovation from our Ridgewood base, serving Queens, Brooklyn,
+              Manhattan, the Bronx, and Staten Island. Bathrooms, kitchens, tile,
+              cabinets, flooring, plaster, and paint.
             </p>
           </div>
 
@@ -77,13 +78,17 @@ export default function Footer() {
             >
               Follow {siteData.instagramHandle}<span className="sr-only">, opens in a new tab</span>
             </a>
+            <a href={siteData.yelp} target="_blank" rel="noopener noreferrer"
+              className="mt-4 block text-sm text-accent underline underline-offset-4">
+              Find LOKEIL on Yelp<span className="sr-only">, opens in a new tab</span>
+            </a>
           </div>
         </div>
 
         <div className="mt-12 border-t border-ink/10 pt-7 text-sm text-ink/80">
           <div className="flex flex-wrap items-center justify-between gap-4">
-            <p>&copy; {new Date().getFullYear()} {siteData.legalName}. Ridgewood, Queens, NY.</p>
-            <div className="flex gap-5"><Link href="/privacy" className="hover:text-accent">Privacy</Link><a href="/llms.txt" className="hover:text-accent">Agent instructions</a></div>
+            <p>&copy; {new Date().getFullYear()} {siteData.legalName} Ridgewood, Queens, NY.</p>
+            <div className="flex gap-5"><Link href="/privacy" className="hover:text-accent">Privacy</Link><Link href="/terms" className="hover:text-accent">Terms</Link></div>
           </div>
         </div>
       </div>
