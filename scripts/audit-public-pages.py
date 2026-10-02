@@ -168,7 +168,7 @@ def main():
         process_images = [image for image in page.images if image.startswith('/process/stories/')]
         decoded_images = [urllib.parse.parse_qs(urllib.parse.urlsplit(image).query).get('url', [image])[0] for image in page.images]
         editorial_images = [image for image in decoded_images if image.startswith('/editorial/')]
-        guide_images = [image for image in decoded_images if image.startswith('/process/guides/')]
+        guide_images = [image for image in decoded_images if image.startswith(('/process/guides/', '/planning/'))]
         for cell in page.table_cells:
             if cell and cell not in normalize(markdown):
                 issues.append('comparison table information missing from Markdown')

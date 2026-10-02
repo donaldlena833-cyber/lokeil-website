@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="440" viewBox="0 0 720 440" role="img" aria-labelledby="title desc">
+  <title id="title">Cabinet opening movement planning concept</title>
+  <desc id="desc">A top view of a cabinet shows a door swinging toward a nearby obstruction and the usable space in front. The numbered markers correspond to the accompanying planning legend. The drawing has no dimensional clearance standard.</desc>
+  <rect width="720" height="440" rx="20" fill="#f5f3e9"/>
+  <rect x="80" y="60" width="560" height="17" rx="4" fill="#ddd9cb"/>
+  <rect x="150" y="77" width="315" height="100" rx="5" fill="#b4bba4" stroke="#45614a" stroke-width="3"/>
+  <path d="M155 177H460" stroke="#293b30" stroke-width="6"/>
+  <path d="M155 177A155 155 0 0 0 310 332L310 177Z" fill="#e3e8d8"/>
+  <path d="M155 177A155 155 0 0 0 310 332" fill="none" stroke="#8b714d" stroke-width="4" stroke-dasharray="8 8"/>
+  <path d="M310 177V332" stroke="#45614a" stroke-width="6"/>
+  <circle cx="310" cy="177" r="7" fill="#293b30"/>
+  <rect x="82" y="230" width="80" height="134" rx="28" fill="#ddd9cb" stroke="#bcb6a4" stroke-width="3"/>
+  <rect x="370" y="218" width="193" height="166" rx="48" fill="#e3e8d8"/>
+  <g fill="#45614a"><circle cx="380" cy="126" r="29"/><circle cx="251" cy="261" r="29"/><circle cx="466" cy="300" r="29"/></g>
+  <g fill="#fafaf3" font-family="Arial,sans-serif" font-size="31" font-weight="600" text-anchor="middle"><text x="380" y="137">1</text><text x="251" y="272">2</text><text x="466" y="311">3</text></g>
+</svg>
