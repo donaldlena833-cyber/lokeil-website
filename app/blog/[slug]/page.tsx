@@ -25,30 +25,12 @@ type BlogPageProps = {
 };
 
 const blogSeoTitles: Record<string, string> = {
-  'apartment-bathroom-remodeling-ridgewood-queens-nyc-guide':
-    'Ridgewood Apartment Bathroom Remodeling Guide',
-  'apartment-renovation-queens-planning-guide':
-    'Apartment Renovation Queens Planning Guide',
-  'bathroom-flooring-installation-queens-guide':
-    'Bathroom Flooring Installation Queens',
   'bathroom-remodeling-cost-queens-ny':
     'Bathroom Remodeling Cost in Queens: Compare Quotes',
-  'bathroom-tile-installation-queens-planning-guide':
-    'Bathroom Tile Installation Queens',
-  'bathroom-vanity-replacement-queens-planning-guide':
-    'Bathroom Vanity Replacement Queens',
-  'kitchen-remodeling-brooklyn-vs-queens-planning-guide':
-    'Kitchen Remodeling: Brooklyn vs Queens',
-  'kitchen-remodeling-queens-planning-guide':
-    'Kitchen Remodeling Queens Planning Guide',
   'nyc-kitchen-bathroom-remodel-permits-queens':
     'Kitchen and Bathroom Remodel Permits in Queens',
   'shower-tile-installation-queens-guide':
     'Shower Tile in Queens: Layers and Waterproofing',
-  'small-bathroom-remodel-ideas-queens-apartments':
-    'Small Bathroom Remodel Ideas Queens',
-  'walk-in-shower-remodel-queens-planning-guide':
-    'Walk-In Shower Remodeling Queens',
 };
 
 export function generateStaticParams() {

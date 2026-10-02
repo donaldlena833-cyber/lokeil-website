@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="400" viewBox="0 0 720 400" role="img" aria-labelledby="title desc">
+  <title id="title">Bathroom floor height planning concept</title>
+  <desc id="desc">A bathroom finish at the left meets a lower adjoining floor at the right through a sloped transition. Three numbered markers correspond to the accompanying planning legend. This is not a measured assembly.</desc>
+  <rect width="720" height="400" rx="20" fill="#f5f3e9"/>
+  <path d="M60 295H660V350H60Z" fill="#ddd9cb"/>
+  <path d="M60 255H355V295H60Z" fill="#e3e8d8"/>
+  <path d="M60 236H355V255H60Z" fill="#668069"/>
+  <path d="M60 236H355M60 255H355" stroke="#293b30" stroke-width="3"/>
+  <path d="M130 236V255M205 236V255M280 236V255" stroke="#f5f3e9" stroke-width="3"/>
+  <path d="M355 236L427 276V295H355Z" fill="#c6a877" stroke="#8b714d" stroke-width="3"/>
+  <path d="M427 276H660V295H427Z" fill="#b4bba4"/>
+  <path d="M427 276H660" stroke="#293b30" stroke-width="3"/>
+  <path d="M540 276V295M615 276V295" stroke="#f5f3e9" stroke-width="3"/>
+  <g fill="none" stroke="#45614a" stroke-width="3"><path d="M195 161V214"/><path d="M387 161V216"/><path d="M546 161V253"/></g>
+  <g fill="#45614a"><circle cx="195" cy="122" r="29"/><circle cx="387" cy="122" r="29"/><circle cx="546" cy="122" r="29"/></g>
+  <g fill="#fafaf3" font-family="Arial,sans-serif" font-size="31" font-weight="600" text-anchor="middle"><text x="195" y="133">1</text><text x="387" y="133">2</text><text x="546" y="133">3</text></g>
+</svg>
