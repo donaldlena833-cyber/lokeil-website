@@ -1,4 +1,4 @@
-import type { BlogSection } from './blogData';
+import type { BlogSection, BlogPost } from './blogData';
 
 type PhotoArticleBody = {
   intro: string[];
@@ -6,6 +6,10 @@ type PhotoArticleBody = {
   diagramAfter: number;
   title?: string;
   description?: string;
+  diagramHeading?: string;
+  processSteps?: string[];
+  processDiagram?: BlogPost['processDiagram'];
+  sources?: Array<{ label: string; href: string }>;
 };
 
 export const photoArticleAltText: Record<string, string> = {
@@ -13,8 +17,8 @@ export const photoArticleAltText: Record<string, string> = {
   '/gallery/bathroom-tiles/5.jpg': 'Gray horizontal tub surround tile with an unfinished recessed niche and protected tub.',
   '/gallery/bathroom-tiles/6.jpg': 'Pale marble look shower tile, recessed niche, and glass enclosure beside a dark vanity.',
   '/gallery/bathroom-tiles/7.jpg': 'An opening in the painted wall just above a pale countertop.',
-  '/gallery/bathroom-tiles/8.jpg': 'Large pale shower wall tiles with spacing clips above a smaller mosaic floor.',
-  '/gallery/bathroom-tiles/9.jpg': 'An open rectangular niche surrounded by gray horizontal shower tile.',
+  '/gallery/bathroom-tiles/8.jpg': 'Pale shower wall tile with yellow and red clips, a long patterned recess and lower shelf, square floor tiles, a raised entry and unfinished surrounding walls.',
+  '/gallery/bathroom-tiles/9.jpg': 'An open rectangular recess with exposed wood lath at the back, unfinished interior sides and lower edge, surrounded by horizontal gray wall tile.',
   '/gallery/bathroom-tiles/10.jpg': 'Close view of gray tub wall tile, recessed niche, and unfinished outer edge.',
   '/gallery/bathroom-flooring/1.jpg': 'Patterned bathroom floor tile beside an unfinished shower wall and doorway.',
   '/gallery/bathroom-flooring/2.jpg': 'Black and white checkerboard floor in a room with unfinished wall patches.',
@@ -23,7 +27,7 @@ export const photoArticleAltText: Record<string, string> = {
   '/gallery/bathroom-flooring/5.jpg': 'A gray and white geometric tile sample held over a rough floor.',
   '/gallery/bathroom-flooring/6.jpg': 'Patterned bathroom floor at the entrance to an unfinished shower area.',
   '/gallery/bathroom-flooring/7.jpg': 'Checkerboard floor border beside a patched wall and doorway.',
-  '/gallery/bathroom-flooring/8.jpg': 'Black and white hex pattern shower floor tile around a visible drain.',
+  '/gallery/bathroom-flooring/8.jpg': 'Dark outlined hexagon pattern across a bathroom floor beside pale rectangular wall tile, unfinished fixture positions, a dark bag and an open doorway.',
   '/gallery/bathroom-flooring/9.jpg': 'Gray tub wall tile and recessed niche before surrounding fixtures and edges are finished.',
   '/gallery/bathroom-shower/1.jpg': 'Pale marble look tub surround with a recessed shelf and unfinished ceiling above.',
   '/gallery/bathroom-shower/2.jpg': 'Large pale shower tiles around fixture openings before the final hardware.',
@@ -31,7 +35,7 @@ export const photoArticleAltText: Record<string, string> = {
   '/gallery/bathroom-shower/4.jpg': 'Pale shower wall and floor tile below an open unfinished bathroom ceiling.',
   '/gallery/bathroom-shower/5.jpg': 'Horizontal gray tub wall tile surrounding a recessed storage niche.',
   '/gallery/bathroom-shower/6.jpg': 'Two vertically stacked recessed niches in a narrow pale tiled shower.',
-  '/gallery/bathroom-shower/7.jpg': 'Colored mosaic inside a niche surrounded by pale shower tiles with spacing clips.',
+  '/gallery/bathroom-shower/7.jpg': 'Pale shower tile around a long black and white patterned recess with a lower shelf, clips and tape, a square tiled floor and unfinished adjoining wallboard.',
   '/gallery/bathroom-shower/8.jpg': 'Pale shower floor and wall tile together before the final fixtures are installed.',
   '/gallery/bathroom-painting/2.jpg': 'Blue gray bathroom wall beside pale flooring and unfinished fixture areas.',
   '/gallery/bathroom-painting/3.jpg': 'Cream kitchen cabinets, metal pulls, pale counter, and blue backsplash tile.',
@@ -87,25 +91,125 @@ export const photoArticleBodies: Record<string, PhotoArticleBody> = {
     ],
   },
   '/gallery/bathroom-tiles/8.jpg': {
-    intro: ['Broad shower wall tile and a smaller mosaic floor do different visual jobs. In this progress view, their meeting line is the useful place to start: it connects the quiet walls to the floor beneath your feet.'],
-    diagramAfter: 3,
-    sections: [
-      { heading: 'Start at the base of the shower', body: ['The mosaic pattern makes the floor legible while the large wall pieces keep the enclosure calm. Consider the drain, entry, and wall junction before deciding that you want the same combination. Those details shape how both tile formats will fit.'] },
-      { heading: 'The two tile sizes need one plan', body: ['Wall tiles can cover a broad plane. Floor pieces need to suit the prepared shower base and its changes in plane. A small format does not, by itself, establish that a floor has the correct slope or water management.'] },
-      { heading: 'Read the clips as a construction clue', body: ['Spacing clips remain on the walls in the photograph. They help identify the installation stage and show where the tile lines meet. They are not a certificate of the work beneath the tile, and the room still has finishing tasks ahead.'] },
-      { heading: 'Bring the wall and floor samples together', body: ['Judge the grout colors, piece sizes, and surface appearance in the same light. A floor sample that looks busy on its own may balance a simple wall; two strong patterns may compete in a small enclosure.'], list: ['View enough mosaic sheets to understand the repeat.', 'Check the product specification for its intended shower use.', 'Ask how the selected pieces meet the drain and entry.'] },
-      { heading: 'Keep the entry in the estimate', body: ['Show the existing shower entrance and the bathroom floor outside it. A large shower wall tile and mosaic floor project should account for the complete base and transition, rather than treating the two finishes as unrelated jobs.'] },
+    "title": "Large Shower Wall Tile Beside a Patterned Shelf",
+    "description": "Pale shower wall tile, a long patterned recess, and a square floor show why the wall, shelf, and entry belong in one finish conversation.",
+    "intro": [
+      "Broad pale tiles frame a long patterned recess in this shower progress photograph. Below them, a floor of square pieces meets the raised entry. The three surfaces have different appearances, but they will be seen together each time someone enters the room."
     ],
+    "diagramAfter": 1,
+    "sections": [
+      {
+        "heading": "Give each surface its own role",
+        "body": [
+          "Begin with the broad wall field, then look at the pattern inside the recess and the quieter square floor. Decide which part should draw the eye in your room. Bring actual samples together under the bathroom light rather than choose each surface from a separate screen."
+        ]
+      },
+      {
+        "heading": "Read the shelf with its surrounding tile",
+        "body": [
+          "The recess spans several tile courses and has a projecting lower shelf. Ask how your proposed storage fits the things you use, the assessed wall, and the surrounding cuts. Its length and apparent depth in a photograph do not provide dimensions for another bathroom.",
+          "Discuss the shelf edge, its sides, and the junction with the main tile as one detail. The selected products and assembly need review by the responsible installer; the photograph does not identify the concealed water management system."
+        ]
+      },
+      {
+        "heading": "Use the clips to recognize the stage",
+        "body": [
+          "Yellow and red clips, blue tape, open fixture positions, and exposed surrounding board remain visible. This is work in progress. Ask which tile, fixture, wall finish, and cleanup tasks are included before the room returns to use."
+        ]
+      },
+      {
+        "heading": "Include the view outside the shower",
+        "body": [
+          "The raised entry meets a larger bathroom floor, and the wall beside it is unfinished. Share that surrounding area as well as the shower when requesting an estimate. A quote for the main tiled field may leave the neighboring repairs outside its scope."
+        ],
+        "list": [
+          "Whole shower and room entry views.",
+          "The selected wall, shelf, and floor samples.",
+          "Storage needs and fixtures that will remain.",
+          "The adjoining surfaces you expect to be complete."
+        ]
+      }
+    ],
+    "diagramHeading": "See three finishes in one view",
+    "processSteps": [
+      "Compare the wall field, shelf pattern, and floor together.",
+      "Review storage and edge details for the assessed room.",
+      "Include the entry and adjoining finishes in the estimate."
+    ],
+    "processDiagram": {
+      "src": "/editorial/shower-wall-shelf-floor.svg",
+      "width": 1200,
+      "height": 800,
+      "displayOnMobile": true,
+      "alt": "An original front view separates the broad wall tile, patterned shelf area, and square floor as three connected finish selections.",
+      "caption": "Original finish selection concept, without room dimensions or a specified installation system."
+    },
+    "sources": [
+      {
+        "label": "Schluter: wall tile edge profile selection",
+        "href": "https://www.schluter.com/schluter-us/en_US/Profiles/For-Walls/Edging-%26-Outside-Wall-Corners/Schluter%EF%BF%BD-JOLLY/p/product?productCode=EV%2FJ100TSR"
+      }
+    ]
   },
   '/gallery/bathroom-tiles/9.jpg': {
-    intro: ['An open shower niche is a useful pause in the work. You can still see an opening that will later be enclosed by tile, which makes this the right time to settle storage and finishing questions.'],
-    diagramAfter: 0,
-    sections: [
-      { heading: 'Use the opening as a decision point', body: ['The gray field tile surrounds an unfinished niche interior. The photograph shows the opening and its relationship to the wall courses, but cannot establish the support or waterproof connections behind them. The next conversation should cover both the storage you want and the assembly that makes it suitable for the shower.'] },
-      { heading: 'Choose the contents before the interior tile', body: ['Set out the bottles, soap, and other items you expect to store. Their heights and how you reach them give the opening a practical purpose. An attractive rectangle on a drawing may need adjustment once the actual products are beside it.'], comparison: { caption: 'Details to settle while the niche remains accessible', headings: ['Detail', 'Decision'], rows: [['Interior tile', 'Match the wall or choose an accent, with both samples present.'], ['Sill', 'Discuss how it sheds water back into the shower.'], ['Outside edge', 'Choose a compatible trim or other finished edge before setting the last cuts.']] } },
-      { heading: 'Keep a progress record', body: ['Ask for photographs of the specified preparation before tile covers the niche. Keep the product information with the project scope. These records are more useful than trying to identify a concealed shower niche installation from its finished appearance.'] },
-      { heading: 'Bring the opening into the room design', body: ['Stand where you will use the shower and review the proposed height. The niche should feel reachable and belong to the tile layout around it. Resolve those two questions together while changes are still possible.'] },
+    "title": "An Open Wall Niche Before Its Interior Is Finished",
+    "description": "An open recess with visible wood lath raises questions about wall condition, usable storage, the selected assembly, and the finished edges.",
+    "intro": [
+      "Wood lath remains visible inside this rectangular opening, surrounded by gray tile. The recess has not received its complete interior finish in this view. Use that pause to ask what will support the storage, what finish will cover it, and which edges still need completion."
     ],
+    "diagramAfter": 0,
+    "sections": [
+      {
+        "heading": "Record what is exposed",
+        "body": [
+          "Take a close view of the back, sides, and lower edge, then a wider image of the surrounding wall. These views help the responsible installer assess the existing condition. They cannot establish the entire wall construction, concealed services, or the suitability of a proposed assembly on their own."
+        ]
+      },
+      {
+        "heading": "Compare the opening with real storage",
+        "body": [
+          "Bring the bottles and items that will live there. Ask about the usable finished height and depth after the specified layers and edge treatments are included. The visible rough opening is not the final storage space."
+        ],
+        "list": [
+          "Items to be stored and their approximate sizes.",
+          "Who will reach the shelf and from where.",
+          "Selected interior and surrounding finishes."
+        ]
+      },
+      {
+        "heading": "Agree the assembly before the interior finish",
+        "body": [
+          "Have the responsible installer explain the proposed support, selected system, relevant wet area connections, and shelf finish for your room. Ask what assessment or preparation is needed before covering the exposed condition.",
+          "Keep the specified products and appropriate progress records with the scope. A finished tiled rectangle will reveal less about the preparation than this open view, so it is useful to settle those questions while they remain accessible."
+        ]
+      },
+      {
+        "heading": "Finish the recess and the surrounding field together",
+        "body": [
+          "Review the cuts, border, shelf, and adjoining tile with the proposed storage dimensions. For an estimate, state whether you are completing an existing assessed opening or considering a new one. Include the wall condition and final finish expectation, rather than send only a picture of an attractive niche."
+        ]
+      }
+    ],
+    "diagramHeading": "From exposed opening to usable storage",
+    "processSteps": [
+      "Record the exposed wall condition and ask for assessment.",
+      "Review the selected assembly and usable finished space.",
+      "Coordinate the interior, shelf, and surrounding edges."
+    ],
+    "processDiagram": {
+      "src": "/editorial/open-wall-niche-review.svg",
+      "width": 1200,
+      "height": 800,
+      "displayOnMobile": true,
+      "alt": "An original recessed opening connects exposed wall questions with assessed assembly, usable storage, and finish boundary decisions.",
+      "caption": "Original assessment concept. It does not specify how to repair the pictured wall or verify a concealed assembly."
+    },
+    "sources": [
+      {
+        "label": "Schluter: wall assessment for storage niches",
+        "href": "https://eu.schluter.com/en-GB/wall-niches-and-shower-niches-11923.html"
+      }
+    ]
   },
   '/gallery/bathroom-tiles/10.jpg': {
     intro: ['The closer you look at a simple gray tub wall, the more its cut sizes matter. This angle turns the niche border and outside edge into the main story.'],
@@ -188,14 +292,77 @@ export const photoArticleBodies: Record<string, PhotoArticleBody> = {
     ],
   },
   '/gallery/bathroom-flooring/8.jpg': {
-    intro: ['The drain brings the black and white hex shower floor into focus. The most revealing pieces are the small ones immediately around it, where the pattern has to meet a fixed object.'],
-    diagramAfter: 1,
-    sections: [
-      { heading: 'Begin with the drain you have', body: ['A new tile pattern does not make an existing drain disappear. Decide whether its position and type are staying before the floor design is settled. Moving or changing it can involve work beyond the visible surface.'], list: ['Photograph the existing drain from directly above.', 'Show its position within the complete shower base.', 'Explain whether you are changing only finishes or rebuilding the shower.'] },
-      { heading: 'Trace the pieces nearest the opening', body: ['The hex pattern meets the drain through smaller fitted pieces. Look at those cuts as well as the broad field. A carefully considered sheet layout can help avoid the drain looking like an interruption added after the pattern.', 'The prepared shower base and water management detail need assessment before the tile. Small pieces can suit changes in plane, but their presence does not prove a correct slope or drain connection.'] },
-      { heading: 'Keep the base and finish in one proposal', body: ['A hex shower floor tile estimate should identify the shower base work as well as the tile arrangement. Ask how the selected system meets the drain and which preparation is included. The photograph is a useful pattern reference; product specifications and site conditions define the assembly.'] },
-      { heading: 'Review the floor from standing height', body: ['After examining the drain close up, look from the shower entrance too. This helps you judge whether the overall black and white pattern has the calm or contrast you want in daily use.'], comparison: { caption: 'A complete floor review uses both views', headings: ['View', 'Useful observation'], rows: [['Close to the drain', 'Cut sizes and how the pattern meets the opening.'], ['From the entrance', 'Scale, contrast, and balance across the shower base.']] } },
+    "title": "Black Outlined Hexagons Across a Bathroom Floor",
+    "description": "A bold hexagon pattern runs across a bathroom floor beside pale wall tile, unfinished fittings, and a doorway. Review the whole room before choosing it.",
+    "intro": [
+      "Dark outlines turn this bathroom floor into a strong geometric field. Pale wall tiles surround it, while unfinished fittings and the room doorway keep the photograph grounded in a renovation stage. No exposed drain is identifiable in this view."
     ],
+    "diagramAfter": 1,
+    "sections": [
+      {
+        "heading": "Judge the repeat from the entrance",
+        "body": [
+          "Look from the doorway before judging individual pieces. A strong outline can feel different across a whole room than on a small sample. Compare enough of the proposed product to understand its repeat, direction, and relationship with the pale walls.",
+          "The photograph shows the appearance of a patterned surface. It does not establish whether each visible hexagon is a separate piece, identify its material, or verify the assembly beneath it. Check the selected product information for your intended floor."
+        ]
+      },
+      {
+        "heading": "Add the fixtures to the pattern view",
+        "body": [
+          "The room still has unfinished fittings. For your bathroom, mark the retained or proposed fixture footprints on the layout so the installer can review what will remain visible. A vanity or other fitting can hide part of the repeat and change the balance you saw on an empty floor."
+        ],
+        "list": [
+          "Whole room and doorway photographs.",
+          "The actual product and its pattern repeat.",
+          "Fixtures that stay or change.",
+          "Adjoining floor and wall finish details."
+        ]
+      },
+      {
+        "heading": "Keep the doorway and supporting work in the scope",
+        "body": [
+          "Share the floor outside the bathroom and the surrounding wall edges as well as the pattern you like. Ask for the supporting floor assessment, installation boundaries, fixture coordination, and doorway finishing to be identified together.",
+          "A bathroom floor estimate should follow the actual room and selected product. Use this photograph as a reference for scale and contrast, then supply your own conditions so the pattern and the work needed beneath and around it can be discussed clearly."
+        ],
+        "comparison": {
+          "caption": "Two views of one patterned floor",
+          "headings": [
+            "View",
+            "What to compare"
+          ],
+          "rows": [
+            [
+              "From the doorway",
+              "Pattern scale, direction, and relationship with the walls."
+            ],
+            [
+              "At the perimeter",
+              "Fixture footprints, wall finishing, and adjoining floor transition."
+            ]
+          ]
+        }
+      }
+    ],
+    "diagramHeading": "A strong pattern belongs to the whole room",
+    "processSteps": [
+      "Review the repeat from the doorway.",
+      "Bring fixture footprints into the layout.",
+      "Include the supporting floor and adjoining boundaries in the scope."
+    ],
+    "processDiagram": {
+      "src": "/editorial/hex-bathroom-floor-room-view.svg",
+      "width": 1200,
+      "height": 800,
+      "displayOnMobile": true,
+      "alt": "An original hexagon floor concept connects the pattern field with fixture footprint, room doorway, and perimeter questions.",
+      "caption": "Original whole room planning concept. It does not show a drain, measured layout, or identified product from the photograph."
+    },
+    "sources": [
+      {
+        "label": "Schluter: floor edges and transitions",
+        "href": "https://assets.schluter.com/asset/570120892212/document_fkpq5q8afd67l9f4unaspal14b/floor-profiles-data-sheet.pdf?content-disposition=inline"
+      }
+    ]
   },
   '/gallery/bathroom-flooring/9.jpg': {
     intro: ['This gray tub surround looks far along, but a finished tile field is only one part of finishing the bathroom. The niche, fixture openings, and adjacent edges are reminders of the remaining scope.'],
@@ -267,15 +434,64 @@ export const photoArticleBodies: Record<string, PhotoArticleBody> = {
     ],
   },
   '/gallery/bathroom-shower/7.jpg': {
-    intro: ['A small mosaic niche can carry the color for a largely white shower. Choosing two tile materials creates a useful accent and a junction that deserves a close sample review.'],
-    diagramAfter: 2,
-    sections: [
-      { heading: 'Choose how much color the room needs', body: ['The white field remains the main surface while color is concentrated inside the opening. If you want a quiet shower with one stronger detail, this is a way to explore that balance without changing every wall.'] },
-      { heading: 'Place the two samples side by side', body: ['Compare the mosaic and field tile in the same light. Then look at them from the edge, where differences in thickness become visible. The installer needs to consider that meeting as well as the colors.'], comparison: { caption: 'Sample checks for a mosaic shower niche', headings: ['Check', 'Why it matters'], rows: [['Color', 'The accent should feel right against the main wall tile.'], ['Thickness', 'The two surfaces need a planned relationship at the opening.'], ['Grout', 'Small mosaic joints can change the appearance of the accent.'], ['Edge finish', 'The border completes the junction between the materials.']] } },
-      { heading: 'Leave room for the wet area detail', body: ['Support, water management, and a suitable sill remain part of the niche even when the decorative insert is the main feature. Those decisions should be resolved with the selected system before the finish covers them.'] },
-      { heading: 'Use the progress view for the right conversation', body: ['Clips and unfinished edges remain visible in the photograph. It shows a colored insert within an installation stage, without identifying the concealed assembly or its completed condition. Bring the image to explain the accent you like, alongside your own samples and opening dimensions.'] },
-      { heading: 'View the accent from outside the shower', body: ['A detail that looks strong at arm’s length can feel subtle across the room. Review both views before ordering. It helps you decide whether the niche provides enough color or whether a different palette better suits the bathroom.'], list: ['Keep the main wall sample behind the mosaic.', 'Review the color under your actual bathroom lighting.', 'Show the intended border with both materials.'] },
+    "title": "A Patterned Shelf Across a Pale Shower Wall",
+    "description": "A patterned shelf stands out against pale shower tile. Use the wider view to plan storage, selected finishes, and the surrounding bathroom scope.",
+    "intro": [
+      "The patterned recess makes a horizontal focal point across a pale shower wall. It is a quiet color palette with a stronger repeated shape, not a colorful mosaic insert. The wider view also shows the entry, bathroom floor, and unfinished wall surfaces outside the shower."
     ],
+    "diagramAfter": 2,
+    "sections": [
+      {
+        "heading": "Decide where the eye should stop",
+        "body": [
+          "A contained pattern can make storage part of the room’s appearance. Compare the accent with the main tile from both inside and outside the shower. A detail that is prominent at arm’s length can read differently from the bathroom door."
+        ]
+      },
+      {
+        "heading": "Bring the actual finishes to the edge",
+        "body": [
+          "Place the selected accent and field samples together, including their intended joint and border details. Ask how the actual products will meet at the recess. A photograph can show contrast and proportion but cannot establish material, thickness, or the specified finishing piece."
+        ]
+      },
+      {
+        "heading": "Give the shelf a practical storage brief",
+        "body": [
+          "Show the items you intend to store and ask about usable space and reach after finishing. Review the proposed recess with the assessed wall and selected wet area system. The attractive pattern does not settle the support, connections, or shelf detail."
+        ]
+      },
+      {
+        "heading": "Follow the wide view into the rest of the room",
+        "body": [
+          "Here the tiled shower sits between exposed wallboard, fixture openings, and a larger bathroom floor. Keep those surrounding surfaces on the estimate request if you expect the room to be complete. The visible clips and tape show that this is still a progress photograph."
+        ]
+      },
+      {
+        "heading": "Send the accent and the scope together",
+        "body": [
+          "Share the selected tile references, current room photos, intended storage, and the finishes that should remain. Say whether the work concerns the recessed shelf, the shower, or the connected bathroom. That gives the accent a clear place in the overall proposal."
+        ]
+      }
+    ],
+    "diagramHeading": "One accent, three connected decisions",
+    "processSteps": [
+      "Choose the balance between the pale field and the pattern.",
+      "Review the actual products and finished storage detail.",
+      "Include the surrounding room surfaces in the scope."
+    ],
+    "processDiagram": {
+      "src": "/editorial/patterned-shower-shelf-scope.svg",
+      "width": 1200,
+      "height": 800,
+      "displayOnMobile": true,
+      "alt": "An original wall concept places a patterned shelf in a pale tile field and connects its appearance, edge, and surrounding finish scope.",
+      "caption": "Original accent coordination concept, not a specification of the photographed tile or concealed assembly."
+    },
+    "sources": [
+      {
+        "label": "Schluter: wall tile edge profile selection",
+        "href": "https://www.schluter.com/schluter-us/en_US/Profiles/For-Walls/Edging-%26-Outside-Wall-Corners/Schluter%EF%BF%BD-JOLLY/p/product?productCode=EV%2FJ100TSR"
+      }
+    ]
   },
   '/gallery/bathroom-shower/8.jpg': {
     intro: ['This white shower view brings the wall, floor, and base into one picture before the final hardware arrives. It is a useful reminder to plan the enclosure as a connected space.'],

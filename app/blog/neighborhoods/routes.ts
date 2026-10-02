@@ -26,4 +26,7 @@ export const neighborhoodArticleSlugs = [
   'patterned-bathroom-floor-tile-before-the-room-is-finished',
   'marble-look-shower-tile-framed-by-glass',
   'herringbone-shower-walls-with-a-bench-and-hex-floor',
+  'how-a-patterned-bathroom-floor-meets-the-shower',
+  'planning-the-last-tile-cuts-around-a-gray-tub-niche',
+  'gray-tub-tile-before-fixtures-and-final-trim',
 ] as const;

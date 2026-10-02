@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1600" viewBox="0 0 1200 1600" role="img" aria-labelledby="title desc">
+<title id="title">Three boundaries on a bathroom floor</title><desc id="desc">An original concept plan marks the shower entry, fixture perimeter, and doorway to a retained room.</desc>
+<defs><pattern id="floor" width="120" height="120" patternUnits="userSpaceOnUse"><rect width="120" height="120" fill="#edf0e4"/><path d="M0 0H120V120H0Z" fill="none" stroke="#c8d2c0" stroke-width="3"/></pattern></defs>
+<g stroke="#617261" stroke-width="4" stroke-linejoin="round">
+<rect x="140" y="280" width="550" height="1040" fill="url(#floor)" stroke="none"/>
+<path d="M140 280H690V1320H530M370 1320H140Z" fill="none"/>
+<rect x="140" y="280" width="260" height="420" fill="#d4ddcc"/>
+<path d="M140 700H400V750H140" fill="#91a087"/>
+<rect x="470" y="320" width="180" height="240" rx="10" fill="#fafaf3"/>
+<ellipse cx="560" cy="440" rx="60" ry="85" fill="none"/>
+<path d="M400 1318V1110Q520 1110 520 1318" fill="none" stroke-dasharray="12 10"/>
+<path d="M460 1370V960Q460 880 380 850H270V780" fill="none" stroke-dasharray="20 14"/>
+<path d="M250 800L270 780L290 800" fill="none"/>
+<path d="M270 220V275M690 440H750M550 1250H750" fill="none"/>
+</g>
+<g font-family="Arial,sans-serif" fill="#293b30" font-size="48">
+<text x="270" y="115" text-anchor="middle">Shower entry</text><text x="270" y="175" text-anchor="middle" font-size="40">Review what stays</text>
+<text x="785" y="420">Fixture</text><text x="785" y="480">perimeter</text><text x="785" y="545" font-size="36">Fit and finish</text>
+<text x="785" y="1220">Room</text><text x="785" y="1280">doorway</text><text x="785" y="1345" font-size="36">Join and access</text>
+<text x="600" y="1510" text-anchor="middle" font-size="46">Mark the boundaries before work</text>
+</g></svg>

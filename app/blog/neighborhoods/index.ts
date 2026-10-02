@@ -27,5 +27,9 @@ import { sunsetParkFloorCarePost } from './sunsetPark';
 import { portRichmondVanityDeliveryPost } from './portRichmond';
 import { flushingNicheWallPost } from './flushing';
 
+import { riverdaleBathroomEdgesPost } from './riverdale';
+import { stapletonTileCloseoutPost } from './stapleton';
+import { bayRidgeBathingChoicePost } from './bayRidge';
+
 // Each entry is written and reviewed individually. Existing article URLs stay intact.
-export const neighborhoodOverrides = [gowanusPost, financialDistrictPost, midtownWestPost, longIslandCityCabinetPost, downtownBrooklynBathroomPost, mottHavenPaintingPost, bedStuyTrimPost, crownHeightsFloorPost, harlemKitchenStoragePost, bushwickBacksplashPost, greenpointTilePost, astoriaBathroomUsePost, upperWestSideKitchenPost, upperEastSideVanityPost, eastVillageRoomFitPost, lowerEastSideMoisturePost, chelseaKitchenFloorPost, williamsburgKitchenPalettePost, inwoodWallFinishPost, ridgewoodBathroomBriefPost, parkSlopeKitchenEdgesPost, carrollGardensBacksplashPost, sunnysideFloorRepeatPost, jacksonHeightsOccupiedWorkPost, sunsetParkFloorCarePost, portRichmondVanityDeliveryPost, flushingNicheWallPost];
+export const neighborhoodOverrides = [gowanusPost, financialDistrictPost, midtownWestPost, longIslandCityCabinetPost, downtownBrooklynBathroomPost, mottHavenPaintingPost, bedStuyTrimPost, crownHeightsFloorPost, harlemKitchenStoragePost, bushwickBacksplashPost, greenpointTilePost, astoriaBathroomUsePost, upperWestSideKitchenPost, upperEastSideVanityPost, eastVillageRoomFitPost, lowerEastSideMoisturePost, chelseaKitchenFloorPost, williamsburgKitchenPalettePost, inwoodWallFinishPost, ridgewoodBathroomBriefPost, parkSlopeKitchenEdgesPost, carrollGardensBacksplashPost, sunnysideFloorRepeatPost, jacksonHeightsOccupiedWorkPost, sunsetParkFloorCarePost, portRichmondVanityDeliveryPost, flushingNicheWallPost, riverdaleBathroomEdgesPost, stapletonTileCloseoutPost, bayRidgeBathingChoicePost];

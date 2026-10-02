@@ -60,6 +60,9 @@ export type BlogPost = {
     src: string;
     alt: string;
     caption: string;
+    width?: number;
+    height?: number;
+    displayOnMobile?: boolean;
   };
   diagramAfter?: number;
   diagramHeading?: string;
