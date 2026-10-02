@@ -5,10 +5,10 @@ import test from 'node:test';
 const sitemap = readFileSync(new URL('../app/sitemap.ts', import.meta.url), 'utf8');
 
 const verifiedUpdates = {
-  '/bathroom-remodeling-queens': '2026-09-28',
-  '/kitchen-remodeling-queens': '2026-09-28',
-  '/tile-installation-queens': '2026-09-12',
-  '/flooring-installation-queens': '2026-09-14',
+  '/bathroom-remodeling-queens': '2026-10-02',
+  '/kitchen-remodeling-queens': '2026-10-02',
+  '/tile-installation-queens': '2026-10-02',
+  '/flooring-installation-queens': '2026-10-02',
 };
 
 test('priority service sitemap dates match their verified content updates', () => {

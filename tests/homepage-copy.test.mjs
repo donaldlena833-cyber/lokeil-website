@@ -14,5 +14,5 @@ test('homepage guides homeowners instead of exposing internal editorial language
 test('homepage preserves primary project and estimate routes', () => {
   assert.match(page, /href="\/gallery"/);
   assert.match(page, /href="\/contact"/);
-  assert.match(sitemap, /path: '', priority: 1, changeFrequency: 'weekly' as const, lastModified: '2026-09-28'/);
+  assert.match(sitemap, /path: '', priority: 1, changeFrequency: 'weekly' as const, lastModified: '2026-10-02'/);
 });

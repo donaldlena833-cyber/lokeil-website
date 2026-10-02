@@ -21,7 +21,7 @@ export type BlogPost = {
   description: string;
   eyebrow: string;
   publishDate: string;
-  updatedDate?: string;
+  modifiedDate?: string;
   readTime: string;
   heroImage: string;
   heroAlt: string;

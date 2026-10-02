@@ -5,7 +5,7 @@ export const midtownWestPost: BlogPost = {
   title: 'The Vanity Swap That Changes a Midtown West Bathroom',
   description: 'A better cabinet can change how a bathroom feels. In Midtown West and Hudson Yards, check the pipes, glass, floor, and building access before ordering it.',
   eyebrow: 'Midtown West / Hudson Yards · Manhattan',
-  publishDate: '2026-10-01', updatedDate: '2026-10-02', readTime: '5 min read',
+  publishDate: '2026-10-01', modifiedDate: '2026-10-02', readTime: '5 min read',
   heroImage: '/gallery/bathroom-tiles/3.jpg',
   heroAlt: 'LOKEIL project photo showing a pale vanity close to shower glass, a mirror above it, and a patterned bathroom floor.',
   primaryKeyword: 'Midtown West bathroom vanity replacement',

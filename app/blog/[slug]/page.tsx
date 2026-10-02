@@ -4,8 +4,10 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 
 import { buildPageMetadata } from '../../seo';
+import Breadcrumbs from '../../components/Breadcrumbs';
 import { siteData } from '../../siteData';
 import { blogPosts, getBlogPost } from '../blogData';
+import { relatedBlogPosts } from '../relatedPosts';
 import NeighborhoodArticle from '../NeighborhoodArticle';
 
 const formatPublishDate = (date: string) =>
@@ -73,7 +75,7 @@ export async function generateMetadata({ params }: BlogPageProps): Promise<Metad
       ...metadata.openGraph,
       type: 'article',
       publishedTime: post.publishDate,
-      modifiedTime: post.updatedDate || post.publishDate,
+      modifiedTime: post.modifiedDate || post.publishDate,
       authors: [siteData.brandName],
       tags: post.keywords,
       images: [{ url: post.heroImage, alt: post.heroAlt }],
@@ -93,17 +95,17 @@ export default async function BlogPostPage({ params }: BlogPageProps) {
     notFound();
   }
 
-  const relatedPosts = blogPosts
-    .filter((item) => item.slug !== post.slug && (!post.processDiagram || item.processDiagram?.src === post.processDiagram.src))
-    .slice(0, 3);
+  const relatedPosts = relatedBlogPosts(post, blogPosts);
   const articleSchema = {
     '@context': 'https://schema.org',
     '@type': 'BlogPosting',
+    '@id': `${siteData.siteUrl}/blog/${post.slug}#article`,
     headline: post.title,
     description: post.description,
     image: `${siteData.siteUrl}${post.heroImage}`,
     datePublished: post.publishDate,
-    dateModified: post.updatedDate || post.publishDate,
+    dateModified: post.modifiedDate || post.publishDate,
+    isPartOf: { '@id': `${siteData.siteUrl}/#website` },
     author: {
       '@type': 'Organization',
       '@id': `${siteData.siteUrl}/#business`,
@@ -169,6 +171,7 @@ export default async function BlogPostPage({ params }: BlogPageProps) {
 
   return (
     <main>
+      <Breadcrumbs items={[{ label: 'Blog', href: '/blog' }, { label: post.title, href: `/blog/${post.slug}` }]} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema ? [articleSchema, faqSchema] : articleSchema) }}
@@ -190,6 +193,12 @@ export default async function BlogPostPage({ params }: BlogPageProps) {
                   {formatPublishDate(post.publishDate)}
                 </time>
               </div>
+              <p className="mt-5 text-sm leading-6 text-ink/80">
+                By <Link href="/about" className="text-accent underline underline-offset-4">{siteData.brandName}</Link>
+                {post.modifiedDate && post.modifiedDate !== post.publishDate ? (
+                  <>. Updated <time dateTime={post.modifiedDate}>{formatPublishDate(post.modifiedDate)}</time>.</>
+                ) : null}
+              </p>
             </div>
 
             <div className="media-frame min-h-[24rem] sm:min-h-[34rem]" data-reveal="fade-in" data-delay="1">

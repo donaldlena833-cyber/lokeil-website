@@ -5,7 +5,7 @@ export const financialDistrictPost: BlogPost = {
   title: 'A Narrow FiDi Bathroom Should Work From the Door In',
   description: 'Before changing a small Financial District bathroom, trace the path between the vanity, toilet, and shower. A finish upgrade should make daily use easier.',
   eyebrow: 'Financial District · Manhattan',
-  publishDate: '2026-10-01', updatedDate: '2026-10-02', readTime: '5 min read',
+  publishDate: '2026-10-01', modifiedDate: '2026-10-02', readTime: '5 min read',
   heroImage: '/gallery/bathroom-tiles/2.jpg',
   heroAlt: 'LOKEIL bathroom photographed from the doorway, with a slim vanity on the left, toilet ahead, glass shower, and flowing patterned floor.',
   primaryKeyword: 'Financial District bathroom renovation',

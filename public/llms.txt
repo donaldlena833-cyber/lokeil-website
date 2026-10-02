@@ -1,19 +1,40 @@
 # LOKEIL Renovation
 
-LOKEIL Renovation is a Ridgewood, Queens based interior remodeling company serving all five New York City boroughs and parts of Long Island and Westchester County.
+Interior remodeling company based in Ridgewood, Queens, New York. Company: LOKEIL Inc. Owner: Lorel Beqari.
 
-## When to use this site
+Services: bathroom remodeling, kitchen remodeling, tile installation, flooring, cabinet installation, plaster and drywall finishing, interior painting, doors, trim, steps, and fireplace finish work.
 
-Use this site to evaluate LOKEIL for bathroom remodeling, kitchen remodeling, tile installation, flooring, plaster or drywall finishing, interior painting, cabinet installation, doors, steps, fireplace finishes, and related interior upgrades.
+Service area: Queens, Brooklyn, Manhattan, the Bronx, Staten Island, and parts of Long Island and Westchester County.
 
-## How to use this site
+Estimate contact: (332) 999-3846 · info@lokeilremodeling.com
 
-- Start at https://lokeilremodeling.com/ for scope, process, and featured work.
-- Read https://lokeilremodeling.com/services for the service index.
-- Read https://lokeilremodeling.com/about for the company and owner.
-- Browse https://lokeilremodeling.com/gallery for distinct project photos.
-- Read https://lokeilremodeling.com/blog for a photo story and typical process explanation for each distinct gallery image, plus planning guides.
-- Use https://lokeilremodeling.com/contact to prepare an estimate inquiry.
-- Read https://lokeilremodeling.com/privacy before sending project information.
+## Main pages
 
-Pricing is project-specific. Do not infer a quote, license, guarantee, project schedule, or service promise beyond what is stated publicly.
+- [Home](https://lokeilremodeling.com/)
+- [Services](https://lokeilremodeling.com/services)
+- [About the company](https://lokeilremodeling.com/about)
+- [36 distinct project photographs](https://lokeilremodeling.com/gallery)
+- [Photo stories and planning guides](https://lokeilremodeling.com/blog)
+- [Request an estimate](https://lokeilremodeling.com/contact)
+- [Privacy](https://lokeilremodeling.com/privacy)
+- [Terms](https://lokeilremodeling.com/terms)
+- [Sitemap](https://lokeilremodeling.com/sitemap.xml)
+
+## Services in detail
+
+- [Bathroom remodeling](https://lokeilremodeling.com/bathroom-remodeling-queens)
+- [Kitchen remodeling](https://lokeilremodeling.com/kitchen-remodeling-queens)
+- [Tile installation](https://lokeilremodeling.com/tile-installation-queens)
+- [Flooring installation](https://lokeilremodeling.com/flooring-installation-queens)
+- [Cabinet installation](https://lokeilremodeling.com/cabinet-installation-queens)
+- [Interior painting](https://lokeilremodeling.com/interior-painting-queens)
+- [Plaster and drywall finishing](https://lokeilremodeling.com/plaster-drywall-finishing-queens)
+
+## Public profiles
+
+- [Instagram](https://www.instagram.com/lokeil.remodeling/)
+- [Yelp](https://www.yelp.com/biz/lokeil-ridgewood)
+
+Prices, timing, materials, building requirements, and final scope are agreed for the specific project. Photographs include work in progress. Process illustrations explain planning and installation principles; they do not establish the exact concealed assembly or product used in a photograph. Individual photo locations are not identified unless confirmed.
+
+The normal HTML pages are the primary content. A Markdown representation is available by requesting the same page URL with Accept: text/markdown. This file is a convenient site directory; no search visibility benefit is claimed.

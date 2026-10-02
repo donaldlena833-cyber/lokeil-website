@@ -2,7 +2,7 @@ import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import test from 'node:test';
 
-const page = readFileSync(new URL('../app/kitchen-remodeling-queens/page.tsx', import.meta.url), 'utf8');
+const page = readFileSync(new URL('../app/kitchen-remodeling-queens/page.tsx', import.meta.url), 'utf8') + '\n' + readFileSync(new URL('../app/services/content/kitchen-remodeling.ts', import.meta.url), 'utf8');
 
 test('kitchen scope copy addresses homeowners instead of internal lead planning', () => {
   assert.doesNotMatch(page, /both in play|many kitchen leads|use the gallery as proof/i);

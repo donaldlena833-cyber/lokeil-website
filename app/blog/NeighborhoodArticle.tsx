@@ -1,6 +1,8 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import NeighborhoodEstimateBrief from '../components/NeighborhoodEstimateBrief';
+import Breadcrumbs from '../components/Breadcrumbs';
+import { siteData } from '../siteData';
 import type { BlogPost } from './blogData';
 
 type Props = { post: BlogPost; schema: object[]; relatedPosts: BlogPost[] };
@@ -20,6 +22,7 @@ export default function NeighborhoodArticle({ post, schema, relatedPosts }: Prop
 
   return (
     <main>
+      <Breadcrumbs items={[{ label: 'Blog', href: '/blog' }, { label: editorial.neighborhood, href: `/blog/${post.slug}` }]} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
       <article>
         <header className="section-space border-b border-ink/15">
@@ -29,7 +32,7 @@ export default function NeighborhoodArticle({ post, schema, relatedPosts }: Prop
               <p className="mt-6 text-sm font-medium text-accent">{post.eyebrow}</p>
               <h1 className="mt-4 text-5xl leading-[1.04] sm:text-6xl lg:text-7xl">{post.title}</h1>
               <p className="lead mt-7">{post.description}</p>
-              <p className="mt-7 text-xs tracking-wide text-ink/70">{post.readTime} · Updated <time dateTime={post.updatedDate || post.publishDate}>{dateLabel(post.updatedDate || post.publishDate)}</time> · LOKEIL Renovation</p>
+              <p className="mt-7 text-xs tracking-wide text-ink/70">{post.readTime} · Updated <time dateTime={post.modifiedDate || post.publishDate}>{dateLabel(post.modifiedDate || post.publishDate)}</time> · By <Link href="/about" className="underline underline-offset-4">{siteData.brandName}</Link></p>
               <a href="#estimate-brief" className="mt-7 inline-block border-b border-accent pb-1 text-sm font-medium text-accent">Plan a similar project →</a>
             </div>
             <figure data-reveal="fade-in">

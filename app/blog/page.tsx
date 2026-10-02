@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { buildPageMetadata } from '../seo';
 import { siteData } from '../siteData';
 import { blogPosts } from './blogData';
+import { isPublishedPost } from './relatedPosts';
 
 export const metadata: Metadata = buildPageMetadata({
   title: 'Renovation Photo Stories and Planning Guides',
@@ -14,12 +15,7 @@ export const metadata: Metadata = buildPageMetadata({
 });
 
 export default function BlogIndex() {
-  const visiblePosts = blogPosts.filter(
-    (post) =>
-      !post.slug.match(
-        /^bathroom-remodeling-(astoria|jackson-heights|long-island-city|ridgewood|sunnyside|woodside)-nyc-planning-guide$/,
-      ),
-  );
+  const visiblePosts = blogPosts.filter(isPublishedPost);
   const photoPosts = visiblePosts.filter((post) => post.processDiagram);
   const guidePosts = visiblePosts.filter((post) => !post.processDiagram);
   const featuredPost = photoPosts[0];

@@ -5,7 +5,7 @@ export const gowanusPost: BlogPost = {
   title: 'A Gowanus Bathroom With Character Starts at the Tile Line',
   description: 'Blue vertical tile, a useful niche, and the decisions that keep an older bathroom renovation from becoming a collection of expensive surprises.',
   eyebrow: 'Gowanus · Brooklyn',
-  publishDate: '2026-10-01', updatedDate: '2026-10-02', readTime: '6 min read',
+  publishDate: '2026-10-01', modifiedDate: '2026-10-02', readTime: '6 min read',
   heroImage: '/gallery/bathroom-tiles/1.jpg',
   heroAlt: 'LOKEIL project photo of blue vertical tub-surround tile, a pale recessed niche, cream tub, and shower curtain.',
   primaryKeyword: 'Gowanus bathroom renovation',
