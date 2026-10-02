@@ -141,8 +141,8 @@ export default function Contact() {
             <p className="eyebrow">Service area</p>
             <h2 className="section-title mt-4">Ridgewood first, broader NYC area after that.</h2>
             <p className="mt-6 text-base leading-8 text-olive-100/72">
-              Ridgewood, Queens is the home base, and the company also works across Brooklyn,
-              Manhattan, parts of Long Island, and Westchester County.
+              Ridgewood, Queens is the home base. LOKEIL works across the five boroughs and also
+              takes projects in parts of Long Island and Westchester County.
             </p>
             <p className="mt-5 text-base leading-8 text-olive-100/72">
               If your project is interior-focused and falls within that area, call or send an

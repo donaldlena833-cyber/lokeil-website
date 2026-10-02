@@ -7,9 +7,9 @@ import { siteData } from '../siteData';
 import { blogPosts } from './blogData';
 
 export const metadata: Metadata = buildPageMetadata({
-  title: 'Remodeling Blog',
+  title: 'Renovation Photo Stories and Planning Guides',
   description:
-    'Queens remodeling guides from LOKEIL Renovation covering bathroom remodeling, kitchen remodeling, shower tile, small bathrooms, and NYC permit questions.',
+    'See real LOKEIL renovation photos with clear notes on shower tile, floors, cabinetry, paint, and practical remodeling decisions across New York City.',
   path: '/blog',
 });
 
@@ -20,8 +20,10 @@ export default function BlogIndex() {
         /^bathroom-remodeling-(astoria|jackson-heights|long-island-city|ridgewood|sunnyside|woodside)-nyc-planning-guide$/,
       ),
   );
-  const featuredPost = visiblePosts[0];
-  const otherPosts = visiblePosts.slice(1);
+  const photoPosts = visiblePosts.filter((post) => post.processDiagram);
+  const guidePosts = visiblePosts.filter((post) => !post.processDiagram);
+  const featuredPost = photoPosts[0];
+  const otherPosts = photoPosts.slice(1);
 
   return (
     <main>
@@ -29,10 +31,10 @@ export default function BlogIndex() {
         <div className="site-shell grid gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:items-end">
           <div data-reveal="fade-up">
             <p className="eyebrow">Remodeling blog</p>
-            <h1 className="page-title mt-4">Queens remodeling guides for better project planning.</h1>
+            <h1 className="page-title mt-4">Real renovation photos and useful planning notes.</h1>
             <p className="lead mt-6">
-              Practical notes on bathroom remodeling, kitchen planning, shower tile, small spaces,
-              and NYC renovation questions for homeowners comparing the next step.
+              Each photo has its own story about the visible work, the process behind that detail,
+              and what to consider for your own bathroom or kitchen. LOKEIL serves all five boroughs.
             </p>
           </div>
 
@@ -69,6 +71,7 @@ export default function BlogIndex() {
 
       <section className="section-space">
         <div className="site-shell">
+          <h2 className="section-title mb-8">Explore the project photos</h2>
           <div className="grid gap-6 lg:grid-cols-2">
             {otherPosts.map((post, index) => (
               <Link
@@ -96,6 +99,36 @@ export default function BlogIndex() {
                   <p className="mt-5 text-sm uppercase tracking-[0.16em] text-accent/82">
                     {post.readTime}
                   </p>
+                </article>
+              </Link>
+            ))}
+          </div>
+
+          <h2 className="section-title mb-8 mt-16">Remodeling planning guides</h2>
+          <div className="grid gap-6 lg:grid-cols-2">
+            {guidePosts.map((post, index) => (
+              <Link
+                href={`/blog/${post.slug}`}
+                key={post.slug}
+                className="surface tile-hover grid overflow-hidden sm:grid-cols-[0.82fr_1fr]"
+                data-reveal="fade-up"
+                data-delay={String((index % 4) + 1)}
+              >
+                <div className="relative min-h-[16rem]">
+                  <Image
+                    src={post.heroImage}
+                    alt={post.heroAlt}
+                    fill
+                    quality={68}
+                    sizes="(max-width: 639px) 100vw, (max-width: 1023px) 42vw, 22vw"
+                    className="object-cover"
+                  />
+                  <div className="image-veil" />
+                </div>
+                <article className="p-6 sm:p-7">
+                  <p className="eyebrow">{post.eyebrow}</p>
+                  <h3 className="mt-3 text-3xl leading-tight text-olive-50">{post.title}</h3>
+                  <p className="mt-4 text-base leading-7 text-olive-100/72">{post.description}</p>
                 </article>
               </Link>
             ))}

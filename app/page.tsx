@@ -125,8 +125,8 @@ export default function Home() {
             <div className="py-6">
               <h3 className="text-2xl text-olive-50">Where do you work?</h3>
               <p className="mt-2 text-base leading-7 text-olive-100/72">
-                We are based in Ridgewood and serve Queens, Brooklyn, Manhattan, parts of
-                Long Island, and Westchester County. Include your neighborhood when you contact us.
+                We are based in Ridgewood and serve all five New York City boroughs, plus parts of
+                Long Island and Westchester County. Include your neighborhood when you contact us.
               </p>
             </div>
             <div className="py-6">

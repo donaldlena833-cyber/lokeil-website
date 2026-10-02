@@ -6,9 +6,9 @@ import { featuredImages, photoCount } from '../siteData';
 import GalleryClient from './GalleryClient';
 
 export const metadata: Metadata = buildPageMetadata({
-  title: 'Remodeling Gallery in Queens',
+  title: 'Renovation Project Photos and Stories',
   description:
-    'Browse LOKEIL Renovation project photos for bathroom remodeling, tile installation, flooring, cabinets, paint preparation, and interior finish work in Queens and NYC.',
+    'Browse distinct LOKEIL project photos and read the story behind each visible tile, floor, shower, cabinet, and paint detail across New York City.',
   path: '/gallery',
 });
 
@@ -23,9 +23,8 @@ export default function GalleryPage() {
               Real bathrooms, kitchens, tile details, and finish work from recent projects.
             </h1>
             <p className="lead mt-6">
-              Browse the photo archive by room and finish type. The gallery is organized so Queens
-              homeowners can compare tile layouts, shower surrounds, floor transitions, cabinetry,
-              paint preparation, and finish details before starting an estimate.
+              Browse distinct project photos by room and finish type. Open any image to read about
+              the visible detail, the typical process, and the choices that matter in your own home.
             </p>
             <p className="mt-5 max-w-2xl text-base leading-7 text-olive-100/72">
               Use the photos to narrow what matters for your own project: a niche location, tile
@@ -68,7 +67,7 @@ export default function GalleryPage() {
                 </div>
                 <div>
                   <p className="text-sm uppercase tracking-[0.18em] text-accent/82">Location</p>
-                  <p className="mt-3 text-2xl text-olive-50">Queens + NYC</p>
+                  <p className="mt-3 text-2xl text-olive-50">Five boroughs</p>
                 </div>
               </div>
             </div>

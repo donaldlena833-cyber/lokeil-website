@@ -46,6 +46,8 @@ export const structuredData = [
       { '@type': 'AdministrativeArea', name: 'Queens, NY' },
       { '@type': 'AdministrativeArea', name: 'Brooklyn, NY' },
       { '@type': 'AdministrativeArea', name: 'Manhattan, NY' },
+      { '@type': 'AdministrativeArea', name: 'Bronx, NY' },
+      { '@type': 'AdministrativeArea', name: 'Staten Island, NY' },
       { '@type': 'AdministrativeArea', name: 'Long Island, NY' },
       { '@type': 'AdministrativeArea', name: 'Westchester County, NY' },
     ],
