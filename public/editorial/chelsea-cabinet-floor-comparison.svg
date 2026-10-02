@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1536" height="1024" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+  <title id="title">The same cabinet color with three floor directions</title>
+  <desc id="desc">An original triptych holds the blue cabinet elevation constant above an even pale floor, a restrained wood pattern, and a more contrasting joint pattern. It compares visual emphasis without identifying products or acoustic performance.</desc>
+  <defs>
+    <g id="cabinet" stroke="#45614A" stroke-width="3" stroke-linejoin="round"><path d="M0 0H320V225H0Z" fill="#79939E"/><path d="M24 24H144V194H24ZM176 24H296V194H176Z" fill="none"/><path d="M0 225H320V248H0Z" fill="#344D39"/><path d="M0 0H320V-19H0Z" fill="#FAFAF3"/><path d="M123 69V107M197 69V107" stroke="#D4C7A7" stroke-width="6" stroke-linecap="round"/></g>
+    <pattern id="wood" width="80" height="95" patternUnits="userSpaceOnUse"><path d="M0 0H80V95H0Z" fill="#D4C7A7"/><path d="M0 0V95M0 95H80" stroke="#BBAF93" stroke-width="2"/><path d="M24 0Q34 27 25 52T27 95M52 0Q43 32 55 64T48 95" fill="none" stroke="#C6B998" stroke-width="2"/></pattern>
+    <pattern id="joints" width="107" height="100" patternUnits="userSpaceOnUse"><path d="M0 0H107V100H0Z" fill="#EAE5D7"/><path d="M0 0H107V100H0Z" fill="none" stroke="#7D8175" stroke-width="7"/></pattern>
+  </defs>
+  <g font-family="Arial, sans-serif" fill="#293B30" text-anchor="middle"><text x="600" y="98" font-size="44">One cabinet finish, three floor directions</text></g>
+  <g transform="translate(50 260)"><use href="#cabinet"/><path d="M0 248H320V442H0Z" fill="#EAE5D7" stroke="#45614A" stroke-width="3"/></g>
+  <g transform="translate(440 260)"><use href="#cabinet"/><path d="M0 248H320V442H0Z" fill="url(#wood)" stroke="#45614A" stroke-width="3"/></g>
+  <g transform="translate(830 260)"><use href="#cabinet"/><path d="M0 248H320V442H0Z" fill="url(#joints)" stroke="#45614A" stroke-width="3"/></g>
+  <g font-family="Arial, sans-serif" fill="#293B30" font-size="42" text-anchor="middle"><text x="210" y="195">Even field</text><text x="600" y="195">Gentle grain</text><text x="990" y="195">Stronger joints</text></g>
+  <g fill="#45614A"><circle cx="210" cy="752" r="26"/><circle cx="600" cy="752" r="26"/><circle cx="990" cy="752" r="26"/></g>
+  <g font-family="Arial, sans-serif" fill="#FAFAF3" font-size="29" text-anchor="middle"><text x="210" y="762">1</text><text x="600" y="762">2</text><text x="990" y="762">3</text></g>
+</svg>

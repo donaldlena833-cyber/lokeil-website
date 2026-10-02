@@ -14,4 +14,7 @@ export const neighborhoodArticleSlugs = [
   'the-unfinished-wall-edge-beside-a-countertop',
   'a-dark-bathroom-vanity-against-a-pale-wall',
   'large-white-shower-tile-before-the-fixtures-go-in',
+  'black-waterproofing-coating-before-shower-tile',
+  'blue-kitchen-cabinets-during-a-backsplash-installation',
+  'cream-kitchen-cabinets-against-a-blue-backsplash',
 ] as const;
