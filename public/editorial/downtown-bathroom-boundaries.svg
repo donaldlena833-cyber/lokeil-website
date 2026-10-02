@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1536" height="1024" viewBox="0 0 1200 800" role="img" aria-labelledby="title description">
+  <title id="title">Bathroom proposal boundaries</title>
+  <desc id="description">A shower area is shown beside its fixture connections, an adjoining wall, and the ceiling. Dashed outlines distinguish the areas to include in a renovation scope.</desc>
+  <rect x="95" y="150" width="610" height="505" fill="#E3E8D8"/>
+  <g stroke="#9AA58D" stroke-width="3"><path d="M95 245H705M95 340H705M95 435H705M95 530H705M200 150V655M350 150V655M500 150V655M650 150V655"/></g>
+  <g fill="none" stroke="#293B30" stroke-width="6"><path d="M80 660V135H1090V660H80"/><path d="M80 95H1090M705 135V660"/><path d="M385 230H470V265"/><path d="M442 265h58M460 280l-8 24M480 280l8 24" stroke-width="4"/><circle cx="460" cy="420" r="23"/><path d="M460 420h25M120 650h565M610 632h45"/></g>
+  <path d="M110 165H685V630H110z" fill="none" stroke="#45614A" stroke-width="7" stroke-dasharray="16 11"/>
+  <g fill="#FAFAF3" stroke="#7A8874" stroke-width="4"><rect x="775" y="460" width="240" height="160"/><path d="M770 450h250v20H770z" fill="#D1D9C4"/><rect x="805" y="250" width="170" height="155"/></g>
+  <path d="M750 180H1055V430M725 110H1080M745 650H1070" fill="none" stroke="#7A8874" stroke-width="5" stroke-dasharray="15 11"/>
+  <path d="M120 715H1090" fill="none" stroke="#45614A" stroke-width="4"/>
+  <g fill="#45614A"><circle cx="125" cy="195" r="31"/><circle cx="1025" cy="210" r="31"/><circle cx="600" cy="715" r="31"/></g>
+  <g fill="#FAFAF3" font-family="Arial,sans-serif" font-size="35" text-anchor="middle"><text x="125" y="207">1</text><text x="1025" y="222">2</text><text x="600" y="727">3</text></g>
+</svg>

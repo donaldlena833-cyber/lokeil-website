@@ -356,13 +356,17 @@ const aliases: Record<string, string> = {
 
 const slug = (title: string) => title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
 
-export const photoStoryNotes = notes.map((note) => ({
-  ...note,
+export const photoStoryNotes = notes.map((note) => {
   // Existing filenames and links keep the original title based slug.
-  slug: slug(note.title),
-  title: photoArticleBodies[note.image]?.title || note.title,
-  alt: photoArticleAltText[note.image] || note.visible.split('.')[0] + '.',
-}));
+  const originalSlug = slug(note.title);
+  const rewrite = neighborhoodOverrides.find((post) => post.slug === originalSlug);
+  return {
+    ...note,
+    slug: originalSlug,
+    title: rewrite?.title || photoArticleBodies[note.image]?.title || note.title,
+    alt: rewrite?.heroAlt || photoArticleAltText[note.image] || note.visible.split('.')[0] + '.',
+  };
+});
 
 export function photoStoryForImage(image: string) {
   return photoStoryNotes.find((note) => note.image === (aliases[image] || image));

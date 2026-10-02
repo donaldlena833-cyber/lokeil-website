@@ -17,6 +17,7 @@ export default function NeighborhoodArticle({ post, schema, relatedPosts }: Prop
       <h3 className="mt-3 text-3xl sm:text-4xl">{post.diagramHeading}</h3>
       {editorial.illustrationAspect === 'portrait' ? <div className="relative mx-auto mt-5 aspect-[3/4] w-full max-w-md overflow-hidden"><Image src={post.processDiagram.src} alt={post.processDiagram.alt} fill sizes="(max-width: 639px) 100vw, 450px" className="object-cover" /></div> : <Image src={post.processDiagram.src} alt={post.processDiagram.alt} width={1536} height={1024} sizes="(max-width: 1023px) 100vw, 760px" className="mt-5 h-auto w-full" />}
       <figcaption className="mt-3 text-xs leading-6 text-ink/70">{post.processDiagram.caption}</figcaption>
+      {post.processSteps?.length ? <ol className="mt-6 list-decimal space-y-3 pl-5 text-sm leading-7 text-ink/85">{post.processSteps.map((step) => <li key={step}>{step}</li>)}</ol> : null}
     </figure>
   ) : null;
 
@@ -53,6 +54,14 @@ export default function NeighborhoodArticle({ post, schema, relatedPosts }: Prop
                   <h2 className="text-3xl leading-tight sm:text-4xl">{section.heading}</h2>
                   <div className="mt-5 space-y-5">{section.body.map((paragraph) => <p key={paragraph} className="text-base leading-8 text-ink/85 sm:text-lg sm:leading-9">{paragraph}</p>)}</div>
                   {section.list ? <ul className="mt-6 list-disc space-y-3 pl-5 text-base leading-8 text-ink/85">{section.list.map((item) => <li key={item}>{item}</li>)}</ul> : null}
+                  {section.comparison ? (
+                    <table className="guide-table mt-7 w-full table-fixed text-left text-sm leading-6 sm:text-base">
+                      <caption className="mb-4 text-left font-semibold text-ink">{section.comparison.caption}</caption>
+                      <thead><tr>{section.comparison.headings.map((heading) => <th key={heading} scope="col" className="border-b border-ink/20 px-3 py-4 align-top font-semibold first:w-[36%]">{heading}</th>)}</tr></thead>
+                      <tbody>{section.comparison.rows.map(([label, detail]) => <tr key={label}><th scope="row" className="border-b border-ink/10 px-3 py-4 align-top font-semibold">{label}</th><td className="border-b border-ink/10 px-3 py-4 align-top text-ink/80">{detail}</td></tr>)}</tbody>
+                    </table>
+                  ) : null}
+                  {section.links?.length ? <ul className="mt-5 grid gap-3 text-sm leading-6">{section.links.map((link) => <li key={link.href}><Link href={link.href} className="text-accent underline underline-offset-4">{link.label}</Link></li>)}</ul> : null}
                   {section.references ? <div className="mt-5 space-y-2">{section.references.map((source) => <a key={source.href} href={source.href} target="_blank" rel="noreferrer" className="block text-sm leading-6 text-accent underline decoration-accent/40 underline-offset-4">{source.label} ↗</a>)}</div> : null}
                 </section>
                 {post.diagramAfter === index ? figure : null}

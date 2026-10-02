@@ -1,6 +1,9 @@
 import { gowanusPost } from './gowanus';
 import { financialDistrictPost } from './financialDistrict';
 import { midtownWestPost } from './midtownWest';
+import { longIslandCityCabinetPost } from './longIslandCity';
+import { downtownBrooklynBathroomPost } from './downtownBrooklyn';
+import { mottHavenPaintingPost } from './mottHaven';
 
 // Each entry is written and reviewed individually. Existing article URLs stay intact.
-export const neighborhoodOverrides = [gowanusPost, financialDistrictPost, midtownWestPost];
+export const neighborhoodOverrides = [gowanusPost, financialDistrictPost, midtownWestPost, longIslandCityCabinetPost, downtownBrooklynBathroomPost, mottHavenPaintingPost];

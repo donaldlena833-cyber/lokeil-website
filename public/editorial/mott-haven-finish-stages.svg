@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1536" height="1024" viewBox="0 0 1200 800" role="img" aria-labelledby="title description">
+  <title id="title">Repair, preparation, and wall finish</title>
+  <desc id="description">Three connected wall studies show an identified repair boundary, a preparation area, and a uniform finish beside retained trim. This is a planning study, not a lead paint remediation procedure.</desc>
+  <path d="M80 180H1120V615H80z" fill="#F1F3E8"/>
+  <path d="M80 615H1120V645H80z" fill="#D1D9C4" stroke="#65775E" stroke-width="4"/>
+  <path d="M160 265 280 235 345 320 322 435 190 457 128 375z" fill="#D1D9C4" stroke="#65775E" stroke-width="4"/>
+  <path d="M151 255 290 220 361 321 340 449 184 480 108 374z" fill="none" stroke="#45614A" stroke-width="4" stroke-dasharray="13 10"/>
+  <path d="m225 265 20 55-38 47 33 48" fill="none" stroke="#7A8874" stroke-width="4"/>
+  <path d="M425 235H755V555H425z" fill="#FAFAF3" stroke="#9AA58D" stroke-width="3"/>
+  <path d="M480 265H690M480 330H690M480 395H690M480 460H690M480 520H650" fill="none" stroke="#E3E8D8" stroke-width="32" stroke-linecap="round"/>
+  <path d="M800 180H1120V615H800z" fill="#D1D9C4"/>
+  <path d="M1090 180V615M800 585H1120" fill="none" stroke="#FAFAF3" stroke-width="12"/>
+  <g stroke="#293B30" stroke-width="5" fill="none"><path d="M80 180H1120M80 180V615M1120 180V615M400 180V615M775 180V615"/><path d="M550 560V580H650V540"/><rect x="650" y="490" width="30" height="75" rx="7" fill="#45614A"/></g>
+  <g fill="#45614A"><circle cx="235" cy="685" r="31"/><circle cx="595" cy="685" r="31"/><circle cx="965" cy="685" r="31"/></g>
+  <g fill="#FAFAF3" font-family="Arial,sans-serif" font-size="35" text-anchor="middle"><text x="235" y="697">1</text><text x="595" y="697">2</text><text x="965" y="697">3</text></g>
+</svg>
