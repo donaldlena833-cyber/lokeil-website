@@ -25,7 +25,7 @@ const routes = [
     images: [post.heroImage],
   })),
   { path: '/gallery', priority: 0.8, changeFrequency: 'weekly' as const, lastModified: '2026-10-02', images: galleryItems.map((item) => item.src) },
-  { path: '/contact', priority: 0.8, changeFrequency: 'monthly' as const, lastModified: '2026-09-28' },
+  { path: '/contact', priority: 0.8, changeFrequency: 'monthly' as const, lastModified: '2026-10-02' },
   { path: '/privacy', priority: 0.3, changeFrequency: 'yearly' as const, lastModified: '2026-10-02' },
 ];
 
