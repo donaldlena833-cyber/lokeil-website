@@ -12,7 +12,8 @@ function topicWords(post: BlogPost) {
 export function relatedBlogPosts(post: BlogPost, posts: BlogPost[], limit = 3) {
   const servicePaths = new Set(post.relatedServices?.map((service) => service.href).filter((path) => path.endsWith('-queens')));
   const words = new Set(topicWords(post));
-  return posts.filter((item) => item.slug !== post.slug && isPublishedPost(item))
+  const candidates = posts.filter((item) => item.slug !== post.slug && isPublishedPost(item));
+  const ranked = candidates
     .map((item, index) => {
       const matchingServices = item.relatedServices?.filter((service) => servicePaths.has(service.href)).length || 0;
       const matchingWords = topicWords(item).filter((word) => words.has(word)).length;
@@ -20,5 +21,12 @@ export function relatedBlogPosts(post: BlogPost, posts: BlogPost[], limit = 3) {
       return { item, score: matchingServices * 3 + matchingWords * 2 + sameFormat, index };
     })
     .sort((a, b) => b.score - a.score || a.index - b.index)
-    .slice(0, limit).map(({ item }) => item);
+    .map(({ item }) => item);
+  const selected = [...new Set(post.preferredRelatedSlugs || [])]
+    .flatMap((slug) => {
+      const item = candidates.find((candidate) => candidate.slug === slug);
+      return item ? [item] : [];
+    });
+  const selectedSlugs = new Set(selected.map((item) => item.slug));
+  return [...selected, ...ranked.filter((item) => !selectedSlugs.has(item.slug))].slice(0, limit);
 }

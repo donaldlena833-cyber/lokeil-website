@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+<title id="title">Let the wall assessment guide the storage choice</title><desc id="desc">A storage preference is reviewed with existing wall conditions before comparing a suitable recess or a surface storage option.</desc>
+<g stroke="#617261" stroke-width="4" fill="#fafaf3"><rect x="75" y="100" width="400" height="370"/><rect x="120" y="175" width="115" height="200" fill="#e3e8d8"/><path d="M135 285H220"/><path d="M325 170V402M295 240H350" stroke="#9c926b" stroke-width="7"/></g>
+<g font-family="Arial,sans-serif" fill="#293b30"><text x="275" y="70" text-anchor="middle" font-size="43">Existing wall questions</text><text x="177" y="429" text-anchor="middle" font-size="38">Storage</text><text x="177" y="465" text-anchor="middle" font-size="38">idea</text><text x="350" y="448" text-anchor="middle" font-size="35">Services</text></g>
+<g stroke="#617261" stroke-width="4" fill="none"><path d="M475 275H565M543 253L565 275L543 297"/><path d="M820 365V425H640V475M820 425H1000V475"/></g>
+<rect x="580" y="165" width="490" height="200" rx="12" fill="#e3e8d8" stroke="#617261" stroke-width="4"/>
+<g font-family="Arial,sans-serif" fill="#293b30" text-anchor="middle"><text x="825" y="235" font-size="49">Wall assessment</text><text x="825" y="288" font-size="34">Construction and depth</text><text x="825" y="333" font-size="34">Services</text></g>
+<g stroke="#617261" stroke-width="4" fill="#fafaf3"><rect x="505" y="495" width="275" height="185"/><rect x="855" y="495" width="275" height="185"/><rect x="594" y="515" width="92" height="55" fill="#dce5df"/><path d="M920 515V570H1060M920 540H1060" fill="none"/></g>
+<g font-family="Arial,sans-serif" fill="#293b30" text-anchor="middle"><text x="642" y="618" font-size="37">Suitable</text><text x="642" y="655" font-size="37">recess</text><text x="992" y="618" font-size="37">Surface</text><text x="992" y="655" font-size="37">storage</text><text x="800" y="740" font-size="40">Compare assessed options</text></g>
+</svg>

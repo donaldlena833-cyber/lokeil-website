@@ -55,6 +55,7 @@ export type BlogPost = {
     label: string;
     href: string;
   }>;
+  preferredRelatedSlugs?: string[];
   processDiagram?: {
     src: string;
     alt: string;

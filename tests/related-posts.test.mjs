@@ -34,3 +34,13 @@ test('a kitchen subject outranks a vanity that shares neighborhood words', () =>
     editorial: { neighborhood: 'Long Island City, Queens' } };
   assert.equal(relatedBlogPosts(current, [current, vanity, kitchen])[0].slug, 'kitchen-fit');
 });
+
+test('editorial next reads stay ordered and valid while automatic reading fills the remainder', () => {
+  const current = { ...post('storage', 'shower niche wall assessment', '/bathroom-remodeling-queens', '/one.svg'),
+    preferredRelatedSlugs: ['missing', 'storage', 'bathroom-remodeling-astoria-nyc-planning-guide', 'niche-detail', 'niche-detail'] };
+  const broad = post('room-use', 'shower niche wall assessment', '/bathroom-remodeling-queens', '/two.svg');
+  const detail = post('niche-detail', 'recessed shelf', '/tile-installation-queens', '/three.svg');
+  const retired = post('bathroom-remodeling-astoria-nyc-planning-guide', 'shower niche', '/bathroom-remodeling-queens', '/four.svg');
+  assert.deepEqual(relatedBlogPosts(current, [current, broad, detail, retired]).map(item => item.slug), ['niche-detail', 'room-use']);
+  assert.deepEqual(relatedBlogPosts(current, [current, broad, detail, retired], 1).map(item => item.slug), ['niche-detail']);
+});
