@@ -7,7 +7,7 @@ import { buildPageMetadata } from '../../seo';
 import Breadcrumbs from '../../components/Breadcrumbs';
 import { siteData } from '../../siteData';
 import { blogPosts, getBlogPost } from '../blogData';
-import { relatedBlogPosts } from '../relatedPosts';
+import { isPublishedPost, relatedBlogPosts } from '../relatedPosts';
 import NeighborhoodArticle from '../NeighborhoodArticle';
 
 const formatPublishDate = (date: string) =>
@@ -32,7 +32,7 @@ const blogSeoTitles: Record<string, string> = {
   'bathroom-flooring-installation-queens-guide':
     'Bathroom Flooring Installation Queens',
   'bathroom-remodeling-cost-queens-ny':
-    'Bathroom Remodeling Cost Queens, NY',
+    'Bathroom Remodeling Cost in Queens: Compare Quotes',
   'bathroom-tile-installation-queens-planning-guide':
     'Bathroom Tile Installation Queens',
   'bathroom-vanity-replacement-queens-planning-guide':
@@ -42,9 +42,9 @@ const blogSeoTitles: Record<string, string> = {
   'kitchen-remodeling-queens-planning-guide':
     'Kitchen Remodeling Queens Planning Guide',
   'nyc-kitchen-bathroom-remodel-permits-queens':
-    'Queens Kitchen & Bathroom Remodel Permits',
+    'Kitchen and Bathroom Remodel Permits in Queens',
   'shower-tile-installation-queens-guide':
-    'Shower Tile Installation Queens',
+    'Shower Tile in Queens: Layers and Waterproofing',
   'small-bathroom-remodel-ideas-queens-apartments':
     'Small Bathroom Remodel Ideas Queens',
   'walk-in-shower-remodel-queens-planning-guide':
@@ -52,14 +52,14 @@ const blogSeoTitles: Record<string, string> = {
 };
 
 export function generateStaticParams() {
-  return blogPosts.map((post) => ({ slug: post.slug }));
+  return blogPosts.filter(isPublishedPost).map((post) => ({ slug: post.slug }));
 }
 
 export async function generateMetadata({ params }: BlogPageProps): Promise<Metadata> {
   const { slug } = await params;
   const post = getBlogPost(slug);
 
-  if (!post) {
+  if (!post || !isPublishedPost(post)) {
     return {};
   }
 
@@ -91,7 +91,7 @@ export default async function BlogPostPage({ params }: BlogPageProps) {
   const { slug } = await params;
   const post = getBlogPost(slug);
 
-  if (!post) {
+  if (!post || !isPublishedPost(post)) {
     notFound();
   }
 
@@ -126,6 +126,7 @@ export default async function BlogPostPage({ params }: BlogPageProps) {
     },
     mainEntityOfPage: `${siteData.siteUrl}/blog/${post.slug}`,
     keywords: post.keywords,
+    ...(post.sources?.length ? { citation: post.sources.map((source) => source.href) } : {}),
   };
 
   const faqSchema = post.faqs.length ? {
@@ -187,7 +188,6 @@ export default async function BlogPostPage({ params }: BlogPageProps) {
               <h1 className="page-title mt-4">{post.title}</h1>
               <p className="lead mt-6">{post.description}</p>
               <div className="mt-7 flex flex-wrap gap-3">
-                {!post.processSteps ? <span className="chip">{post.primaryKeyword}</span> : null}
                 <span className="chip">{post.readTime}</span>
                 <time className="chip" dateTime={post.publishDate}>
                   {formatPublishDate(post.publishDate)}
@@ -230,7 +230,7 @@ export default async function BlogPostPage({ params }: BlogPageProps) {
               <div className="mt-10 space-y-10">
                 {post.sections.map((section, index) => (
                   <div key={section.heading}>
-                    <section>
+                    <section id={`topic-${index + 1}`} className="scroll-mt-24">
                       <h2>{section.heading}</h2>
                       <div className="mt-5 space-y-5">
                         {section.body.map((paragraph) => (
@@ -246,6 +246,48 @@ export default async function BlogPostPage({ params }: BlogPageProps) {
                               {item}
                             </li>
                           ))}
+                        </ul>
+                      ) : null}
+                      {section.comparison ? (
+                        <table className="guide-table mt-7 w-full table-fixed text-left text-sm leading-6 sm:text-base">
+                          <caption className="mb-4 text-left font-semibold text-ink">{section.comparison.caption}</caption>
+                          <thead>
+                            <tr>
+                              {section.comparison.headings.map((heading) => <th key={heading} scope="col" className="border-b border-ink/20 px-3 py-4 align-top font-semibold first:w-[36%]">{heading}</th>)}
+                            </tr>
+                          </thead>
+                          <tbody>
+                            {section.comparison.rows.map(([label, detail]) => (
+                              <tr key={label}>
+                                <th scope="row" className="border-b border-ink/10 px-3 py-4 align-top font-semibold">{label}</th>
+                                <td className="border-b border-ink/10 px-3 py-4 align-top text-ink/80">{detail}</td>
+                              </tr>
+                            ))}
+                          </tbody>
+                        </table>
+                      ) : null}
+                      {section.visual ? (
+                        <figure className="mt-7">
+                          <Image src={section.visual.src} alt={section.visual.alt}
+                            width={section.visual.width} height={section.visual.height}
+                            sizes="(max-width: 1023px) 100vw, 720px"
+                            className="h-auto w-full rounded-xl" />
+                          {section.visual.legend ? (
+                            <ol className="mt-6 grid gap-4">
+                              {section.visual.legend.map((item, number) => (
+                                <li key={item.label} className="flex items-start gap-3 text-sm leading-6 sm:text-base">
+                                  <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-sage-soft font-semibold text-ink" aria-hidden="true">{number + 1}</span>
+                                  <span><strong>{item.label}.</strong> {item.detail}</span>
+                                </li>
+                              ))}
+                            </ol>
+                          ) : null}
+                          <figcaption className="mt-4 text-sm leading-6">{section.visual.caption}</figcaption>
+                        </figure>
+                      ) : null}
+                      {section.links?.length ? (
+                        <ul className="mt-5 grid gap-3 text-sm leading-6">
+                          {section.links.map((link) => <li key={link.href}><Link href={link.href}>{link.label}</Link></li>)}
                         </ul>
                       ) : null}
                     </section>
@@ -289,19 +331,15 @@ export default async function BlogPostPage({ params }: BlogPageProps) {
               ) : null}
             </div>
 
-            <aside className="surface sticky top-32 p-6">
+            <aside className="surface p-6 lg:sticky lg:top-24 lg:max-h-[calc(100svh-7rem)] lg:overflow-y-auto" aria-label="Article planning links" tabIndex={0}>
               {post.processSteps ? <>
                 <p className="eyebrow">In this photo</p>
                 <p className="mt-4 text-2xl leading-snug text-ink">{post.diagramHeading}</p>
               </> : <>
-                <p className="eyebrow">Planning topics</p>
-                <div className="mt-4 flex flex-wrap gap-2">
-                  {post.keywords.map((keyword) => (
-                    <span key={keyword} className="chip normal-case tracking-[0.04em]">
-                      {keyword}
-                    </span>
-                  ))}
-                </div>
+                <p className="eyebrow">In this guide</p>
+                <nav aria-label="Article sections" className="mt-4 grid gap-3">
+                  {post.sections.map((section, index) => <a key={section.heading} href={`#topic-${index + 1}`} className="text-sm leading-6 text-accent underline underline-offset-4">{section.heading}</a>)}
+                </nav>
               </>}
 
               <div className="mt-8 border-t border-ink/10 pt-6">

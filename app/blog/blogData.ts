@@ -7,12 +7,27 @@ import { ridgewoodBathroomRemodelingPost } from './ridgewoodBathroomRemodelingPo
 import { sunnysideBathroomRemodelingPost } from './sunnysideBathroomRemodelingPost';
 import { woodsideBathroomRemodelingPost } from './woodsideBathroomRemodelingPost';
 import { photoStoryPosts } from './photoStories';
+import { bathroomCostGuide, remodelPermitGuide, showerTileGuide } from './planningGuides';
 
 export type BlogSection = {
   heading: string;
   body: string[];
   list?: string[];
   references?: Array<{ label: string; href: string }>;
+  links?: Array<{ label: string; href: string }>;
+  comparison?: {
+    caption: string;
+    headings: [string, string];
+    rows: Array<[string, string]>;
+  };
+  visual?: {
+    src: string;
+    alt: string;
+    width: number;
+    height: number;
+    caption: string;
+    legend?: Array<{ label: string; detail: string }>;
+  };
 };
 
 export type BlogPost = {
@@ -189,7 +204,7 @@ export const blogPosts: BlogPost[] = [
     readTime: '7 min read',
     heroImage: '/gallery/bathroom-tiles/8.jpg',
     heroAlt:
-      'Large-format bathroom wall tile with a decorative shower niche band during a Queens bathroom remodel.',
+      'Large shower wall tiles, spacing clips, a decorative niche band, and mosaic floor during installation.',
     primaryKeyword: 'bathroom tile installation Queens',
     keywords: [
       'bathroom tile installation Queens',
@@ -409,7 +424,7 @@ export const blogPosts: BlogPost[] = [
     publishDate: '2026-05-14',
     readTime: '7 min read',
     heroImage: '/gallery/kitchen-cabinets/3.jpg',
-    heroAlt: 'Queens apartment kitchen cabinet and backsplash renovation with new flooring.',
+    heroAlt: 'Gray kitchen cabinets with a patterned backsplash and wood look floor.',
     primaryKeyword: 'apartment renovation Queens',
     keywords: [
       'apartment renovation Queens',
@@ -704,98 +719,7 @@ export const blogPosts: BlogPost[] = [
       { label: 'Flooring Installation Queens', href: '/flooring-installation-queens' },
     ],
   },
-  {
-    slug: 'bathroom-remodeling-cost-queens-ny',
-    title: 'Bathroom Remodeling Cost in Queens, NY: What Changes the Price',
-    description:
-      'A practical Queens bathroom remodeling cost guide covering scope, tile, plumbing, layout, permits, and estimate questions for NYC homeowners.',
-    eyebrow: 'Bathroom remodeling Queens',
-    publishDate: '2026-05-10',
-    readTime: '6 min read',
-    heroImage: '/gallery/bathroom-shower/1.jpg',
-    heroAlt: 'Marble-look bathroom shower tile remodel by LOKEIL Renovation.',
-    primaryKeyword: 'bathroom remodeling cost Queens NY',
-    keywords: [
-      'bathroom remodeling cost Queens NY',
-      'bathroom renovation Queens',
-      'bathroom remodel contractor Ridgewood NY',
-      'Queens bathroom tile installation',
-      'NYC bathroom remodel estimate',
-    ],
-    intro: [
-      'Most Queens homeowners search bathroom remodeling cost because they are trying to separate a simple refresh from a real renovation. The price changes quickly when the project moves from paint, fixtures, and surface updates into tile demolition, waterproofing, plumbing, electrical, or layout work.',
-      `${siteData.brandName} works from Ridgewood, Queens and focuses on bathrooms, tile, flooring, plaster, painting, cabinetry, and finish details. This guide explains what usually moves the estimate so the first conversation is clearer.`,
-    ],
-    sections: [
-      {
-        heading: 'Start with the real scope',
-        body: [
-          'A bathroom refresh may keep the same layout and focus on surfaces: paint, plaster repair, vanity replacement, mirror, hardware, lighting trim, or new cabinet storage. A remodel usually goes deeper. It may include tile removal, shower wall rebuilds, floor leveling, waterproofing, niche details, fixture changes, or a new tub-to-shower layout.',
-          'When comparing quotes, make sure each contractor is pricing the same scope. One estimate may include demolition, substrate prep, waterproofing, tile setting, grout, trim, and finish work. Another may only describe the visible finish.',
-        ],
-        list: [
-          'Low-disruption refresh: paint, plaster, vanity, hardware, and direct fixture replacement.',
-          'Tile-led remodel: shower walls, bathroom floor, waterproofing, niche, curb, bench, or tub surround.',
-          'Layout renovation: plumbing or electrical moves, wall changes, or a changed bathroom footprint.',
-        ],
-      },
-      {
-        heading: 'Tile and waterproofing drive a lot of the budget',
-        body: [
-          'Tile is one of the biggest swing factors in a Queens bathroom renovation. Large-format tile, patterned layouts, herringbone, niches, benches, miters, and small mosaic floors take more layout time than a basic straight-set installation. The prep behind the tile matters just as much as the tile face.',
-          'For shower areas, the buyer should ask how the walls, seams, corners, curb, and niche will be waterproofed before tile goes on. Clean grout lines are visible, but waterproofing is what protects the bathroom after the project is complete.',
-        ],
-      },
-      {
-        heading: 'Plumbing and electrical changes raise complexity',
-        body: [
-          'Keeping the toilet, tub, shower, and vanity in the same location usually keeps the job simpler. Moving supply lines, drains, outlets, switches, ventilation, or lighting can require additional licensed trade coordination and may affect permitting.',
-          'A remodel can still be worth it when the old layout does not work, but homeowners should know that layout changes are usually planning decisions, not just style decisions.',
-        ],
-      },
-      {
-        heading: 'Questions to ask before requesting an estimate',
-        body: [
-          'A better estimate starts with better information. Before calling, take photos of the bathroom from all corners, note what you want to keep, and decide whether the layout should stay the same. If you already have tile, vanity, fixtures, or inspiration photos, mention them early.',
-        ],
-        list: [
-          'Is this a refresh, tile remodel, or layout change?',
-          'Are the tub, shower, toilet, and vanity staying in the same place?',
-          'Do you want a niche, bench, glass panel, new floor tile, or new lighting?',
-          'Are there known leaks, soft floors, cracked tile, or ventilation problems?',
-        ],
-      },
-    ],
-    faqs: [
-      {
-        question: 'What is the fastest way to get a bathroom remodel estimate in Queens?',
-        answer:
-          'Send photos, the property location, the current bathroom size, the desired scope, and whether plumbing fixtures are moving. That helps LOKEIL separate surface work from deeper renovation work.',
-      },
-      {
-        question: 'Is tile installation usually part of a bathroom remodel?',
-        answer:
-          'Yes, tile is often central to a bathroom remodel, especially for shower walls, tub surrounds, bathroom floors, niches, and finish transitions.',
-      },
-      {
-        question: 'Does every Queens bathroom remodel need a permit?',
-        answer:
-          'No. Some minor work may not need a work permit, but many NYC kitchen and bathroom renovations do. A licensed professional or DOB guidance should be used when the scope includes plumbing, electrical, walls, or layout changes.',
-      },
-    ],
-    sources: [
-      {
-        label: 'NYC Department of Buildings kitchen and bathroom renovation guidance',
-        href: 'https://www.nyc.gov/site/buildings/property-or-business-owner/renovating-kitchens-bathrooms.page',
-      },
-    ],
-    relatedServices: [
-      { label: 'Bathroom Remodeling Queens', href: '/bathroom-remodeling-queens' },
-      { label: 'Tile Installation Queens', href: '/tile-installation-queens' },
-      { label: 'Plaster and Drywall Finishing Queens', href: '/plaster-drywall-finishing-queens' },
-      { label: 'Interior Painting Queens', href: '/interior-painting-queens' },
-    ],
-  },
+  bathroomCostGuide,
   {
     slug: 'small-bathroom-remodel-ideas-queens-apartments',
     title: 'Small Bathroom Remodel Ideas for Queens Apartments and Homes',
@@ -957,175 +881,8 @@ export const blogPosts: BlogPost[] = [
       { label: 'Interior Painting Queens', href: '/interior-painting-queens' },
     ],
   },
-  {
-    slug: 'shower-tile-installation-queens-guide',
-    title: 'Shower Tile Installation in Queens: What Homeowners Should Check',
-    description:
-      'A homeowner guide to shower tile installation in Queens, including waterproofing, niches, benches, layout lines, grout, and finish details.',
-    eyebrow: 'Shower tile installation',
-    publishDate: '2026-05-10',
-    readTime: '5 min read',
-    heroImage: '/gallery/bathroom-shower/9.jpg',
-    heroAlt: 'Finished shower enclosure with marble-look wall tile and hex floor.',
-    primaryKeyword: 'shower tile installation Queens',
-    keywords: [
-      'shower tile installation Queens',
-      'bathroom tile contractor Queens',
-      'tile shower remodel Queens NY',
-      'shower niche installation Queens',
-      'bathroom remodeling Ridgewood Queens',
-    ],
-    intro: [
-      'Shower tile is one of the first things people notice in a bathroom remodel, but the most important work is behind the tile. A good shower installation depends on layout planning, waterproofing, substrate prep, drainage, grout choices, and careful finish transitions.',
-      'For Queens homeowners comparing bathroom remodel contractors, the right questions can prevent confusion before the walls are closed and the tile is set.',
-    ],
-    sections: [
-      {
-        heading: 'Ask about the wall system before the tile',
-        body: [
-          'Tile and grout are not the waterproofing plan by themselves. The shower needs a suitable wall system, sealed seams, protected corners, and careful treatment around niches, benches, curbs, and penetrations. Homeowners do not need to know every product name, but they should ask what system is being used and how the wet area is protected.',
-        ],
-      },
-      {
-        heading: 'Plan the tile layout before installation starts',
-        body: [
-          'Clean shower tile depends on where the lines begin and end. A rushed layout can leave skinny cuts in obvious places, awkward niche edges, or tile lines that fight the shower glass and fixtures.',
-          'Before installation, discuss tile direction, niche placement, valve location, edge trim, grout color, and where pattern changes will happen.',
-        ],
-        list: [
-          'Confirm whether tile will run vertical, horizontal, stacked, offset, or patterned.',
-          'Decide whether the niche blends in or becomes an accent.',
-          'Plan edge trim and outside corners before the first tile is set.',
-        ],
-      },
-      {
-        heading: 'Niches and benches need extra attention',
-        body: [
-          'A shower niche is useful, but only when it is sized and placed around real use. It should fit bottles, avoid awkward cuts where possible, and be integrated into the waterproofing system. Benches and curbs also need proper slope and finish details so water does not sit where it should drain.',
-        ],
-      },
-      {
-        heading: 'The finish details decide how polished it feels',
-        body: [
-          'Even good tile can look weak if the final details are ignored. Grout color, caulk lines, trim edges, glass alignment, fixture cutouts, and the meeting point between wall tile and floor tile all matter.',
-          `${siteData.brandName} leans into clean, modern tile work because those details are what make the bathroom feel finished instead of merely updated.`,
-        ],
-      },
-    ],
-    faqs: [
-      {
-        question: 'Is shower tile waterproof?',
-        answer:
-          'Tile is water-resistant, but the shower should rely on the correct backing and waterproofing system behind the tile, especially around seams, corners, niches, benches, and curbs.',
-      },
-      {
-        question: 'What should I decide before shower tile installation?',
-        answer:
-          'Tile size, layout direction, grout color, niche size, fixture placement, trim style, glass plan, and whether the floor tile or wall tile sets the visual direction.',
-      },
-      {
-        question: 'Can LOKEIL install bathroom shower tile in Queens?',
-        answer:
-          'Yes. Bathroom shower tile, tub surrounds, niches, floors, and finish transitions are part of LOKEIL Renovation’s remodeling work.',
-      },
-    ],
-    relatedServices: [
-      { label: 'Tile Installation Queens', href: '/tile-installation-queens' },
-      { label: 'Bathroom Remodeling Queens', href: '/bathroom-remodeling-queens' },
-      { label: 'Plaster and Drywall Finishing Queens', href: '/plaster-drywall-finishing-queens' },
-    ],
-  },
-  {
-    slug: 'nyc-kitchen-bathroom-remodel-permits-queens',
-    title: 'Do You Need a Permit for a Kitchen or Bathroom Remodel in Queens?',
-    description:
-      'Plain-English guidance for Queens homeowners on NYC kitchen and bathroom remodel permits, cosmetic work, plumbing changes, ALT2 filings, and who to ask.',
-    eyebrow: 'NYC remodel permits',
-    publishDate: '2026-05-10',
-    readTime: '6 min read',
-    heroImage: '/gallery/bathroom-flooring/4.jpg',
-    heroAlt: 'Bathroom shower bench and tile installation with clean finish transitions.',
-    primaryKeyword: 'NYC kitchen bathroom remodel permits Queens',
-    keywords: [
-      'NYC kitchen bathroom remodel permits Queens',
-      'bathroom remodel permit NYC',
-      'kitchen renovation permit Queens',
-      'ALT2 bathroom renovation NYC',
-      'Queens remodeling contractor permit questions',
-    ],
-    intro: [
-      'Permit questions come up early in Queens kitchen and bathroom remodels because NYC rules depend on the scope. Painting a bathroom is very different from moving plumbing, rerouting electrical, adding a bathroom, or changing a load-bearing wall.',
-      'This guide is not legal advice and does not replace DOB, architect, engineer, or licensed trade guidance. It gives homeowners a cleaner way to think about the first estimate conversation.',
-    ],
-    sections: [
-      {
-        heading: 'NYC says many kitchen and bathroom renovations may require permits',
-        body: [
-          'The NYC Department of Buildings says construction plans and permits may be required for kitchen and bathroom renovations depending on complexity. DOB also says most kitchen and bathroom renovations require an ALT2 permit application when there are multiple types of work and no change to use, exits, or occupancy.',
-          'Examples from DOB include adding a new bathroom, rerouting gas pipes and adding electrical outlets, or moving a load-bearing wall.',
-        ],
-      },
-      {
-        heading: 'Cosmetic work can be different',
-        body: [
-          'DOB lists some minor alterations that may be done without a work permit, including painting, plastering, installing new cabinets, and resurfacing floors. That does not mean every kitchen or bathroom project is permit-free. It means the exact scope matters.',
-          'For plumbing, DOB says simple repairs or direct replacement of existing faucets or fixtures such as toilets and sinks may be considered cosmetic when the work does not alter shutoff valves or the fixture trap.',
-        ],
-      },
-      {
-        heading: 'When to slow down and verify',
-        body: [
-          'Homeowners should pause and verify before assuming a project is simple if the plan includes moving walls, changing plumbing lines, moving gas, changing electrical, adding a bathroom, altering ventilation, or changing the layout in a way that affects building systems.',
-          'A Professional Engineer, Registered Architect, DOB borough office representative, Licensed Master Plumber, or other properly licensed professional can clarify what the project requires.',
-        ],
-        list: [
-          'Same-location paint, plaster, cabinet, and surface work may be simpler.',
-          'Plumbing, electrical, gas, structural, and layout changes need closer review.',
-          'Ask who is responsible for filing, inspections, and licensed trade coordination.',
-        ],
-      },
-      {
-        heading: 'How this affects the estimate',
-        body: [
-          'Permit-related work can affect timeline, sequencing, and which professionals need to be involved. A contractor cannot responsibly price a complex kitchen or bathroom renovation the same way as a surface refresh.',
-          `When contacting ${siteData.brandName}, be direct about the project goal and any planned fixture, wall, plumbing, gas, or electrical changes. That makes the next step clearer.`,
-        ],
-      },
-    ],
-    faqs: [
-      {
-        question: 'Does painting a bathroom in Queens need a DOB work permit?',
-        answer:
-          'DOB lists painting as an example of a minor alteration that may be done without a work permit. The full project scope still matters.',
-      },
-      {
-        question: 'Does moving plumbing in a bathroom change the permit picture?',
-        answer:
-          'Yes. Work involving alteration, rearrangement, relocation, or permanent removal of piping must be handled with the right licensed plumbing supervision and DOB permits when required.',
-      },
-      {
-        question: 'Who should confirm permit requirements?',
-        answer:
-          'Use NYC DOB guidance and the appropriate licensed professionals, such as a registered architect, professional engineer, Licensed Master Plumber, or DOB representative.',
-      },
-    ],
-    sources: [
-      {
-        label: 'NYC Department of Buildings: Renovating Kitchens & Bathrooms',
-        href: 'https://www.nyc.gov/site/buildings/property-or-business-owner/renovating-kitchens-bathrooms.page',
-      },
-      {
-        label: 'NYC Department of Buildings: Plumbing Permits',
-        href: 'https://www.nyc.gov/site/buildings/property-or-business-owner/plumbing-permits.page',
-      },
-    ],
-    relatedServices: [
-      { label: 'Bathroom Remodeling Queens', href: '/bathroom-remodeling-queens' },
-      { label: 'Kitchen Remodeling Queens', href: '/kitchen-remodeling-queens' },
-      { label: 'Tile Installation Queens', href: '/tile-installation-queens' },
-      { label: 'Flooring Installation Queens', href: '/flooring-installation-queens' },
-    ],
-  },
+  showerTileGuide,
+  remodelPermitGuide,
 ];
 
 export function getBlogPost(slug: string) {

@@ -56,6 +56,18 @@ function blogMarkdown(slug: string) {
       ...section.body,
       ...(section.list || []).map((item) => `- ${item}`),
       ...(section.references || []).map((source) => `${source.label}: ${source.href}`),
+      ...(section.comparison ? [
+        section.comparison.caption,
+        `| ${section.comparison.headings.join(' | ')} |`,
+        '| --- | --- |',
+        ...section.comparison.rows.map((row) => `| ${row.map((cell) => cell.replace(/\|/g, '\\|')).join(' | ')} |`),
+      ] : []),
+      ...(section.visual ? [
+        `![${section.visual.alt}](${siteData.siteUrl}${section.visual.src})`,
+        ...(section.visual.legend || []).map((item, number) => `${number + 1}. **${item.label}.** ${item.detail}`),
+        section.visual.caption,
+      ] : []),
+      ...(section.links || []).map((link) => `[${link.label}](${link.href.startsWith('/') ? siteData.siteUrl + link.href : link.href})`),
       ...(post.diagramAfter === index ? process : []),
     ]),
     ...(post.diagramAfter === undefined ? process : []),

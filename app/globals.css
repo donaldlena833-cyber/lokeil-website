@@ -218,6 +218,16 @@
     overflow-x: auto;
     overscroll-behavior-inline: contain;
   }
+
+  .guide-table th,
+  .guide-table td {
+    overflow-wrap: anywhere;
+  }
+
+  #planning-guides,
+  #project-photos {
+    scroll-margin-top: 6rem;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
