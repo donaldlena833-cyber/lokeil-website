@@ -31,10 +31,10 @@ export default function BlogIndex() {
         <div className="site-shell grid gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:items-end">
           <div data-reveal="fade-up">
             <p className="eyebrow">Remodeling blog</p>
-            <h1 className="page-title mt-4">Real renovation photos and useful planning notes.</h1>
+            <h1 className="page-title mt-4">Real rooms. Better renovation decisions.</h1>
             <p className="lead mt-6">
-              Each photo has its own story about the visible work, the process behind that detail,
-              and what to consider for your own bathroom or kitchen. LOKEIL serves all five boroughs.
+              Start with a room, a detail, or a neighborhood. Explore LOKEIL project photographs,
+              illustrated planning advice, and practical questions to bring to your own renovation.
             </p>
           </div>
 
@@ -71,7 +71,7 @@ export default function BlogIndex() {
 
       <section className="section-space">
         <div className="site-shell">
-          <h2 className="section-title mb-8">Explore the project photos</h2>
+          <h2 className="section-title mb-8">Explore the renovation journal</h2>
           <div className="grid gap-6 lg:grid-cols-2">
             {otherPosts.map((post, index) => (
               <Link

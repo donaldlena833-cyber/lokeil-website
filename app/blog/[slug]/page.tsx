@@ -6,6 +6,7 @@ import { notFound } from 'next/navigation';
 import { buildPageMetadata } from '../../seo';
 import { siteData } from '../../siteData';
 import { blogPosts, getBlogPost } from '../blogData';
+import NeighborhoodArticle from '../NeighborhoodArticle';
 
 const formatPublishDate = (date: string) =>
   new Intl.DateTimeFormat('en-US', {
@@ -72,7 +73,7 @@ export async function generateMetadata({ params }: BlogPageProps): Promise<Metad
       ...metadata.openGraph,
       type: 'article',
       publishedTime: post.publishDate,
-      modifiedTime: post.publishDate,
+      modifiedTime: post.updatedDate || post.publishDate,
       authors: [siteData.brandName],
       tags: post.keywords,
       images: [{ url: post.heroImage, alt: post.heroAlt }],
@@ -102,7 +103,7 @@ export default async function BlogPostPage({ params }: BlogPageProps) {
     description: post.description,
     image: `${siteData.siteUrl}${post.heroImage}`,
     datePublished: post.publishDate,
-    dateModified: post.publishDate,
+    dateModified: post.updatedDate || post.publishDate,
     author: {
       '@type': 'Organization',
       '@id': `${siteData.siteUrl}/#business`,
@@ -137,6 +138,10 @@ export default async function BlogPostPage({ params }: BlogPageProps) {
       },
     })),
   } : null;
+
+  if (post.editorial) {
+    return <NeighborhoodArticle post={post} schema={faqSchema ? [articleSchema, faqSchema] : [articleSchema]} relatedPosts={blogPosts.filter((item) => item.editorial && item.slug !== post.slug)} />;
+  }
 
   const processFigure = post.processDiagram ? (
     <figure className="mt-10 border-t border-black/10 pt-9">

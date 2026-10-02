@@ -23,20 +23,22 @@ function blogMarkdown(slug: string) {
     `# ${post.title}`,
     post.description,
     `Photo: ${siteData.siteUrl}${post.heroImage}`,
+    ...(post.editorial ? [post.editorial.photoCaption, post.editorial.takeaway] : []),
     ...post.intro,
     ...post.sections.flatMap((section) => [
       `## ${section.heading}`,
       ...section.body,
       ...(section.list || []),
+      ...(section.references || []).map((source) => `${source.label}: ${source.href}`),
     ]),
     ...(post.processDiagram ? [
-      '## The typical process',
+      `## ${post.diagramHeading || 'The typical process'}`,
       `Illustration: ${siteData.siteUrl}${post.processDiagram.src}`,
       post.processDiagram.caption,
     ] : []),
     ...post.faqs.flatMap((faq) => [`## ${faq.question}`, faq.answer]),
     ...(post.sources || []).map((source) => `${source.label}: ${source.href}`),
-    `Estimate: ${siteData.siteUrl}/contact`,
+    `Estimate: ${post.editorial ? `${siteData.siteUrl}/blog/${post.slug}#estimate-brief` : `${siteData.siteUrl}/contact`}`,
   ].join('\n\n');
 }
 

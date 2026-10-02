@@ -12,6 +12,7 @@ export type BlogSection = {
   heading: string;
   body: string[];
   list?: string[];
+  references?: Array<{ label: string; href: string }>;
 };
 
 export type BlogPost = {
@@ -20,6 +21,7 @@ export type BlogPost = {
   description: string;
   eyebrow: string;
   publishDate: string;
+  updatedDate?: string;
   readTime: string;
   heroImage: string;
   heroAlt: string;
@@ -47,6 +49,15 @@ export type BlogPost = {
   diagramAfter?: number;
   diagramHeading?: string;
   processSteps?: string[];
+  editorial?: {
+    neighborhood: string;
+    photoCaption: string;
+    takeaway: string;
+    choices: Array<{ label: string; detail: string }>;
+    estimateTitle: string;
+    estimateScope: string;
+    illustrationAspect?: 'portrait';
+  };
 };
 
 export const blogPosts: BlogPost[] = [

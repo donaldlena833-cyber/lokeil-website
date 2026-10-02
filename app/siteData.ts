@@ -45,7 +45,7 @@ export const heroStats = [
   { value: 'Queens Based', label: 'Serving Ridgewood and the wider NYC area' },
   {
     value: 'Real Project Photos',
-    label: 'Every image comes from LOKEIL renovation work',
+    label: 'LOKEIL project photography, with planning illustrations labeled',
   },
   {
     value: 'Direct Estimates',
