@@ -23,18 +23,8 @@ export default function GalleryPage() {
               Real bathrooms, kitchens, tile details, and finish work from recent projects.
             </h1>
             <p className="lead mt-6">
-              Browse distinct project photos by room and finish type. Open any image to read about
-              the visible detail, the typical process, and the choices that matter in your own home.
-            </p>
-            <p className="mt-5 max-w-2xl text-base leading-7 text-olive-100/72">
-              Use the photos to narrow what matters for your own project: a niche location, tile
-              direction, shower bench, cabinet reveal, floor pattern, or the level of wall prep you
-              want before paint. The more specific the reference, the better the first conversation.
-            </p>
-            <p className="mt-4 max-w-2xl text-base leading-7 text-olive-100/72">
-              When you contact LOKEIL, reference the room type and the kind of finish you liked in
-              the gallery. That makes the first estimate conversation more specific and helps avoid
-              vague remodeling requests that are hard to price.
+              Browse real project photos by room and finish. Each image opens a story about
+              the detail shown and the decisions behind it.
             </p>
           </div>
 
@@ -51,7 +41,7 @@ export default function GalleryPage() {
               />
               <div className="image-veil" />
               <div className="absolute bottom-0 left-0 right-0 p-6 sm:p-7">
-                <span className="chip">Client project archive only</span>
+                <span className="chip">Real project photos</span>
               </div>
             </div>
 

@@ -1,4 +1,4 @@
-:root { --readiness-bg:#3b4433; --readiness-ink:#f5f0e8; }
+:root { --readiness-bg:#292d2a; --readiness-ink:#f8f6f0; }
 
 /* Shared utility behavior, independently shipped with this site. */
 .readiness-utility { display:flex; flex-wrap:wrap; align-items:center; justify-content:center; gap:12px 24px; padding:24px 20px; background:var(--readiness-bg,#f5f1e9); color:var(--readiness-ink,#25251f); font-size:13px; line-height:1.5; }

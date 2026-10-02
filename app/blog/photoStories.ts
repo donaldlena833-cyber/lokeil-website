@@ -1,4 +1,5 @@
 import type { BlogPost } from './blogData';
+import plans from './photoStoryPlans.json';
 
 type Process = 'shower' | 'floor' | 'niche' | 'cabinet' | 'paint';
 type PhotoNote = {
@@ -359,14 +360,6 @@ export function photoStoryForImage(image: string) {
   return photoStoryNotes.find((note) => note.image === (aliases[image] || image));
 }
 
-const diagramLabels: Record<Process, string> = {
-  shower: 'Shower tile process: solid backing, waterproof layer, setting mortar, tile and grout, then final joints.',
-  floor: 'Tile floor process: inspect the base, prepare the surface, plan the layout, set tile, then finish edges.',
-  niche: 'Shower niche process: locate the opening, build support, waterproof it, pitch the sill, then finish tile.',
-  cabinet: 'Cabinet process: measure the room, set a level reference, install boxes, fit details, then check doors and drawers.',
-  paint: 'Painting process: protect the room, repair the wall, smooth the base, prime, then apply finish coats.',
-};
-
 const processSources: Record<Process, { label: string; href: string }> = {
   shower: {
     label: 'Schluter: Essential Water Management in Tiled Showers',
@@ -390,29 +383,48 @@ const processSources: Record<Process, { label: string; href: string }> = {
   },
 };
 
-export const photoStoryPosts: BlogPost[] = photoStoryNotes.map((note) => ({
+type ContentKey = 'photo' | 'detail' | 'method' | 'home';
+type StoryPlan = {
+  lead: string;
+  description: string;
+  outline: [string, ContentKey[]][];
+  steps: string[];
+  diagramAfter: number;
+  diagramHeading: string;
+};
+
+const storyPlans = plans as StoryPlan[];
+
+export const photoStoryPosts: BlogPost[] = photoStoryNotes.map((note, index) => ({
   slug: note.slug,
   title: note.title,
-  description: `${note.visible.split('.')[0]}. See the photo, the typical process, and what to ask before requesting a renovation estimate.`,
+  description: storyPlans[index].description,
   eyebrow: 'From the project gallery',
   publishDate: '2026-10-01',
-  readTime: '2 min read',
+  readTime: '3 min read',
   heroImage: note.image,
   heroAlt: note.visible.split('.')[0] + '.',
   primaryKeyword: note.keyword,
   keywords: [note.keyword, 'New York City interior renovation', 'LOKEIL Renovation'],
-  intro: [note.visible],
-  sections: [
-    { heading: 'The detail worth noticing', body: [details[note.image]] },
-    { heading: 'What goes into this detail', body: [note.process] },
-    { heading: 'What to consider in your own home', body: [note.decision] },
-  ],
+  intro: [storyPlans[index].lead],
+  sections: storyPlans[index].outline.map(([heading, keys]) => {
+    const content: Record<ContentKey, string> = {
+      photo: note.visible,
+      detail: details[note.image],
+      method: note.process,
+      home: note.decision,
+    };
+    return { heading, body: keys.map((key) => content[key]) };
+  }),
   faqs: [],
   processDiagram: {
-    src: `/process/${note.diagram}.svg`,
-    alt: diagramLabels[note.diagram],
-    caption: 'Typical process illustration. The exact assembly and product specifications depend on the room and chosen materials.',
+    src: `/process/stories/${note.slug}.svg`,
+    alt: `${storyPlans[index].diagramHeading}. ${storyPlans[index].steps.join('. ')}.`,
+    caption: `${storyPlans[index].diagramHeading}. The exact assembly and product specifications depend on the room and chosen materials.`,
   },
+  diagramAfter: storyPlans[index].diagramAfter,
+  diagramHeading: storyPlans[index].diagramHeading,
+  processSteps: storyPlans[index].steps,
   sources: [processSources[note.diagram]],
   relatedServices: [
     { label: 'See all project photos', href: '/gallery' },

@@ -6,6 +6,7 @@ import test from 'node:test';
 
 const root = process.cwd();
 const source = readFileSync(join(root, 'app/blog/photoStories.ts'), 'utf8');
+const plans = JSON.parse(readFileSync(join(root, 'app/blog/photoStoryPlans.json'), 'utf8'));
 const notes = [...source.matchAll(/^    image: '(\/gallery\/[^']+)',\n    title: '([^']+)'/gm)]
   .map((match) => ({ image: match[1], title: match[2] }));
 const detailSource = source.split('const details: Record<string, string> = {')[1].split('\n};')[0];
@@ -43,10 +44,21 @@ test('each distinct gallery photo has one story and all repeated files resolve t
   }
 });
 
-test('every referenced process illustration is present', () => {
-  const diagramNames = [...source.matchAll(/diagram: '(shower|floor|niche|cabinet|paint)'/g)].map((match) => match[1]);
-  assert.equal(diagramNames.length, notes.length);
-  for (const name of new Set(diagramNames)) {
-    assert.ok(existsSync(join(root, 'public/process', `${name}.svg`)), name);
+test('all photo stories have a distinct editorial plan and process illustration', () => {
+  assert.equal(plans.length, notes.length);
+  for (const field of ['lead', 'description', 'diagramHeading']) {
+    assert.equal(new Set(plans.map((plan) => plan[field])).size, notes.length, `${field} repeats`);
   }
+  assert.equal(new Set(plans.map((plan) => JSON.stringify(plan.outline))).size, notes.length);
+
+  plans.forEach((plan, index) => {
+    assert.ok(plan.outline.length >= 2);
+    assert.ok(plan.outline.every(([heading]) => heading.length > 12));
+    assert.equal(plan.steps.length, 4);
+    assert.ok(plan.diagramAfter >= 0 && plan.diagramAfter < plan.outline.length);
+    const slug = notes[index].title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+    const diagram = join(root, 'public/process/stories', `${slug}.svg`);
+    assert.ok(existsSync(diagram), slug);
+    assert.ok(readFileSync(diagram, 'utf8').includes(plan.diagramHeading), slug);
+  });
 });

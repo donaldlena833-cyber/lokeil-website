@@ -28,14 +28,8 @@ export default function Services() {
               Interior remodeling services shaped around the work in the portfolio.
             </h1>
             <p className="lead mt-6">
-              From bathrooms and kitchens to tile work, flooring, plaster, painting, cabinets,
-              and finish details, these are the services most often requested for Queens interior
-              remodeling projects.
-            </p>
-            <p className="mt-5 max-w-2xl text-base leading-7 text-olive-100/72">
-              Start with the service page closest to your project, then use the gallery and contact
-              page to send room photos, finish references, and the practical constraints around the
-              work area.
+              Explore bathroom and kitchen remodeling, tile, flooring, cabinets, painting,
+              plaster, and the finish details that bring a room together.
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
               <Link href="/bathroom-remodeling-queens" className="button-secondary">
@@ -46,21 +40,6 @@ export default function Services() {
               </Link>
               <Link href="/tile-installation-queens" className="button-secondary">
                 Tile Installation Queens
-              </Link>
-              <Link href="/flooring-installation-queens" className="button-secondary">
-                Flooring Installation Queens
-              </Link>
-              <Link href="/plaster-drywall-finishing-queens" className="button-secondary">
-                Plaster & Drywall Queens
-              </Link>
-              <Link href="/interior-painting-queens" className="button-secondary">
-                Interior Painting Queens
-              </Link>
-              <Link href="/cabinet-installation-queens" className="button-secondary">
-                Cabinet Installation Queens
-              </Link>
-              <Link href="/blog" className="button-secondary">
-                Remodeling Guides
               </Link>
             </div>
           </div>
@@ -86,9 +65,8 @@ export default function Services() {
             <p className="eyebrow">What the client can hire for</p>
             <h2 className="section-title mt-4">Interior work for the rooms people use every day.</h2>
             <p className="mt-5 text-base leading-7 text-olive-100/72">
-              LOKEIL is positioned for room-by-room interior upgrades rather than vague whole-home
-              claims. Each service page explains the surfaces, prep, and decisions that usually
-              shape the estimate.
+              Pick the room or surface you want to change. Each service page shows the preparation,
+              finish choices, and project details worth discussing before an estimate.
             </p>
           </div>
 

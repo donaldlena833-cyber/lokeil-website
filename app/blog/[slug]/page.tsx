@@ -138,6 +138,30 @@ export default async function BlogPostPage({ params }: BlogPageProps) {
     })),
   } : null;
 
+  const processFigure = post.processDiagram ? (
+    <figure className="mt-10 border-t border-black/10 pt-9">
+      <h2>{post.diagramHeading || 'The typical process'}</h2>
+      {post.processSteps ? <ol className="mt-6 grid gap-2 sm:hidden">
+        {post.processSteps.map((step, index) => (
+          <li key={step} className="flex items-center gap-4 rounded-lg border border-black/10 bg-[#eeede6] p-4 text-sm font-medium">
+            <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[#6c7868] text-white">{index + 1}</span>
+            {step}
+          </li>
+        ))}
+      </ol> : null}
+      <div className="process-scroll mt-6 hidden rounded-xl bg-[#eeede6] p-3 sm:block sm:p-5" tabIndex={0} aria-label="Process illustration">
+        <Image
+          src={post.processDiagram.src}
+          alt={post.processDiagram.alt}
+          width={1200}
+          height={680}
+          className="h-auto w-full"
+        />
+      </div>
+      <figcaption className="mt-3 text-sm leading-6">{post.processDiagram.caption}</figcaption>
+    </figure>
+  ) : null;
+
   return (
     <main>
       <script
@@ -155,7 +179,7 @@ export default async function BlogPostPage({ params }: BlogPageProps) {
               <h1 className="page-title mt-4">{post.title}</h1>
               <p className="lead mt-6">{post.description}</p>
               <div className="mt-7 flex flex-wrap gap-3">
-                <span className="chip">{post.primaryKeyword}</span>
+                {!post.processSteps ? <span className="chip">{post.primaryKeyword}</span> : null}
                 <span className="chip">{post.readTime}</span>
                 <time className="chip" dateTime={post.publishDate}>
                   {formatPublishDate(post.publishDate)}
@@ -179,8 +203,8 @@ export default async function BlogPostPage({ params }: BlogPageProps) {
         </section>
 
         <section className="section-space">
-          <div className="site-shell grid gap-10 lg:grid-cols-[minmax(0,1fr)_18rem] lg:items-start">
-            <div className="surface px-6 py-8 sm:px-10 sm:py-10 lg:px-12">
+          <div className="site-shell grid min-w-0 gap-8 lg:grid-cols-[minmax(0,1fr)_17rem] lg:items-start">
+            <div className="story-body">
               <div className="space-y-6">
                 {post.intro.map((paragraph) => (
                   <p key={paragraph} className="lead max-w-none">
@@ -190,57 +214,40 @@ export default async function BlogPostPage({ params }: BlogPageProps) {
               </div>
 
               <div className="mt-10 space-y-10">
-                {post.sections.map((section) => (
-                  <section key={section.heading}>
-                    <h2 className="text-4xl leading-tight text-olive-50">{section.heading}</h2>
-                    <div className="mt-5 space-y-5">
-                      {section.body.map((paragraph) => (
-                        <p key={paragraph} className="text-base leading-8 text-olive-100/76 sm:text-lg">
-                          {paragraph}
-                        </p>
-                      ))}
-                    </div>
-                    {section.list ? (
-                      <ul className="mt-6 grid gap-3">
-                        {section.list.map((item) => (
-                          <li
-                            key={item}
-                            className="border-l border-accent/50 pl-4 text-base leading-7 text-olive-100/78"
-                          >
-                            {item}
-                          </li>
+                {post.sections.map((section, index) => (
+                  <div key={section.heading}>
+                    <section>
+                      <h2>{section.heading}</h2>
+                      <div className="mt-5 space-y-5">
+                        {section.body.map((paragraph) => (
+                          <p key={paragraph} className="text-base leading-8 text-olive-100/76 sm:text-lg">
+                            {paragraph}
+                          </p>
                         ))}
-                      </ul>
-                    ) : null}
-                  </section>
+                      </div>
+                      {section.list ? (
+                        <ul className="mt-6 grid gap-3">
+                          {section.list.map((item) => (
+                            <li key={item} className="border-l border-accent/70 pl-4 text-base leading-7">
+                              {item}
+                            </li>
+                          ))}
+                        </ul>
+                      ) : null}
+                    </section>
+                    {post.diagramAfter === index ? processFigure : null}
+                  </div>
                 ))}
               </div>
 
-              {post.processDiagram ? (
-                <figure className="mt-12 border-t border-white/10 pt-10">
-                  <h2 className="text-4xl leading-tight text-olive-50">The typical process</h2>
-                  <p className="mt-3 text-sm text-olive-100/70 sm:hidden">Swipe the illustration to read each step.</p>
-                  <div className="mt-6 overflow-x-auto rounded-2xl bg-[#f1f0e8] p-3 sm:p-5">
-                    <Image
-                      src={post.processDiagram.src}
-                      alt={post.processDiagram.alt}
-                      width={1200}
-                      height={680}
-                      className="h-auto min-w-[720px] w-full"
-                    />
-                  </div>
-                  <figcaption className="mt-3 text-sm leading-6 text-olive-100/65">
-                    {post.processDiagram.caption}
-                  </figcaption>
-                </figure>
-              ) : null}
+              {post.diagramAfter === undefined ? processFigure : null}
 
-              {post.faqs.length ? <section className="mt-12 border-t border-white/10 pt-10">
-                <h2 className="text-4xl leading-tight text-olive-50">Common questions</h2>
-                <div className="mt-6 divide-y divide-white/10">
+              {post.faqs.length ? <section className="mt-12 border-t border-black/10 pt-10">
+                <h2>Common questions</h2>
+                <div className="mt-6 divide-y divide-black/10">
                   {post.faqs.map((faq) => (
                     <div key={faq.question} className="py-6 first:pt-0 last:pb-0">
-                      <h3 className="text-2xl text-olive-50">{faq.question}</h3>
+                      <h3 className="text-2xl">{faq.question}</h3>
                       <p className="mt-3 text-base leading-8 text-olive-100/76">{faq.answer}</p>
                     </div>
                   ))}
@@ -248,8 +255,8 @@ export default async function BlogPostPage({ params }: BlogPageProps) {
               </section> : null}
 
               {post.sources ? (
-                <section className="mt-10 border-t border-white/10 pt-8">
-                  <h2 className="text-3xl leading-tight text-olive-50">Sources</h2>
+                <section className="mt-10 border-t border-black/10 pt-8">
+                  <h2>Sources</h2>
                   <ul className="mt-4 grid gap-3">
                     {post.sources.map((source) => (
                       <li key={source.href}>
@@ -269,14 +276,19 @@ export default async function BlogPostPage({ params }: BlogPageProps) {
             </div>
 
             <aside className="surface sticky top-32 p-6">
-              <p className="eyebrow">Planning topics</p>
-              <div className="mt-4 flex flex-wrap gap-2">
-                {post.keywords.map((keyword) => (
-                  <span key={keyword} className="chip normal-case tracking-[0.04em]">
-                    {keyword}
-                  </span>
-                ))}
-              </div>
+              {post.processSteps ? <>
+                <p className="eyebrow">In this photo</p>
+                <p className="mt-4 text-2xl leading-snug text-olive-50">{post.diagramHeading}</p>
+              </> : <>
+                <p className="eyebrow">Planning topics</p>
+                <div className="mt-4 flex flex-wrap gap-2">
+                  {post.keywords.map((keyword) => (
+                    <span key={keyword} className="chip normal-case tracking-[0.04em]">
+                      {keyword}
+                    </span>
+                  ))}
+                </div>
+              </>}
 
               <div className="mt-8 border-t border-white/10 pt-6">
                 <p className="text-2xl text-olive-50">Planning a remodel?</p>
