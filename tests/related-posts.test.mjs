@@ -21,3 +21,16 @@ test('recommendations exclude the current article and retired location URLs', ()
   assert.deepEqual(relatedBlogPosts(current, [current, retired, related]).map((item) => item.slug), ['niche']);
   assert.equal(isPublishedPost(retired), false);
 });
+
+test('a kitchen subject outranks a vanity that shares neighborhood words', () => {
+  const current = { ...post('retained-kitchen', 'Upper West Side kitchen wall repair', '/kitchen-remodeling-queens', '/kitchen.svg'),
+    relatedServices: ['/kitchen-remodeling-queens', '/cabinet-installation-queens', '/plaster-drywall-finishing-queens'].map(href => ({ href })),
+    editorial: { neighborhood: 'Upper West Side, Manhattan' } };
+  const vanity = { ...post('vanity-wall', 'Upper East Side bathroom vanity refresh', '/cabinet-installation-queens', '/vanity.svg'),
+    relatedServices: ['/cabinet-installation-queens', '/plaster-drywall-finishing-queens'].map(href => ({ href })),
+    editorial: { neighborhood: 'Upper East Side, Manhattan' } };
+  const kitchen = { ...post('kitchen-fit', 'Long Island City kitchen cabinet installation', '/kitchen-remodeling-queens', '/fit.svg'),
+    relatedServices: ['/kitchen-remodeling-queens', '/cabinet-installation-queens'].map(href => ({ href })),
+    editorial: { neighborhood: 'Long Island City, Queens' } };
+  assert.equal(relatedBlogPosts(current, [current, vanity, kitchen])[0].slug, 'kitchen-fit');
+});
