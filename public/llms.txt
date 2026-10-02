@@ -1,6 +1,6 @@
 # LOKEIL Renovation
 
-LOKEIL Renovation is a Ridgewood, Queens based interior remodeling company serving Queens, Brooklyn, Manhattan, parts of Long Island, and Westchester County.
+LOKEIL Renovation is a Ridgewood, Queens based interior remodeling company serving all five New York City boroughs and parts of Long Island and Westchester County.
 
 ## When to use this site
 
@@ -11,6 +11,8 @@ Use this site to evaluate LOKEIL for bathroom remodeling, kitchen remodeling, ti
 - Start at https://lokeilremodeling.com/ for scope, process, and featured work.
 - Read https://lokeilremodeling.com/services for the service index.
 - Read https://lokeilremodeling.com/about for the company and owner.
+- Browse https://lokeilremodeling.com/gallery for distinct project photos.
+- Read https://lokeilremodeling.com/blog for a photo story and typical process explanation for each distinct gallery image, plus planning guides.
 - Use https://lokeilremodeling.com/contact to prepare an estimate inquiry.
 - Read https://lokeilremodeling.com/privacy before sending project information.
 

@@ -1,6 +1,7 @@
 'use client';
 
 import Image from 'next/image';
+import Link from 'next/link';
 import { useState } from 'react';
 
 import {
@@ -81,9 +82,10 @@ export default function GalleryClient() {
 
           <div className="columns-1 gap-5 md:columns-2 xl:columns-3">
             {filteredItems.map((item, index) => (
-              <div
+              <Link
                 key={item.id}
-                className="gallery-tile"
+                href={item.storyHref}
+                className="gallery-tile block"
                 data-reveal="fade-up"
                 data-delay={String((index % 5) + 1)}
               >
@@ -96,7 +98,11 @@ export default function GalleryClient() {
                   sizes="(max-width: 767px) 100vw, (max-width: 1279px) 50vw, 33vw"
                   className="gallery-image"
                 />
-              </div>
+                <span className="block bg-olive-900 px-4 py-4 text-lg leading-6 text-olive-50">
+                  {item.title}
+                  <span className="mt-2 block text-sm text-accent">Read the photo story</span>
+                </span>
+              </Link>
             ))}
           </div>
         </div>

@@ -1,19 +1,49 @@
 import { coreServices, siteData } from '../../siteData';
+import { blogPosts, getBlogPost } from '../../blog/blogData';
 
 const serviceList = coreServices.map((service) => `- ${service.title}: ${service.summary}`).join('\n');
 const pages: Record<string, string> = {
   "/terms": "# Terms and conditions\n\nUpdated September 13, 2026.\n\n\n## About this website\n\nThese terms apply to your use of lokeilremodeling.com, operated by LOKEIL Renovation. Use the site to learn about the business and contact us about relevant requests.\n\n\n## Estimates and remodeling work\n\nPhotos and service descriptions help explain the type of interior work offered. An inquiry or preliminary estimate does not book a project or establish a final price. Site conditions, measurements, materials, building requirements, scope, schedule, and payment terms must be agreed separately before work begins.\n\n\n## Responsible use\n\nProvide accurate information and share only content you are entitled to share. Do not interfere with the site, misuse forms, attempt unauthorized access, or upload harmful content. Do not send passwords, payment-card details, or unrelated confidential records through an initial inquiry.\n\n\n## Website materials and external links\n\nWebsite copy, photographs, artwork, and branding belong to their respective owners. Viewing the site does not grant permission to reuse them commercially. External websites and services have their own terms and privacy practices.\n\n\n## Questions and updates\n\nIf something on the website appears incorrect or you have a question about these terms, contact us before relying on it for a project or booking. Updates to these website terms do not change an existing signed agreement. Nothing here limits rights that cannot lawfully be excluded.\n\nPrivacy notice \u00b7 Contact LOKEIL Renovation\n\nSource: https://lokeilremodeling.com/terms\nContact: https://lokeilremodeling.com/contact\n",
-  '/': `# ${siteData.brandName}\n\n${siteData.description}\n\n## When to use LOKEIL\n\nUse LOKEIL for interior-focused residential remodeling in Queens, Brooklyn, Manhattan, parts of Long Island, and Westchester County. Best-fit inquiries include bathrooms, kitchens, tile, flooring, plaster and drywall finishing, interior painting, cabinetry, doors, steps, and fireplace finish upgrades.\n\n## Services\n\n${serviceList}\n\n## Estimate preparation\n\nSend the project neighborhood, room type, current photos, rough scope, timing, access constraints, and finish references. Pricing is project-specific and begins with a direct estimate conversation.\n\n## Contact\n\n- Phone: ${siteData.phoneDisplay}\n- Email: ${siteData.email}\n- Instagram: ${siteData.instagram}\n- Base: ${siteData.location}\n`,
+  '/': `# ${siteData.brandName}\n\n${siteData.description}\n\n## When to use LOKEIL\n\nUse LOKEIL for interior remodeling across ${siteData.serviceArea}. Best-fit inquiries include bathrooms, kitchens, tile, flooring, plaster and drywall finishing, interior painting, cabinetry, doors, steps, and fireplace finish upgrades.\n\n## Services\n\n${serviceList}\n\n## Project photos and planning\n\nBrowse ${siteData.siteUrl}/gallery for real project photos and ${siteData.siteUrl}/blog for a photo story and process explanation for each distinct gallery image.\n\n## Estimate preparation\n\nSend the project neighborhood, room type, current photos, rough scope, timing, access constraints, and finish references. Pricing is project-specific and begins with a direct estimate conversation.\n\n## Contact\n\n- Phone: ${siteData.phoneDisplay}\n- Email: ${siteData.email}\n- Instagram: ${siteData.instagram}\n- Base: ${siteData.location}\n`,
   '/about': `# About ${siteData.brandName}\n\n${siteData.brandName} is led by ${siteData.owner} and is based in ${siteData.location}. The company focuses on practical, finish-driven interior renovation: bathrooms, kitchens, tile, flooring, cabinets, plaster, paint, doors, steps, and fireplace upgrades.\n\n## Approach\n\nProjects begin with the room, the problem, and the desired finish level. Layout, materials, access, and sequencing are discussed before work moves forward. Execution focuses on clean lines, durable installation, material transitions, and a final walkthrough.\n\n## Service area\n\n${siteData.serviceArea}. Call ${siteData.phoneDisplay} or email ${siteData.email} to discuss an estimate.\n`,
   '/services': `# LOKEIL Renovation services\n\n${serviceList}\n\nLOKEIL is an interior-focused remodeling company based in Ridgewood, Queens. Call ${siteData.phoneDisplay} or email ${siteData.email} with the room, location, photos, and rough scope for an estimate conversation.\n`,
   '/contact': `# Contact ${siteData.brandName}\n\nCall ${siteData.phoneDisplay} or email ${siteData.email}. Include the property location, room type, whether the work is a repair or full replacement, current photos, timing, access constraints, and any gallery references that match the desired finish.\n\nLOKEIL is based in ${siteData.location} and serves ${siteData.serviceArea}. Business hours are Monday through Friday 10:00 AM to 6:00 PM and Saturday 12:00 PM to 5:00 PM.\n`,
   '/privacy': `# Privacy notice\n\nLOKEIL Renovation uses information provided by phone, email, or another direct inquiry channel to understand a remodeling request, prepare or discuss an estimate, schedule communication, and coordinate an active project. Information may include a name, email address, phone number, property location, room details, project photographs, measurements, timing, access notes, and finish references.\n\nInformation is shared only with service providers or project participants when reasonably necessary for hosting, communications, estimating, scheduling, recordkeeping, or completing requested work. LOKEIL does not sell inquiry information. Do not send payment-card information, account passwords, or unrelated sensitive records by ordinary email. To request an eligible correction or deletion, contact ${siteData.email}.\n`,
 };
 
+const blogIndex = `# Renovation photo stories and planning guides\n\n${blogPosts
+  .filter((post) => !post.slug.match(/^bathroom-remodeling-(astoria|jackson-heights|long-island-city|ridgewood|sunnyside|woodside)-nyc-planning-guide$/))
+  .map((post) => `${post.title}: ${siteData.siteUrl}/blog/${post.slug}`)
+  .join('\n')}\n`;
+
+function blogMarkdown(slug: string) {
+  const post = getBlogPost(slug);
+  if (!post) return null;
+  return [
+    `# ${post.title}`,
+    post.description,
+    `Photo: ${siteData.siteUrl}${post.heroImage}`,
+    ...post.intro,
+    ...post.sections.flatMap((section) => [
+      `## ${section.heading}`,
+      ...section.body,
+      ...(section.list || []),
+    ]),
+    ...(post.processDiagram ? [
+      '## The typical process',
+      `Illustration: ${siteData.siteUrl}${post.processDiagram.src}`,
+      post.processDiagram.caption,
+    ] : []),
+    ...post.faqs.flatMap((faq) => [`## ${faq.question}`, faq.answer]),
+    ...(post.sources || []).map((source) => `${source.label}: ${source.href}`),
+    `Estimate: ${siteData.siteUrl}/contact`,
+  ].join('\n\n');
+}
+
 export async function GET(_request: Request, context: { params: Promise<{ slug?: string[] }> }) {
   const { slug = [] } = await context.params;
   const path = slug.length ? `/${slug.join('/')}` : '/';
-  const body = pages[path];
+  const body = pages[path] || (path === '/blog' ? blogIndex : path.startsWith('/blog/') ? blogMarkdown(path.slice(6)) : null);
   if (!body) return new Response(`# Page not found\n\nNo page exists at ${path}.\n\n- [Home](${siteData.siteUrl}/)\n- [Services](${siteData.siteUrl}/services)\n- [Contact](${siteData.siteUrl}/contact)\n- [Sitemap](${siteData.siteUrl}/sitemap.xml)\n- [Agent instructions](${siteData.siteUrl}/llms.txt)\n`, { status: 404, headers: { 'Content-Type': 'text/markdown; charset=utf-8', Vary: 'Accept' } });
   return new Response(body, { headers: { 'Content-Type': 'text/markdown; charset=utf-8', Vary: 'Accept', 'Cache-Control': 'public, s-maxage=300, stale-while-revalidate=86400' } });
 }

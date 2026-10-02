@@ -75,6 +75,11 @@ export async function generateMetadata({ params }: BlogPageProps): Promise<Metad
       modifiedTime: post.publishDate,
       authors: [siteData.brandName],
       tags: post.keywords,
+      images: [{ url: post.heroImage, alt: post.heroAlt }],
+    },
+    twitter: {
+      ...metadata.twitter,
+      images: [post.heroImage],
     },
   };
 }
@@ -87,7 +92,9 @@ export default async function BlogPostPage({ params }: BlogPageProps) {
     notFound();
   }
 
-  const relatedPosts = blogPosts.filter((item) => item.slug !== post.slug).slice(0, 3);
+  const relatedPosts = blogPosts
+    .filter((item) => item.slug !== post.slug && (!post.processDiagram || item.processDiagram?.src === post.processDiagram.src))
+    .slice(0, 3);
   const articleSchema = {
     '@context': 'https://schema.org',
     '@type': 'BlogPosting',
@@ -118,7 +125,7 @@ export default async function BlogPostPage({ params }: BlogPageProps) {
     keywords: post.keywords,
   };
 
-  const faqSchema = {
+  const faqSchema = post.faqs.length ? {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
     mainEntity: post.faqs.map((faq) => ({
@@ -129,13 +136,13 @@ export default async function BlogPostPage({ params }: BlogPageProps) {
         text: faq.answer,
       },
     })),
-  };
+  } : null;
 
   return (
     <main>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify([articleSchema, faqSchema]) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema ? [articleSchema, faqSchema] : articleSchema) }}
       />
 
       <article>
@@ -209,7 +216,26 @@ export default async function BlogPostPage({ params }: BlogPageProps) {
                 ))}
               </div>
 
-              <section className="mt-12 border-t border-white/10 pt-10">
+              {post.processDiagram ? (
+                <figure className="mt-12 border-t border-white/10 pt-10">
+                  <h2 className="text-4xl leading-tight text-olive-50">The typical process</h2>
+                  <p className="mt-3 text-sm text-olive-100/70 sm:hidden">Swipe the illustration to read each step.</p>
+                  <div className="mt-6 overflow-x-auto rounded-2xl bg-[#f1f0e8] p-3 sm:p-5">
+                    <Image
+                      src={post.processDiagram.src}
+                      alt={post.processDiagram.alt}
+                      width={1200}
+                      height={680}
+                      className="h-auto min-w-[720px] w-full"
+                    />
+                  </div>
+                  <figcaption className="mt-3 text-sm leading-6 text-olive-100/65">
+                    {post.processDiagram.caption}
+                  </figcaption>
+                </figure>
+              ) : null}
+
+              {post.faqs.length ? <section className="mt-12 border-t border-white/10 pt-10">
                 <h2 className="text-4xl leading-tight text-olive-50">Common questions</h2>
                 <div className="mt-6 divide-y divide-white/10">
                   {post.faqs.map((faq) => (
@@ -219,7 +245,7 @@ export default async function BlogPostPage({ params }: BlogPageProps) {
                     </div>
                   ))}
                 </div>
-              </section>
+              </section> : null}
 
               {post.sources ? (
                 <section className="mt-10 border-t border-white/10 pt-8">
@@ -288,7 +314,9 @@ export default async function BlogPostPage({ params }: BlogPageProps) {
         <div className="site-shell">
           <div className="max-w-3xl">
             <p className="eyebrow">Keep planning</p>
-            <h2 className="section-title mt-4">More Queens remodeling guides.</h2>
+            <h2 className="section-title mt-4">
+              {post.processDiagram ? 'More renovation photo stories.' : 'More remodeling guides.'}
+            </h2>
           </div>
 
           <div className="mt-10 grid gap-6 lg:grid-cols-3">

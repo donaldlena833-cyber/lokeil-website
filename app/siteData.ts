@@ -1,3 +1,5 @@
+import { photoStoryNotes } from './blog/photoStories';
+
 export const siteData = {
   legalName: 'LOKEIL Inc.',
   brandName: 'LOKEIL Renovation',
@@ -15,7 +17,7 @@ export const siteData = {
   instagramHandle: '@lokeil.remodeling',
   location: 'Ridgewood, Queens, NY 11385',
   serviceArea:
-    'Queens, Brooklyn, Manhattan, parts of Long Island, and Westchester County',
+    'Queens, Brooklyn, Manhattan, the Bronx, Staten Island, and parts of Long Island and Westchester County',
   logo: '/icon.svg',
   ogImage: '/gallery/bathroom-shower/1.jpg',
   ogImageAlt: 'Bathroom remodel with marble-look tile surround and recessed niche.',
@@ -28,7 +30,7 @@ export const siteData = {
   ],
 } as const;
 
-export const estimateEmailHref = `mailto:${siteData.email}?subject=${encodeURIComponent('Queens remodeling estimate request')}&body=${encodeURIComponent('Project neighborhood: \nRoom or service: \nWhat I want to change: \nApproximate timeline: \nBest number to reach me: \n\nI can attach current room photos and finish references to this email.')}`;
+export const estimateEmailHref = `mailto:${siteData.email}?subject=${encodeURIComponent('Remodeling estimate request')}&body=${encodeURIComponent('Project neighborhood: \nRoom or service: \nWhat I want to change: \nApproximate timeline: \nBest number to reach me: \nHow did you hear about LOKEIL? \n\nI can attach current room photos and finish references to this email.')}`;
 
 export const navItems = [
   { href: '/', label: 'Home' },
@@ -206,41 +208,23 @@ export const galleryCategories: Array<{ id: GalleryCategory; label: string }> = 
   { id: 'bathroom-painting', label: 'Paint and prep' },
 ];
 
-const makeImageItems = (
-  category: Exclude<GalleryCategory, 'all'>,
-  folder: string,
-  count: number,
-  label: string,
-) =>
-  Array.from({ length: count }, (_, index) => ({
-    id: `${category}-${index + 1}`,
-    category,
-    src: `/gallery/${folder}/${index + 1}.jpg`,
-    alt: `${label} project photo ${index + 1} completed by ${siteData.brandName} in the New York City area.`,
-  }));
+const categoryForPhoto = (image: string): Exclude<GalleryCategory, 'all'> => {
+  if (/bathroom-tiles\/(4)/.test(image) || /bathroom-painting\/(3|5|6)/.test(image)) {
+    return 'kitchen-cabinets';
+  }
+  if (/bathroom-tiles\/7/.test(image)) return 'bathroom-painting';
+  if (/bathroom-painting\/4/.test(image) || /bathroom-tiles\/6/.test(image)) return 'bathroom-shower';
+  return image.split('/')[2] as Exclude<GalleryCategory, 'all'>;
+};
 
-export const galleryItems = [
-  ...makeImageItems('bathroom-tiles', 'bathroom-tiles', 10, 'Bathroom tile detail'),
-  ...makeImageItems(
-    'bathroom-flooring',
-    'bathroom-flooring',
-    9,
-    'Bathroom flooring detail',
-  ),
-  ...makeImageItems('bathroom-shower', 'bathroom-shower', 9, 'Bathroom shower remodel'),
-  ...makeImageItems(
-    'bathroom-painting',
-    'bathroom-painting',
-    6,
-    'Surface prep and painting',
-  ),
-  ...makeImageItems(
-    'kitchen-cabinets',
-    'kitchen-cabinets',
-    9,
-    'Kitchen and cabinet installation',
-  ),
-] as const;
+export const galleryItems = photoStoryNotes.map((note) => ({
+  id: note.slug,
+  category: categoryForPhoto(note.image),
+  src: note.image,
+  alt: note.visible.split('.')[0] + '.',
+  storyHref: `/blog/${note.slug}`,
+  title: note.title,
+}));
 
 export const photoCount = galleryItems.length;
 

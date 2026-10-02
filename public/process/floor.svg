@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="680" viewBox="0 0 1200 680" role="img" aria-labelledby="title desc">
+<title id="title">How a tile floor comes together</title><desc id="desc">Preparation and layout before the finished surface. A shower floor also needs a sloped waterproof assembly tied to its drain.</desc>
+<style>
+.title { font: 600 48px Georgia, serif; fill: #223027; }
+.sub { font: 23px Arial, sans-serif; fill: #586157; }
+.heading { font: 600 23px Arial, sans-serif; fill: #223027; }
+.number { font: 700 18px Arial, sans-serif; fill: #fffdf7; }
+.body { font: 19px Arial, sans-serif; fill: #455247; }
+.foot { font: 19px Arial, sans-serif; fill: #586157; }
+</style>
+<rect width="1200" height="680" fill="#f1f0e8"/>
+<text x="45" y="82" class="title">How a tile floor comes together</text>
+<text x="45" y="126" class="sub">Preparation and layout before the finished surface</text>
+<path d="M 90 260 H 1110" stroke="#b4754a" stroke-width="3" opacity="0.4"/>
+<g>
+          <rect x="45" y="190" width="210" height="345" rx="18" fill="#fffdf7" stroke="#d8d7c8" stroke-width="2"/>
+          <circle cx="81" cy="230" r="23" fill="#b4754a"/>
+          <text x="81" y="237" text-anchor="middle" class="number">01</text>
+          <rect x="70" y="285" width="160" height="5" rx="2" fill="#b4754a" opacity="0.75"/>
+          <text x="70" y="337" class="heading">Inspect base</text>
+          <text x="70" y="365" class="body"><tspan x="70" dy="27">Check soundness,</tspan><tspan x="70" dy="27">movement and</tspan><tspan x="70" dy="27">finished floor</tspan><tspan x="70" dy="27">height.</tspan></text>
+        </g><g>
+          <rect x="271" y="190" width="210" height="345" rx="18" fill="#fffdf7" stroke="#d8d7c8" stroke-width="2"/>
+          <circle cx="307" cy="230" r="23" fill="#b4754a"/>
+          <text x="307" y="237" text-anchor="middle" class="number">02</text>
+          <rect x="296" y="285" width="160" height="5" rx="2" fill="#b4754a" opacity="0.75"/>
+          <text x="296" y="337" class="heading">Prepare surface</text>
+          <text x="296" y="365" class="body"><tspan x="296" dy="27">Use a suitable</tspan><tspan x="296" dy="27">substrate or</tspan><tspan x="296" dy="27">underlayment.</tspan></text>
+        </g><g>
+          <rect x="497" y="190" width="210" height="345" rx="18" fill="#fffdf7" stroke="#d8d7c8" stroke-width="2"/>
+          <circle cx="533" cy="230" r="23" fill="#b4754a"/>
+          <text x="533" y="237" text-anchor="middle" class="number">03</text>
+          <rect x="522" y="285" width="160" height="5" rx="2" fill="#b4754a" opacity="0.75"/>
+          <text x="522" y="337" class="heading">Plan layout</text>
+          <text x="522" y="365" class="body"><tspan x="522" dy="27">Balance cuts,</tspan><tspan x="522" dy="27">pattern and</tspan><tspan x="522" dy="27">doorway</tspan><tspan x="522" dy="27">transitions.</tspan></text>
+        </g><g>
+          <rect x="723" y="190" width="210" height="345" rx="18" fill="#fffdf7" stroke="#d8d7c8" stroke-width="2"/>
+          <circle cx="759" cy="230" r="23" fill="#b4754a"/>
+          <text x="759" y="237" text-anchor="middle" class="number">04</text>
+          <rect x="748" y="285" width="160" height="5" rx="2" fill="#b4754a" opacity="0.75"/>
+          <text x="748" y="337" class="heading">Set tile</text>
+          <text x="748" y="365" class="body"><tspan x="748" dy="27">Use compatible</tspan><tspan x="748" dy="27">setting material</tspan><tspan x="748" dy="27">and spacing.</tspan></text>
+        </g><g>
+          <rect x="949" y="190" width="210" height="345" rx="18" fill="#fffdf7" stroke="#d8d7c8" stroke-width="2"/>
+          <circle cx="985" cy="230" r="23" fill="#b4754a"/>
+          <text x="985" y="237" text-anchor="middle" class="number">05</text>
+          <rect x="974" y="285" width="160" height="5" rx="2" fill="#b4754a" opacity="0.75"/>
+          <text x="974" y="337" class="heading">Finish edges</text>
+          <text x="974" y="365" class="body"><tspan x="974" dy="27">Grout and</tspan><tspan x="974" dy="27">complete movement</tspan><tspan x="974" dy="27">and transition</tspan><tspan x="974" dy="27">details.</tspan></text>
+        </g>
+<text x="45" y="603" class="foot">A shower floor also needs a sloped waterproof assembly tied to its drain.</text>
+<text x="45" y="645" class="foot">Typical process only. Materials and details depend on the project.</text>
+</svg>

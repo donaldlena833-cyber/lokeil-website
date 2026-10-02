@@ -6,6 +6,7 @@ import { nycLocalSeoPost } from './nycLocalSeoPost';
 import { ridgewoodBathroomRemodelingPost } from './ridgewoodBathroomRemodelingPost';
 import { sunnysideBathroomRemodelingPost } from './sunnysideBathroomRemodelingPost';
 import { woodsideBathroomRemodelingPost } from './woodsideBathroomRemodelingPost';
+import { photoStoryPosts } from './photoStories';
 
 export type BlogSection = {
   heading: string;
@@ -38,9 +39,15 @@ export type BlogPost = {
     label: string;
     href: string;
   }>;
+  processDiagram?: {
+    src: string;
+    alt: string;
+    caption: string;
+  };
 };
 
 export const blogPosts: BlogPost[] = [
+  ...photoStoryPosts,
   jacksonHeightsBathroomRemodelingPost,
   woodsideBathroomRemodelingPost,
   sunnysideBathroomRemodelingPost,

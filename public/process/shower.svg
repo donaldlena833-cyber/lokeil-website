@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="680" viewBox="0 0 1200 680" role="img" aria-labelledby="title desc">
+<title id="title">What sits behind shower tile</title><desc id="desc">Typical bonded waterproof shower wall sequence. Tile and grout are the visible finish. The waterproof assembly manages water.</desc>
+<style>
+.title { font: 600 48px Georgia, serif; fill: #223027; }
+.sub { font: 23px Arial, sans-serif; fill: #586157; }
+.heading { font: 600 23px Arial, sans-serif; fill: #223027; }
+.number { font: 700 18px Arial, sans-serif; fill: #fffdf7; }
+.body { font: 19px Arial, sans-serif; fill: #455247; }
+.foot { font: 19px Arial, sans-serif; fill: #586157; }
+</style>
+<rect width="1200" height="680" fill="#f1f0e8"/>
+<text x="45" y="82" class="title">What sits behind shower tile</text>
+<text x="45" y="126" class="sub">Typical bonded waterproof shower wall sequence</text>
+<path d="M 90 260 H 1110" stroke="#b4754a" stroke-width="3" opacity="0.4"/>
+<g>
+          <rect x="45" y="190" width="210" height="345" rx="18" fill="#fffdf7" stroke="#d8d7c8" stroke-width="2"/>
+          <circle cx="81" cy="230" r="23" fill="#b4754a"/>
+          <text x="81" y="237" text-anchor="middle" class="number">01</text>
+          <rect x="70" y="285" width="160" height="5" rx="2" fill="#b4754a" opacity="0.75"/>
+          <text x="70" y="337" class="heading">Solid backing</text>
+          <text x="70" y="365" class="body"><tspan x="70" dy="27">Choose a suitable</tspan><tspan x="70" dy="27">wall base for the</tspan><tspan x="70" dy="27">specified system.</tspan></text>
+        </g><g>
+          <rect x="271" y="190" width="210" height="345" rx="18" fill="#fffdf7" stroke="#d8d7c8" stroke-width="2"/>
+          <circle cx="307" cy="230" r="23" fill="#b4754a"/>
+          <text x="307" y="237" text-anchor="middle" class="number">02</text>
+          <rect x="296" y="285" width="160" height="5" rx="2" fill="#b4754a" opacity="0.75"/>
+          <text x="296" y="337" class="heading">Waterproof layer</text>
+          <text x="296" y="365" class="body"><tspan x="296" dy="27">Join seams,</tspan><tspan x="296" dy="27">corners and</tspan><tspan x="296" dy="27">openings to the</tspan><tspan x="296" dy="27">drain system.</tspan></text>
+        </g><g>
+          <rect x="497" y="190" width="210" height="345" rx="18" fill="#fffdf7" stroke="#d8d7c8" stroke-width="2"/>
+          <circle cx="533" cy="230" r="23" fill="#b4754a"/>
+          <text x="533" y="237" text-anchor="middle" class="number">03</text>
+          <rect x="522" y="285" width="160" height="5" rx="2" fill="#b4754a" opacity="0.75"/>
+          <text x="522" y="337" class="heading">Setting mortar</text>
+          <text x="522" y="365" class="body"><tspan x="522" dy="27">Use a compatible</tspan><tspan x="522" dy="27">mortar and</tspan><tspan x="522" dy="27">achieve required</tspan><tspan x="522" dy="27">coverage.</tspan></text>
+        </g><g>
+          <rect x="723" y="190" width="210" height="345" rx="18" fill="#fffdf7" stroke="#d8d7c8" stroke-width="2"/>
+          <circle cx="759" cy="230" r="23" fill="#b4754a"/>
+          <text x="759" y="237" text-anchor="middle" class="number">04</text>
+          <rect x="748" y="285" width="160" height="5" rx="2" fill="#b4754a" opacity="0.75"/>
+          <text x="748" y="337" class="heading">Tile and grout</text>
+          <text x="748" y="365" class="body"><tspan x="748" dy="27">Set the planned</tspan><tspan x="748" dy="27">layout, then</tspan><tspan x="748" dy="27">finish the</tspan><tspan x="748" dy="27">joints.</tspan></text>
+        </g><g>
+          <rect x="949" y="190" width="210" height="345" rx="18" fill="#fffdf7" stroke="#d8d7c8" stroke-width="2"/>
+          <circle cx="985" cy="230" r="23" fill="#b4754a"/>
+          <text x="985" y="237" text-anchor="middle" class="number">05</text>
+          <rect x="974" y="285" width="160" height="5" rx="2" fill="#b4754a" opacity="0.75"/>
+          <text x="974" y="337" class="heading">Final joints</text>
+          <text x="974" y="365" class="body"><tspan x="974" dy="27">Use the specified</tspan><tspan x="974" dy="27">sealant at</tspan><tspan x="974" dy="27">changes of plane.</tspan></text>
+        </g>
+<text x="45" y="603" class="foot">Tile and grout are the visible finish. The waterproof assembly manages water.</text>
+<text x="45" y="645" class="foot">Typical process only. Materials and details depend on the project.</text>
+</svg>

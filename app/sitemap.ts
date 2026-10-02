@@ -1,7 +1,7 @@
 import type { MetadataRoute } from 'next';
 
 import { blogPosts } from './blog/blogData';
-import { siteData } from './siteData';
+import { galleryItems, siteData } from './siteData';
 
 const routes = [
   { path: '/terms', priority: 0.2, changeFrequency: 'yearly' as const, lastModified: '2026-09-13' },
@@ -15,14 +15,15 @@ const routes = [
   { path: '/plaster-drywall-finishing-queens', priority: 0.84, changeFrequency: 'monthly' as const, lastModified: '2026-08-12' },
   { path: '/interior-painting-queens', priority: 0.84, changeFrequency: 'monthly' as const, lastModified: '2026-08-12' },
   { path: '/cabinet-installation-queens', priority: 0.84, changeFrequency: 'monthly' as const, lastModified: '2026-08-12' },
-  { path: '/blog', priority: 0.8, changeFrequency: 'weekly' as const, lastModified: '2026-06-12' },
+  { path: '/blog', priority: 0.8, changeFrequency: 'weekly' as const, lastModified: '2026-10-01' },
   ...blogPosts.filter((post) => !post.slug.match(/^bathroom-remodeling-(astoria|jackson-heights|long-island-city|ridgewood|sunnyside|woodside)-nyc-planning-guide$/)).map((post) => ({
     path: `/blog/${post.slug}`,
     priority: 0.72,
     changeFrequency: 'monthly' as const,
     lastModified: post.publishDate,
+    images: [post.heroImage],
   })),
-  { path: '/gallery', priority: 0.8, changeFrequency: 'weekly' as const, lastModified: '2026-06-12' },
+  { path: '/gallery', priority: 0.8, changeFrequency: 'weekly' as const, lastModified: '2026-10-01', images: galleryItems.map((item) => item.src) },
   { path: '/contact', priority: 0.8, changeFrequency: 'monthly' as const, lastModified: '2026-09-28' },
   { path: '/privacy', priority: 0.3, changeFrequency: 'yearly' as const, lastModified: '2026-08-21' },
 ];
@@ -33,5 +34,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     lastModified: new Date(`${route.lastModified}T00:00:00.000Z`),
     changeFrequency: route.changeFrequency,
     priority: route.priority,
+    ...('images' in route ? { images: route.images?.map((image) => `${siteData.siteUrl}${image}`) } : {}),
   }));
 }
