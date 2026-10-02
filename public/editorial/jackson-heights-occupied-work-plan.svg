@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+  <title id="title">Occupied apartment work coordination</title>
+  <desc id="desc">A proposed room scope connects with property instructions, responsible reviews, and daily access before an agreed start.</desc>
+  <g stroke-linecap="round" stroke-linejoin="round">
+    <path d="M65 480V160H390V480M65 480H390" fill="#fafaf3" stroke="#526751" stroke-width="5"/>
+    <path d="M84 480V260H160V480" fill="#e1d9c8" stroke="#526751" stroke-width="4"/>
+    <rect x="193" y="180" width="174" height="208" fill="#d5e0e0" stroke="#526751" stroke-width="4"/>
+    <path d="M193 248H367M193 317H367M250 180V388M308 180V388" stroke="#fafaf3" stroke-width="4"/>
+    <path d="M179 404H376L361 452H194Z" fill="#eee8d9" stroke="#526751" stroke-width="5"/>
+    <path d="M205 466H372" stroke="#526751" stroke-width="4"/>
+    <path d="M412 320H485M464 301L487 320L464 339" fill="none" stroke="#45614a" stroke-width="6"/>
+    <path d="M500 95H1095V222H500Z" fill="#fafaf3" stroke="#526751" stroke-width="4"/>
+    <path d="M520 95V77H1115V203H1095" fill="none" stroke="#aebda6" stroke-width="3"/>
+    <path d="M500 266H1095V393H500Z" fill="#edf0e4" stroke="#526751" stroke-width="4"/>
+    <path d="M520 266V248H1115V374H1095" fill="none" stroke="#aebda6" stroke-width="3"/>
+    <path d="M500 437H1095V564H500Z" fill="#fafaf3" stroke="#526751" stroke-width="4"/>
+    <path d="M520 437V419H1115V545H1095" fill="none" stroke="#aebda6" stroke-width="3"/>
+    <path d="M800 572V617M779 596L800 620L821 596" fill="none" stroke="#45614a" stroke-width="6"/>
+    <rect x="640" y="639" width="319" height="100" rx="8" fill="#e3e8d8" stroke="#45614a" stroke-width="4"/>
+    <path d="M640 669H959M680 626V654M919 626V654" stroke="#45614a" stroke-width="5"/>
+  </g>
+  <g font-family="Arial, sans-serif" fill="#293b30">
+    <text x="227" y="110" text-anchor="middle" font-size="46">Proposed work</text>
+    <g font-size="47"><text x="530" y="170">Property instructions</text><text x="530" y="341">Responsible reviews</text><text x="530" y="512">Daily access</text></g>
+    <text x="800" y="718" text-anchor="middle" font-size="43">Agree the start</text>
+    <text x="227" y="540" text-anchor="middle" font-size="35" fill="#536154">One current scope</text>
+  </g>
+</svg>

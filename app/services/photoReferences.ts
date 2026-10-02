@@ -7,7 +7,7 @@ export const servicePhotoReferences: Record<string, { heading: string; intro: st
   },
   '/kitchen-remodeling-queens': {
     heading: 'Follow a kitchen from cabinet placement to the final surfaces.',
-    intro: 'These kitchen photographs show backsplash boundaries, a cabinet installation in progress, and the door alignment that matters at the end.',
+    intro: 'These kitchen photographs show backsplash boundaries, a cabinet installation in progress, and the counter decision that helps define a refresh.',
     images: ['/gallery/bathroom-tiles/4.jpg', '/gallery/kitchen-cabinets/6.jpg', '/gallery/bathroom-painting/6.jpg'],
   },
   '/tile-installation-queens': {
@@ -22,7 +22,7 @@ export const servicePhotoReferences: Record<string, { heading: string; intro: st
   },
   '/cabinet-installation-queens': {
     heading: 'Cabinet fit is easier to discuss with a real reference.',
-    intro: 'Use these photos to compare room clearances, the installation work area, and the door gaps you will see every day.',
+    intro: 'Use these photos to compare room clearances, the installation work area, and the cabinet and counter boundaries of a kitchen refresh.',
     images: ['/gallery/kitchen-cabinets/2.jpg', '/gallery/kitchen-cabinets/6.jpg', '/gallery/bathroom-painting/6.jpg'],
   },
   '/interior-painting-queens': {

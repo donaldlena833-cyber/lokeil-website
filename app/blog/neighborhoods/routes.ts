@@ -20,4 +20,7 @@ export const neighborhoodArticleSlugs = [
   'gray-tub-surround-tile-with-a-recessed-niche-in-progress',
   'blue-feature-tile-around-a-tub-and-window',
   'protecting-a-kitchen-floor-while-cabinets-are-installed',
+  'cabinet-door-alignment-before-a-kitchen-is-handed-over',
+  'testing-a-geometric-tile-sample-against-the-real-floor',
+  'shower-floor-and-wall-tile-before-final-hardware',
 ] as const;
