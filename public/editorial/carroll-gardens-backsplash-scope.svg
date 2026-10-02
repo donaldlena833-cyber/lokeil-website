@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+  <title id="title">Counter decision and backsplash scope</title>
+  <desc id="desc">A kitchen elevation separates cabinets, a proposed wall finish, and the counter, with notes for keeping or replacing the counter.</desc>
+  <g stroke-linecap="round" stroke-linejoin="round">
+    <rect x="155" y="145" width="690" height="390" fill="#fafaf3" stroke="#526751" stroke-width="4"/>
+    <rect x="180" y="155" width="240" height="145" fill="#eee8d9" stroke="#526751" stroke-width="4"/>
+    <path d="M193 168H406V288H193ZM300 168V287" fill="none" stroke="#526751" stroke-width="3"/>
+    <rect x="580" y="155" width="240" height="145" fill="#eee8d9" stroke="#526751" stroke-width="4"/>
+    <path d="M593 168H806V288H593ZM700 168V287" fill="none" stroke="#526751" stroke-width="3"/>
+    <rect x="155" y="305" width="690" height="153" fill="#cbd8dc"/>
+    <path d="M155 356H845M155 407H845M253 306V356M451 306V356M649 306V356M353 356V407M551 356V407M749 356V407M253 407V458M451 407V458M649 407V458" fill="none" stroke="#fafaf3" stroke-width="5"/>
+    <rect x="180" y="478" width="640" height="118" fill="#eee8d9" stroke="#526751" stroke-width="4"/>
+    <path d="M195 494H805V580H195ZM390 494V580M605 494V580" fill="none" stroke="#526751" stroke-width="3"/>
+    <path d="M155 458H845V480H155Z" fill="#d8d7c8" stroke="#45614a" stroke-width="5"/>
+    <path d="M470 120V72M850 380H925M846 470H925" fill="none" stroke="#45614a" stroke-width="3"/>
+    <path d="M152 623H845" stroke="#becbb5" stroke-width="3"/>
+  </g>
+  <g font-family="Arial, sans-serif" fill="#293b30">
+    <text x="470" y="55" text-anchor="middle" font-size="50">Cabinet position</text>
+    <text x="935" y="370" font-size="41"><tspan x="935">Wall finish</tspan><tspan x="935" dy="48">changes</tspan></text>
+    <text x="935" y="480" font-size="41">Counter</text>
+    <g font-size="43" font-weight="600"><text x="152" y="685">Counter stays</text><text x="630" y="685">Counter changes</text></g>
+    <g font-size="36" fill="#536154"><text x="152" y="738">Assess the junction</text><text x="630" y="738">Coordinate the supplier</text></g>
+  </g>
+</svg>

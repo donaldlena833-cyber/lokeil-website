@@ -34,7 +34,7 @@ export function serviceMarkdown(path: string) {
         const story = photoStoryForImage(image);
         return story ? [
           `### ${story.title}`,
-          `![${story.visible.split('.')[0]}.](${siteData.siteUrl}${story.image})`,
+          `![${story.alt}](${siteData.siteUrl}${story.image})`,
           `[Read this photo story](${siteData.siteUrl}/blog/${story.slug})`,
         ] : [];
       }),

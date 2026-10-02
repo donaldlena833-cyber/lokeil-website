@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1600" viewBox="0 0 1200 1600" role="img" aria-labelledby="title desc">
+  <title id="title">From one motif to the entrance view</title>
+  <desc id="desc">An original diamond motif is repeated across a conceptual floor with visible perimeter cuts and a doorway viewing point.</desc>
+  <defs>
+    <g id="motif"><rect width="150" height="150" fill="#e3e8d8"/><path d="M75 0L150 75L75 150L0 75Z" fill="#fafaf3"/><path d="M75 0L150 75H75ZM75 150L0 75H75Z" fill="#526751"/><path d="M75 0L150 75L75 150L0 75Z" fill="none" stroke="#aebda6" stroke-width="3"/></g>
+    <pattern id="repeat" width="150" height="150" patternUnits="userSpaceOnUse"><use href="#motif"/></pattern>
+  </defs>
+  <g stroke-linecap="round" stroke-linejoin="round">
+    <use href="#motif" transform="translate(450 160) scale(2)"/>
+    <path d="M600 460V528M582 510L600 530L618 510" fill="none" stroke="#45614a" stroke-width="5"/>
+    <rect x="140" y="650" width="920" height="660" fill="url(#repeat)" stroke="#293b30" stroke-width="6"/>
+    <path d="M140 1310H460M740 1310H1060" stroke="#293b30" stroke-width="12"/>
+    <path d="M460 1340H740" stroke="#45614a" stroke-width="9"/>
+    <path d="M600 1410L195 705M600 1410L1005 705" fill="none" stroke="#293b30" stroke-width="4" stroke-dasharray="12 13"/>
+    <circle cx="600" cy="1410" r="18" fill="#45614a"/>
+    <circle cx="140" cy="925" r="30" fill="none" stroke="#a1804d" stroke-width="7"/>
+    <circle cx="1060" cy="1125" r="30" fill="none" stroke="#a1804d" stroke-width="7"/>
+  </g>
+  <g font-family="Arial, sans-serif" fill="#293b30" text-anchor="middle">
+    <text x="600" y="105" font-size="60">One motif</text>
+    <text x="600" y="590" font-size="58">The repeat across a room</text>
+    <text x="600" y="1505" font-size="56">View from the doorway</text>
+    <text x="600" y="1565" font-size="39" fill="#536154">Review the visible cuts at the edges</text>
+  </g>
+</svg>
