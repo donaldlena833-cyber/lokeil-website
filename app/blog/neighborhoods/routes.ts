@@ -8,4 +8,7 @@ export const neighborhoodArticleSlugs = [
   'black-and-white-checkered-tile-in-a-bathroom-under-construction',
   'checkerboard-floor-cuts-at-an-unfinished-wall',
   'blue-kitchen-backsplash-while-cabinets-are-still-in-progress',
+  'gray-kitchen-cabinets-with-a-patterned-backsplash',
+  'blue-scallop-tile-and-the-problem-of-starting-the-pattern',
+  'marble-look-tub-surround-with-a-recessed-shelf',
 ] as const;

@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1536" height="1024" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+  <title id="title">A backsplash has a beginning, interruptions, and an end</title>
+  <desc id="desc">An original concept kitchen elevation shows a looping tile pattern behind a range and around an outlet, ending beside a window. Three numbered points correspond to focal view, interruptions, and exposed boundaries. No dimensions or product specifications are implied.</desc>
+  <defs><pattern id="loops" width="86" height="86" patternUnits="userSpaceOnUse"><path d="M43 0C0 0 0 86 43 86S86 0 43 0M0 43C0 0 86 0 86 43S0 86 0 43" fill="none" stroke="#45614A" stroke-width="3" opacity=".5"/></pattern></defs>
+  <g stroke="#45614A" stroke-width="3" stroke-linejoin="round">
+    <path d="M100 285H915V548H100Z" fill="#FAFAF3"/><path d="M100 285H915V548H100Z" fill="url(#loops)"/>
+    <path d="M100 180H340V280H100ZM650 180H815V280H650Z" fill="#E3E8D8"/>
+    <path d="M398 180H565L590 285H372Z" fill="#D4C7A7"/>
+    <path d="M940 235H1100V465H940Z" fill="#E3E8D8"/><path d="M955 250H1085V450H955Z" fill="#FAFAF3"/>
+    <path d="M1020 250V450M955 350H1085" fill="none"/>
+    <path d="M710 377H758V452H710Z" fill="#FAFAF3"/><path d="M722 392H746V410H722ZM722 420H746V438H722Z" fill="#E3E8D8"/>
+    <path d="M100 548H1100V570H100Z" fill="#D4C7A7"/>
+    <path d="M390 570H570V725H390Z" fill="#FAFAF3"/><path d="M410 620H550V702H410Z" fill="#E3E8D8"/>
+    <path d="M100 570H375V725H100ZM585 570H1100V725H585Z" fill="#E3E8D8"/>
+    <path d="M235 590V705M810 590V705M955 590V705" fill="none" opacity=".5"/>
+    <path d="M915 285V548" stroke="#A18B5E" stroke-width="9"/>
+  </g>
+  <g font-family="Arial, sans-serif" font-size="35" fill="#293B30"><text x="100" y="105">See the whole wall</text><text x="340" y="340" font-size="28">Focal view</text><text x="655" y="510" font-size="28">Outlet</text><text x="940" y="520" font-size="28">Window</text></g>
+  <g fill="#45614A"><circle cx="480" cy="430" r="30"/><circle cx="734" cy="335" r="30"/><circle cx="915" cy="220" r="30"/></g>
+  <g fill="#FAFAF3" font-family="Arial, sans-serif" font-size="32" font-weight="bold" text-anchor="middle"><text x="480" y="441">1</text><text x="734" y="346">2</text><text x="915" y="231">3</text></g>
+  <path d="M915 250V283" stroke="#A18B5E" stroke-width="3"/>
+</svg>
