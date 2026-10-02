@@ -17,4 +17,7 @@ export const neighborhoodArticleSlugs = [
   'black-waterproofing-coating-before-shower-tile',
   'blue-kitchen-cabinets-during-a-backsplash-installation',
   'cream-kitchen-cabinets-against-a-blue-backsplash',
+  'gray-tub-surround-tile-with-a-recessed-niche-in-progress',
+  'blue-feature-tile-around-a-tub-and-window',
+  'protecting-a-kitchen-floor-while-cabinets-are-installed',
 ] as const;

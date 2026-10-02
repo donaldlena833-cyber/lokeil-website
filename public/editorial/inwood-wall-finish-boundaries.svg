@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+  <title id="title">Agree the wall finish boundaries</title>
+  <desc id="desc">Retained tile sits beside a smaller repair area within a larger paint boundary. A light represents reviewing the selected finish in the room.</desc>
+  <defs>
+    <pattern id="tile" width="150" height="85" patternUnits="userSpaceOnUse"><rect width="150" height="85" fill="#d2d6cd"/><path d="M0 0H150V85H0Z" fill="none" stroke="#fafaf3" stroke-width="5"/></pattern>
+    <pattern id="patch" width="26" height="26" patternUnits="userSpaceOnUse"><path d="M0 26L26 0" stroke="#b7c7ab" stroke-width="4"/></pattern>
+  </defs>
+  <g stroke-linejoin="round" stroke-linecap="round">
+    <rect x="95" y="150" width="880" height="425" fill="#fafaf3" stroke="#526751" stroke-width="4"/>
+    <rect x="95" y="150" width="280" height="425" fill="url(#tile)"/>
+    <rect x="425" y="188" width="500" height="335" rx="12" fill="#edf0e4" stroke="#45614a" stroke-width="5" stroke-dasharray="13 13"/>
+    <path d="M539 313Q570 285 620 301L705 283Q739 310 719 364L737 426Q679 450 634 431L549 449Q518 395 539 313Z" fill="#cedac3"/>
+    <path d="M539 313Q570 285 620 301L705 283Q739 310 719 364L737 426Q679 450 634 431L549 449Q518 395 539 313Z" fill="url(#patch)" stroke="#5e7655" stroke-width="3"/>
+    <path d="M377 145V585" stroke="#526751" stroke-width="6"/>
+    <path d="M1000 260V502M1000 502H1090M980 260H1090L1060 206H1010Z" fill="#d8dfce" stroke="#45614a" stroke-width="5"/>
+    <path d="M982 280L822 235M982 330L825 376M983 378L848 493" fill="none" stroke="#bccaaa" stroke-width="7"/>
+    <path d="M660 270V90M838 530V625M224 575V625" fill="none" stroke="#45614a" stroke-width="3"/>
+  </g>
+  <g font-family="Arial, sans-serif" font-size="48" fill="#293b30">
+    <text x="660" y="65" text-anchor="middle">Repair area</text>
+    <text x="224" y="685" text-anchor="middle">Retained tile</text>
+    <text x="824" y="685" text-anchor="middle">Paint boundary</text>
+    <text x="1000" y="580" text-anchor="middle" font-size="36">Room light</text>
+  </g>
+</svg>
