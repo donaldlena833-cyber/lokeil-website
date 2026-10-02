@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1536" height="1024" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+  <title id="title">One finish set, reviewed under the intended light</title>
+  <desc id="desc">Original cream cabinet, blue tile, pale counter and hardware samples are surrounded by daylight, cooking light and evening symbols. Colors remain fixed; this is a review concept rather than a product lighting simulation.</desc>
+  <defs><marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#45614A"/></marker></defs>
+  <g font-family="Arial, sans-serif" fill="#293B30" text-anchor="middle"><text x="600" y="80" font-size="44">Review the same samples</text></g>
+  <g stroke="#45614A" stroke-width="3" stroke-linejoin="round">
+    <path d="M395 198H575V478H395Z" fill="#EAE2CC"/><path d="M420 224H550V451H420Z" fill="none"/><path d="M527 286V342" stroke="#A18B5E" stroke-width="7" stroke-linecap="round"/>
+    <path d="M608 264H834V416H608Z" fill="#79939E"/><path d="M608 314H834M608 365H834M720 264V314M660 314V365M778 314V365M720 365V416" stroke="#D4DFD9"/>
+    <path d="M395 504H834V555H395Z" fill="#FAFAF3"/><path d="M446 509L480 530L533 526L592 545M651 511L709 536L750 534L812 551" fill="none" stroke="#C6CFC4"/>
+    <circle cx="150" cy="260" r="42" fill="#D4C7A7"/><path d="M150 190V170M150 330V350M80 260H60M220 260H240M102 212L86 196M198 308L214 324M198 212L214 196M102 308L86 324" stroke="#A18B5E" stroke-width="5"/>
+    <path d="M1045 176V228M1020 228H1070L1100 278H990Z" fill="#E3E8D8"/><path d="M1045 288V319M1008 288L994 312M1082 288L1096 312" stroke="#A18B5E" stroke-width="5"/>
+    <path d="M670 638A46 46 0 1 1 623 707A40 40 0 0 0 670 638Z" fill="#D4DFD9"/>
+    <path d="M249 278L363 329M951 278L858 329M600 638V584" fill="none" stroke-dasharray="9 7" marker-end="url(#arrow)"/>
+  </g>
+  <g font-family="Arial, sans-serif" fill="#293B30" text-anchor="middle" font-size="38"><text x="150" y="397">Daylight</text><text x="1045" y="397">Cooking light</text><text x="650" y="763">Evening use</text><text x="728" y="213" font-size="32">Cabinet, tile,</text><text x="728" y="245" font-size="32">counter, hardware</text></g>
+</svg>

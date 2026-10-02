@@ -13,6 +13,9 @@ import { astoriaBathroomUsePost } from './astoria';
 import { upperWestSideKitchenPost } from './upperWestSide';
 import { upperEastSideVanityPost } from './upperEastSide';
 import { eastVillageRoomFitPost } from './eastVillage';
+import { lowerEastSideMoisturePost } from './lowerEastSide';
+import { chelseaKitchenFloorPost } from './chelsea';
+import { williamsburgKitchenPalettePost } from './williamsburg';
 
 // Each entry is written and reviewed individually. Existing article URLs stay intact.
-export const neighborhoodOverrides = [gowanusPost, financialDistrictPost, midtownWestPost, longIslandCityCabinetPost, downtownBrooklynBathroomPost, mottHavenPaintingPost, bedStuyTrimPost, crownHeightsFloorPost, harlemKitchenStoragePost, bushwickBacksplashPost, greenpointTilePost, astoriaBathroomUsePost, upperWestSideKitchenPost, upperEastSideVanityPost, eastVillageRoomFitPost];
+export const neighborhoodOverrides = [gowanusPost, financialDistrictPost, midtownWestPost, longIslandCityCabinetPost, downtownBrooklynBathroomPost, mottHavenPaintingPost, bedStuyTrimPost, crownHeightsFloorPost, harlemKitchenStoragePost, bushwickBacksplashPost, greenpointTilePost, astoriaBathroomUsePost, upperWestSideKitchenPost, upperEastSideVanityPost, eastVillageRoomFitPost, lowerEastSideMoisturePost, chelseaKitchenFloorPost, williamsburgKitchenPalettePost];

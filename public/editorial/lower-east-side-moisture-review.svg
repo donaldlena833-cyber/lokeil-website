@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1600" viewBox="0 0 600 800" role="img" aria-labelledby="title desc">
+  <title id="title">Follow the condition before the color</title>
+  <desc id="desc">An original observation and assessment path branches into wet area assembly work and surrounding wall repairs, then returns to an agreed finish. No moisture cause or repair method is diagnosed.</desc>
+  <defs><marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#45614A"/></marker></defs>
+  <g font-family="Arial, sans-serif" fill="#293B30" text-anchor="middle"><text x="300" y="56" font-size="30">Observe, assess, define</text></g>
+  <g stroke="#45614A" stroke-width="3" stroke-linejoin="round">
+    <path d="M222 91H378V217H222Z" fill="#FAFAF3"/><path d="M300 112Q321 139 308 150Q291 160 283 146Q276 134 300 112Z" fill="#C6D8DD"/><path d="M245 175H350M245 190H330" fill="none"/>
+    <path d="M300 280V316" fill="none" marker-end="url(#arrow)"/>
+    <path d="M115 332H485V412H115Z" fill="#E3E8D8"/>
+    <path d="M300 412V455H145V496" fill="none" marker-end="url(#arrow)"/><path d="M300 455H455V496" fill="none" marker-end="url(#arrow)"/>
+    <path d="M35 514H270V614H35Z" fill="#D4DFD9"/><path d="M330 514H565V614H330Z" fill="#EAE2CC"/>
+    <path d="M152 614V664H448V614M300 664V704" fill="none" marker-end="url(#arrow)"/>
+  </g>
+  <g font-family="Arial, sans-serif" fill="#293B30" text-anchor="middle" font-size="27"><text x="300" y="258">Location and timing</text><text x="300" y="368">Assess the source</text><text x="300" y="395" font-size="23">and surface condition</text><text x="152" y="555">Wet area</text><text x="152" y="589">assembly scope</text><text x="448" y="555">Surrounding</text><text x="448" y="589">wall repair scope</text><text x="300" y="747" font-size="30">Agreed final finish</text></g>
+</svg>

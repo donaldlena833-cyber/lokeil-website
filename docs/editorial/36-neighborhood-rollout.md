@@ -1,6 +1,6 @@
 # Neighborhood rollout: LOKEIL first, MetroGlass additive
 
-The supplied order is preserved. These are editorial assignments, not verified rankings of demand. LOKEIL batches 1 through 5 are written, with 21 assignments remaining. Each later assignment needs its own source check, evidence, original writing, illustration where useful, and evaluation before publication. Match existing LOKEIL articles individually to the subjects, retaining URLs when rewriting; preserve existing MetroGlass articles and add separate glazing content. MetroGlass directions in this table remain separate assignments and are not declared published by a LOKEIL release.
+The supplied order is preserved. These are editorial assignments, not verified rankings of demand. LOKEIL batches 1 through 6 are written, with 18 assignments remaining. Each later assignment needs its own source check, evidence, original writing, illustration where useful, and evaluation before publication. Match existing LOKEIL articles individually to the subjects, retaining URLs when rewriting; preserve existing MetroGlass articles and add separate glazing content. MetroGlass directions in this table remain separate assignments and are not declared published by a LOKEIL release.
 
 Publish three completed articles together. Recommended operating pace: one evaluated batch per week, with flexibility when a story needs more evidence. No recurring publication has been scheduled. Check crawl/index status separately from client response. Review search response after 2–4 weeks and business results over 90 days; an email click is not a received inquiry, and an estimate is not a credited job.
 
@@ -21,9 +21,9 @@ Publish three completed articles together. Recommended operating pace: one evalu
 | 5 | Upper West Side | Cabinet and wall repairs around finishes worth keeping | Co-op owner | Glass replacement with existing frames and trim | LOKEIL rewritten |
 | 5 | Upper East Side | A bathroom refresh with coordinated mirror, vanity, and light | Apartment owner | Mirror installation and electrical coordination | LOKEIL rewritten |
 | 5 | East Village | Planning a compact room with irregular existing walls | Homeowner | Custom glass measurement for out-of-square openings | LOKEIL rewritten |
-| 6 | Lower East Side | Moisture questions to settle before wall-finish replacement | Property owner | Condensation observations and what to inspect before replacement | Queued |
-| 6 | Chelsea | Selecting a quiet floor to support a strong cabinetry finish | Homeowner | Glass finishes for light and privacy | Queued |
-| 6 | Williamsburg | A finish palette checked in the room's actual lighting | Homeowner | Mirror and glass reflections under actual room lighting | Queued |
+| 6 | Lower East Side | Moisture questions to settle before wall-finish replacement | Property owner | Condensation observations and what to inspect before replacement | LOKEIL rewritten |
+| 6 | Chelsea | Selecting a quiet floor to support a strong cabinetry finish | Homeowner | Glass finishes for light and privacy | LOKEIL rewritten |
+| 6 | Williamsburg | A finish palette checked in the room's actual lighting | Homeowner | Mirror and glass reflections under actual room lighting | LOKEIL rewritten |
 | 7 | Inwood | Repairing a painted wall and agreeing what a ready surface means | Apartment owner | Preparing walls for mounted mirrors | Queued |
 | 7 | Ridgewood | A local bathroom estimate built from existing room conditions | Homeowner | A photo brief for glass replacement | Queued |
 | 7 | Park Slope | Restoring room edges after cabinet or fixture removal | House owner | Glazing beside retained moldings and finishes | Queued |
