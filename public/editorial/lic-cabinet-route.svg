@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1536" height="1024" viewBox="0 0 1200 800" role="img" aria-labelledby="title description">
+  <title id="title">Cabinet delivery and installation route</title>
+  <desc id="description">A carton passes through a turning route into a holding area before the cabinet run is installed. The plan is conceptual and has no dimensions.</desc>
+  <defs><marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 10 5 0 10z" fill="#45614A"/></marker></defs>
+  <g fill="none" stroke="#293B30" stroke-width="7" stroke-linejoin="round">
+    <path d="M85 615V140H555V335H1050V665H745V485H315V615"/>
+    <path d="M85 615H165M265 615H315M745 665H825M925 665H1050"/>
+    <path d="M165 615V515A100 100 0 0 1 265 615" stroke-width="3" stroke="#7A8874"/>
+    <path d="M825 665V565A100 100 0 0 1 925 665" stroke-width="3" stroke="#7A8874"/>
+  </g>
+  <path d="M175 690V350Q175 255 285 255H440V408H665Q810 408 810 490" fill="none" stroke="#45614A" stroke-width="9" stroke-dasharray="18 15" marker-end="url(#arrow)"/>
+  <g transform="translate(330 125)" stroke="#65775E" stroke-width="4" stroke-linejoin="round"><path d="M0 60 65 20 140 65 75 105z" fill="#E3E8D8"/><path d="M0 60V155L75 200V105z" fill="#F1F3E8"/><path d="M75 105V200L140 160V65z" fill="#D1D9C4"/><path d="m30 42 76 46v85" fill="none"/></g>
+  <rect x="820" y="355" width="195" height="245" rx="6" fill="#E3E8D8" stroke="#7A8874" stroke-width="3" stroke-dasharray="12 10"/>
+  <g stroke="#65775E" stroke-width="4" fill="#FAFAF3"><rect x="850" y="400" width="60" height="75"/><rect x="920" y="420" width="65" height="80"/><rect x="875" y="500" width="75" height="60"/></g>
+  <path d="M560 660H705V735H560z" fill="#E3E8D8" stroke="#7A8874" stroke-width="3"/>
+  <g stroke="#293B30" stroke-width="4" fill="#FAFAF3"><rect x="410" y="545" width="270" height="105"/><path d="M400 535H690V553H400z" fill="#D1D9C4"/><path d="M500 553V650M590 553V650"/><path d="M478 587v25M523 587v25M568 587v25M613 587v25" stroke-width="6"/></g>
+  <g fill="#45614A"><circle cx="105" cy="315" r="31"/><circle cx="1040" cy="370" r="31"/><circle cx="420" cy="685" r="31"/></g>
+  <g fill="#FAFAF3" font-family="Arial,sans-serif" font-size="35" text-anchor="middle"><text x="105" y="327">1</text><text x="1040" y="382">2</text><text x="420" y="697">3</text></g>
+</svg>

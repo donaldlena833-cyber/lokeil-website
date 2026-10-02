@@ -1,6 +1,6 @@
 # Neighborhood rollout: LOKEIL first, MetroGlass additive
 
-The supplied order is preserved. These are editorial assignments, not verified rankings of demand. Only batch 1 is written in this release. Each later assignment needs its own source check, evidence, original writing, illustration where useful, and evaluation before publication. Match existing LOKEIL articles individually to the subjects, retaining URLs when rewriting; preserve existing MetroGlass articles and add separate glazing content.
+The supplied order is preserved. These are editorial assignments, not verified rankings of demand. LOKEIL batches 1 and 2 are written. Each later assignment needs its own source check, evidence, original writing, illustration where useful, and evaluation before publication. Match existing LOKEIL articles individually to the subjects, retaining URLs when rewriting; preserve existing MetroGlass articles and add separate glazing content. MetroGlass directions in this table remain separate assignments and are not declared published by a LOKEIL release.
 
 Publish three completed articles together. Recommended operating pace: one evaluated batch per week, with flexibility when a story needs more evidence. No recurring publication has been scheduled. Check crawl/index status separately from client response. Review search response after 2–4 weeks and business results over 90 days; an email click is not a received inquiry, and an estimate is not a credited job.
 
@@ -9,9 +9,9 @@ Publish three completed articles together. Recommended operating pace: one evalu
 | 1 | Gowanus | Tile rhythm, niche placement, and defining the tub-surround scope | Homeowner | Shower-glass measuring after tile finishes | Rewritten |
 | 1 | Financial District | Walking path and fixture movement in a narrow bathroom | Apartment owner / manager | Glass door movement and access in a managed building | Rewritten |
 | 1 | Midtown West / Hudson Yards | Vanity interior, old footprint, and occupied-apartment access | Apartment owner | Mirror and shower-glass coordination during a bathroom refresh | Rewritten |
-| 2 | Long Island City | Kitchen cabinet delivery and installation in an occupied apartment | Condo owner | Interior glass partition layout and mounting surfaces | Queued |
-| 2 | Downtown Brooklyn | Comparing a wet-area renovation scope with finish-only work | Apartment owner | Shower glass after waterproofing and tile completion | Queued |
-| 2 | Mott Haven | A unit-turnover finish scope that separates repair from painting | Property manager | Prioritizing glass repairs during a unit turnover | Queued |
+| 2 | Long Island City | Kitchen cabinet delivery and installation in an occupied apartment | Condo owner | Interior glass partition layout and mounting surfaces | LOKEIL rewritten |
+| 2 | Downtown Brooklyn | Comparing a wet-area renovation scope with finish-only work | Apartment owner | Shower glass after waterproofing and tile completion | LOKEIL rewritten |
+| 2 | Mott Haven | A unit-turnover finish scope that separates repair from painting | Property manager | Prioritizing glass repairs during a unit turnover | LOKEIL rewritten |
 | 3 | Bedford-Stuyvesant | Preserving trim while repairing plaster and repainting a room | House owner | Mirrors and glazing beside retained architectural details | Queued |
 | 3 | Crown Heights | Floor thresholds and transitions between old and new rooms | Homeowner | Shower threshold measurements and enclosure options | Queued |
 | 3 | Central / East Harlem | Small kitchen storage without losing the working passage | Apartment owner | Glass partition visibility and privacy choices | Queued |
