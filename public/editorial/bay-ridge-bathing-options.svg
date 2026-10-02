@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+<title id="title">Compare bathing options with the same questions</title><desc id="desc">An original retained tub and shower concept point to routine, entry, services, and scope questions.</desc>
+<g stroke="#617261" stroke-width="4" stroke-linejoin="round">
+<rect x="100" y="150" width="390" height="210" rx="40" fill="#d4ddcc"/><rect x="140" y="180" width="310" height="140" rx="55" fill="#fafaf3"/>
+<path d="M145 365V385M445 365V385M730 360V150H1070V360M730 360H1070" fill="none"/>
+<path d="M820 165V205H900M880 205H930M887 230V250M905 230V250M923 230V250" fill="none"/>
+<path d="M965 190V340" fill="none" stroke-dasharray="10 10"/>
+<path d="M295 400V435H905V400M600 435V490M580 470L600 490L620 470" fill="none"/>
+<rect x="65" y="565" width="245" height="110" fill="#fafaf3"/><rect x="340" y="565" width="245" height="110" fill="#edf0e4"/><rect x="615" y="565" width="245" height="110" fill="#fafaf3"/><rect x="890" y="565" width="245" height="110" fill="#edf0e4"/>
+</g>
+<g font-family="Arial,sans-serif" fill="#293b30" font-size="46" text-anchor="middle">
+<text x="295" y="95">Keep the bath</text><text x="905" y="95">Assess a shower</text>
+<text x="600" y="535" font-size="42">The same four questions</text>
+<text x="188" y="633">Routine</text><text x="463" y="633">Entry</text><text x="738" y="633">Services</text><text x="1013" y="633">Scope</text>
+<text x="600" y="755" font-size="42">Compare complete assessed options</text>
+</g></svg>

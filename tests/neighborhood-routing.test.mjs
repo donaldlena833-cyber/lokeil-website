@@ -4,7 +4,7 @@ import { resolve } from 'node:path';
 import test from 'node:test';
 import { loadTypeScriptExports } from './load-ts.mjs';
 
-const imports = Object.fromEntries(['gowanus', 'financialDistrict', 'midtownWest', 'longIslandCity', 'downtownBrooklyn', 'mottHaven', 'bedStuy', 'crownHeights', 'harlem', 'bushwick', 'greenpoint', 'astoria', 'upperWestSide', 'upperEastSide', 'eastVillage', 'lowerEastSide', 'chelsea', 'williamsburg', 'inwood', 'ridgewood', 'parkSlope', 'carrollGardens', 'sunnyside', 'jacksonHeights', 'sunsetPark', 'portRichmond', 'flushing']
+const imports = Object.fromEntries(['gowanus', 'financialDistrict', 'midtownWest', 'longIslandCity', 'downtownBrooklyn', 'mottHaven', 'bedStuy', 'crownHeights', 'harlem', 'bushwick', 'greenpoint', 'astoria', 'upperWestSide', 'upperEastSide', 'eastVillage', 'lowerEastSide', 'chelsea', 'williamsburg', 'inwood', 'ridgewood', 'parkSlope', 'carrollGardens', 'sunnyside', 'jacksonHeights', 'sunsetPark', 'portRichmond', 'flushing', 'riverdale', 'stapleton', 'bayRidge']
   .map(name => [`./${name}`, loadTypeScriptExports(resolve(`app/blog/neighborhoods/${name}.ts`))]));
 const overrides = loadTypeScriptExports(resolve('app/blog/neighborhoods/index.ts'), imports);
 const { neighborhoodArticleSlugs } = loadTypeScriptExports(resolve('app/blog/neighborhoods/routes.ts'));
@@ -14,6 +14,10 @@ const { photoStoryPosts, photoStoryNotes } = loadTypeScriptExports(resolve('app/
   './neighborhoods': overrides,
   './photoArticleBodies': bodies,
 });
+
+const { buyerPlanningGuides } = loadTypeScriptExports(resolve('app/blog/buyerGuides.ts'));
+const { bathroomCostGuide, remodelPermitGuide, showerTileGuide } = loadTypeScriptExports(resolve('app/blog/planningGuides.ts'));
+const articleSlugs = new Set([...photoStoryPosts, ...buyerPlanningGuides, bathroomCostGuide, remodelPermitGuide, showerTileGuide].map(post => post.slug));
 
 test('neighborhood overrides preserve each photo route and its mobile estimate brief', () => {
   const { neighborhoodOverrides } = overrides;
@@ -30,7 +34,11 @@ test('neighborhood overrides preserve each photo route and its mobile estimate b
     assert.ok(existsSync(resolve('public' + rewrite.processDiagram.src)), rewrite.slug);
     assert.ok(rewrite.diagramAfter >= 0 && rewrite.diagramAfter < rewrite.sections.length);
     for (const link of [...rewrite.relatedServices || [], ...rewrite.sections.flatMap(section => section.links || [])]) {
-      assert.ok(existsSync(resolve('app' + link.href + '/page.tsx')), `Canonical service page missing: ${link.href}`);
+      if (link.href.startsWith('/blog/')) {
+        assert.ok(articleSlugs.has(link.href.slice('/blog/'.length)), `Linked article missing: ${link.href}`);
+      } else {
+        assert.ok(existsSync(resolve('app' + link.href + '/page.tsx')), `Canonical page missing: ${link.href}`);
+      }
     }
   }
 });

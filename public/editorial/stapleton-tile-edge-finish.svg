@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+<title id="title">A tiled wall boundary has connected finishes</title><desc id="desc">Original front view of tile face, edge treatment, and adjoining wall finish, linked to limits, treatment, and completion decisions.</desc>
+<g stroke="#617261" stroke-width="4" stroke-linejoin="round">
+<rect x="80" y="220" width="470" height="370" fill="#d3ddcc"/>
+<path d="M80 310H550M80 405H550M80 500H550M315 220V310M195 310V405M430 310V405M315 405V500M195 500V590M430 500V590" fill="none"/>
+<rect x="550" y="220" width="30" height="370" fill="#91a087"/>
+<rect x="580" y="220" width="540" height="370" fill="#fafaf3"/>
+<path d="M300 125V195M565 125V195M885 125V195M280 175L300 195L320 175M545 175L565 195L585 175M865 175L885 195L905 175" fill="none"/>
+<path d="M300 605V650M565 605V650M885 605V650" fill="none"/>
+</g>
+<g font-family="Arial,sans-serif" fill="#293b30" font-size="46" text-anchor="middle">
+<text x="300" y="85">Tile face</text><text x="565" y="85">Edge</text><text x="885" y="85">Wall finish</text>
+<text x="300" y="715">Limits</text><text x="565" y="715">Treatment</text><text x="885" y="715">Completion</text>
+</g></svg>

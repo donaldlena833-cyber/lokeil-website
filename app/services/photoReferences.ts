@@ -12,12 +12,12 @@ export const servicePhotoReferences: Record<string, { heading: string; intro: st
   },
   '/tile-installation-queens': {
     heading: 'See how a tile choice changes the layout.',
-    intro: 'A vertical shower wall, a loose floor selection, and a tub niche bring different questions: layout, future care, and finished edges. Open the detail closest to your project.',
+    intro: 'A vertical shower wall, a loose floor selection, and a marked tile wall bring different questions: layout, future care, and final edge finishing. Open the detail closest to your project.',
     images: ['/gallery/bathroom-tiles/1.jpg', '/gallery/bathroom-flooring/1.jpg', '/gallery/bathroom-tiles/10.jpg'],
   },
   '/flooring-installation-queens': {
     heading: 'Start with the places where the floor meets something else.',
-    intro: 'Pattern direction, a shower entry, and the tile around a drain show why flooring needs more than a material choice.',
+    intro: 'A floor layout, the boundaries beside a shower entry, and tile around a drain show why flooring needs more than a material choice.',
     images: ['/gallery/bathroom-flooring/3.jpg', '/gallery/bathroom-flooring/6.jpg', '/gallery/bathroom-flooring/8.jpg'],
   },
   '/cabinet-installation-queens': {
