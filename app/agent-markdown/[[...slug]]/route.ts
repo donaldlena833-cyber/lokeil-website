@@ -49,11 +49,13 @@ function blogMarkdown(slug: string) {
     post.description,
     `By ${siteData.brandName}. Published ${post.publishDate}.${post.modifiedDate ? ` Updated ${post.modifiedDate}.` : ''}`,
     `![${post.heroAlt}](${siteData.siteUrl}${post.heroImage})`,
+    ...(post.editorial ? [post.editorial.photoCaption, post.editorial.takeaway] : []),
     ...post.intro,
     ...post.sections.flatMap((section, index) => [
       `## ${section.heading}`,
       ...section.body,
       ...(section.list || []).map((item) => `- ${item}`),
+      ...(section.references || []).map((source) => `${source.label}: ${source.href}`),
       ...(post.diagramAfter === index ? process : []),
     ]),
     ...(post.diagramAfter === undefined ? process : []),
@@ -62,7 +64,7 @@ function blogMarkdown(slug: string) {
     ...(post.relatedServices || []).map((service) => `[${service.label}](${siteData.siteUrl}${service.href})`),
     '## Keep planning',
     ...relatedBlogPosts(post, blogPosts).map((related) => `[${related.title}](${siteData.siteUrl}/blog/${related.slug})`),
-    `Estimate: ${siteData.siteUrl}/contact`,
+    `Estimate: ${post.editorial ? `${siteData.siteUrl}/blog/${post.slug}#estimate-brief` : `${siteData.siteUrl}/contact`}`,
     `Source: ${siteData.siteUrl}/blog/${post.slug}`,
   ].join('\n\n');
 }

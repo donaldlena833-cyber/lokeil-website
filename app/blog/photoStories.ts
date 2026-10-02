@@ -1,5 +1,6 @@
 import type { BlogPost } from './blogData';
 import plans from './photoStoryPlans.json';
+import { neighborhoodOverrides } from './neighborhoods';
 
 type Process = 'shower' | 'floor' | 'niche' | 'cabinet' | 'paint';
 type PhotoNote = {
@@ -415,7 +416,7 @@ const photoServiceLinks = (note: PhotoNote) => {
   return [bathroom, tile];
 };
 
-export const photoStoryPosts: BlogPost[] = photoStoryNotes.map((note, index) => ({
+const generatedPhotoStoryPosts: BlogPost[] = photoStoryNotes.map((note, index) => ({
   slug: note.slug,
   title: note.title,
   description: storyPlans[index].description,
@@ -453,3 +454,7 @@ export const photoStoryPosts: BlogPost[] = photoStoryNotes.map((note, index) => 
     { label: 'Request an estimate', href: '/contact' },
   ],
 }));
+
+export const photoStoryPosts: BlogPost[] = generatedPhotoStoryPosts.map((post) =>
+  neighborhoodOverrides.find((rewrite) => rewrite.slug === post.slug) || post,
+);

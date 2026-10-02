@@ -8,6 +8,7 @@ import Breadcrumbs from '../../components/Breadcrumbs';
 import { siteData } from '../../siteData';
 import { blogPosts, getBlogPost } from '../blogData';
 import { relatedBlogPosts } from '../relatedPosts';
+import NeighborhoodArticle from '../NeighborhoodArticle';
 
 const formatPublishDate = (date: string) =>
   new Intl.DateTimeFormat('en-US', {
@@ -139,6 +140,10 @@ export default async function BlogPostPage({ params }: BlogPageProps) {
       },
     })),
   } : null;
+
+  if (post.editorial) {
+    return <NeighborhoodArticle post={post} schema={faqSchema ? [articleSchema, faqSchema] : [articleSchema]} relatedPosts={blogPosts.filter((item) => item.editorial && item.slug !== post.slug)} />;
+  }
 
   const processFigure = post.processDiagram ? (
     <figure className="mt-10 border-t border-black/10 pt-9">
