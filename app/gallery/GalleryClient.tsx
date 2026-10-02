@@ -35,7 +35,7 @@ export default function GalleryClient() {
 
   return (
     <>
-      <section className="sticky top-[104px] z-30 border-b border-white/8 bg-olive-600/90 py-4 backdrop-blur-xl">
+      <section className="sticky top-[70px] z-30 border-b border-ink/8 bg-paper/95 py-4 backdrop-blur-xl">
         <div className="site-shell">
           <div className="-mx-1 flex gap-2 overflow-x-auto px-1 pb-1">
             {galleryCategories.map((category) => {
@@ -47,8 +47,8 @@ export default function GalleryClient() {
                   aria-pressed={activeCategory === category.id}
                   className={`shrink-0 rounded-full px-4 py-2 text-sm font-medium transition-all ${
                     activeCategory === category.id
-                      ? 'bg-accent text-olive-900'
-                      : 'border border-white/10 bg-white/[0.04] text-olive-100/78 hover:border-accent/30 hover:text-olive-50'
+                      ? 'bg-accent text-white'
+                      : 'border border-ink/10 bg-paper-raised text-ink/80 hover:border-accent/30 hover:text-ink'
                   }`}
                 >
                   {category.label} <span className="text-current/70">{categoryCounts[category.id]}</span>
@@ -61,7 +61,7 @@ export default function GalleryClient() {
 
       <section className="section-space pt-12">
         <div className="site-shell">
-          <div className="mb-8 flex flex-col gap-3 border-b border-white/8 pb-6 sm:flex-row sm:items-end sm:justify-between">
+          <div className="mb-8 flex flex-col gap-3 border-b border-ink/8 pb-6 sm:flex-row sm:items-end sm:justify-between">
             <div data-reveal="fade-up">
               <p className="eyebrow">Current selection</p>
               <h2 className="section-title mt-4">
@@ -72,7 +72,7 @@ export default function GalleryClient() {
             </div>
 
             <p
-              className="text-sm uppercase tracking-[0.18em] text-olive-100/56"
+              className="text-sm uppercase tracking-[0.18em] text-ink/80"
               data-reveal="fade-up"
               data-delay="1"
             >
@@ -98,7 +98,7 @@ export default function GalleryClient() {
                   sizes="(max-width: 767px) 100vw, (max-width: 1279px) 50vw, 33vw"
                   className="gallery-image"
                 />
-                <span className="block bg-olive-900 px-4 py-4 text-lg leading-6 text-olive-50">
+                <span className="block bg-paper-raised px-4 py-4 text-lg leading-6 text-ink">
                   {item.title}
                   <span className="mt-2 block text-sm text-accent">Read the photo story</span>
                 </span>

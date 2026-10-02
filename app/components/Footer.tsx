@@ -4,26 +4,26 @@ import { coreServices, navItems, siteData } from '../siteData';
 
 export default function Footer() {
   return (
-    <footer className="section-rule bg-olive-700/70 pt-14 pb-28 md:pb-14">
+    <footer className="section-rule bg-sage-soft pt-14 pb-28 md:pb-14">
       <div className="site-shell">
         <div className="grid gap-10 lg:grid-cols-[1.2fr_0.8fr_0.9fr_0.9fr]">
           <div>
             <p className="eyebrow">Interior remodeling</p>
             <h3 className="mt-3 font-serif text-4xl text-accent">{siteData.brandName}</h3>
-            <p className="mt-4 max-w-md text-sm leading-7 text-olive-100/72">
+            <p className="mt-4 max-w-md text-sm leading-7 text-ink/80">
               Bathrooms, kitchens, tile work, flooring, plaster, painting, cabinets,
               doors, steps, and fireplace design with a cleaner, modern finish language.
             </p>
           </div>
 
           <div>
-            <h4 className="text-sm font-semibold uppercase tracking-[0.18em] text-olive-100/54">
+            <h4 className="text-sm font-semibold uppercase tracking-[0.18em] text-ink/80">
               Navigate
             </h4>
             <ul className="mt-4 space-y-3 text-sm">
               {navItems.map((item) => (
                 <li key={item.href}>
-                  <Link href={item.href} className="text-olive-100/76 hover:text-accent">
+                  <Link href={item.href} className="text-ink/80 hover:text-accent">
                     {item.label}
                   </Link>
                 </li>
@@ -32,10 +32,10 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="text-sm font-semibold uppercase tracking-[0.18em] text-olive-100/54">
+            <h4 className="text-sm font-semibold uppercase tracking-[0.18em] text-ink/80">
               Core Services
             </h4>
-            <ul className="mt-4 space-y-3 text-sm text-olive-100/76">
+            <ul className="mt-4 space-y-3 text-sm text-ink/80">
               {coreServices.slice(0, 5).map((service) => (
                 <li key={service.title}>
                   {'href' in service ? (
@@ -51,10 +51,10 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="text-sm font-semibold uppercase tracking-[0.18em] text-olive-100/54">
+            <h4 className="text-sm font-semibold uppercase tracking-[0.18em] text-ink/80">
               Contact
             </h4>
-            <ul className="mt-4 space-y-3 text-sm text-olive-100/76">
+            <ul className="mt-4 space-y-3 text-sm text-ink/80">
               <li>
                 <a href={`tel:${siteData.phoneHref}`} className="hover:text-accent">
                   {siteData.phoneDisplay}
@@ -80,7 +80,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-12 border-t border-white/10 pt-7 text-sm text-olive-100/48">
+        <div className="mt-12 border-t border-ink/10 pt-7 text-sm text-ink/80">
           <div className="flex flex-wrap items-center justify-between gap-4">
             <p>&copy; {new Date().getFullYear()} {siteData.legalName}. Ridgewood, Queens, NY.</p>
             <div className="flex gap-5"><Link href="/privacy" className="hover:text-accent">Privacy</Link><a href="/llms.txt" className="hover:text-accent">Agent instructions</a></div>

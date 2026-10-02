@@ -170,7 +170,7 @@ export default async function BlogPostPage({ params }: BlogPageProps) {
       />
 
       <article>
-        <section className="section-space border-b border-white/8">
+        <section className="section-space border-b border-ink/8">
           <div className="site-shell grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-end">
             <div data-reveal="fade-up">
               <Link href="/blog" className="eyebrow hover:text-accent-hover">
@@ -220,7 +220,7 @@ export default async function BlogPostPage({ params }: BlogPageProps) {
                       <h2>{section.heading}</h2>
                       <div className="mt-5 space-y-5">
                         {section.body.map((paragraph) => (
-                          <p key={paragraph} className="text-base leading-8 text-olive-100/76 sm:text-lg">
+                          <p key={paragraph} className="text-base leading-8 text-ink/80 sm:text-lg">
                             {paragraph}
                           </p>
                         ))}
@@ -248,7 +248,7 @@ export default async function BlogPostPage({ params }: BlogPageProps) {
                   {post.faqs.map((faq) => (
                     <div key={faq.question} className="py-6 first:pt-0 last:pb-0">
                       <h3 className="text-2xl">{faq.question}</h3>
-                      <p className="mt-3 text-base leading-8 text-olive-100/76">{faq.answer}</p>
+                      <p className="mt-3 text-base leading-8 text-ink/80">{faq.answer}</p>
                     </div>
                   ))}
                 </div>
@@ -278,7 +278,7 @@ export default async function BlogPostPage({ params }: BlogPageProps) {
             <aside className="surface sticky top-32 p-6">
               {post.processSteps ? <>
                 <p className="eyebrow">In this photo</p>
-                <p className="mt-4 text-2xl leading-snug text-olive-50">{post.diagramHeading}</p>
+                <p className="mt-4 text-2xl leading-snug text-ink">{post.diagramHeading}</p>
               </> : <>
                 <p className="eyebrow">Planning topics</p>
                 <div className="mt-4 flex flex-wrap gap-2">
@@ -290,9 +290,9 @@ export default async function BlogPostPage({ params }: BlogPageProps) {
                 </div>
               </>}
 
-              <div className="mt-8 border-t border-white/10 pt-6">
-                <p className="text-2xl text-olive-50">Planning a remodel?</p>
-                <p className="mt-3 text-sm leading-7 text-olive-100/72">
+              <div className="mt-8 border-t border-ink/10 pt-6">
+                <p className="text-2xl text-ink">Planning a remodel?</p>
+                <p className="mt-3 text-sm leading-7 text-ink/80">
                   Send photos, location, and a short scope so LOKEIL can start the estimate
                   conversation clearly.
                 </p>
@@ -302,7 +302,7 @@ export default async function BlogPostPage({ params }: BlogPageProps) {
               </div>
 
               {post.relatedServices ? (
-                <div className="mt-8 border-t border-white/10 pt-6">
+                <div className="mt-8 border-t border-ink/10 pt-6">
                   <p className="eyebrow">Related services</p>
                   <div className="mt-4 grid gap-3">
                     {post.relatedServices.map((service) => (
@@ -322,7 +322,7 @@ export default async function BlogPostPage({ params }: BlogPageProps) {
         </section>
       </article>
 
-      <section className="section-rule section-space bg-black/8">
+      <section className="section-rule section-space bg-sage-soft/60">
         <div className="site-shell">
           <div className="max-w-3xl">
             <p className="eyebrow">Keep planning</p>
@@ -346,8 +346,8 @@ export default async function BlogPostPage({ params }: BlogPageProps) {
                     />
                     <div className="image-veil" />
                   </div>
-                  <h3 className="mt-5 text-3xl leading-tight text-olive-50">{related.title}</h3>
-                  <p className="mt-3 text-base leading-7 text-olive-100/72">{related.description}</p>
+                  <h3 className="mt-5 text-3xl leading-tight text-ink">{related.title}</h3>
+                  <p className="mt-3 text-base leading-7 text-ink/80">{related.description}</p>
                 </article>
               </Link>
             ))}

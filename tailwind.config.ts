@@ -8,21 +8,13 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        'olive': {
-          50: '#F8F6F0',
-          100: '#E7E4DC',
-          200: '#D5D0C5',
-          300: '#B3B5A8',
-          400: '#666D63',
-          500: '#292D2A',
-          600: '#252925',
-          700: '#202420',
-          800: '#1A1E1B',
-          900: '#151915',
-        },
+        paper: '#F1F3E8',
+        'paper-raised': '#FAFAF3',
+        'sage-soft': '#E3E8D8',
+        ink: '#293B30',
         'accent': {
-          DEFAULT: '#C8A96E',
-          hover: '#D4B87A',
+          DEFAULT: '#45614A',
+          hover: '#344D39',
         },
       },
       fontFamily: {

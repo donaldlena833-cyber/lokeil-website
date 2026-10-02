@@ -34,7 +34,7 @@ const contactCards = [
 export default function Contact() {
   return (
     <main>
-      <section className="section-space border-b border-white/8">
+      <section className="section-space border-b border-ink/8">
         <div className="site-shell grid gap-10 lg:grid-cols-[1fr_0.9fr] lg:items-end">
           <div data-reveal="fade-up">
             <p className="eyebrow">Contact</p>
@@ -43,7 +43,7 @@ export default function Contact() {
               Call LOKEIL Renovation or email your project details. We are based in Ridgewood
               and handle bathrooms, kitchens, tile, flooring, cabinets, and interior finishes.
             </p>
-            <p className="mt-5 max-w-2xl text-base leading-7 text-olive-100/72">
+            <p className="mt-5 max-w-2xl text-base leading-7 text-ink/80">
               Include your neighborhood, the room, what you want to change, and current photos.
               The email button opens a draft you can fill in and send from your own email app.
             </p>
@@ -58,22 +58,22 @@ export default function Contact() {
             </div>
 
             <div className="mt-8 flex flex-wrap gap-3">
-              <span className="chip normal-case tracking-[0.06em] text-olive-100/82">
+              <span className="chip normal-case tracking-[0.06em] text-ink/82">
                 Ridgewood based
               </span>
-              <span className="chip normal-case tracking-[0.06em] text-olive-100/82">
+              <span className="chip normal-case tracking-[0.06em] text-ink/82">
                 Queens + NYC service area
               </span>
-              <span className="chip normal-case tracking-[0.06em] text-olive-100/82">
+              <span className="chip normal-case tracking-[0.06em] text-ink/82">
                 Project-specific estimates
               </span>
             </div>
           </div>
 
           <div className="surface p-6 sm:p-8" data-reveal="scale-in" data-delay="1">
-            <p className="text-sm uppercase tracking-[0.18em] text-accent/82">Based in</p>
-            <h2 className="mt-3 text-4xl text-olive-50">{siteData.location}</h2>
-            <p className="mt-4 text-base leading-7 text-olive-100/72">
+            <p className="text-sm uppercase tracking-[0.18em] text-accent/95">Based in</p>
+            <h2 className="mt-3 text-4xl text-ink">{siteData.location}</h2>
+            <p className="mt-4 text-base leading-7 text-ink/80">
               Serving {siteData.serviceArea}.
             </p>
 
@@ -84,13 +84,13 @@ export default function Contact() {
                 rel="noopener noreferrer"
                 className="soft-surface px-5 py-4 transition-colors hover:border-accent/30 hover:text-accent"
               >
-                <p className="text-sm uppercase tracking-[0.18em] text-accent/82">Instagram</p>
-                <p className="mt-2 text-lg text-olive-50">{siteData.instagramHandle}<span className="sr-only">, opens in a new tab</span></p>
+                <p className="text-sm uppercase tracking-[0.18em] text-accent/95">Instagram</p>
+                <p className="mt-2 text-lg text-ink">{siteData.instagramHandle}<span className="sr-only">, opens in a new tab</span></p>
               </a>
               <div className="soft-surface px-5 py-4">
-                <p className="text-sm uppercase tracking-[0.18em] text-accent/82">Business hours</p>
-                <p className="mt-2 text-lg text-olive-50">{siteData.hours[0].label}</p>
-                <p className="mt-1 text-sm text-olive-100/72">{siteData.hours[0].value}</p>
+                <p className="text-sm uppercase tracking-[0.18em] text-accent/95">Business hours</p>
+                <p className="mt-2 text-lg text-ink">{siteData.hours[0].label}</p>
+                <p className="mt-1 text-sm text-ink/80">{siteData.hours[0].value}</p>
               </div>
             </div>
           </div>
@@ -109,17 +109,17 @@ export default function Contact() {
                 data-reveal="fade-up"
                 data-delay={String(index + 1)}
             >
-              <p className="text-sm font-semibold uppercase tracking-[0.18em] text-accent/82">
+              <p className="text-sm font-semibold uppercase tracking-[0.18em] text-accent/95">
                 {card.label}
               </p>
-              <p className="mt-4 text-3xl text-olive-50 break-words">{card.value}</p>
-              <p className="mt-3 text-base leading-7 text-olive-100/68">{card.note}</p>
+              <p className="mt-4 text-3xl text-ink break-words">{card.value}</p>
+              <p className="mt-3 text-base leading-7 text-ink/80">{card.note}</p>
             </a>
           ))}
         </div>
       </section>
 
-      <section className="section-rule section-space bg-black/8">
+      <section className="section-rule section-space bg-sage-soft/60">
         <div className="site-shell grid gap-8 lg:grid-cols-[0.95fr_1.05fr]">
           <div className="surface p-6 sm:p-8" data-reveal="fade-up">
             <p className="eyebrow">Hours</p>
@@ -128,9 +128,9 @@ export default function Contact() {
               {siteData.hours.map((item) => (
                 <div
                   key={item.label}
-                  className="flex items-center justify-between gap-4 border-b border-white/8 pb-4 last:border-b-0 last:pb-0"
+                  className="flex items-center justify-between gap-4 border-b border-ink/8 pb-4 last:border-b-0 last:pb-0"
                 >
-                  <span className="text-base text-olive-100/72">{item.label}</span>
+                  <span className="text-base text-ink/80">{item.label}</span>
                   <span className="text-base font-semibold text-accent">{item.value}</span>
                 </div>
               ))}
@@ -140,11 +140,11 @@ export default function Contact() {
           <div className="surface p-6 sm:p-8" data-reveal="scale-in" data-delay="1">
             <p className="eyebrow">Service area</p>
             <h2 className="section-title mt-4">Ridgewood first, broader NYC area after that.</h2>
-            <p className="mt-6 text-base leading-8 text-olive-100/72">
+            <p className="mt-6 text-base leading-8 text-ink/80">
               Ridgewood, Queens is the home base. LOKEIL works across the five boroughs and also
               takes projects in parts of Long Island and Westchester County.
             </p>
-            <p className="mt-5 text-base leading-8 text-olive-100/72">
+            <p className="mt-5 text-base leading-8 text-ink/80">
               If your project is interior-focused and falls within that area, call or send an
               email with the room, location, and rough scope.
             </p>
@@ -172,7 +172,7 @@ export default function Contact() {
                 'The main goal: repair, refresh, full remodel, new tile, cabinet installation, flooring, plaster, or painting.',
                 'Any finish references from the gallery, service pages, or materials you already selected.',
               ].map((item) => (
-                <p key={item} className="border-b border-white/8 pb-5 text-base leading-7 text-olive-100/72 last:border-b-0 last:pb-0">
+                <p key={item} className="border-b border-ink/8 pb-5 text-base leading-7 text-ink/80 last:border-b-0 last:pb-0">
                   {item}
                 </p>
               ))}

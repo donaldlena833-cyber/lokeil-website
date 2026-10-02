@@ -27,7 +27,7 @@ export default function BlogIndex() {
 
   return (
     <main>
-      <section className="section-space border-b border-white/8">
+      <section className="section-space border-b border-ink/8">
         <div className="site-shell grid gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:items-end">
           <div data-reveal="fade-up">
             <p className="eyebrow">Remodeling blog</p>
@@ -57,10 +57,10 @@ export default function BlogIndex() {
               <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(12,16,11,0.04)_0%,rgba(12,16,11,0.82)_100%)]" />
               <div className="absolute bottom-0 left-0 right-0 p-6 sm:p-8">
                 <span className="chip">{featuredPost.primaryKeyword}</span>
-                <h2 className="mt-4 max-w-2xl text-4xl leading-tight text-olive-50">
+                <h2 className="mt-4 max-w-2xl text-4xl leading-tight text-white">
                   {featuredPost.title}
                 </h2>
-                <p className="mt-3 text-sm uppercase tracking-[0.16em] text-olive-100/70">
+                <p className="mt-3 text-sm uppercase tracking-[0.16em] text-white/90">
                   {featuredPost.readTime}
                 </p>
               </div>
@@ -94,9 +94,9 @@ export default function BlogIndex() {
                 </div>
                 <article className="p-6 sm:p-7">
                   <p className="eyebrow">{post.eyebrow}</p>
-                  <h2 className="mt-3 text-3xl leading-tight text-olive-50">{post.title}</h2>
-                  <p className="mt-4 text-base leading-7 text-olive-100/72">{post.description}</p>
-                  <p className="mt-5 text-sm uppercase tracking-[0.16em] text-accent/82">
+                  <h2 className="mt-3 text-3xl leading-tight text-ink">{post.title}</h2>
+                  <p className="mt-4 text-base leading-7 text-ink/80">{post.description}</p>
+                  <p className="mt-5 text-sm uppercase tracking-[0.16em] text-accent/95">
                     {post.readTime}
                   </p>
                 </article>
@@ -127,8 +127,8 @@ export default function BlogIndex() {
                 </div>
                 <article className="p-6 sm:p-7">
                   <p className="eyebrow">{post.eyebrow}</p>
-                  <h3 className="mt-3 text-3xl leading-tight text-olive-50">{post.title}</h3>
-                  <p className="mt-4 text-base leading-7 text-olive-100/72">{post.description}</p>
+                  <h3 className="mt-3 text-3xl leading-tight text-ink">{post.title}</h3>
+                  <p className="mt-4 text-base leading-7 text-ink/80">{post.description}</p>
                 </article>
               </Link>
             ))}

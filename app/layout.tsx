@@ -94,7 +94,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: '#292D2A',
+  themeColor: '#F1F3E8',
 };
 
 export default function RootLayout({
@@ -104,7 +104,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${manrope.variable} ${instrumentSerif.variable}`}>
-      <body className="bg-olive-500 text-olive-50">
+      <body className="bg-paper text-ink">
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}

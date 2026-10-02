@@ -35,7 +35,7 @@ const principles = [
 export default function About() {
   return (
     <main>
-      <section className="section-space border-b border-white/8">
+      <section className="section-space border-b border-ink/8">
         <div className="site-shell grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-end">
           <div data-reveal="fade-up">
             <p className="eyebrow">About the company</p>
@@ -69,7 +69,7 @@ export default function About() {
           <div data-reveal="fade-up">
             <p className="eyebrow">Our story</p>
             <h2 className="section-title mt-4">Built around rooms, materials, and the details that finish well.</h2>
-            <div className="mt-6 space-y-5 text-base leading-8 text-olive-100/76">
+            <div className="mt-6 space-y-5 text-base leading-8 text-ink/80">
               <p>
                 {siteData.brandName} works on interior spaces that need a stronger finish and a better
                 sense of order, whether that means a new shower surround, updated flooring,
@@ -87,23 +87,23 @@ export default function About() {
           </div>
 
           <div className="surface p-6 sm:p-8" data-reveal="scale-in" data-delay="1">
-            <p className="text-sm uppercase tracking-[0.18em] text-accent/84">
+            <p className="text-sm uppercase tracking-[0.18em] text-accent/95">
               Meet the owner
             </p>
-            <h3 className="mt-3 text-4xl text-olive-50">{siteData.owner}</h3>
-            <p className="mt-5 text-base leading-8 text-olive-100/74">
+            <h3 className="mt-3 text-4xl text-ink">{siteData.owner}</h3>
+            <p className="mt-5 text-base leading-8 text-ink/80">
               Lorel Beqari is the owner behind {siteData.brandName}. He brings the company around
               interior upgrades that benefit from patience and detail: bathrooms, kitchens, tile,
               floors, cabinetry, trim, and finish work that should feel composed once the room is complete.
             </p>
-            <p className="mt-5 text-base leading-8 text-olive-100/74">
+            <p className="mt-5 text-base leading-8 text-ink/80">
               The goal is simple: do the work cleanly, choose materials carefully, and leave the
               space looking sharper, more functional, and more comfortable to live with.
             </p>
 
             <div className="mt-7 flex flex-wrap gap-3">
               {valuePoints.map((item) => (
-                <span key={item} className="chip normal-case tracking-[0.06em] text-olive-100/82">
+                <span key={item} className="chip normal-case tracking-[0.06em] text-ink/82">
                   {item}
                 </span>
               ))}
@@ -112,7 +112,7 @@ export default function About() {
         </div>
       </section>
 
-      <section className="section-rule section-space bg-black/8">
+      <section className="section-rule section-space bg-sage-soft/60">
         <div className="site-shell grid gap-6 lg:grid-cols-3">
           {principles.map((item, index) => (
             <div
@@ -121,8 +121,8 @@ export default function About() {
               data-reveal="fade-up"
               data-delay={String(index + 1)}
             >
-              <h3 className="text-3xl text-olive-50">{item.title}</h3>
-              <p className="mt-3 text-base leading-7 text-olive-100/72">{item.body}</p>
+              <h3 className="text-3xl text-ink">{item.title}</h3>
+              <p className="mt-3 text-base leading-7 text-ink/80">{item.body}</p>
             </div>
           ))}
         </div>
@@ -143,8 +143,8 @@ export default function About() {
                 <div key={step.step} className="grid gap-4 sm:grid-cols-[auto_1fr]">
                   <span className="text-4xl text-accent">{step.step}</span>
                   <div>
-                    <h3 className="text-2xl text-olive-50">{step.title}</h3>
-                    <p className="mt-2 text-base leading-7 text-olive-100/72">{step.description}</p>
+                    <h3 className="text-2xl text-ink">{step.title}</h3>
+                    <p className="mt-2 text-base leading-7 text-ink/80">{step.description}</p>
                   </div>
                 </div>
               ))}
