@@ -22,7 +22,7 @@ export default function ServicePhotoReferences({ servicePath }: { servicePath: s
             <Link key={story.slug} href={`/blog/${story.slug}`} className="tile-hover group">
               <figure>
                 <div className="media-frame aspect-[4/3]">
-                  <Image src={story.image} alt={story.visible.split('.')[0] + '.'} fill quality={68}
+                  <Image src={story.image} alt={story.alt} fill quality={68}
                     sizes="(max-width: 767px) 100vw, (max-width: 1023px) 50vw, 33vw" className="object-cover" />
                 </div>
                 <figcaption className="mt-5">

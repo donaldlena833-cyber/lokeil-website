@@ -1,6 +1,7 @@
 import type { BlogPost } from './blogData';
 import plans from './photoStoryPlans.json';
 import { neighborhoodOverrides } from './neighborhoods';
+import { photoArticleBodies, photoArticleAltText } from './photoArticleBodies';
 
 type Process = 'shower' | 'floor' | 'niche' | 'cabinet' | 'paint';
 type PhotoNote = {
@@ -355,7 +356,13 @@ const aliases: Record<string, string> = {
 
 const slug = (title: string) => title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
 
-export const photoStoryNotes = notes.map((note) => ({ ...note, slug: slug(note.title) }));
+export const photoStoryNotes = notes.map((note) => ({
+  ...note,
+  // Existing filenames and links keep the original title based slug.
+  slug: slug(note.title),
+  title: photoArticleBodies[note.image]?.title || note.title,
+  alt: photoArticleAltText[note.image] || note.visible.split('.')[0] + '.',
+}));
 
 export function photoStoryForImage(image: string) {
   return photoStoryNotes.find((note) => note.image === (aliases[image] || image));
@@ -418,18 +425,18 @@ const photoServiceLinks = (note: PhotoNote) => {
 
 const generatedPhotoStoryPosts: BlogPost[] = photoStoryNotes.map((note, index) => ({
   slug: note.slug,
-  title: note.title,
-  description: storyPlans[index].description,
+  title: photoArticleBodies[note.image]?.title || note.title,
+  description: photoArticleBodies[note.image]?.description || storyPlans[index].description,
   eyebrow: 'From the project gallery',
   publishDate: '2026-10-01',
   modifiedDate: '2026-10-02',
   readTime: '3 min read',
   heroImage: note.image,
-  heroAlt: note.visible.split('.')[0] + '.',
+  heroAlt: note.alt,
   primaryKeyword: note.keyword,
   keywords: [note.keyword, 'New York City interior renovation', 'LOKEIL Renovation'],
-  intro: [storyPlans[index].lead],
-  sections: storyPlans[index].outline.map(([heading, keys]) => {
+  intro: photoArticleBodies[note.image]?.intro || [storyPlans[index].lead],
+  sections: photoArticleBodies[note.image]?.sections || storyPlans[index].outline.map(([heading, keys]) => {
     const content: Record<ContentKey, string> = {
       photo: note.visible,
       detail: details[note.image],
@@ -444,7 +451,7 @@ const generatedPhotoStoryPosts: BlogPost[] = photoStoryNotes.map((note, index) =
     alt: `${storyPlans[index].diagramHeading}. ${storyPlans[index].steps.join('. ')}.`,
     caption: `${storyPlans[index].diagramHeading}. The exact assembly and product specifications depend on the room and chosen materials.`,
   },
-  diagramAfter: storyPlans[index].diagramAfter,
+  diagramAfter: photoArticleBodies[note.image]?.diagramAfter ?? storyPlans[index].diagramAfter,
   diagramHeading: storyPlans[index].diagramHeading,
   processSteps: storyPlans[index].steps,
   sources: [processSources[note.diagram]],
