@@ -71,6 +71,13 @@ function blogMarkdown(slug: string) {
       ...(post.diagramAfter === index ? process : []),
     ]),
     ...(post.diagramAfter === undefined ? process : []),
+    ...(post.editorial ? [
+      '## Choose a starting point',
+      ...post.editorial.choices.flatMap((choice) => [`### ${choice.label}`, choice.detail]),
+      `## ${post.editorial.estimateTitle}`,
+      post.editorial.estimateScope,
+      `Prepare a short brief at ${siteData.siteUrl}/blog/${post.slug}#estimate-brief, then open it in your email app. Add room photos and building requirements before sending. This prepares a draft; LOKEIL receives it only when you send it.`,
+    ] : []),
     ...post.faqs.flatMap((faq) => [`## ${faq.question}`, faq.answer]),
     ...(post.sources || []).map((source) => `${source.label}: ${source.href}`),
     ...(post.relatedServices || []).map((service) => `[${service.label}](${siteData.siteUrl}${service.href})`),

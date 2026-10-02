@@ -112,7 +112,7 @@ export default function RootLayout({
         <ContactIntentAnalytics />
         <ScrollObserver />
         <Header />
-        <div className="min-h-screen overflow-x-hidden pb-24 md:pb-0">{children}</div>
+        <div className="min-h-screen overflow-x-clip pb-24 md:pb-0">{children}</div>
         <MobileCtaBar />
         <Footer />
 <CookieConsent tagManagerId={gtmId} />

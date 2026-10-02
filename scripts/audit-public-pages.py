@@ -167,6 +167,7 @@ def main():
             issues.append('Markdown variation or canonical link missing')
         process_images = [image for image in page.images if image.startswith('/process/stories/')]
         decoded_images = [urllib.parse.parse_qs(urllib.parse.urlsplit(image).query).get('url', [image])[0] for image in page.images]
+        editorial_images = [image for image in decoded_images if image.startswith('/editorial/')]
         guide_images = [image for image in decoded_images if image.startswith('/process/guides/')]
         for cell in page.table_cells:
             if cell and cell not in normalize(markdown):
@@ -188,22 +189,22 @@ def main():
         for link in page.links:
             if link.startswith('/blog/') and (CANONICAL + link) not in urls:
                 issues.append('article link points outside the published URL set: ' + link)
-        if process_images:
+        if process_images or editorial_images:
             other_stories = {link for link in page.links if link.startswith('/blog/') and link != path}
-            if len(other_stories) < 3:
-                issues.append('fewer than three useful related article links')
+            if len(other_stories) < (2 if editorial_images else 3):
+                issues.append('useful related article links missing')
             if not any(link.endswith('-queens') for link in page.links):
                 issues.append('photo story has no service link')
             if 'By LOKEIL Renovation' not in text:
                 issues.append('visible article author missing')
-            for image in process_images:
+            for image in process_images + editorial_images:
                 asset_status, _, _ = fetch(base + image, '*/*')
                 if asset_status != 200:
                     issues.append('photo process asset missing')
         if any(re.search(r'/blog/bathroom-remodeling-(astoria|jackson-heights|long-island-city|ridgewood|sunnyside|woodside)-nyc-planning-guide$', link) for link in page.links):
             issues.append('retired location page remains in main navigation')
         return {'path': path, 'title': normalize(page.title), 'html': status, 'markdown': md_status,
-                'server_visible_h1': not page.hidden_h1, 'photo_story': bool(process_images),
+                'server_visible_h1': not page.hidden_h1, 'photo_story': bool(process_images or editorial_images),
                 'comparison_cells': len(page.table_cells), 'guide_illustrations': len(guide_images), 'issues': issues}
 
     with concurrent.futures.ThreadPoolExecutor(max_workers=6) as pool:
