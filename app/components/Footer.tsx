@@ -67,8 +67,9 @@ export default function Footer() {
                 </a>
               </li>
               <li>{siteData.location}</li>
-              <li>{siteData.hours[0].label}: {siteData.hours[0].value}</li>
-              <li>{siteData.hours[1].label}: {siteData.hours[1].value}</li>
+              {siteData.hours.map((hour) => (
+                <li key={hour.label}>{hour.label}: {hour.value}</li>
+              ))}
             </ul>
             <a
               href={siteData.instagram}

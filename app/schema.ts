@@ -15,6 +15,7 @@ export const structuredData = [
     '@id': `${siteData.siteUrl}/#business`,
     name: siteData.brandName,
     legalName: siteData.legalName,
+    founder: { '@type': 'Person', name: siteData.owner },
     description: siteData.description,
     url: siteData.siteUrl,
     telephone: siteData.phoneHref,
@@ -51,19 +52,12 @@ export const structuredData = [
       { '@type': 'AdministrativeArea', name: 'Long Island, NY' },
       { '@type': 'AdministrativeArea', name: 'Westchester County, NY' },
     ],
-    openingHoursSpecification: [
-      {
-        '@type': 'OpeningHoursSpecification',
-        dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
-        opens: '10:00',
-        closes: '18:00',
-      },
-      {
-        '@type': 'OpeningHoursSpecification',
-        dayOfWeek: 'Saturday',
-        opens: '12:00',
-        closes: '17:00',
-      },
-    ],
+    paymentAccepted: siteData.paymentMethods.join(', '),
+    openingHoursSpecification: siteData.hours.map((hour) => ({
+      '@type': 'OpeningHoursSpecification',
+      dayOfWeek: hour.days,
+      opens: hour.opens,
+      closes: hour.closes,
+    })),
   },
 ];

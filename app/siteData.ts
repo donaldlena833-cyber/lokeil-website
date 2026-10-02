@@ -25,10 +25,18 @@ export const siteData = {
   socialImage: '/opengraph-image',
   socialImageAlt: 'LOKEIL Renovation interior remodeling in Ridgewood, Queens.',
   hours: [
-    { label: 'Monday - Friday', value: '10:00 AM - 6:00 PM' },
-    { label: 'Saturday', value: '12:00 PM - 5:00 PM' },
-    { label: 'Sunday', value: 'Closed' },
+    { label: 'Monday to Thursday', value: '8:30 AM to 5:30 PM', days: ['Monday', 'Tuesday', 'Wednesday', 'Thursday'], opens: '08:30', closes: '17:30' },
+    { label: 'Friday', value: '8:30 AM to 6:00 PM', days: ['Friday'], opens: '08:30', closes: '18:00' },
+    { label: 'Saturday', value: '10:00 AM to 6:00 PM', days: ['Saturday'], opens: '10:00', closes: '18:00' },
+    { label: 'Sunday', value: '10:30 AM to 4:00 PM', days: ['Sunday'], opens: '10:30', closes: '16:00' },
   ],
+  paymentMethods: ['credit cards', 'Zelle', 'Venmo', 'PayPal', 'Cash App'],
+  communicationNote: 'American Sign Language communication is available.',
+  history: {
+    heading: 'From Albania to Ridgewood.',
+    origin: 'Lorel Beqari founded LOKEIL in Albania in 1995, bringing construction experience from Greece to the company’s early projects.',
+    expansion: 'The business expanded into the United States in 2022. Today, LOKEIL Renovation is based in Ridgewood, Queens, working on homes and commercial interiors.',
+  },
 } as const;
 
 export const estimateEmailHref = `mailto:${siteData.email}?subject=${encodeURIComponent('Remodeling estimate request')}&body=${encodeURIComponent('Project neighborhood: \nRoom or service: \nWhat I want to change: \nApproximate timeline: \nBest number to reach me: \nHow did you hear about LOKEIL? \n\nI can attach current room photos and finish references to this email.')}`;

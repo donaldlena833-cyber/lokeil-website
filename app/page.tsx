@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
+import CustomerFeedback from './components/CustomerFeedback';
 
 import {
   coreServices,
@@ -246,6 +247,8 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <CustomerFeedback />
 
       <section className="section-rule section-space">
         <div className="site-shell grid gap-10 lg:grid-cols-[0.92fr_1.08fr]">

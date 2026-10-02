@@ -2,6 +2,7 @@
 export const projectFit = [
   'Bathroom wall tile, shower surrounds, niches, benches, and tub areas',
   'Bathroom floors, kitchen backsplashes, and interior tile feature surfaces',
+  'Ceramic, porcelain, mosaic, and marble tile installation or replacement',
   'Layout planning for grout lines, edge trim, corners, and transitions',
   'Queens apartments and homes where tile work connects to plaster, paint, flooring, and finish details',
 ] as const;
@@ -68,6 +69,10 @@ export const localTilePaths = [
 
 export const faqs = [
   {
+    q: 'Which tile materials does LOKEIL install?',
+    a: 'LOKEIL installs and replaces ceramic, porcelain, mosaic, and marble tile for interior remodeling projects.',
+  },
+  {
     q: "How do I compare tile installation quotes fairly?",
     a: "Compare the same surface preparation, removal, tile layout, wet area assembly where relevant, edge trim, grout, sealant, and final cleanup. A price for setting tile alone is a different scope from preparing and finishing the whole area. Supply the same room photos and material details to each installer.",
   },
@@ -87,4 +92,3 @@ export const faqs = [
       'Send photos of the room, the surface that needs tile, any tile inspiration or material already selected, the neighborhood, and whether the work is part of a bathroom, kitchen, floor, or backsplash project.',
   },
 ] as const;
-

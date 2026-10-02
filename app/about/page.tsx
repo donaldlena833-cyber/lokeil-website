@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
+import CustomerFeedback from '../components/CustomerFeedback';
 
 import {
   featuredImages,
@@ -13,7 +14,7 @@ import { buildPageMetadata } from '../seo';
 export const metadata: Metadata = buildPageMetadata({
   title: 'About Our Queens Remodeling Team',
   description:
-    'Learn about LOKEIL Renovation, owner Lorel Beqari, and the interior remodeling approach behind the company\'s bathrooms, kitchens, tile, and finish work.',
+    'Meet Lorel Beqari and learn LOKEIL’s story from Albania in 1995 to its US expansion in 2022 and today’s remodeling work from Ridgewood, Queens.',
   path: '/about',
 });
 
@@ -80,21 +81,21 @@ export default function About() {
         <div className="site-shell grid gap-10 lg:grid-cols-[1.05fr_0.95fr]">
           <div data-reveal="fade-up">
             <p className="eyebrow">Our story</p>
-            <h2 className="section-title mt-4">Built around rooms, materials, and the details that finish well.</h2>
+            <h2 className="section-title mt-4">{siteData.history.heading}</h2>
             <div className="mt-6 space-y-5 text-base leading-8 text-ink/80">
               <p>
-                {siteData.brandName} works on interior spaces that need a stronger finish and a better
-                sense of order, whether that means a new shower surround, updated flooring,
-                cleaner cabinetry, or a more complete kitchen layout.
+                {siteData.history.origin}
               </p>
               <p>
-                The company approach is practical and finish-focused. Materials need to look good,
-                but they also need to fit the room well and hold up in daily use.
+                {siteData.history.expansion}
               </p>
               <p>
-                That is why the portfolio leans into bathrooms, kitchens, tile work, flooring,
-                cabinetry, and the smaller transition details that make the final result feel complete.
+                Bathrooms, kitchens, tile and finish work are at the heart of our New York
+                portfolio. Explore the photos to see the rooms and details we work on.
               </p>
+              <a href={siteData.yelp} target="_blank" rel="noopener noreferrer" className="inline-block text-sm text-accent underline underline-offset-4">
+                Company history on Yelp<span className="sr-only">, opens in a new tab</span>
+              </a>
             </div>
           </div>
 
@@ -104,9 +105,9 @@ export default function About() {
             </p>
             <h3 className="mt-3 text-4xl text-ink">{siteData.owner}</h3>
             <p className="mt-5 text-base leading-8 text-ink/80">
-              Lorel Beqari is the owner behind {siteData.brandName}. He brings the company around
-              interior upgrades that benefit from patience and detail: bathrooms, kitchens, tile,
-              floors, cabinetry, trim, and finish work that should feel composed once the room is complete.
+              {siteData.owner} leads {siteData.brandName}. Our work brings together the surfaces
+              you see every day: a shower wall, the floor underfoot, a cabinet door that closes
+              properly, and the trim that completes a room.
             </p>
             <p className="mt-5 text-base leading-8 text-ink/80">
               The goal is simple: do the work cleanly, choose materials carefully, and leave the
@@ -123,6 +124,8 @@ export default function About() {
           </div>
         </div>
       </section>
+
+      <CustomerFeedback />
 
       <section className="section-rule section-space bg-sage-soft/60">
         <div className="site-shell grid gap-6 lg:grid-cols-3">
