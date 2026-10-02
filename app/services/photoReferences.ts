@@ -2,7 +2,7 @@
 export const servicePhotoReferences: Record<string, { heading: string; intro: string; images: string[] }> = {
   '/bathroom-remodeling-queens': {
     heading: 'Look at the bathroom details before choosing your scope.',
-    intro: 'Compare a vanity beside glass, recessed shower storage, and a niche in progress. Each photograph opens its own story about the decisions behind that detail.',
+    intro: 'Compare a vanity beside glass, recessed shower storage, and an open niche awaiting its interior finish. Each photograph explains a different decision within a bathroom scope.',
     images: ['/gallery/bathroom-tiles/3.jpg', '/gallery/bathroom-flooring/4.jpg', '/gallery/bathroom-tiles/9.jpg'],
   },
   '/kitchen-remodeling-queens': {

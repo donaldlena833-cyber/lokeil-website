@@ -31,5 +31,9 @@ import { riverdaleBathroomEdgesPost } from './riverdale';
 import { stapletonTileCloseoutPost } from './stapleton';
 import { bayRidgeBathingChoicePost } from './bayRidge';
 
+import { forestHillsShowerStoragePost } from './forestHills';
+import { ditmasParkNicheFinishPost } from './ditmasPark';
+import { pelhamBayProgressPhotoPost } from './pelhamBay';
+
 // Each entry is written and reviewed individually. Existing article URLs stay intact.
-export const neighborhoodOverrides = [gowanusPost, financialDistrictPost, midtownWestPost, longIslandCityCabinetPost, downtownBrooklynBathroomPost, mottHavenPaintingPost, bedStuyTrimPost, crownHeightsFloorPost, harlemKitchenStoragePost, bushwickBacksplashPost, greenpointTilePost, astoriaBathroomUsePost, upperWestSideKitchenPost, upperEastSideVanityPost, eastVillageRoomFitPost, lowerEastSideMoisturePost, chelseaKitchenFloorPost, williamsburgKitchenPalettePost, inwoodWallFinishPost, ridgewoodBathroomBriefPost, parkSlopeKitchenEdgesPost, carrollGardensBacksplashPost, sunnysideFloorRepeatPost, jacksonHeightsOccupiedWorkPost, sunsetParkFloorCarePost, portRichmondVanityDeliveryPost, flushingNicheWallPost, riverdaleBathroomEdgesPost, stapletonTileCloseoutPost, bayRidgeBathingChoicePost];
+export const neighborhoodOverrides = [gowanusPost, financialDistrictPost, midtownWestPost, longIslandCityCabinetPost, downtownBrooklynBathroomPost, mottHavenPaintingPost, bedStuyTrimPost, crownHeightsFloorPost, harlemKitchenStoragePost, bushwickBacksplashPost, greenpointTilePost, astoriaBathroomUsePost, upperWestSideKitchenPost, upperEastSideVanityPost, eastVillageRoomFitPost, lowerEastSideMoisturePost, chelseaKitchenFloorPost, williamsburgKitchenPalettePost, inwoodWallFinishPost, ridgewoodBathroomBriefPost, parkSlopeKitchenEdgesPost, carrollGardensBacksplashPost, sunnysideFloorRepeatPost, jacksonHeightsOccupiedWorkPost, sunsetParkFloorCarePost, portRichmondVanityDeliveryPost, flushingNicheWallPost, riverdaleBathroomEdgesPost, stapletonTileCloseoutPost, bayRidgeBathingChoicePost, forestHillsShowerStoragePost, ditmasParkNicheFinishPost, pelhamBayProgressPhotoPost];
