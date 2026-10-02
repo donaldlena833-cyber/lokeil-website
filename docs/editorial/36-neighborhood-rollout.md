@@ -1,6 +1,6 @@
 # Neighborhood rollout: LOKEIL first, MetroGlass additive
 
-The supplied order is preserved. These are editorial assignments, not verified rankings of demand. LOKEIL batches 1 and 2 are written. Each later assignment needs its own source check, evidence, original writing, illustration where useful, and evaluation before publication. Match existing LOKEIL articles individually to the subjects, retaining URLs when rewriting; preserve existing MetroGlass articles and add separate glazing content. MetroGlass directions in this table remain separate assignments and are not declared published by a LOKEIL release.
+The supplied order is preserved. These are editorial assignments, not verified rankings of demand. LOKEIL batches 1 through 3 are written, with 27 assignments remaining. Each later assignment needs its own source check, evidence, original writing, illustration where useful, and evaluation before publication. Match existing LOKEIL articles individually to the subjects, retaining URLs when rewriting; preserve existing MetroGlass articles and add separate glazing content. MetroGlass directions in this table remain separate assignments and are not declared published by a LOKEIL release.
 
 Publish three completed articles together. Recommended operating pace: one evaluated batch per week, with flexibility when a story needs more evidence. No recurring publication has been scheduled. Check crawl/index status separately from client response. Review search response after 2–4 weeks and business results over 90 days; an email click is not a received inquiry, and an estimate is not a credited job.
 
@@ -12,9 +12,9 @@ Publish three completed articles together. Recommended operating pace: one evalu
 | 2 | Long Island City | Kitchen cabinet delivery and installation in an occupied apartment | Condo owner | Interior glass partition layout and mounting surfaces | LOKEIL rewritten |
 | 2 | Downtown Brooklyn | Comparing a wet-area renovation scope with finish-only work | Apartment owner | Shower glass after waterproofing and tile completion | LOKEIL rewritten |
 | 2 | Mott Haven | A unit-turnover finish scope that separates repair from painting | Property manager | Prioritizing glass repairs during a unit turnover | LOKEIL rewritten |
-| 3 | Bedford-Stuyvesant | Preserving trim while repairing plaster and repainting a room | House owner | Mirrors and glazing beside retained architectural details | Queued |
-| 3 | Crown Heights | Floor thresholds and transitions between old and new rooms | Homeowner | Shower threshold measurements and enclosure options | Queued |
-| 3 | Central / East Harlem | Small kitchen storage without losing the working passage | Apartment owner | Glass partition visibility and privacy choices | Queued |
+| 3 | Bedford-Stuyvesant | Preserving trim while assessing wall materials and repainting a room | House owner | Mirrors and glazing beside retained architectural details | LOKEIL rewritten |
+| 3 | Crown Heights | Floor thresholds and transitions between old and new rooms | Homeowner | Shower threshold measurements and enclosure options | LOKEIL rewritten |
+| 3 | Central / East Harlem | Small kitchen storage without losing the working passage | Apartment owner | Glass partition visibility and privacy choices | LOKEIL rewritten |
 | 4 | Bushwick | Choosing where a strong backsplash pattern begins and ends | Homeowner | Glass shelving and support planning | Queued |
 | 4 | Greenpoint | Keeping a bathroom's character through a practical tile layout | Homeowner | Mirror proportions and wall condition | Queued |
 | 4 | Astoria | An only-bathroom renovation and daily-use work sequencing | Apartment owner | Coordinating final glass measurements with tile work | Queued |

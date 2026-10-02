@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1536" height="1024" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+  <title id="title">Storage and movement share the galley</title>
+  <desc id="desc">A concept plan places cabinets on opposite sides of a central passage, with one open drawer and a cabinet door swing. A separate storage sketch shows items organized inside a cabinet. Positions are illustrative and are not clearance specifications.</desc>
+  <g stroke="#45614A" stroke-width="3" stroke-linejoin="round">
+    <path d="M170 172H637V669H170Z" fill="#FAFAF3"/>
+    <path d="M315 182H490V659H315Z" fill="#E3E8D8" stroke="none"/>
+    <path d="M178 182H304V658H178ZM502 182H628V658H502Z" fill="#D4C7A7"/>
+    <path d="M178 282H304M178 382H304M178 482H304M178 582H304M502 302H628M502 432H628M502 542H628" fill="none"/>
+    <path d="M304 304H390V374H304Z" fill="#FAFAF3" stroke="#A18B5E"/><path d="M376 317V361" stroke="#A18B5E"/>
+    <path d="M502 450L400 504" fill="none" stroke="#A18B5E" stroke-width="5"/><path d="M502 556A106 106 0 0 1 400 504" fill="none" stroke="#A18B5E" stroke-dasharray="6 6"/>
+    <path d="M437 205V443M437 562V631" fill="none" stroke-dasharray="10 8"/>
+    <path d="M750 372H1090V616H750Z" fill="#FAFAF3"/>
+    <path d="M765 435H1075M765 530H1075" fill="none"/><path d="M790 387V430M818 387V430M846 387V430" stroke="#A18B5E" stroke-width="8"/>
+    <path d="M900 477H1040V522H900Z" fill="#E3E8D8"/><path d="M790 566H869V607H790Z" fill="#D4C7A7"/>
+  </g>
+  <g font-family="Arial, sans-serif" font-size="30" fill="#293B30">
+    <text x="105" y="107">Look at the room with the fronts open</text>
+    <text x="750" y="218">Shared passage</text><path d="M730 228H450" stroke="#45614A" stroke-width="2"/>
+    <text x="750" y="292">Open fronts</text><path d="M730 300L550 340H390" fill="none" stroke="#A18B5E" stroke-width="2"/>
+    <text x="750" y="668">Storage inside the footprint</text>
+    <text x="105" y="746" font-size="25" fill="#45614A">An illustrative plan. Check actual dimensions and product operation.</text>
+  </g>
+  <g fill="#45614A"><circle cx="437" cy="220" r="25"/><circle cx="390" cy="340" r="25"/><circle cx="918" cy="372" r="25"/></g>
+  <g fill="#FAFAF3" font-family="Arial, sans-serif" font-size="27" font-weight="bold" text-anchor="middle"><text x="437" y="229">1</text><text x="390" y="349">2</text><text x="918" y="381">3</text></g>
+</svg>
