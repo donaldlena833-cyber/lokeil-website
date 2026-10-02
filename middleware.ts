@@ -1,6 +1,7 @@
 import type { NextRequest } from 'next/server';
 import { NextResponse } from 'next/server';
 import { appendVaryAccept, preferredRepresentation } from './lib/accept';
+import { indexNowVerificationResponse } from './lib/indexnow.mjs';
 
 const apexDomain = 'lokeilremodeling.com';
 const wwwDomain = `www.${apexDomain}`;
@@ -23,6 +24,9 @@ export function middleware(request: NextRequest) {
     redirectUrl.protocol = 'https';
     return NextResponse.redirect(redirectUrl, 308);
   }
+
+  const verification = indexNowVerificationResponse(pathname, process.env.INDEXNOW_KEY, request.method);
+  if (verification) return verification;
 
   if (pathname === '/sitemap') {
     const redirectUrl = request.nextUrl.clone();
@@ -53,4 +57,4 @@ export function middleware(request: NextRequest) {
   return response;
 }
 
-export const config = { matcher: ['/((?!api/|agent-markdown|opengraph-image|twitter-image|_next/|.*\\.[^/]+$).*)'] };
+export const config = { matcher: ['/((?!api/|agent-markdown|opengraph-image|twitter-image|_next/|.*\\.[^/]+$).*)', '/:indexNowKey([a-f0-9]{32}).txt'] };
