@@ -1,10 +1,11 @@
 "use client";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 import { useEffect, useRef, useState } from "react";
 
 type Choice = { analytics: boolean; marketing: boolean; expires: number };
-type TagWindow = Window & { dataLayer?: unknown[]; gtag?: (...args: unknown[]) => void; [key: `ga-disable-${string}`]: boolean };
+type TagWindow = Window & { dataLayer?: unknown[]; gtag?: (...args: unknown[]) => void; __siteAnalyticsAllowed?: boolean; [key: `ga-disable-${string}`]: boolean };
 const KEY = "site-cookie-choice-v1";
 const denied = { ad_storage: "denied", ad_user_data: "denied", ad_personalization: "denied", analytics_storage: "denied" };
 
@@ -29,7 +30,7 @@ function clearMeasurementCookies() {
 export function CookieConsent({ analyticsId, adsId, tagManagerId, privacyPath = "/privacy", nonce }: {
   analyticsId?: string; adsId?: string; tagManagerId?: string; privacyPath?: string; nonce?: string;
 }) {
-  const [open, setOpen] = useState(false);
+  const pathname = usePathname();
   const [choice, setChoice] = useState<Choice | null>(null);
   const [ready, setReady] = useState(false);
   const loaded = useRef(false);
@@ -39,8 +40,10 @@ export function CookieConsent({ analyticsId, adsId, tagManagerId, privacyPath = 
     const sync = () => {
       const saved = readChoice();
       const privacySignal = (navigator as Navigator & { globalPrivacyControl?: boolean }).globalPrivacyControl || navigator.doNotTrack === "1";
-      setChoice(saved ? { ...saved, marketing: privacySignal ? false : saved.marketing } : null);
-      setOpen(!saved); setReady(true);
+      const next = saved || { analytics: true, marketing: false, expires: Date.now() + 180 * 86400000 };
+      setChoice(privacySignal ? { ...next, analytics: false, marketing: false } : next);
+      if (!next.analytics || privacySignal) clearMeasurementCookies();
+      setReady(true);
     };
     sync();
     const onStorage = (event: StorageEvent) => { if (event.key === KEY) { if (loaded.current) location.reload(); else sync(); } };
@@ -51,12 +54,13 @@ export function CookieConsent({ analyticsId, adsId, tagManagerId, privacyPath = 
   useEffect(() => {
     if (!ready) return;
     const w = window as unknown as TagWindow;
+    w.__siteAnalyticsAllowed = Boolean(choice?.analytics);
     if (analyticsId) w[`ga-disable-${analyticsId}`] = !choice?.analytics;
     if (!choice?.analytics && !choice?.marketing) {
-      if (loaded.current) location.reload();
+      w.gtag?.("consent", "update", denied);
       return;
     }
-    // No vendor connection or event queue exists before an explicit opt-in.
+    // Analytics runs unless opted out; advertising still requires a saved opt-in.
     w.dataLayer = w.dataLayer || [];
     // Google documents its command queue as Arguments objects, not event arrays.
     w.gtag = w.gtag || function () { w.dataLayer!.push(arguments); };
@@ -91,24 +95,21 @@ export function CookieConsent({ analyticsId, adsId, tagManagerId, privacyPath = 
 
   function save(analytics: boolean, marketing: boolean) {
     const privacySignal = (navigator as Navigator & { globalPrivacyControl?: boolean }).globalPrivacyControl || navigator.doNotTrack === "1";
-    const next = { analytics, marketing: privacySignal ? false : marketing, expires: Date.now() + 180 * 86400000 };
-    try { localStorage.setItem(KEY, JSON.stringify(next)); } catch { /* Choice still applies to this page if storage is unavailable. */ }
+    const next = { analytics: privacySignal ? false : analytics, marketing: privacySignal ? false : marketing, expires: Date.now() + 180 * 86400000 };
+    let persisted = false;
+    try { localStorage.setItem(KEY, JSON.stringify(next)); persisted = true; } catch { /* Choice still applies to this page if storage is unavailable. */ }
     if (!next.analytics || !next.marketing) clearMeasurementCookies();
     const reload = loaded.current;
-    setChoice(next); setOpen(false);
-    if (reload) location.reload();
+    setChoice(next);
+    if (reload && persisted) location.reload();
   }
   return <>
-    <div className="readiness-utility"><Link href={privacyPath}>Privacy</Link><Link href="/terms">Terms</Link><Link href="/contact">Contact</Link><button type="button" onClick={() => setOpen(true)}>Cookie settings</button></div>
-    {ready && open && <section className="readiness-consent" aria-label="Cookie preferences">
-      <h2>Your privacy choices</h2>
-      <p>Essential features work without optional cookies. {marketingAvailable ? "With your permission, Google tools help us understand visits and measure advertising." : "With your permission, Google Analytics helps us understand visits."} Choose below or change your choice in Cookie settings. <Link href={privacyPath}>Read our privacy notice</Link>.</p>
-      <div className="readiness-consent-actions">
-        <button type="button" onClick={() => save(false, false)}>Reject optional</button>
-        {!tagManagerId && analyticsId && marketingAvailable && <button type="button" onClick={() => save(true, false)}>Analytics only</button>}
-        <button type="button" onClick={() => save(true, marketingAvailable)}>{marketingAvailable ? "Accept optional" : "Allow analytics"}</button>
-        {choice && <button type="button" onClick={() => setOpen(false)}>Close</button>}
-      </div>
+    <div className="readiness-utility"><Link href={privacyPath}>Privacy</Link><Link href="/terms">Terms</Link><Link href="/contact">Contact</Link></div>
+    {ready && pathname?.replace(/\/$/, "") === privacyPath.replace(/\/$/, "") && <section className="readiness-privacy-controls" aria-label="Website analytics settings">
+      <h2>Website analytics</h2>
+      <p>Google Analytics is {choice?.analytics ? "on" : "off"} in this browser. You can change it below.</p>
+      <button type="button" onClick={() => save(!choice?.analytics, Boolean(choice?.marketing))}>{choice?.analytics ? "Turn off analytics" : "Turn on analytics"}</button>
+      {marketingAvailable && <button type="button" onClick={() => save(Boolean(choice?.analytics), !choice?.marketing)}>{choice?.marketing ? "Turn off ad measurement" : "Allow ad measurement"}</button>}
     </section>}
   </>;
 }

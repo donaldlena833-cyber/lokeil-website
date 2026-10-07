@@ -28,7 +28,7 @@ export default function PrivacyPage() {
           <h2 className="section-title">Your choices</h2>
           <p className="mt-5">To request an eligible correction or deletion, email <a className="text-accent underline underline-offset-4" href={`mailto:${siteData.email}`}>{siteData.email}</a>. Some information may be retained when reasonably required for an active project, legal obligation, safety, fraud prevention, or ordinary business records.</p>
         </section>
-        <p className="text-sm">Updated October 2, 2026. <Link className="ml-2 text-accent underline underline-offset-4" href="/contact">Contact LOKEIL</Link></p>
+        <p className="text-sm">Updated October 7, 2026. <Link className="ml-2 text-accent underline underline-offset-4" href="/contact">Contact LOKEIL</Link></p>
       </article>
     </main>
   );

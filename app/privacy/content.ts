@@ -3,7 +3,7 @@ export const privacyIntro = 'LOKEIL Renovation uses the information provided by 
 export const privacySections = [
   {
     heading: 'Cookies and your choices',
-    body: 'Optional Google measurement tools load only after you choose to allow them. You can reject optional cookies and still use the website, or change your choice using Cookie settings at the bottom of any page. We store your choice in this browser for up to 180 days. With consent, measurement tools may process device, page, usage, and network information; this is not necessarily anonymous. A Global Privacy Control or Do Not Track signal prevents optional advertising consent on this site. Hosting and security services still process information needed to deliver and protect the website. Google Tag Manager may load analytics and advertising tags only after optional consent. The map is an external Google link; opening it is your choice.',
+    body: 'Google Analytics helps us understand visits and runs automatically unless you opt out below or your browser sends a Global Privacy Control or Do Not Track signal. Existing saved opt-outs are respected. Your saved choice applies in this browser for up to 180 days. Analytics may process device, page, usage, and network information; we do not send inquiry contents to it. Hosting and security services process information needed to deliver and protect the website. The map is an external Google link; opening it is your choice.',
   },
   {
     heading: 'Information you provide',

@@ -12,7 +12,7 @@ import ScrollObserver from './components/ScrollObserver';
 import { structuredData } from './schema';
 import { siteData } from './siteData';
 
-const gtmId = 'GTM-P7SQ92V3';
+const googleAnalyticsId = 'G-H0NMDD35NJ';
 
 const manrope = Manrope({
   subsets: ['latin'],
@@ -115,7 +115,7 @@ export default function RootLayout({
         <div className="min-h-screen overflow-x-clip pb-24 md:pb-0">{children}</div>
         <MobileCtaBar />
         <Footer />
-<CookieConsent tagManagerId={gtmId} />
+<CookieConsent analyticsId={googleAnalyticsId} />
       </body>
     </html>
   );

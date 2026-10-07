@@ -39,7 +39,7 @@ Middleware handles canonical host and consolidated route redirects before repres
 
 The estimate action opens an email draft with project details, or initiates a call. Neither action confirms receipt of an inquiry. There is no server submission form in this version.
 
-Optional Google tools are consent gated. Contact intent events use `click_call` and `click_email`, with the page path only; destinations and project details are excluded. The existing GTM container loads only when both optional purposes are accepted because its tags can include advertising. An intent event is not a qualified lead or completed sale.
+Google Analytics runs by default with an opt-out on the privacy page; saved opt-outs and browser privacy signals are respected. Contact intent events use `click_call` and `click_email`, with the page path only; destinations and project details are excluded. The GA4 stream uses a direct analytics tag, without enabling the former GTM container or advertising tags. An intent event is not a qualified lead or completed sale.
 
 Use Search Console and Bing Webmaster Tools for their respective visibility reports, and a separate inquiry ledger for estimates and credited jobs. Do not infer attribution from a page event or a citation alone.
 

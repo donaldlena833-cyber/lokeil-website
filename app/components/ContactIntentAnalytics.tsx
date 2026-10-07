@@ -4,10 +4,9 @@ import { useEffect } from 'react';
 
 import { contactIntentPayload } from '../contactIntent';
 
-type ContactIntentEvent = NonNullable<ReturnType<typeof contactIntentPayload>>;
-
 type AnalyticsWindow = Window & {
-  dataLayer?: ContactIntentEvent[];
+  gtag?: (...args: unknown[]) => void;
+  __siteAnalyticsAllowed?: boolean;
 };
 
 export default function ContactIntentAnalytics() {
@@ -21,14 +20,9 @@ export default function ContactIntentAnalytics() {
         window.location.pathname,
       );
       if (!payload) return;
-      try {
-        const consent = JSON.parse(localStorage.getItem('site-cookie-choice-v1') || 'null');
-        if (!consent || !consent.analytics || !consent.marketing || consent.expires <= Date.now()) return;
-      } catch { return; }
-
       const analyticsWindow = window as AnalyticsWindow;
-      analyticsWindow.dataLayer ??= [];
-      analyticsWindow.dataLayer.push(payload);
+      if (!analyticsWindow.__siteAnalyticsAllowed) return;
+      analyticsWindow.gtag?.('event', payload.event, { page_path: payload.page_path });
     };
 
     document.addEventListener('click', handleContactClick);
