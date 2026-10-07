@@ -29,3 +29,9 @@
  body:has(input:focus,textarea:focus,select:focus) .readiness-mobile { display:none; }
 }
 @media(prefers-reduced-motion:reduce) { .readiness-page *, .readiness-consent * { animation:none!important; transition:none!important; } }
+
+.readiness-privacy-controls { position:static; width:min(680px,calc(100% - 40px)); margin:24px auto 48px; padding:24px; border:1px solid currentColor; color:var(--readiness-ink,#25251f); background:var(--readiness-bg,#f5f1e9); }
+.readiness-privacy-controls h2 { margin:0 0 12px; font-size:22px; }
+.readiness-privacy-controls p { margin:0 0 16px; font-size:14px; line-height:1.6; }
+.readiness-privacy-controls button { min-height:44px; margin:4px 8px 4px 0; padding:10px 16px; border:1px solid currentColor; background:transparent; color:inherit; cursor:pointer; }
+.readiness-privacy-controls button:focus-visible { outline:2px solid currentColor; outline-offset:4px; }
